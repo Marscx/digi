@@ -86,9 +86,9 @@ Kontakt: [E-Mail]</code></pre>
         </section>
 
         <section class="step" id="testserver">
-            <header><span class="step-num">3</span><h2>Lokal testen: Testserver, MAMP, WAMP oder LAMP</h2><span class="time">25 Min.</span></header>
-            <p>Ein Doppelklick auf <code>index.html</code> reicht für eine einfache Seite. Sobald Seiten auf andere Dateien verweisen (Unterseiten, Schriften, Skripte), verhält sich ein <b>lokaler Webserver</b> wie das spätere Hosting. Dann zeigt dir der Browser genau das, was Besuchende sehen. Teste deshalb, bevor du etwas hochlädst. Es gibt drei Wege, vom einfachsten zum vollständigsten:</p>
-            <h3>Weg 1: der eingebaute Testserver (für Seiten aus HTML, CSS und JavaScript)</h3>
+            <header><span class="step-num">3</span><h2>Lokal testen: der Testserver</h2><span class="time">15 Min.</span></header>
+            <p>Ein Doppelklick auf <code>index.html</code> reicht für eine einfache Seite. Sobald Seiten auf andere Dateien verweisen (Unterseiten, Schriften, Skripte), verhält sich ein <b>lokaler Webserver</b> wie das spätere Hosting. Dann zeigt dir der Browser genau das, was Besuchende sehen. Teste deshalb, bevor du etwas hochlädst. Für Seiten aus reinem HTML, CSS und JavaScript reicht ein eingebauter Testserver, du musst nichts weiter installieren.</p>
+            <h3>Der eingebaute Testserver</h3>
             <ol>
                 <li>Öffne das Terminal im Ordner deiner Website (<code>cd meine-website</code>).</li>
                 <li>Starte den Testserver. Auf dem Mac geht <code>python3</code>, auf Windows meist <code>py</code>:</li>
@@ -102,26 +102,6 @@ Kontakt: [E-Mail]</code></pre>
                 <li>Beende den Server mit <kbd>Ctrl+C</kbd> im Terminal. Nach einer Änderung lädst du die Seite im Browser neu.</li>
             </ol>
             <div class="note"><b>Alternative im Code-Editor</b>In Visual Studio Code gibt es die Erweiterung «Live Server». Sie startet einen Testserver mit einem Klick und lädt die Seite bei jeder Änderung automatisch neu.</div>
-            <h3>Weg 2: MAMP, WAMP oder XAMPP (ein ganzer Webserver mit PHP und Datenbank)</h3>
-            <p>Diese Pakete installieren einen Apache-Webserver, PHP und eine Datenbank (MySQL oder MariaDB) in einem Schritt. Du brauchst sie, wenn deine Seite PHP verwendet, eine Datenbank braucht (zum Beispiel WordPress) oder du Einstellungen aus einer <code>.htaccess</code>-Datei testen willst.</p>
-            <ul>
-                <li><b>MAMP</b> (Mac und Windows, gratis): <a href="https://www.mamp.info/" target="_blank" rel="noopener">mamp.info</a>. Starte MAMP, klicke auf <b>Start</b>. Deine Dateien liegen im Ordner <code>htdocs</code> von MAMP, die Seite öffnest du meist unter <code>http://localhost:8888</code>.</li>
-                <li><b>WAMP</b> (nur Windows, gratis): <a href="https://www.wampserver.com/" target="_blank" rel="noopener">wampserver.com</a>. Deine Dateien liegen im Ordner <code>www</code>, die Seite öffnest du unter <code>http://localhost</code>.</li>
-                <li><b>XAMPP</b> (Mac, Windows, Linux, gratis): <a href="https://www.apachefriends.org/" target="_blank" rel="noopener">apachefriends.org</a>. Ordner <code>htdocs</code>, Adresse <code>http://localhost</code>.</li>
-                <li><b>LAMP</b> (Linux): kein Programm, sondern der Name des Pakets aus Linux, Apache, MySQL und PHP. Die Installation geht über die Paketverwaltung deiner Linux-Version. Die KI kann dir die Befehle für dein System nennen.</li>
-            </ul>
-            <ol>
-                <li>Installiere MAMP, WAMP oder XAMPP und starte den Webserver.</li>
-                <li>Lege deinen Website-Ordner in den Hauptordner des Servers (<code>htdocs</code> oder <code>www</code>). In MAMP kannst du alternativ in den Einstellungen den <b>Document Root</b> auf deinen Website-Ordner stellen, dann bleibt er dort, wo er ist.</li>
-                <li>Öffne die Adresse im Browser (siehe oben) und prüfe deine Seite.</li>
-            </ol>
-            <div class="note"><b>Die Ports</b>Die Adresse kann bei dir abweichen, zum Beispiel <code>:8888</code> bei MAMP oder <code>:8080</code>, wenn ein anderes Programm den Standard-Port nutzt. Schau in den Einstellungen des Programms nach, welcher Port eingetragen ist.</div>
-            <h3>Welchen Weg wählst du?</h3>
-            <ul>
-                <li>Reine Seite aus HTML, CSS und JavaScript, wie in dieser Anleitung: <b>Weg 1</b> reicht.</li>
-                <li>Seite mit PHP, Datenbank oder WordPress: <b>MAMP, WAMP, XAMPP oder LAMP</b>.</li>
-                <li>Du willst sehen, wie sich die Seite beim Hoster verhält: Teste mit Weg 2 und der gleichen Ordnerstruktur.</li>
-            </ul>
             <div class="warn"><b>Nur für dich</b>Ein lokaler Testserver ist nur auf deinem Computer erreichbar. Gib nie ein Passwort auf einem lokalen Testserver ein, das du anderswo brauchst. Schliesse den Server, wenn du fertig bist.</div>
             <h3>Fertig, wenn&hellip;</h3>
             <ul class="check">
@@ -201,7 +181,7 @@ git push -u origin main</code></pre>
             <p><b>Auftrag:</b> Ändere einen Satz auf deiner Seite und bringe die Änderung bis ins Internet.</p>
             <ol>
                 <li>Ändere in <code>index.html</code> einen Satz und speichere die Datei.</li>
-                <li>Prüfe die Änderung lokal auf deinem Testserver (<code>http://localhost:8000</code> oder MAMP, WAMP, XAMPP).</li>
+                <li>Prüfe die Änderung lokal auf deinem Testserver (<code>http://localhost:8000</code>).</li>
                 <li>Speichere eine neue Fassung und lade sie hoch:</li>
             </ol>
             <div class="code">
