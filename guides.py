@@ -397,7 +397,7 @@ GUIDES.append(dict(
 
 # ------------------------------------------------------------------ DaVinci Resolve
 GUIDES.append(dict(
-    slug="davinci-resolve", title="DaVinci Resolve", title_long="DaVinci Resolve: Multispurvideo schneiden",
+    slug="davinci-resolve", final=True, title="DaVinci Resolve", title_long="DaVinci Resolve: Multispurvideo schneiden",
     eyebrow="Video · Beispiel 3, 5",
     lead="Mehrere Aufnahmen auf einer Tonspur synchron schneiden und nebeneinander zeigen, zum Beispiel für ein Multispurvideo mit Notenrolle.",
     card="Installieren, ausprobieren, Multispurvideo schneiden.", diff_kurz="mittel bis schwierig", bsp=["B3", "B5"],
