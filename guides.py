@@ -103,7 +103,7 @@ GUIDES.append(dict(
 
 # ------------------------------------------------------------------ Moises
 GUIDES.append(dict(
-    slug="moises", title="Moises", title_long="Moises: Stimmen trennen und Playalong machen",
+    slug="moises", final=True, title="Moises", title_long="Moises: Stimmen trennen und Playalong machen",
     eyebrow="Playalongs · Beispiel 7, 8",
     lead="Ein Stück in Gesang, Schlagzeug, Bass und mehr zerlegen und dir daraus ein Playalong bauen.",
     card="Stimmen trennen im Browser, Gratis-Konto.", diff_kurz="mittel", bsp=["B7", "B8"],
@@ -124,6 +124,8 @@ GUIDES.append(dict(
         ("erste", "Erste Schritte zum Testen", "15 Min.", "\n".join([
             tut("https://www.youtube.com/watch?v=ylBV5q5X4VY", "«How to Use Stem Separation to Practice Smarter» (Moises Essentials, Video, Englisch)",
                 "Vom offiziellen Moises-Kanal auf YouTube. Zeigt, wie man ein Stück in Stems trennt und damit übt. Es gibt kein deutsches Video von Moises. Nutze bei Bedarf die automatischen Untertitel mit Übersetzung."),
+            tut("https://www.youtube.com/watch?v=NBmJklnDnZE", "«How To Separate Stems With Moises AI [2026 Guide]» (AJ Tech Tutorials, Video, Englisch)",
+                "Zweites Tutorial, zeigt den Ablauf Schritt für Schritt am Computer im Browser. Von einem Drittanbieter, nicht von Moises selbst."),
             ol(["Wähle <b>Hochladen</b> (Upload) und lade deine Audiodatei hoch. Je nach Version geht auch ein Link oder eine Datei aus der Cloud.",
                 "Wähle, welche Spuren du trennen willst, zum Beispiel Gesang und Begleitung, und starte die Trennung.",
                 "Warte, bis die Verarbeitung fertig ist. Bei einem normalen Lied dauert das meist nur kurz.",
