@@ -101,6 +101,66 @@ GUIDES.append(dict(
              ("Noteflight Hilfe-Center: Exporting Scores for Noteflight Learn Assignments", "https://support.noteflight.com/hc/en-us/articles/360040361432-Exporting-Scores-for-Noteflight-Learn-Assignments")],
 ))
 
+# ------------------------------------------------------------------ MuseScore
+GUIDES.append(dict(
+    slug="musescore", title="MuseScore", title_long="MuseScore: Noten schreiben, finden und tauschen",
+    eyebrow="Notation · Beispiel 3, 4, 5, 6, 7",
+    lead="Das kostenlose Notenprogramm installieren, eine Melodie schreiben und als PDF, MP3 und MusicXML weitergeben.",
+    card="Plattform, Software und Import/Export.", diff_kurz="mittel", bsp=["B3", "B4", "B5", "B6", "B7"],
+    zeit="ca. 60&ndash;90 Minuten", diff="mittel", geraet="Computer (Mac, Windows, Linux)", kosten="Programm gratis, kein Konto nötig",
+    steps=[
+        ("basics", "Basics: Was ist das, was brauche ich?", "10 Min.", "\n".join([
+            p("<b>MuseScore Studio</b> ist ein freies Notenschreibprogramm, das du auf dem Computer installierst. Du schreibst Noten, hörst sie sofort ab und gibst sie als PDF, MP3, MIDI oder MusicXML weiter. Es ist die kostenlose Alternative zu Programmen wie Dorico oder Sibelius."),
+            p("Dazu gehört die Plattform <b>musescore.com</b>: eine Website, auf der Menschen ihre Noten veröffentlichen und andere sie finden und abspielen können. Das Programm und die Plattform sind getrennt. Für das Programm brauchst du kein Konto."),
+            h3("Das brauchst du"),
+            ul(["Computer mit Mac, Windows oder Linux (die Installation geht über das Hilfsprogramm MuseHub, siehe unten)", "Internetverbindung für den Download", "Kopfhörer",
+                "Optional: ein Konto auf musescore.com, wenn du Noten dort veröffentlichen oder suchen willst"]),
+            note("Welche Version?", "Der aktuelle Name ist <b>MuseScore Studio</b> (früher MuseScore 4). Ältere Videos und Seiten sprechen von MuseScore 3 oder 4, die Oberfläche ist ähnlich, aber nicht gleich. Gilt nur, was du auf dem Bildschirm siehst."),
+        ])),
+        ("start", "Installieren", "15 Min.", "\n".join([
+            ol(['Öffne <a href="https://musescore.org/en/download" target="_blank" rel="noopener">musescore.org/download</a> und klicke auf <b>Free Download</b>.',
+                "Du lädst damit <b>MuseHub</b> herunter, ein kleines Programm, das MuseScore Studio installiert und aktuell hält.",
+                "<b>Mac:</b> Öffne die Datei <code>Muse_Hub.dmg</code> in den Downloads, ziehe MuseHub in den Ordner «Programme» und starte es. Erlaube bei Rückfrage die Berechtigungen.",
+                "<b>Windows:</b> Starte die heruntergeladene Datei und folge dem Installationsfenster.",
+                "Klicke in MuseHub auf <b>Apps</b> und bei MuseScore Studio auf <b>Free</b>. Wenn der Download fertig ist, klicke auf <b>Open</b>."]),
+            note("Installation im Detail", 'Die Anleitung von MuseScore dazu: <a href="https://handbook.musescore.org/introduction/download-and-installation" target="_blank" rel="noopener">Download and installation</a> (Handbuch, Englisch).'),
+            warn("Nicht von anderen Seiten laden", "Lade MuseScore nur von musescore.org. Auf Drittseiten gibt es Versionen mit unerwünschten Zusatzprogrammen."),
+        ])),
+        ("erste", "Erste Schritte zum Testen", "25 Min.", "\n".join([
+            tut("https://www.youtube.com/watch?v=0X8G59wJcXc", "«MuseScore in Minutes: The Basics of Score Writing» (Video, Englisch)",
+                "Kurze Einführung in die Basis: Partitur anlegen, Noten eingeben, abspielen. Das Video gehört zur Reihe «MuseScore in Minutes» auf dem YouTube-Kanal von MuseScore. Nutze bei Bedarf die automatischen Untertitel mit Übersetzung."),
+            tut("https://handbook.musescore.org/introduction/create-your-first-score", "MuseScore Handbuch: Create your first score (Englisch)",
+                "Schritt für Schritt vom neuen Dokument bis zur ersten Note. Es gibt auch Handbuchseiten auf Deutsch, die Auswahl oben rechts auf der Seite."),
+            ol(["Klicke auf <b>New score</b> und wähle eine Vorlage, zum Beispiel «Klavier» oder «Melodie».", "Im nächsten Fenster stellst du Tonart, Taktart und Tempo ein oder überspringst es mit <b>Done</b>.",
+                "Klicke in den ersten Takt und drücke <kbd>N</kbd>. Ein blaues Feld zeigt, wo die nächste Note landet (Eingabemodus).", "Wähle den Notenwert in der Leiste oben oder mit den Zifferntasten <kbd>1</kbd> bis <kbd>7</kbd>.",
+                "Tippe die Tonhöhe als Buchstabe von <kbd>A</kbd> bis <kbd>G</kbd>. Mit <kbd>Esc</kbd> verlässt du den Eingabemodus.", "Drücke die <b>Leertaste</b> zum Abspielen."]),
+        ])),
+        ("umsetzung", "Kleine Umsetzung: deine erste Melodie", "30&ndash;45 Min.", "\n".join([
+            p("<b>Auftrag:</b> Schreibe eine achttaktige Melodie, die du kennst, und gib sie in drei Formaten weiter."),
+            ol(["<b>Schreiben:</b> Gib 8 Takte ein und speichere die Datei auf dem Computer (<b>Datei &rarr; Speichern</b>).",
+                "<b>Anpassen:</b> Ändere Tempo und Instrument und entscheide dich für eine Version.",
+                "<b>Exportieren:</b> Wähle <b>Datei &rarr; Exportieren</b>, dann das Format <b>PDF</b> und klicke auf <b>Exportieren</b>. Wiederhole es mit <b>MP3</b>.",
+                "<b>Tauschen:</b> Exportiere noch einmal als <b>MusicXML</b>. Diese Datei kannst du in anderen Notenprogrammen öffnen. Probiere es mit Noteflight (Anleitung auf dieser Seite).",
+                "<b>Kontrolle:</b> Öffne das PDF und spiele die MP3 ab."]),
+            check("ms", ["deine Melodie 8 Takte hat und sich abspielen lässt,", "du ein PDF und eine MP3-Datei auf deinem Gerät hast,", "du eine MusicXML-Datei exportiert hast,", "die MusicXML-Datei in Noteflight oder einem anderen Programm aufgeht."]),
+            h3("Wenn du weitermachen willst"),
+            ul(["<b>Importieren:</b> MuseScore öffnet MusicXML, MIDI und einige Formate anderer Programme, zum Beispiel Guitar Pro. So kommst du an Noten aus anderen Quellen und kannst sie bearbeiten.",
+                "<b>Teilen auf musescore.com:</b> Mit einem Konto kannst du deine Noten dort online speichern und per Link teilen. Die Bedingungen für Gratis-Konten ändern sich, schau vor dem Veröffentlichen in den aktuellen Angaben der Plattform nach.",
+                "<b>Mehrere Stimmen:</b> Füge im Fenster «Instrumente» ein zweites Instrument oder Gesang hinzu und schreibe einen Satz für die Gruppe."]),
+        ])),
+    ],
+    stolper=["<b>Konto nur für die Plattform:</b> Für das Programm brauchst du kein Konto. Mit einem Konto auf musescore.com lassen sich Noten online speichern und teilen. Welche Gratis-Grenzen dort gelten, ändert sich. Prüfe es im Konto.",
+             "<b>Noten von musescore.com herunterladen:</b> Viele Stücke auf der Plattform lassen sich nur mit Abo als PDF oder Datei laden. Das Anschauen und Abspielen im Browser geht in der Regel ohne.",
+             "<b>MusicXML in Noteflight:</b> Noteflight liest die komprimierte Form (<code>.mxl</code>) nicht direkt. Exportiere, wenn MuseScore beide Formen anbietet, die unkomprimierte (<code>.musicxml</code> oder <code>.xml</code>).",
+             "<b>Format sieht anders aus:</b> Nach dem Import aus anderen Programmen kann das Layout abweichen. Prüfe Taktstriche, Vorzeichen und Texte.",
+             "<b>Urheberrecht:</b> Fremde Stücke nur im geschlossenen Rahmen weitergeben (zum Beispiel Moodle mit Anmeldung) und nicht öffentlich auf musescore.com veröffentlichen."],
+    quellen=[("MuseScore Studio: Download", "https://musescore.org/en/download"),
+             ("MuseScore Handbuch: Download and installation", "https://handbook.musescore.org/introduction/download-and-installation"),
+             ("MuseScore Handbuch: Create your first score", "https://handbook.musescore.org/introduction/create-your-first-score"),
+             ("MuseScore Handbuch: File export", "https://handbook.musescore.org/file-management/file-export"),
+             ("MuseScore in Minutes: The Basics of Score Writing (YouTube)", "https://www.youtube.com/watch?v=0X8G59wJcXc")],
+))
+
 # ------------------------------------------------------------------ Moises
 GUIDES.append(dict(
     slug="moises", final=True, title="Moises", title_long="Moises: Stimmen trennen und Playalong machen",
@@ -465,7 +525,6 @@ GUIDES.append(dict(
 
 # ------------------------------------------------------------------ Index-Struktur
 SOON = {
-    "musescore": dict(title="MuseScore", card="Plattform, Software und Import/Export.", diff="mittel"),
     "dorico": dict(title="Dorico SE", card="Installation, Ausprobieren, Soundbanks, Export und Import.", diff="mittel"),
     "daw": dict(title="GarageBand, Logic, Ableton", card="Playalongs bauen und Stimmen trennen in der DAW.", diff="mittel bis schwierig", bsp=["B7"]),
     "handyvideo": dict(title="Video mit dem Handy", card="Aufnehmen mit Pilotspur, Notenrolle per Bildschirmaufnahme.", diff="leicht bis mittel", bsp=["B3"]),
