@@ -11,7 +11,7 @@ import os
 
 from guides import GUIDES, GROUPS, SOON
 
-V = 3                                   # Version der CSS-Dateien (?v=N)
+V = 4                                   # Version der CSS-Dateien (?v=N)
 HOME = "https://neu.marcscheidegger.ch"   # ÜBERGANG bis Livegang (nach 14.11.2026): "neu." entfernen
 STAND = "November 2026"
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -67,6 +67,21 @@ CHECK_JS = """
             try { c.checked = localStorage.getItem('digi-' + c.dataset.k) === '1'; } catch (e) {}
             c.addEventListener('change', function () {
                 try { localStorage.setItem('digi-' + c.dataset.k, c.checked ? '1' : '0'); } catch (e) {}
+            });
+        });
+
+        // Kopieren-Knopf der Codefenster
+        document.querySelectorAll('.code .copy').forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                var text = btn.parentNode.querySelector('code').textContent;
+                function ok() { btn.textContent = 'Kopiert'; btn.classList.add('done'); setTimeout(function () { btn.textContent = 'Kopieren'; btn.classList.remove('done'); }, 2000); }
+                function fallback() {
+                    var ta = document.createElement('textarea'); ta.value = text; ta.style.position = 'fixed'; ta.style.opacity = '0';
+                    document.body.appendChild(ta); ta.select();
+                    try { document.execCommand('copy'); ok(); } catch (e) { btn.textContent = 'Markieren und Cmd/Strg+C'; }
+                    document.body.removeChild(ta);
+                }
+                if (navigator.clipboard && window.isSecureContext) { navigator.clipboard.writeText(text).then(ok, fallback); } else { fallback(); }
             });
         });
     </script>

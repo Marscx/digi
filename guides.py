@@ -46,7 +46,15 @@ def h3(text):
     return f"            <h3>{text}</h3>"
 
 
+def code(text):
+    import html as _h
+    return ('            <div class="code">\n                <button type="button" class="copy">Kopieren</button>\n'
+            '                <pre><code>' + _h.escape(text.rstrip("\n")) + '</code></pre>\n            </div>')
+
+
 GUIDES = []
+import os as _os
+CODE_OPENDAW = open(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), "beispiele", "opendaw-midnight-hook.txt"), encoding="utf-8").read()
 
 # ------------------------------------------------------------------ Noteflight
 GUIDES.append(dict(
@@ -464,7 +472,25 @@ GUIDES.append(dict(
             ol(["Lege ein Tempo fest (zum Beispiel 90 BPM für einen ruhigen Hip-Hop-Groove).", "Baue den Schlagzeug-Rhythmus aus Kick, Snare und Hi-Hat.", "Füge eine einfache Basslinie hinzu, die dem Rhythmus folgt.", "Füge einen dritten Klang hinzu und spiele alles zusammen ab.", "Speichere das Projekt oder exportiere den Ton."]),
             check("od", ["der Beat läuft acht Takte lang,", "du hast mindestens drei Spuren,", "du hast dein Ergebnis gespeichert oder exportiert."]),
             h3("Wenn du weitermachen willst"),
-            ul(["Probiere die Code-Funktionen aus: Mit einem Prompt an Claude lässt sich ein Beat als Code beschreiben.", "Vergleiche mit dem Koala Sampler auf dem Handy (Anleitung zum Koala Sampler)."]),
+            ul(["Probiere den Code-Editor aus (nächster Abschnitt): Mit einem Auftrag an Claude lässt sich ein Beat als Code beschreiben.", "Vergleiche mit dem Koala Sampler auf dem Handy (Anleitung zum Koala Sampler)."]),
+        ])),
+        ("code", "Code-Editor: Musik als Code", "20&ndash;30 Min.", "\n".join([
+            p("openDAW hat einen eingebauten <b>Script Editor</b>. Dort beschreibst du ein ganzes Projekt als Text (TypeScript): Tempo, Instrumente, Noten und Effekte. Ein Klick auf <b>Run</b>, und das Projekt öffnet sich im Studio. Das ist nachvollziehbar, lässt sich beliebig wiederholen und ist leicht abzuwandeln."),
+            p("Das Skript unten hat Claude Code geschrieben, nachdem es die Scripting Docs auf opendaw.studio gelesen hat. Es baut einen <b>8-Takt-Hip-Hop-Beat</b> in a-Moll mit 88 BPM: Schlagzeug, 808-Bass, Pad (Akkordfolge Am9, Fmaj9, Dm9, E7(b9)) und eine Hookline als Frage und Antwort."),
+            h3("So führst du das Skript aus"),
+            ol(['Öffne <a href="https://opendaw.studio/" target="_blank" rel="noopener">opendaw.studio</a> und lege ein neues Projekt an.', "Öffne im Menü <b>openDAW</b> den <b>Script Editor</b>.",
+                "Lösche den Beispieltext im Editor, füge den Code von unten ein (Button <b>Kopieren</b>) und klicke auf <b>Run</b>.", "Das neue Projekt «Midnight Hook» öffnet sich im Studio. Drücke <b>Play</b>."]),
+            code(CODE_OPENDAW),
+            p('Den Code gibt es auch als Datei: <a href="../beispiele/opendaw-midnight-hook.txt" download>opendaw-midnight-hook.txt</a> (reiner Text, Endung beim Einfügen egal).'),
+            h3("Selber abwandeln"),
+            ul(["<b>Tempo:</b> Ändere <code>project.bpm = 88</code> zum Beispiel auf <code>100</code>.", "<b>Länge:</b> <code>const BARS = 8</code> bestimmt die Takte. Die Muster sind auf 8 Takte ausgelegt, ändere es nur mit Bedacht.",
+                "<b>Akkorde:</b> Die Liste <code>chords</code> enthält die Akkorde als Tonnummern (MIDI). Tausche einen Akkord aus und höre, was passiert.", "<b>Melodie:</b> Die Listen <code>call</code>, <code>answer</code> und <code>resolve</code> enthalten die Hookline als [Position, Länge, Tonhöhe].",
+                "<b>Klang:</b> Zahlen bei <code>cutoff</code>, <code>attack</code> oder <code>volume</code> ändern den Klang der Instrumente."]),
+            h3("Mit KI selber ein Skript erzeugen"),
+            p("Gib einer KI (zum Beispiel Claude) den Auftrag, ein Skript nach den Scripting Docs von openDAW zu schreiben. Ein Beispiel für den Auftrag:"),
+            code("Lies die Scripting Docs auf opendaw.studio. Schreibe ein openDAW-Skript (TypeScript), das einen 8-Takt-Beat in [Stil] mit [Tempo] BPM erzeugt: Schlagzeug, Bass und eine einfache Melodie. Es soll mit openDAW.newProject() beginnen und mit project.openInStudio() enden."),
+            note("Wichtig", "Die KI muss die aktuellen Scripting Docs kennen. Ohne sie erfindet sie Befehle, die es nicht gibt. Läuft das Skript nicht, kopiere die Fehlermeldung des Editors zurück in den Chat und lass es korrigieren."),
+            warn("Fremden Code nur mit Vorsicht ausführen", "Ein Skript läuft in deinem Browser. Führe nur Code aus, den du von einer vertrauenswürdigen Quelle hast und zumindest grob verstehst. Dieser Code stammt aus dem Praxistag und tut nichts anderes, als ein Projekt zu bauen."),
         ])),
     ],
     stolper=["<b>Neues Programm:</b> Funktionen und Menüs ändern sich. Wenn etwas anders aussieht, folge dem, was du siehst.", "<b>Browser:</b> Nicht jede Funktion läuft in jedem Browser. Wechsle im Zweifel auf Chrome.", "<b>Speichern:</b> Ohne Anmeldung liegt dein Projekt nur auf deinem Gerät. Sichere es."],
