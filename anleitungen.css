@@ -128,6 +128,9 @@ kbd { font-family: ui-monospace, Menlo, monospace; font-size: .85em; background:
 .sources { font-size: .92rem; color: var(--soft); }
 .sources li { margin: 3px 0; }
 
+/* Lange Adressen dürfen umbrechen, damit nichts seitlich übersteht */
+.step, .tutorial, .note, .warn, .sources { overflow-wrap: anywhere; }
+
 @media (max-width: 640px) {
     .step { padding: 16px 14px 12px; }
     .step > header { flex-wrap: wrap; }

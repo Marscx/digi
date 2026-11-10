@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <title>DaVinci Resolve: Multispurvideo schneiden · digi.marcscheidegger.ch</title>
+    <meta name="description" content="Mehrere Aufnahmen auf einer Tonspur synchron schneiden und nebeneinander zeigen, zum Beispiel für ein Multispurvideo mit Notenrolle.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="theme-color" content="#0b1220">
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../marke.css?v=1">
+    <link rel="stylesheet" href="../anleitungen.css?v=3">
+</head>
+<body>
+    <header class="ms-bar">
+        <div class="ms-bar-inner">
+            <a class="ms-brand" href="https://neu.marcscheidegger.ch/">Marc <span>Scheidegger</span></a>
+            <nav aria-label="Hauptnavigation">
+                <ul class="ms-nav">
+                    <li><a href="../index.html">Start</a></li>
+                    <li><a href="../index.html#anleitungen" aria-current="page">Anleitungen</a></li>
+                    <li><a href="../index.html#praesentationen">Präsentationen</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="wrap">
+        <p class="crumbs"><a href="../index.html#anleitungen">&larr; Alle Anleitungen</a></p>
+
+        <section class="hero">
+            <p class="eyebrow">Video · Beispiel 3, 5</p>
+            <h1>DaVinci Resolve: Multispurvideo schneiden</h1>
+            <p class="lead">Mehrere Aufnahmen auf einer Tonspur synchron schneiden und nebeneinander zeigen, zum Beispiel für ein Multispurvideo mit Notenrolle.</p>
+            <ul class="facts">
+                <li><b>Zeit</b><span>ca. 2&ndash;3 Stunden</span></li>
+                <li><b>Schwierigkeit</b><span>mittel bis schwierig</span></li>
+                <li><b>Gerät</b><span>Computer (Mac, Windows), iPad-Version vorhanden</span></li>
+                <li><b>Kosten</b><span>Gratisversion reicht</span></li>
+            </ul>
+            <p><span class="badge">Entwurf</span> Noch nicht von Hand getestet. Falls ein Menü anders heisst, gilt, was du auf dem Bildschirm siehst. Sag es Marc, dann wird die Anleitung korrigiert.</p>
+            <ul class="toc">
+                <li><a href="#basics">1 Basics</a></li>
+                <li><a href="#start">2 Installieren</a></li>
+                <li><a href="#erste">3 Erste Schritte zum Testen</a></li>
+                <li><a href="#umsetzung">4 Kleine Umsetzung</a></li>
+                <li><a href="#stolper">Stolpersteine</a></li>
+            </ul>
+        </section>
+
+        <section class="step" id="basics">
+            <header><span class="step-num">1</span><h2>Basics: Was ist das, was brauche ich?</h2><span class="time">10 Min.</span></header>
+            <p>DaVinci Resolve ist ein Videoschnittprogramm von Blackmagic Design. Die Gratisversion reicht für unser Multispurvideo. Du schneidest mehrere Aufnahmen (zum Beispiel jede Stimme einzeln) auf dieselbe Tonspur und zeigst sie nebeneinander.</p>
+            <h3>Das brauchst du</h3>
+            <ul>
+                <li>Einen Computer mit genügend Speicher und Leistung (Mac oder Windows, am Praxistag notfalls im Computerraum der HSLU) oder ein iPad mit der iPad-Version</li>
+                <li>Etwa 1&ndash;2 Stunden Zeit für Download und Installation, am besten <b>vor</b> dem Praxistag</li>
+                <li>Deine Aufnahmen als Videodateien und eine Tonspur zum Synchronisieren, zum Beispiel einen mp3-Export aus Noteflight als Pilotspur</li>
+                <li>Kopfhörer</li>
+            </ul>
+            <div class="note"><b>Vor dem Praxistag</b>Installiere DaVinci Resolve zu Hause. Der Download ist gross und dauert auch bei schnellem Internet lange.</div>
+        </section>
+
+        <section class="step" id="start">
+            <header><span class="step-num">2</span><h2>Installieren</h2><span class="time">30&ndash;60 Min.</span></header>
+            <ol>
+                <li>Öffne <a href="https://www.blackmagicdesign.com/products/davinciresolve" target="_blank" rel="noopener">blackmagicdesign.com/products/davinciresolve</a> und lade die <b>kostenlose Version</b> für dein System herunter. Je nach Seite brauchst du ein Anmeldeformular mit E-Mail-Adresse.</li>
+                <li>Installiere das Programm wie jedes andere (Mac: Datei öffnen und ins Programme-Verzeichnis ziehen, Windows: Installer ausführen).</li>
+                <li>Starte Resolve. Beim ersten Start fragt es nach Einstellungen und Speicherort. Die Voreinstellungen sind in Ordnung.</li>
+                <li>Lege über <b>Neues Projekt</b> ein Projekt an und gib ihm einen Namen.</li>
+            </ol>
+        </section>
+
+        <section class="step" id="erste">
+            <header><span class="step-num">3</span><h2>Erste Schritte zum Testen</h2><span class="time">30 Min.</span></header>
+            <div class="tutorial">
+                <span class="badge badge--soft">Tutorial</span>
+                <p><a href="https://www.tutkit.com/de/text-tutorials/1829-davinci-resolve-audio-synchronisieren-leicht-gemacht" target="_blank" rel="noopener">tutkit: DaVinci Resolve Audio synchronisieren (Textanleitung, Deutsch)</a><br>
+                <small>Zeigt zwei Wege: von Hand an der Wellenform und automatisch mit «Autosync Audio». Menüs können je nach Version abweichen.</small></p>
+            </div>
+            <div class="tutorial">
+                <span class="badge badge--soft">Tutorial</span>
+                <p><a href="https://www.youtube.com/results?search_query=DaVinci+Resolve+Einsteiger+Tutorial+deutsch+Schnitt" target="_blank" rel="noopener">YouTube-Suche: «DaVinci Resolve Einsteiger Tutorial deutsch Schnitt»</a><br>
+                <small>Wähle ein aktuelles Video zur Version, die du installiert hast.</small></p>
+            </div>
+            <ol>
+                <li>Importiere deine Videodateien und die Tonspur auf der Seite <b>Medien</b> (Media).</li>
+                <li>Wechsle auf die Seite <b>Schnitt</b> (Cut oder Edit) und ziehe die Tonspur und einen Clip in die Timeline.</li>
+                <li>Spiele ab und prüfe, ob Bild und Ton zusammenpassen.</li>
+            </ol>
+        </section>
+
+        <section class="step" id="umsetzung">
+            <header><span class="step-num">4</span><h2>Kleine Umsetzung: Multispurvideo mit drei Spuren</h2><span class="time">60&ndash;90 Min.</span></header>
+            <p><b>Auftrag:</b> Setze drei Aufnahmen auf einer Tonspur synchron zusammen und zeige sie nebeneinander.</p>
+            <ol>
+                <li>Lege die Tonspur (Pilotspur) in die Timeline und je eine Videoaufnahme auf eine eigene Videospur darüber.</li>
+                <li>Synchronisiere jede Aufnahme mit der Tonspur (Autosync Audio «basierend auf Wellenformen», oder von Hand an der Wellenform).</li>
+                <li>Stelle die Bilder nebeneinander: Wähle einen Clip, öffne im <b>Inspektor</b> (Inspector) die Transformationen und ändere <b>Zoom</b> und <b>Position</b>, bis die drei Bilder nebeneinander passen.</li>
+                <li>Schalte die Tonspuren der einzelnen Clips stumm, wenn die Pilotspur den Ton liefert, oder mische die Tonspuren ab.</li>
+                <li>Exportiere das Ergebnis auf der Seite <b>Ausgabe</b> (Deliver) als MP4.</li>
+            </ol>
+            <h3>Fertig, wenn&hellip;</h3>
+            <ul class="check">
+                <li><label><input type="checkbox" data-k="dv1"> drei Aufnahmen laufen synchron zusammen,</label></li>
+                <li><label><input type="checkbox" data-k="dv2"> die Bilder sind nebeneinander angeordnet,</label></li>
+                <li><label><input type="checkbox" data-k="dv3"> du hast eine MP4-Datei exportiert und angehört.</label></li>
+            </ul>
+            <h3>Wenn du weitermachen willst</h3>
+            <ul>
+                <li>Füge die Notenrolle (Bildschirmaufnahme aus Noteflight) als weitere Spur hinzu.</li>
+                <li>Bette das fertige Video in Moodle ein (Anleitung zum Moodle-Kurs).</li>
+            </ul>
+        </section>
+
+        <section class="step" id="stolper">
+            <header><span class="step-num">!</span><h2>Stolpersteine</h2></header>
+            <ul>
+                <li><b>Leistung:</b> Auf älteren Geräten ruckelt die Vorschau. Das Ergebnis ist trotzdem in Ordnung. Schneide in kurzen Stücken.</li>
+                <li><b>Dateien:</b> Resolve verknüpft Videodateien. Verschiebe sie nicht nach dem Import.</li>
+                <li><b>Kopfhörer:</b> Ohne Kopfhörer nehmen die Aufnahmen die Pilotspur mit auf und alles klingt doppelt.</li>
+                <li><b>Version:</b> Menüs und Namen unterscheiden sich je nach Version. Halte dich an die Wörter in deinem Programm.</li>
+            </ul>
+        </section>
+
+        <section class="sources">
+            <h3>Quellen</h3>
+            <ul>
+                <li><a href="https://www.blackmagicdesign.com/products/davinciresolve" target="_blank" rel="noopener">Blackmagic Design: DaVinci Resolve</a></li>
+                <li><a href="https://www.tutkit.com/de/text-tutorials/1829-davinci-resolve-audio-synchronisieren-leicht-gemacht" target="_blank" rel="noopener">tutkit: Audio synchronisieren</a></li>
+                <li><a href="https://www.tutkit.com/de/text-tutorials/1799-meistere-den-multicam-schnitt-in-davinci-resolve" target="_blank" rel="noopener">tutkit: Multicam-Schnitt</a></li>
+            </ul>
+            <p>Stand: November 2026. Noch nicht von Hand getestet.</p>
+        </section>
+    </main>
+
+    <footer class="ms-foot">
+        <p>Von <a href="https://neu.marcscheidegger.ch/" target="_blank" rel="noopener">Marc Scheidegger</a>, entwickelt mit Claude (Anthropic) ·
+        <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.de" target="_blank" rel="noopener license">CC BY-NC-SA 4.0</a></p>
+        <ul>
+            <li><a href="https://neu.marcscheidegger.ch/impressum.html">Impressum</a></li>
+            <li><a href="https://neu.marcscheidegger.ch/datenschutz.html">Datenschutz</a></li>
+        </ul>
+    </footer>
+
+
+    <script>
+        // Häkchen der Checkliste im Browser merken (nur auf diesem Gerät)
+        document.querySelectorAll('input[data-k]').forEach(function (c) {
+            try { c.checked = localStorage.getItem('digi-' + c.dataset.k) === '1'; } catch (e) {}
+            c.addEventListener('change', function () {
+                try { localStorage.setItem('digi-' + c.dataset.k, c.checked ? '1' : '0'); } catch (e) {}
+            });
+        });
+    </script>
+
+</body>
+</html>
