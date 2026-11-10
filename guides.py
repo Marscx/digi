@@ -50,7 +50,7 @@ GUIDES = []
 
 # ------------------------------------------------------------------ Noteflight
 GUIDES.append(dict(
-    slug="noteflight", title="Noteflight", title_long="Noteflight: erste Noten im Browser",
+    slug="noteflight", final=True, title="Noteflight", title_long="Noteflight: erste Noten im Browser",
     eyebrow="Notation · Beispiel 3, 4, 5, 6",
     lead="Eine Melodie schreiben, abspielen, teilen und exportieren, ohne etwas zu installieren.",
     card="Erste Noten im Browser, abspielen, teilen, exportieren.", diff_kurz="leicht", bsp=["B3", "B4", "B5", "B6"],

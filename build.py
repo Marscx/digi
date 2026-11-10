@@ -84,7 +84,8 @@ def guide_page(g):
     for label, key in (("Zeit", "zeit"), ("Schwierigkeit", "diff"), ("Gerät", "geraet"), ("Kosten", "kosten")):
         out.append(f'                <li><b>{label}</b><span>{g[key]}</span></li>')
     out.append('            </ul>')
-    out.append('            <p><span class="badge">Entwurf</span> Noch nicht von Hand getestet. Falls ein Menü anders heisst, gilt, was du auf dem Bildschirm siehst. Sag es Marc, dann wird die Anleitung korrigiert.</p>')
+    if not g.get("final"):
+        out.append('            <p><span class="badge">Entwurf</span> Noch nicht von Hand getestet. Falls ein Menü anders heisst, gilt, was du auf dem Bildschirm siehst. Sag es Marc, dann wird die Anleitung korrigiert.</p>')
     out.append('            <ul class="toc">')
     for i, s in enumerate(g["steps"], 1):
         out.append(f'                <li><a href="#{s[0]}">{i} {s[1].split(":")[0]}</a></li>')
@@ -109,7 +110,7 @@ def guide_page(g):
         for t, u in g["quellen"]:
             out.append(f'                <li><a href="{u}" target="_blank" rel="noopener">{t}</a></li>')
         out.append('            </ul>')
-    out.append(f'            <p>Stand: {STAND}. Noch nicht von Hand getestet.</p>\n        </section>')
+    out.append(f'            <p>Stand: {STAND}.{"" if g.get("final") else " Noch nicht von Hand getestet."}</p>\n        </section>')
     out.append('    </main>')
     out.append(foot())
     out.append(CHECK_JS)
@@ -119,8 +120,9 @@ def guide_page(g):
 
 def card_done(g):
     tags = "".join(f'<span class="pill">{b}</span>' for b in g["bsp"])
+    badge = '<span class="badge badge--ok">Fertig</span>' if g.get("final") else '<span class="badge">Entwurf</span>'
     return (f'                    <li class="card"><a class="card-link" href="anleitungen/{g["slug"]}.html">{g["title"]}</a>'
-            f'<p>{g["card"]}</p><div class="meta"><span class="badge">Entwurf</span>'
+            f'<p>{g["card"]}</p><div class="meta">{badge}'
             f'<span class="pill">{g["diff_kurz"]}</span>{tags}</div></li>')
 
 
