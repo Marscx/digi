@@ -447,7 +447,7 @@ GUIDES.append(dict(
 
 # ------------------------------------------------------------------ openDAW
 GUIDES.append(dict(
-    slug="opendaw", title="openDAW", title_long="openDAW: Musik produzieren im Browser",
+    slug="opendaw", final=True, title="openDAW", title_long="openDAW: Musik produzieren im Browser",
     eyebrow="Producing · Beispiel 4",
     lead="Einen kurzen Beat im Browser bauen, ohne Anmeldung und ohne Installation.",
     card="DAW im Browser, ohne Registrierung.", diff_kurz="leicht bis schwierig", bsp=["B4"],
