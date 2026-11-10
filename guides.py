@@ -222,7 +222,7 @@ GUIDES.append(dict(
                 "Exportiere das Video in der höchsten Gratis-Qualität (1080p)."]),
             warn("Wasserzeichen und Pro", "Nach den Angaben, die ich gefunden habe, exportiert CapCut ein Video ohne Wasserzeichen, solange du keine Vorlagen oder Effekte mit Pro-Zeichen benutzt. Manche Quellen widersprechen sich, und die Preise ändern sich. Schau beim Export auf das Pro-Zeichen und starte keine Testphase, wenn du kein Abo willst. Die Menünamen der App können je nach Version abweichen."),
             h3("Weitere Alternativen"),
-            ul(["<b>Gridplay (iPhone, Mac mit Apple-Chip):</b> Eine kleine kostenpflichtige App (laut App Store 1.99 Euro) für Raster-Musikvideos mit bis zu 16 Bildern. Pro Clip sind 15 Sekunden gratis möglich, 5 Minuten mit einem Zusatzkauf (0.99 Euro). Sie läuft auf dem Mac als iPhone-App, nur mit einem Chip der M-Reihe. Die App wurde zuletzt 2020 aktualisiert und hat nur wenige Bewertungen. Ich habe sie nicht getestet. Hier gibt es den App-Store-Eintrag: <a href=\"https://apps.apple.com/de/app/gridplay/id861216052\" target=\"_blank\" rel=\"noopener\">Gridplay</a>.",
+            ul(["<b>GridPlayer (Mac, Windows, Linux, gratis):</b> Ein Abspielprogramm, das mehrere Videos gleichzeitig nebeneinander im Raster zeigt. Es ist <b>kein</b> Aufnahme- und kein Schnittprogramm und exportiert nichts (laut Beschreibung des Projekts). Nützlich, um die einzelnen Stimmen beim Üben oder in der Besprechung nebeneinander anzuschauen. Für den Mac gibt es die Version nur für Apple-Chips (M-Reihe). Sie ist nicht signiert, macOS fragt deshalb nach einer Ausnahme. Lade es nur von der Seite des Projekts auf <a href=\"https://github.com/vzhd1701/gridplayer\" target=\"_blank\" rel=\"noopener\">GitHub</a>, nicht von Download-Portalen. Ich habe es nicht getestet.",
                 "<b>iMovie (iPhone, iPad, Mac, gratis):</b> Legt zwei Clips nebeneinander oder übereinander (Split Screen). Mehr als zwei Bilder gehen nicht. Details bei Apple: <a href=\"https://support.apple.com/guide/imovie-iphone/kna831efee4d/ios\" target=\"_blank\" rel=\"noopener\">iMovie Split Screen</a>.",
                 "<b>InShot:</b> Funktioniert ähnlich wie CapCut, mit Gratis-Einschränkungen (zum Beispiel Wasserzeichen).",
                 "<b>DaVinci Resolve:</b> Wenn du mehr Kontrolle über Ton und Schnitt willst, siehe die eigene Anleitung auf dieser Seite."]),
@@ -239,7 +239,7 @@ GUIDES.append(dict(
              ("Apple: Bildschirmaufnahme auf iPhone, iPad", "https://support.apple.com/en-us/102653"),
              ("Apple: iMovie auf dem iPhone, Split Screen", "https://support.apple.com/guide/imovie-iphone/kna831efee4d/ios"),
              ("CapCut: Two videos side by side (Desktop)", "https://www.capcut.com/resource/how-to-put-two-videos-side-by-side"),
-             ("Gridplay im App Store", "https://apps.apple.com/de/app/gridplay/id861216052")],
+             ("GridPlayer auf GitHub", "https://github.com/vzhd1701/gridplayer")],
 ))
 
 # ------------------------------------------------------------------ Moises
