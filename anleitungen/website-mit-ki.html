@@ -2,8 +2,8 @@
 <html lang="de">
 <head>
     <meta charset="utf-8">
-    <title>Website mit KI: erzeugen und lokal testen · digi.marcscheidegger.ch</title>
-    <meta name="description" content="Eine einfache Website von einer KI schreiben lassen, auf dem eigenen Computer öffnen und anpassen.">
+    <title>Website mit KI: analysieren, verbessern, in Jimdo umsetzen · digi.marcscheidegger.ch</title>
+    <meta name="description" content="Eine KI schaut sich eine bestehende Website an und schlägt Verbesserungen vor. Du setzt sie zuerst von Hand um und lässt danach die KI in Jimdo selber mitarbeiten.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="noindex, nofollow">
     <meta name="theme-color" content="#0b1220">
@@ -30,97 +30,130 @@
 
         <section class="hero">
             <p class="eyebrow">Hosten · Beispiel 2</p>
-            <h1>Website mit KI: erzeugen und lokal testen</h1>
-            <p class="lead">Eine einfache Website von einer KI schreiben lassen, auf dem eigenen Computer öffnen und anpassen.</p>
+            <h1>Website mit KI: analysieren, verbessern, in Jimdo umsetzen</h1>
+            <p class="lead">Eine KI schaut sich eine bestehende Website an und schlägt Verbesserungen vor. Du setzt sie zuerst von Hand um und lässt danach die KI in Jimdo selber mitarbeiten.</p>
             <ul class="facts">
-                <li><b>Zeit</b><span>ca. 60&ndash;90 Minuten</span></li>
+                <li><b>Zeit</b><span>ca. 90&ndash;120 Minuten</span></li>
                 <li><b>Schwierigkeit</b><span>mittel</span></li>
-                <li><b>Gerät</b><span>Computer mit Browser und einem Texteditor</span></li>
-                <li><b>Kosten</b><span>gratis (KI-Zugang vorausgesetzt)</span></li>
+                <li><b>Gerät</b><span>Computer mit Browser</span></li>
+                <li><b>Kosten</b><span>gratis (KI-Zugang und Jimdo-Konto vorausgesetzt)</span></li>
             </ul>
             <p><span class="badge">Entwurf</span> Noch nicht von Hand getestet. Falls ein Menü anders heisst, gilt, was du auf dem Bildschirm siehst. Sag es Marc, dann wird die Anleitung korrigiert.</p>
             <ul class="toc">
                 <li><a href="#basics">1 Basics</a></li>
-                <li><a href="#start">2 Plan und Prompt</a></li>
-                <li><a href="#erste">3 Erste Schritte zum Testen</a></li>
-                <li><a href="#umsetzung">4 Kleine Umsetzung</a></li>
+                <li><a href="#analyse">2 Analyse</a></li>
+                <li><a href="#manuell">3 Zuerst von Hand</a></li>
+                <li><a href="#jimdo">4 Jimdo</a></li>
                 <li><a href="#stolper">Stolpersteine</a></li>
             </ul>
         </section>
 
         <section class="step" id="basics">
             <header><span class="step-num">1</span><h2>Basics: Was ist das, was brauche ich?</h2><span class="time">10 Min.</span></header>
-            <p>Eine Website besteht aus Dateien: <b>HTML</b> (Inhalt), <b>CSS</b> (Aussehen) und manchmal <b>JavaScript</b> (Verhalten). Eine KI wie Claude kann sie nach deiner Beschreibung schreiben. Du speicherst sie auf dem Computer, öffnest sie im Browser und passt sie an. Erst danach überlegst du, wo sie gehostet wird.</p>
+            <p>Du musst nicht bei null anfangen. Meist gibt es schon eine Website, die besser werden soll. Eine KI kann sie lesen, auf typische Schwächen prüfen und eine <b>priorisierte Liste von Verbesserungen</b> schreiben. Du entscheidest, was du umsetzt. Zuerst machst du es von Hand, damit du verstehst, was sich ändert. Danach lässt du die KI in Jimdo mitarbeiten.</p>
             <h3>Das brauchst du</h3>
             <ul>
+                <li>Eine bestehende Website, die du ändern darfst (am besten deine eigene, zum Beispiel bei Jimdo)</li>
                 <li>Einen Zugang zu einer KI (zum Beispiel Claude)</li>
-                <li>Einen Texteditor (Mac: «TextEdit» im Nur-Text-Modus, Windows: Editor, besser ein Code-Editor)</li>
-                <li>Einen Browser</li>
-                <li>Einen kurzen Plan: Wofür ist die Seite, und für wen?</li>
+                <li>Ein Jimdo-Konto für den Teil 4 (ein Gratis-Konto reicht zum Testen)</li>
+                <li>Ein Ziel: Was soll die Seite erreichen, und für wen?</li>
             </ul>
-            <div class="note"><b>Muss es sofort Git und Server sein?</b>Nein. Fang lokal an: Datei speichern, im Browser öffnen, anpassen. Hosting kommt später. Alternative ohne Code: eine Jimdo-Seite, die eine KI nach deiner Vorlage erstellen lässt.</div>
+            <div class="note"><b>Der nächste Schritt danach</b>Wenn du eine Seite selber aus Dateien baust und mit Git und GitHub veröffentlichen willst, gibt es dazu eine eigene Anleitung: <a href="website-git.html">Website veröffentlichen mit Git, GitHub und Hosting</a>.</div>
         </section>
 
-        <section class="step" id="start">
-            <header><span class="step-num">2</span><h2>Plan und Prompt</h2><span class="time">20 Min.</span></header>
-            <ol>
-                <li>Schreibe in fünf Sätzen auf: Wer bist du, was bietest du an, für wen, und was sollen Besuchende tun (zum Beispiel anrufen, schreiben, anmelden)?</li>
-                <li>Sammle, was auf die Seite soll: Name, Foto, Kurztext, drei Angebote, Kontakt.</li>
-                <li>Gib diese Angaben der KI mit einem klaren Auftrag, zum Beispiel: «Schreibe mir eine einfache Website mit einer Seite, Abschnitte Über mich, Angebote und Kontakt, schlicht, gut lesbar auf dem Handy. Liefere eine einzige Datei index.html mit eingebautem CSS.»</li>
-            </ol>
-            <div class="warn"><b>Datenschutz</b>Gib der KI keine privaten Angaben anderer Personen (Namen, Adressen, Fotos), die nicht öffentlich werden sollen.</div>
-        </section>
+        <section class="step" id="analyse">
+            <header><span class="step-num">2</span><h2>Analyse: die KI prüft deine Seite</h2><span class="time">20 Min.</span></header>
+            <p>Gib der KI die Adresse deiner Seite oder, falls sie diese nicht öffnen kann, den Text der Seite und einen Screenshot. Verwende diesen Auftrag und fülle die eckigen Klammern aus:</p>
+            <div class="code">
+                <button type="button" class="copy">Kopieren</button>
+                <pre><code>Analysiere diese Website: [Adresse einfügen] (falls du sie nicht öffnen kannst, sag es mir, dann füge ich den Text und einen Screenshot ein).
+Ziel der Seite: [zum Beispiel: Anfragen für Gesangsunterricht]
+Zielgruppe: [zum Beispiel: Erwachsene Anfängerinnen und Anfänger]
 
-        <section class="step" id="erste">
-            <header><span class="step-num">3</span><h2>Erste Schritte zum Testen</h2><span class="time">20 Min.</span></header>
-            <div class="tutorial">
-                <span class="badge badge--soft">Tutorial</span>
-                <p><a href="https://www.youtube.com/results?search_query=HTML+Website+lokal+%C3%B6ffnen+index.html+Anf%C3%A4nger" target="_blank" rel="noopener">YouTube-Suche: «HTML Website lokal öffnen index.html Anfänger»</a><br>
-                <small>Falls du das Speichern und Öffnen noch nie gemacht hast.</small></p>
+Gib mir:
+1. Was gut funktioniert (drei Punkte).
+2. Verbesserungsvorschläge als Tabelle mit den Spalten: Vorschlag, Warum, Aufwand (klein, mittel, gross), Wirkung (klein, mittel, gross).
+3. Die drei Vorschläge mit dem besten Verhältnis von Wirkung zu Aufwand, so beschrieben, dass ich sie ohne Code von Hand umsetzen kann.
+
+Prüfe: Verständlichkeit des Einstiegs, Aufbau und Navigation, Aufforderung zum Handeln (Anruf, Mail, Anmeldung), Lesbarkeit und Handyansicht, Bilder und Alt-Texte, Ladezeit, Barrierefreiheit, Impressum und Datenschutz.
+Erfinde nichts. Wenn du etwas nicht sehen kannst, schreibe das dazu.</code></pre>
             </div>
-            <ol>
-                <li>Kopiere den Code der KI in deinen Texteditor und speichere ihn als <code>index.html</code> in einem neuen Ordner.</li>
-                <li>Doppelklicke auf die Datei. Sie öffnet sich im Browser.</li>
-                <li>Lies die Seite durch und notiere drei Dinge, die du ändern möchtest.</li>
-            </ol>
+            <div class="warn"><b>Der KI nicht blind glauben</b>Eine KI kann Seiten falsch lesen oder Dinge behaupten, die nicht stimmen (zum Beispiel «die Seite lädt langsam»). Prüfe jeden Vorschlag selbst am Bildschirm, bevor du etwas änderst.</div>
+            <div class="warn"><b>Datenschutz</b>Gib der KI nur öffentliche Inhalte. Keine Zugangsdaten, keine privaten Angaben von anderen Personen.</div>
         </section>
 
-        <section class="step" id="umsetzung">
-            <header><span class="step-num">4</span><h2>Kleine Umsetzung: deine Seite verbessern</h2><span class="time">30&ndash;45 Min.</span></header>
-            <p><b>Auftrag:</b> Verbessere deine Seite in drei Runden und prüfe sie auf dem Handy.</p>
+        <section class="step" id="manuell">
+            <header><span class="step-num">3</span><h2>Zuerst von Hand: drei Vorschläge umsetzen</h2><span class="time">30&ndash;40 Min.</span></header>
+            <p><b>Auftrag:</b> Wähle drei Vorschläge aus der Liste und setze sie selbst um, im Editor deiner Seite (zum Beispiel Jimdo). So lernst du, was jede Änderung bewirkt.</p>
             <ol>
-                <li>Sag der KI, was du ändern möchtest, in kurzen Sätzen («Farbe ruhiger», «Kontaktblock mit E-Mail»). Ersetze den Code in deiner Datei.</li>
-                <li>Lade die Seite im Browser neu (<kbd>Cmd+R</kbd> oder <kbd>F5</kbd>).</li>
-                <li>Öffne die Datei auf dem Handy (zum Beispiel per AirDrop oder Mail) oder verkleinere das Browserfenster, um die schmale Ansicht zu testen.</li>
+                <li>Notiere, wie die Seite <b>vorher</b> aussieht (Screenshot der Startseite am Computer und auf dem Handy).</li>
+                <li>Wähle drei Vorschläge mit kleinem Aufwand, zum Beispiel einen klareren Einstiegssatz, einen sichtbaren Kontakt-Knopf und kürzere Absätze.</li>
+                <li>Setze einen Vorschlag um und schaue dir die Vorschau an, bevor du veröffentlichst.</li>
+                <li>Mache das gleiche mit den anderen beiden.</li>
+                <li>Mache einen <b>Nachher</b>-Screenshot und vergleiche.</li>
             </ol>
             <h3>Fertig, wenn&hellip;</h3>
             <ul class="check">
-                <li><label><input type="checkbox" data-k="ws1"> deine Seite öffnet sich lokal im Browser,</label></li>
-                <li><label><input type="checkbox" data-k="ws2"> du hast sie dreimal mit der KI verbessert,</label></li>
-                <li><label><input type="checkbox" data-k="ws3"> sie sieht auch in der schmalen Ansicht gut aus.</label></li>
+                <li><label><input type="checkbox" data-k="wk1"> du hast die Seite von der KI analysieren lassen,</label></li>
+                <li><label><input type="checkbox" data-k="wk2"> du hast drei Vorschläge von Hand umgesetzt,</label></li>
+                <li><label><input type="checkbox" data-k="wk3"> du hast Vorher und Nachher verglichen und auf dem Handy geprüft.</label></li>
             </ul>
-            <h3>Wenn du weitermachen willst</h3>
+        </section>
+
+        <section class="step" id="jimdo">
+            <header><span class="step-num">4</span><h2>Jimdo: die KI selber mitarbeiten lassen</h2><span class="time">30&ndash;40 Min.</span></header>
+            <p>Es gibt zwei Wege, eine KI in Jimdo arbeiten zu lassen. Der erste nutzt die KI, die Jimdo mitbringt. Der zweite nutzt eine allgemeine KI, die deine Jimdo-Seite im Browser bedient, so wie du es selbst tust.</p>
+            <h3>Weg A: die KI von Jimdo</h3>
             <ul>
-                <li><b>Jimdo:</b> Lass die KI eine Jimdo-Seite nach deiner Vorlage erstellen. Das geht ohne Code, du brauchst nur ein Konto.</li>
-                <li><b>Hosten:</b> Lade die Datei bei deinem Hosting hoch oder lege sie im Moodle-Kurs ab (Anleitung zum Moodle-Kurs).</li>
+                <li><b>Jimdo Dolphin:</b> Der KI-Editor von Jimdo. Du beantwortest ein paar Fragen zu deinem Angebot, und Jimdo erstellt dir eine Website mit Texten und Bildern. Geeignet für den Start, nicht für das Verbessern einer bestehenden Seite.</li>
+                <li><b>Jimdo Companion:</b> Ein KI-Berater, der dir Empfehlungen und nächste Schritte vorschlägt. Laut einer Quelle ist er nicht in allen Tarifen enthalten.</li>
+                <li><b>Jimdo in ChatGPT:</b> Seit 2026 gibt es eine Jimdo-App in ChatGPT, mit der du eine Seite im Gespräch beschreiben kannst.</li>
+            </ul>
+            <div class="note"><b>Hinweis</b>Was die KI-Funktionen von Jimdo genau können und was sie kosten, ändert sich laufend. Schau in deinem Jimdo-Konto und auf der Jimdo-Hilfe nach, was dein Tarif enthält.</div>
+            <h3>Weg B: eine KI bedient deinen Jimdo-Editor</h3>
+            <p>Eine KI mit Browser-Zugriff (zum Beispiel Claude im Browser) kann im Jimdo-Editor Texte ändern und Elemente verschieben, während du zuschaust. So gibst du die gleichen drei Vorschläge aus Teil 3 in Auftrag:</p>
+            <ol>
+                <li>Melde dich <b>selbst</b> in Jimdo an. Gib der KI nie dein Passwort.</li>
+                <li>Öffne die Seite im Editor und starte die KI im gleichen Browserfenster.</li>
+                <li>Gib einen kleinen Auftrag, zum Beispiel diesen:</li>
+            </ol>
+            <div class="code">
+                <button type="button" class="copy">Kopieren</button>
+                <pre><code>Du arbeitest in meinem Jimdo-Editor (ich bin schon angemeldet). Setze nur diese eine Änderung um: [zum Beispiel: Ersetze den ersten Satz auf der Startseite durch «...»].
+Ändere sonst nichts. Veröffentliche nichts. Sag mir, wenn du fertig bist, ich prüfe zuerst die Vorschau.</code></pre>
+            </div>
+            <ol>
+                <li>Schau zu, während die KI arbeitet, und prüfe die <b>Vorschau</b>.</li>
+                <li>Veröffentliche erst, wenn du zufrieden bist. Das Veröffentlichen machst du selbst.</li>
+                <li>Mache die nächste Änderung als neuen Auftrag.</li>
+            </ol>
+            <div class="warn"><b>Regeln für Weg B</b>Gib immer nur eine kleine, genau beschriebene Änderung in Auftrag. Lass die KI nie ohne deine Zustimmung veröffentlichen, bezahlen, Einstellungen oder Domain ändern oder etwas löschen. Mache vor grossen Änderungen eine Kopie der Texte (zum Beispiel in einem Dokument).</div>
+            <h3>Fertig, wenn&hellip;</h3>
+            <ul class="check">
+                <li><label><input type="checkbox" data-k="jm1"> du kennst die KI-Funktionen von Jimdo,</label></li>
+                <li><label><input type="checkbox" data-k="jm2"> eine KI hat mindestens eine Änderung in deinem Editor gemacht,</label></li>
+                <li><label><input type="checkbox" data-k="jm3"> du hast die Vorschau geprüft, bevor etwas veröffentlicht wurde.</label></li>
             </ul>
         </section>
 
         <section class="step" id="stolper">
             <header><span class="step-num">!</span><h2>Stolpersteine</h2></header>
             <ul>
-                <li><b>Eine Datei:</b> Wenn die KI mehrere Dateien liefert, speichere sie im gleichen Ordner und halte die Namen genau ein.</li>
-                <li><b>Bilder:</b> Verwende nur Bilder, die du verwenden darfst, und halte sie klein.</li>
+                <li><b>Vorschläge blind übernehmen:</b> Eine KI schlägt gern viel vor. Setze wenig um und prüfe jede Änderung.</li>
+                <li><b>Zugangsdaten:</b> Gib der KI nie dein Passwort, auch nicht «nur kurz».</li>
+                <li><b>Gratis-Konto:</b> Nicht jede KI-Funktion von Jimdo ist im Gratis-Tarif enthalten. Prüfe es im Konto.</li>
                 <li><b>Impressum und Datenschutz:</b> Eine öffentliche Seite braucht beides. Eine KI schreibt dir eine Vorlage, prüfe sie aber selbst.</li>
-                <li><b>Alte Fassung sichern:</b> Speichere vor grossen Änderungen eine Kopie der Datei.</li>
+                <li><b>Bilder:</b> Verwende nur Bilder, die du verwenden darfst.</li>
+                <li><b>Die Seite ist öffentlich:</b> Was du veröffentlichst, sehen alle. Kontrolliere die Vorschau.</li>
             </ul>
         </section>
 
         <section class="sources">
             <h3>Quellen</h3>
             <ul>
-                <li><a href="https://developer.mozilla.org/de/docs/Learn/Getting_started_with_the_web" target="_blank" rel="noopener">MDN: Erste Schritte mit HTML (Deutsch)</a></li>
                 <li><a href="https://www.jimdo.com/" target="_blank" rel="noopener">Jimdo</a></li>
+                <li><a href="https://help.jimdo.com/" target="_blank" rel="noopener">Jimdo Hilfe</a></li>
+                <li><a href="https://developer.mozilla.org/de/docs/Learn/Getting_started_with_the_web" target="_blank" rel="noopener">MDN: Erste Schritte mit dem Web (Deutsch)</a></li>
             </ul>
             <p>Stand: November 2026. Noch nicht von Hand getestet.</p>
         </section>

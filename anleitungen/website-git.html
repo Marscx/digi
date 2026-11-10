@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <title>Website veröffentlichen: Git, GitHub und Hosting · digi.marcscheidegger.ch</title>
+    <meta name="description" content="Eine Website aus Dateien bauen, mit Git versionieren, auf GitHub speichern und bei jedem Push automatisch auf einem Hosting veröffentlichen.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="theme-color" content="#0b1220">
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../marke.css?v=1">
+    <link rel="stylesheet" href="../anleitungen.css?v=4">
+</head>
+<body>
+    <header class="ms-bar">
+        <div class="ms-bar-inner">
+            <a class="ms-brand" href="https://neu.marcscheidegger.ch/">Marc <span>Scheidegger</span></a>
+            <nav aria-label="Hauptnavigation">
+                <ul class="ms-nav">
+                    <li><a href="../index.html">Start</a></li>
+                    <li><a href="../index.html#anleitungen" aria-current="page">Anleitungen</a></li>
+                    <li><a href="../index.html#praesentationen">Präsentationen</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="wrap">
+        <p class="crumbs"><a href="../index.html#anleitungen">&larr; Alle Anleitungen</a></p>
+
+        <section class="hero">
+            <p class="eyebrow">Hosten · Beispiel 2</p>
+            <h1>Website veröffentlichen: Git, GitHub und Hosting</h1>
+            <p class="lead">Eine Website aus Dateien bauen, mit Git versionieren, auf GitHub speichern und bei jedem Push automatisch auf einem Hosting veröffentlichen.</p>
+            <ul class="facts">
+                <li><b>Zeit</b><span>ca. 90&ndash;120 Minuten</span></li>
+                <li><b>Schwierigkeit</b><span>mittel bis schwierig</span></li>
+                <li><b>Gerät</b><span>Computer (Mac oder Windows)</span></li>
+                <li><b>Kosten</b><span>Git und GitHub gratis, Hosting je nach Anbieter (GitHub Pages gratis)</span></li>
+            </ul>
+            <p><span class="badge">Entwurf</span> Noch nicht von Hand getestet. Falls ein Menü anders heisst, gilt, was du auf dem Bildschirm siehst. Sag es Marc, dann wird die Anleitung korrigiert.</p>
+            <ul class="toc">
+                <li><a href="#basics">1 Basics</a></li>
+                <li><a href="#lokal">2 Die Website lokal bauen</a></li>
+                <li><a href="#git">3 Git installieren und den ersten Commit machen</a></li>
+                <li><a href="#github">4 GitHub</a></li>
+                <li><a href="#hosting">5 Veröffentlichen</a></li>
+                <li><a href="#umsetzung">6 Kleine Umsetzung</a></li>
+                <li><a href="#stolper">Stolpersteine</a></li>
+            </ul>
+        </section>
+
+        <section class="step" id="basics">
+            <header><span class="step-num">1</span><h2>Basics: Was ist das, was brauche ich?</h2><span class="time">10 Min.</span></header>
+            <p>Eine Website aus Dateien (HTML, CSS) kannst du von einer KI schreiben lassen. Damit nichts verloren geht und du jederzeit zurück kannst, verwaltest du die Dateien mit <b>Git</b> (Versionsverwaltung). <b>GitHub</b> ist der Ort im Internet, an dem deine Git-Ablage (das <b>Repository</b>) liegt. Ein <b>Hosting</b> ist der Server, der die Seite für Besuchende ausliefert.</p>
+            <p>Der Weg: <b>Dateien auf dem Computer &rarr; Git (Commit) &rarr; GitHub (Push) &rarr; Hosting holt sich die neue Fassung automatisch.</b> So ist auch diese Seite hier veröffentlicht.</p>
+            <h3>Das brauchst du</h3>
+            <ul>
+                <li>Computer mit Mac oder Windows und einem Browser</li>
+                <li>Einen Texteditor (besser ein Code-Editor wie Visual Studio Code)</li>
+                <li>Ein kostenloses Konto bei <a href="https://github.com/" target="_blank" rel="noopener">github.com</a></li>
+                <li>Für Teil 5: ein Hosting mit Git-Funktion (zum Beispiel Plesk) oder GitHub Pages (gratis)</li>
+                <li>Einen Zugang zu einer KI</li>
+            </ul>
+            <div class="warn"><b>Öffentlich oder privat</b>Ein öffentliches Repository kann jede Person lesen. Lege nie Passwörter, Schlüssel oder private Daten hinein. Für Websites, die sowieso öffentlich sind, ist das kein Problem.</div>
+        </section>
+
+        <section class="step" id="lokal">
+            <header><span class="step-num">2</span><h2>Die Website lokal bauen</h2><span class="time">25 Min.</span></header>
+            <ol>
+                <li>Schreibe in fünf Sätzen auf: Wer bist du, was bietest du an, für wen, und was sollen Besuchende tun?</li>
+                <li>Gib der KI diese Angaben mit einem klaren Auftrag (siehe unten).</li>
+                <li>Lege einen neuen Ordner an, zum Beispiel <code>meine-website</code>. Speichere den Code der KI darin als <code>index.html</code>.</li>
+                <li>Doppelklicke auf die Datei. Sie öffnet sich im Browser. Prüfe auch die schmale Handyansicht, indem du das Fenster verkleinerst.</li>
+                <li>Verbessere die Seite in drei Runden: Sag der KI kurz, was du ändern willst, ersetze den Code, lade die Seite neu.</li>
+            </ol>
+            <div class="code">
+                <button type="button" class="copy">Kopieren</button>
+                <pre><code>Schreibe mir eine einfache Website mit einer Seite: Abschnitte Über mich, Angebote und Kontakt. Schlicht, gut lesbar auf dem Handy, ohne externe Schriften oder Skripte. Liefere eine einzige Datei index.html mit eingebautem CSS.
+Über mich: [fünf Sätze]
+Angebote: [drei Stichpunkte]
+Kontakt: [E-Mail]</code></pre>
+            </div>
+            <div class="warn"><b>Datenschutz</b>Gib der KI keine privaten Angaben anderer Personen, die nicht öffentlich werden sollen.</div>
+        </section>
+
+        <section class="step" id="git">
+            <header><span class="step-num">3</span><h2>Git installieren und den ersten Commit machen</h2><span class="time">25 Min.</span></header>
+            <ol>
+                <li>Installiere Git von <a href="https://git-scm.com/downloads" target="_blank" rel="noopener">git-scm.com/downloads</a>. Auf dem Mac geht auch: Terminal öffnen und <code>git --version</code> eingeben, macOS bietet die Installation dann selbst an.</li>
+                <li>Öffne das Terminal (Mac) oder die Eingabeaufforderung bzw. «Git Bash» (Windows) und wechsle in deinen Ordner, zum Beispiel mit <code>cd meine-website</code>.</li>
+                <li>Stelle dich einmalig vor, damit Git deine Änderungen beschriften kann. Verwende die Adresse, die du auch bei GitHub angibst (oder die «noreply»-Adresse von GitHub, wenn du deine nicht zeigen willst).</li>
+            </ol>
+            <div class="code">
+                <button type="button" class="copy">Kopieren</button>
+                <pre><code>git config --global user.name &quot;Dein Name&quot;
+git config --global user.email &quot;du@beispiel.ch&quot;</code></pre>
+            </div>
+            <ol>
+                <li>Lege das Repository an, nimm alle Dateien auf und speichere die erste Fassung:</li>
+            </ol>
+            <div class="code">
+                <button type="button" class="copy">Kopieren</button>
+                <pre><code>git init -b main
+git add .
+git commit -m &quot;Erste Fassung der Website&quot;</code></pre>
+            </div>
+            <div class="note"><b>Ohne Terminal</b>Wenn dir das Terminal zu technisch ist, gibt es <a href="https://desktop.github.com/" target="_blank" rel="noopener">GitHub Desktop</a>. Es macht dieselben Schritte mit Knöpfen. Du kannst die KI auch bitten, dir jeden Befehl zu erklären, bevor du ihn eingibst.</div>
+            <p><b>Commit</b> heisst: eine Fassung des Ordners mit einer kurzen Beschreibung speichern. Du kannst später jede alte Fassung ansehen und zurückholen.</p>
+        </section>
+
+        <section class="step" id="github">
+            <header><span class="step-num">4</span><h2>GitHub: Repository anlegen und hochladen</h2><span class="time">20 Min.</span></header>
+            <ol>
+                <li>Melde dich bei <a href="https://github.com/" target="_blank" rel="noopener">github.com</a> an und klicke auf <b>New repository</b>.</li>
+                <li>Gib einen Namen ein (zum Beispiel <code>meine-website</code>), wähle <b>Public</b> und lege <b>keine</b> README-Datei an (dein Ordner hat schon Inhalt). Klicke auf <b>Create repository</b>.</li>
+                <li>GitHub zeigt dir die Adresse deines Repositorys. Verbinde deinen Ordner damit und lade ihn hoch. Ersetze <code>DEIN-NAME</code> und <code>meine-website</code>:</li>
+            </ol>
+            <div class="code">
+                <button type="button" class="copy">Kopieren</button>
+                <pre><code>git remote add origin https://github.com/DEIN-NAME/meine-website.git
+git push -u origin main</code></pre>
+            </div>
+            <ol>
+                <li>Beim ersten Push fragt Git nach deiner Anmeldung. Folge den Hinweisen im Fenster oder in GitHub Desktop. Gib dein GitHub-Passwort nie in einen Chat mit der KI ein.</li>
+                <li>Lade die Seite deines Repositorys neu. Du siehst jetzt deine Dateien.</li>
+            </ol>
+            <div class="warn"><b>Anmeldung bei GitHub</b>GitHub akzeptiert beim Push kein normales Passwort mehr. Die Anmeldung läuft über den Browser, GitHub Desktop oder ein «Personal Access Token». Der Hinweis im Terminal sagt dir, was zu tun ist.</div>
+        </section>
+
+        <section class="step" id="hosting">
+            <header><span class="step-num">5</span><h2>Veröffentlichen: Weg A mit GitHub Pages, Weg B mit eigenem Hosting</h2><span class="time">30 Min.</span></header>
+            <h3>Weg A: GitHub Pages (gratis, am einfachsten)</h3>
+            <ol>
+                <li>Öffne dein Repository auf GitHub und gehe zu <b>Settings &rarr; Pages</b>.</li>
+                <li>Wähle bei <b>Source</b> «Deploy from a branch», Branch <code>main</code> und Ordner <code>/ (root)</code>. Speichere.</li>
+                <li>Nach etwa ein bis zwei Minuten zeigt GitHub oben die Adresse deiner Seite (in der Form <code>DEIN-NAME.github.io/meine-website</code>).</li>
+            </ol>
+            <h3>Weg B: eigenes Hosting mit Plesk (so ist diese Seite veröffentlicht)</h3>
+            <p>Viele Hoster (zum Beispiel Metanet) bieten die Verwaltung <b>Plesk</b> mit einer Git-Funktion. Die Menüs heissen je nach Hoster etwas anders. Die Schritte sind im Kern:</p>
+            <ol>
+                <li>Lege bei deinem Hoster die Domain oder Subdomain an, auf der die Seite laufen soll.</li>
+                <li>Öffne in Plesk die Domain und wähle <b>Git</b>. Wähle <b>Repository hinzufügen</b> (Add Repository) und gib die Adresse deines GitHub-Repositorys an (<code>https://github.com/DEIN-NAME/meine-website.git</code>).</li>
+                <li>Wähle den Branch <code>main</code> und den Modus <b>Automatisches Deployment</b> (bei Plesk: «Automatic»). Bei einem öffentlichen Repository brauchst du keinen Schlüssel.</li>
+                <li>Plesk zeigt dir eine <b>Webhook-URL</b>. Kopiere sie.</li>
+                <li>Gehe in GitHub zu deinem Repository: <b>Settings &rarr; Webhooks &rarr; Add webhook</b>. Füge die URL bei <b>Payload URL</b> ein, wähle als Content type <code>application/json</code> und als Ereignis nur <b>Push</b>. Speichere.</li>
+                <li>Klicke in Plesk einmal auf <b>Pull Updates</b> (Deploy), damit die erste Fassung auf dem Server liegt.</li>
+            </ol>
+            <div class="note"><b>Test</b>Gehe in GitHub zum neuen Webhook und öffne «Recent Deliveries». Ein grüner Haken heisst: Plesk hat die Nachricht erhalten.</div>
+        </section>
+
+        <section class="step" id="umsetzung">
+            <header><span class="step-num">6</span><h2>Kleine Umsetzung: eine Änderung veröffentlichen</h2><span class="time">15&ndash;20 Min.</span></header>
+            <p><b>Auftrag:</b> Ändere einen Satz auf deiner Seite und bringe die Änderung bis ins Internet.</p>
+            <ol>
+                <li>Ändere in <code>index.html</code> einen Satz und speichere die Datei.</li>
+                <li>Prüfe die Änderung lokal im Browser.</li>
+                <li>Speichere eine neue Fassung und lade sie hoch:</li>
+            </ol>
+            <div class="code">
+                <button type="button" class="copy">Kopieren</button>
+                <pre><code>git add .
+git commit -m &quot;Einstiegssatz geändert&quot;
+git push</code></pre>
+            </div>
+            <ol>
+                <li>Warte etwa eine Minute und lade die öffentliche Adresse deiner Seite neu (<kbd>Cmd+Shift+R</kbd> oder <kbd>Strg+F5</kbd>).</li>
+            </ol>
+            <h3>Fertig, wenn&hellip;</h3>
+            <ul class="check">
+                <li><label><input type="checkbox" data-k="gt1"> deine Seite läuft lokal im Browser,</label></li>
+                <li><label><input type="checkbox" data-k="gt2"> dein Repository auf GitHub enthält die Dateien,</label></li>
+                <li><label><input type="checkbox" data-k="gt3"> deine Seite ist über eine Adresse im Internet erreichbar,</label></li>
+                <li><label><input type="checkbox" data-k="gt4"> eine Änderung ist nach einem Push von selbst auf der Seite erschienen.</label></li>
+            </ul>
+            <h3>Wenn du weitermachen willst</h3>
+            <ul>
+                <li><b>Zurück zu einer alten Fassung:</b> <code>git log --oneline</code> zeigt alle Fassungen. Frag die KI, wie du eine davon wiederherstellst.</li>
+                <li><b>Mit der KI im Editor arbeiten:</b> Programme wie Claude Code können Dateien direkt ändern und Commits vorbereiten. Die Prüfung und den Push machst du.</li>
+                <li><b>Eigene Domain:</b> Bei Weg B richtest du die Domain bei deinem Hoster ein. Bei GitHub Pages gibt es dafür eine Einstellung unter «Custom domain».</li>
+            </ul>
+        </section>
+
+        <section class="step" id="stolper">
+            <header><span class="step-num">!</span><h2>Stolpersteine</h2></header>
+            <ul>
+                <li><b>Nichts Geheimes ins Repository:</b> Bei einem öffentlichen Repository sind alle Dateien und alle alten Fassungen für alle sichtbar. Ein einmal hochgeladenes Passwort gilt als verloren.</li>
+                <li><b>Webhook zeigt rot:</b> Meist stimmt die URL nicht oder Plesk ist nicht auf den richtigen Branch eingestellt. Prüfe «Recent Deliveries» in GitHub.</li>
+                <li><b>Seite zeigt noch die alte Fassung:</b> Lade neu ohne Zwischenspeicher (<kbd>Cmd+Shift+R</kbd> oder <kbd>Strg+F5</kbd>) und warte eine Minute.</li>
+                <li><b>Push abgelehnt:</b> Meist fehlt die Anmeldung bei GitHub oder der Branch heisst anders. Kopiere die Fehlermeldung zur KI und lass sie dir erklären.</li>
+                <li><b>Suchmaschinen:</b> Eine neue Seite ist öffentlich. Möchtest du sie noch verstecken, ist ein privates Hosting oder eine Sperre nötig. Frag deinen Hoster.</li>
+                <li><b>Impressum und Datenschutz:</b> Eine öffentliche Seite braucht beides.</li>
+            </ul>
+        </section>
+
+        <section class="sources">
+            <h3>Quellen</h3>
+            <ul>
+                <li><a href="https://git-scm.com/downloads" target="_blank" rel="noopener">Git: Download</a></li>
+                <li><a href="https://desktop.github.com/" target="_blank" rel="noopener">GitHub Desktop</a></li>
+                <li><a href="https://docs.github.com/de/pages" target="_blank" rel="noopener">GitHub Docs: GitHub Pages</a></li>
+                <li><a href="https://www.plesk.com/blog/various/using-remote-git-hosting-with-plesk/" target="_blank" rel="noopener">Plesk: Using Remote Git Hosting</a></li>
+            </ul>
+            <p>Stand: November 2026. Noch nicht von Hand getestet.</p>
+        </section>
+    </main>
+
+    <footer class="ms-foot">
+        <p>Von <a href="https://neu.marcscheidegger.ch/" target="_blank" rel="noopener">Marc Scheidegger</a>, entwickelt mit Claude (Anthropic) ·
+        <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.de" target="_blank" rel="noopener license">CC BY-NC-SA 4.0</a></p>
+        <ul>
+            <li><a href="https://neu.marcscheidegger.ch/impressum.html">Impressum</a></li>
+            <li><a href="https://neu.marcscheidegger.ch/datenschutz.html">Datenschutz</a></li>
+        </ul>
+    </footer>
+
+
+    <script>
+        // Häkchen der Checkliste im Browser merken (nur auf diesem Gerät)
+        document.querySelectorAll('input[data-k]').forEach(function (c) {
+            try { c.checked = localStorage.getItem('digi-' + c.dataset.k) === '1'; } catch (e) {}
+            c.addEventListener('change', function () {
+                try { localStorage.setItem('digi-' + c.dataset.k, c.checked ? '1' : '0'); } catch (e) {}
+            });
+        });
+
+        // Kopieren-Knopf der Codefenster
+        document.querySelectorAll('.code .copy').forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                var text = btn.parentNode.querySelector('code').textContent;
+                function ok() { btn.textContent = 'Kopiert'; btn.classList.add('done'); setTimeout(function () { btn.textContent = 'Kopieren'; btn.classList.remove('done'); }, 2000); }
+                function fallback() {
+                    var ta = document.createElement('textarea'); ta.value = text; ta.style.position = 'fixed'; ta.style.opacity = '0';
+                    document.body.appendChild(ta); ta.select();
+                    try { document.execCommand('copy'); ok(); } catch (e) { btn.textContent = 'Markieren und Cmd/Strg+C'; }
+                    document.body.removeChild(ta);
+                }
+                if (navigator.clipboard && window.isSecureContext) { navigator.clipboard.writeText(text).then(ok, fallback); } else { fallback(); }
+            });
+        });
+    </script>
+
+</body>
+</html>
