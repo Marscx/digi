@@ -103,7 +103,7 @@ GUIDES.append(dict(
 
 # ------------------------------------------------------------------ MuseScore
 GUIDES.append(dict(
-    slug="musescore", title="MuseScore", title_long="MuseScore: Noten schreiben, finden und tauschen",
+    slug="musescore", final=True, title="MuseScore", title_long="MuseScore: Noten schreiben, finden und tauschen",
     eyebrow="Notation · Beispiel 3, 4, 5, 6, 7",
     lead="Das kostenlose Notenprogramm installieren, eine Melodie schreiben und als PDF, MP3 und MusicXML weitergeben.",
     card="Plattform, Software und Import/Export.", diff_kurz="mittel", bsp=["B3", "B4", "B5", "B6", "B7"],
