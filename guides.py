@@ -122,7 +122,8 @@ GUIDES.append(dict(
             warn("Kein Passwort weitergeben", "Gib dein Passwort nie in einen Chat oder ins E-Book. Moises braucht keine Zahlungsdaten fürs Gratis-Konto."),
         ])),
         ("erste", "Erste Schritte zum Testen", "15 Min.", "\n".join([
-            yt("Moises Tutorial Stems trennen deutsch", "Es gibt kein offizielles deutsches Video, das ich gefunden habe. Englische Videos gehen auch."),
+            tut("https://www.youtube.com/watch?v=ylBV5q5X4VY", "«How to Use Stem Separation to Practice Smarter» (Moises Essentials, Video, Englisch)",
+                "Vom offiziellen Moises-Kanal auf YouTube. Zeigt, wie man ein Stück in Stems trennt und damit übt. Es gibt kein deutsches Video von Moises. Nutze bei Bedarf die automatischen Untertitel mit Übersetzung."),
             ol(["Wähle <b>Hochladen</b> (Upload) und lade deine Audiodatei hoch. Je nach Version geht auch ein Link oder eine Datei aus der Cloud.",
                 "Wähle, welche Spuren du trennen willst, zum Beispiel Gesang und Begleitung, und starte die Trennung.",
                 "Warte, bis die Verarbeitung fertig ist. Bei einem normalen Lied dauert das meist nur kurz.",
