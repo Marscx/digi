@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <title>Website veröffentlichen: Git, GitHub und Hosting · digi.marcscheidegger.ch</title>
-    <meta name="description" content="Eine Website aus Dateien bauen, mit Git versionieren, auf GitHub speichern und bei jedem Push automatisch auf einem Hosting veröffentlichen.">
+    <meta name="description" content="Eine Website aus Dateien bauen, lokal testen, mit Git versionieren, auf GitHub speichern und bei jedem Push automatisch auf einem Hosting veröffentlichen.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="noindex, nofollow">
     <meta name="theme-color" content="#0b1220">
@@ -31,7 +31,7 @@
         <section class="hero">
             <p class="eyebrow">Hosten · Beispiel 2</p>
             <h1>Website veröffentlichen: Git, GitHub und Hosting</h1>
-            <p class="lead">Eine Website aus Dateien bauen, mit Git versionieren, auf GitHub speichern und bei jedem Push automatisch auf einem Hosting veröffentlichen.</p>
+            <p class="lead">Eine Website aus Dateien bauen, lokal testen, mit Git versionieren, auf GitHub speichern und bei jedem Push automatisch auf einem Hosting veröffentlichen.</p>
             <ul class="facts">
                 <li><b>Zeit</b><span>ca. 90&ndash;120 Minuten</span></li>
                 <li><b>Schwierigkeit</b><span>mittel bis schwierig</span></li>
@@ -42,10 +42,11 @@
             <ul class="toc">
                 <li><a href="#basics">1 Basics</a></li>
                 <li><a href="#lokal">2 Die Website lokal bauen</a></li>
-                <li><a href="#git">3 Git installieren und den ersten Commit machen</a></li>
-                <li><a href="#github">4 GitHub</a></li>
-                <li><a href="#hosting">5 Veröffentlichen</a></li>
-                <li><a href="#umsetzung">6 Kleine Umsetzung</a></li>
+                <li><a href="#testserver">3 Lokal testen</a></li>
+                <li><a href="#git">4 Git installieren und den ersten Commit machen</a></li>
+                <li><a href="#github">5 GitHub</a></li>
+                <li><a href="#hosting">6 Veröffentlichen</a></li>
+                <li><a href="#umsetzung">7 Kleine Umsetzung</a></li>
                 <li><a href="#stolper">Stolpersteine</a></li>
             </ul>
         </section>
@@ -59,7 +60,7 @@
                 <li>Computer mit Mac oder Windows und einem Browser</li>
                 <li>Einen Texteditor (besser ein Code-Editor wie Visual Studio Code)</li>
                 <li>Ein kostenloses Konto bei <a href="https://github.com/" target="_blank" rel="noopener">github.com</a></li>
-                <li>Für Teil 5: ein Hosting mit Git-Funktion (zum Beispiel Plesk) oder GitHub Pages (gratis)</li>
+                <li>Für Teil 6: ein Hosting mit Git-Funktion (zum Beispiel Plesk) oder GitHub Pages (gratis)</li>
                 <li>Einen Zugang zu einer KI</li>
             </ul>
             <div class="warn"><b>Öffentlich oder privat</b>Ein öffentliches Repository kann jede Person lesen. Lege nie Passwörter, Schlüssel oder private Daten hinein. Für Websites, die sowieso öffentlich sind, ist das kein Problem.</div>
@@ -71,7 +72,7 @@
                 <li>Schreibe in fünf Sätzen auf: Wer bist du, was bietest du an, für wen, und was sollen Besuchende tun?</li>
                 <li>Gib der KI diese Angaben mit einem klaren Auftrag (siehe unten).</li>
                 <li>Lege einen neuen Ordner an, zum Beispiel <code>meine-website</code>. Speichere den Code der KI darin als <code>index.html</code>.</li>
-                <li>Doppelklicke auf die Datei. Sie öffnet sich im Browser. Prüfe auch die schmale Handyansicht, indem du das Fenster verkleinerst.</li>
+                <li>Doppelklicke auf die Datei. Sie öffnet sich im Browser. Prüfe auch die schmale Handyansicht, indem du das Fenster verkleinerst. Wie du die Seite auf einem Testserver öffnest, folgt im nächsten Schritt.</li>
                 <li>Verbessere die Seite in drei Runden: Sag der KI kurz, was du ändern willst, ersetze den Code, lade die Seite neu.</li>
             </ol>
             <div class="code">
@@ -84,8 +85,54 @@ Kontakt: [E-Mail]</code></pre>
             <div class="warn"><b>Datenschutz</b>Gib der KI keine privaten Angaben anderer Personen, die nicht öffentlich werden sollen.</div>
         </section>
 
+        <section class="step" id="testserver">
+            <header><span class="step-num">3</span><h2>Lokal testen: Testserver, MAMP, WAMP oder LAMP</h2><span class="time">25 Min.</span></header>
+            <p>Ein Doppelklick auf <code>index.html</code> reicht für eine einfache Seite. Sobald Seiten auf andere Dateien verweisen (Unterseiten, Schriften, Skripte), verhält sich ein <b>lokaler Webserver</b> wie das spätere Hosting. Dann zeigt dir der Browser genau das, was Besuchende sehen. Teste deshalb, bevor du etwas hochlädst. Es gibt drei Wege, vom einfachsten zum vollständigsten:</p>
+            <h3>Weg 1: der eingebaute Testserver (für Seiten aus HTML, CSS und JavaScript)</h3>
+            <ol>
+                <li>Öffne das Terminal im Ordner deiner Website (<code>cd meine-website</code>).</li>
+                <li>Starte den Testserver. Auf dem Mac geht <code>python3</code>, auf Windows meist <code>py</code>:</li>
+            </ol>
+            <div class="code">
+                <button type="button" class="copy">Kopieren</button>
+                <pre><code>python3 -m http.server 8000</code></pre>
+            </div>
+            <ol>
+                <li>Öffne im Browser <code>http://localhost:8000</code>. Die Seite wird von deinem Computer ausgeliefert.</li>
+                <li>Beende den Server mit <kbd>Ctrl+C</kbd> im Terminal. Nach einer Änderung lädst du die Seite im Browser neu.</li>
+            </ol>
+            <div class="note"><b>Alternative im Code-Editor</b>In Visual Studio Code gibt es die Erweiterung «Live Server». Sie startet einen Testserver mit einem Klick und lädt die Seite bei jeder Änderung automatisch neu.</div>
+            <h3>Weg 2: MAMP, WAMP oder XAMPP (ein ganzer Webserver mit PHP und Datenbank)</h3>
+            <p>Diese Pakete installieren einen Apache-Webserver, PHP und eine Datenbank (MySQL oder MariaDB) in einem Schritt. Du brauchst sie, wenn deine Seite PHP verwendet, eine Datenbank braucht (zum Beispiel WordPress) oder du Einstellungen aus einer <code>.htaccess</code>-Datei testen willst.</p>
+            <ul>
+                <li><b>MAMP</b> (Mac und Windows, gratis): <a href="https://www.mamp.info/" target="_blank" rel="noopener">mamp.info</a>. Starte MAMP, klicke auf <b>Start</b>. Deine Dateien liegen im Ordner <code>htdocs</code> von MAMP, die Seite öffnest du meist unter <code>http://localhost:8888</code>.</li>
+                <li><b>WAMP</b> (nur Windows, gratis): <a href="https://www.wampserver.com/" target="_blank" rel="noopener">wampserver.com</a>. Deine Dateien liegen im Ordner <code>www</code>, die Seite öffnest du unter <code>http://localhost</code>.</li>
+                <li><b>XAMPP</b> (Mac, Windows, Linux, gratis): <a href="https://www.apachefriends.org/" target="_blank" rel="noopener">apachefriends.org</a>. Ordner <code>htdocs</code>, Adresse <code>http://localhost</code>.</li>
+                <li><b>LAMP</b> (Linux): kein Programm, sondern der Name des Pakets aus Linux, Apache, MySQL und PHP. Die Installation geht über die Paketverwaltung deiner Linux-Version. Die KI kann dir die Befehle für dein System nennen.</li>
+            </ul>
+            <ol>
+                <li>Installiere MAMP, WAMP oder XAMPP und starte den Webserver.</li>
+                <li>Lege deinen Website-Ordner in den Hauptordner des Servers (<code>htdocs</code> oder <code>www</code>). In MAMP kannst du alternativ in den Einstellungen den <b>Document Root</b> auf deinen Website-Ordner stellen, dann bleibt er dort, wo er ist.</li>
+                <li>Öffne die Adresse im Browser (siehe oben) und prüfe deine Seite.</li>
+            </ol>
+            <div class="note"><b>Die Ports</b>Die Adresse kann bei dir abweichen, zum Beispiel <code>:8888</code> bei MAMP oder <code>:8080</code>, wenn ein anderes Programm den Standard-Port nutzt. Schau in den Einstellungen des Programms nach, welcher Port eingetragen ist.</div>
+            <h3>Welchen Weg wählst du?</h3>
+            <ul>
+                <li>Reine Seite aus HTML, CSS und JavaScript, wie in dieser Anleitung: <b>Weg 1</b> reicht.</li>
+                <li>Seite mit PHP, Datenbank oder WordPress: <b>MAMP, WAMP, XAMPP oder LAMP</b>.</li>
+                <li>Du willst sehen, wie sich die Seite beim Hoster verhält: Teste mit Weg 2 und der gleichen Ordnerstruktur.</li>
+            </ul>
+            <div class="warn"><b>Nur für dich</b>Ein lokaler Testserver ist nur auf deinem Computer erreichbar. Gib nie ein Passwort auf einem lokalen Testserver ein, das du anderswo brauchst. Schliesse den Server, wenn du fertig bist.</div>
+            <h3>Fertig, wenn&hellip;</h3>
+            <ul class="check">
+                <li><label><input type="checkbox" data-k="ts1"> deine Seite läuft unter <code>localhost</code> im Browser,</label></li>
+                <li><label><input type="checkbox" data-k="ts2"> Unterseiten und Bilder werden gefunden,</label></li>
+                <li><label><input type="checkbox" data-k="ts3"> du kannst eine Änderung speichern und im Browser sehen.</label></li>
+            </ul>
+        </section>
+
         <section class="step" id="git">
-            <header><span class="step-num">3</span><h2>Git installieren und den ersten Commit machen</h2><span class="time">25 Min.</span></header>
+            <header><span class="step-num">4</span><h2>Git installieren und den ersten Commit machen</h2><span class="time">25 Min.</span></header>
             <ol>
                 <li>Installiere Git von <a href="https://git-scm.com/downloads" target="_blank" rel="noopener">git-scm.com/downloads</a>. Auf dem Mac geht auch: Terminal öffnen und <code>git --version</code> eingeben, macOS bietet die Installation dann selbst an.</li>
                 <li>Öffne das Terminal (Mac) oder die Eingabeaufforderung bzw. «Git Bash» (Windows) und wechsle in deinen Ordner, zum Beispiel mit <code>cd meine-website</code>.</li>
@@ -110,7 +157,7 @@ git commit -m &quot;Erste Fassung der Website&quot;</code></pre>
         </section>
 
         <section class="step" id="github">
-            <header><span class="step-num">4</span><h2>GitHub: Repository anlegen und hochladen</h2><span class="time">20 Min.</span></header>
+            <header><span class="step-num">5</span><h2>GitHub: Repository anlegen und hochladen</h2><span class="time">20 Min.</span></header>
             <ol>
                 <li>Melde dich bei <a href="https://github.com/" target="_blank" rel="noopener">github.com</a> an und klicke auf <b>New repository</b>.</li>
                 <li>Gib einen Namen ein (zum Beispiel <code>meine-website</code>), wähle <b>Public</b> und lege <b>keine</b> README-Datei an (dein Ordner hat schon Inhalt). Klicke auf <b>Create repository</b>.</li>
@@ -129,7 +176,7 @@ git push -u origin main</code></pre>
         </section>
 
         <section class="step" id="hosting">
-            <header><span class="step-num">5</span><h2>Veröffentlichen: Weg A mit GitHub Pages, Weg B mit eigenem Hosting</h2><span class="time">30 Min.</span></header>
+            <header><span class="step-num">6</span><h2>Veröffentlichen: Weg A mit GitHub Pages, Weg B mit eigenem Hosting</h2><span class="time">30 Min.</span></header>
             <h3>Weg A: GitHub Pages (gratis, am einfachsten)</h3>
             <ol>
                 <li>Öffne dein Repository auf GitHub und gehe zu <b>Settings &rarr; Pages</b>.</li>
@@ -150,11 +197,11 @@ git push -u origin main</code></pre>
         </section>
 
         <section class="step" id="umsetzung">
-            <header><span class="step-num">6</span><h2>Kleine Umsetzung: eine Änderung veröffentlichen</h2><span class="time">15&ndash;20 Min.</span></header>
+            <header><span class="step-num">7</span><h2>Kleine Umsetzung: eine Änderung veröffentlichen</h2><span class="time">15&ndash;20 Min.</span></header>
             <p><b>Auftrag:</b> Ändere einen Satz auf deiner Seite und bringe die Änderung bis ins Internet.</p>
             <ol>
                 <li>Ändere in <code>index.html</code> einen Satz und speichere die Datei.</li>
-                <li>Prüfe die Änderung lokal im Browser.</li>
+                <li>Prüfe die Änderung lokal auf deinem Testserver (<code>http://localhost:8000</code> oder MAMP, WAMP, XAMPP).</li>
                 <li>Speichere eine neue Fassung und lade sie hoch:</li>
             </ol>
             <div class="code">
@@ -168,7 +215,7 @@ git push</code></pre>
             </ol>
             <h3>Fertig, wenn&hellip;</h3>
             <ul class="check">
-                <li><label><input type="checkbox" data-k="gt1"> deine Seite läuft lokal im Browser,</label></li>
+                <li><label><input type="checkbox" data-k="gt1"> deine Seite läuft lokal auf einem Testserver,</label></li>
                 <li><label><input type="checkbox" data-k="gt2"> dein Repository auf GitHub enthält die Dateien,</label></li>
                 <li><label><input type="checkbox" data-k="gt3"> deine Seite ist über eine Adresse im Internet erreichbar,</label></li>
                 <li><label><input type="checkbox" data-k="gt4"> eine Änderung ist nach einem Push von selbst auf der Seite erschienen.</label></li>
