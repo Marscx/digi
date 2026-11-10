@@ -530,7 +530,7 @@ GUIDES.append(dict(
 
 # ------------------------------------------------------------------ Moodle
 GUIDES.append(dict(
-    slug="moodle-kurs", title="Moodle-Kurs", title_long="Moodle: Kursinhalte erstellen und Video einbetten",
+    slug="moodle-kurs", final=True, title="Moodle-Kurs", title_long="Moodle: Kursinhalte erstellen und Video einbetten",
     eyebrow="Hosten · Beispiel 5",
     lead="In deinem persönlichen Moodle-Kurs eine Seite oder ein E-Book anlegen und ein Video einbetten.",
     card="Kurs ausprobieren, Inhalte erstellen, Video einbetten.", diff_kurz="mittel", bsp=["B5"],
