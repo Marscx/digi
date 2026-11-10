@@ -170,6 +170,64 @@ GUIDES.append(dict(
              ("MuseScore in Minutes: The Basics of Score Writing (YouTube)", "https://www.youtube.com/watch?v=0X8G59wJcXc")],
 ))
 
+# ------------------------------------------------------------------ Video mit dem Handy
+GUIDES.append(dict(
+    slug="handyvideo", title="Video mit dem Handy", title_long="Video mit dem Handy: Mehrbildvideo gleich beim Filmen",
+    eyebrow="Video · Beispiel 3",
+    lead="Mehrere Stimmen nacheinander aufnehmen und als Mehrbildvideo zusammenbauen, direkt auf dem Handy und ohne Schnittprogramm.",
+    card="Mehrbildvideo mit Acapella, Notenrolle per Bildschirmaufnahme, iMovie als Alternative.", diff_kurz="leicht bis mittel", bsp=["B3"],
+    zeit="ca. 45&ndash;60 Minuten", diff="leicht bis mittel", geraet="Handy oder Tablet (iPhone, iPad oder Android)", kosten="Gratis-Version der App, Premium optional",
+    steps=[
+        ("basics", "Basics: Was ist das, was brauche ich?", "10 Min.", "\n".join([
+            p("Ein <b>Mehrbildvideo</b> zeigt mehrere Aufnahmen gleichzeitig in einem Raster, zum Beispiel vier Stimmen, die zusammen ein Lied singen. Mit <b>DaVinci Resolve</b> (eigene Anleitung) ist das genau, aber aufwendig. Die App <b>Acapella</b> (von PicPlay) macht es einfacher: Du nimmst eine Stimme nach der anderen auf, hörst dabei die bisherigen im Kopfhörer, und am Ende liegt das fertige Video im Raster vor."),
+            p("Die <b>Pilotspur</b> ist die erste Aufnahme, nach der sich alle anderen richten, zum Beispiel die Melodie oder ein Klavier. Eine <b>Notenrolle</b> ist ein Video, in dem die Noten zum Stück durchlaufen. Du machst sie mit einer Bildschirmaufnahme (siehe unten)."),
+            h3("Das brauchst du"),
+            ul(["Handy oder Tablet mit Kamera und Mikrofon", "<b>Kabelkopfhörer mit Mikrofon</b>. Bluetooth-Kopfhörer sind für Acapella nicht ideal, weil der Ton leicht verzögert ankommt", "Ein ruhiger Raum und ein Stück, das du kennst",
+                "Genug Speicherplatz auf dem Gerät"]),
+            warn("Gratis-Version begrenzt", "Acapella nimmt bis zu neun Bilder auf. Mehr geht nur mit einem Abo. Auch Importieren von vorhandenen Videos und manche Raster brauchen das Abo. Prüfe vor dem Praxistag, was die Gratis-Version bei dir kann."),
+        ])),
+        ("start", "Installieren", "10 Min.", "\n".join([
+            ol(["Suche im App Store (iPhone, iPad) oder Play Store (Android) nach <b>Acapella</b> und achte darauf, dass die App von <b>PicPlay</b> (früher Mixcord) stammt.", "Installiere sie und öffne sie. Erlaube den Zugriff auf Kamera und Mikrofon.",
+                "Lege bei Bedarf ein Konto an (E-Mail oder bestehendes Konto). Aufnehmen geht je nach Version auch ohne Veröffentlichung."]),
+            note("iPad ohne Abo?", 'Für das iPad gibt es zusätzlich die gratis App <a href="https://apps.apple.com/us/app/duette/id1515610873" target="_blank" rel="noopener">Duette</a> für Mehrbild-Musikvideos. Sie ist hier nicht Hauptweg, weil ich sie nicht getestet habe.'),
+        ])),
+        ("erste", "Erste Schritte zum Testen", "15 Min.", "\n".join([
+            tut("https://intercom.help/mixcord/en/articles/4713363-acapella-getting-started", "Acapella: Getting Started (Hilfe-Center des Herstellers, Englisch)",
+                "Die offizielle Kurzanleitung mit allen Schritten vom neuen Projekt bis zum Speichern. Ein Video von Acapella selbst habe ich nicht gefunden."),
+            ol(["Wähle <b>Record New</b> (neues Projekt).", "Wähle ein Raster, zum Beispiel vier Felder.", "Wähle die Länge. Du kannst die Aufnahme später kürzen.", "Tippe auf das erste Feld und dann auf die rote Aufnahmetaste. Sing oder spiel 20 Sekunden.",
+                "Schau dir den Take an. Mit dem grünen Häkchen behältst du ihn, mit dem roten Kreuz nimmst du neu auf.", "Tippe auf das nächste Feld und nimm die zweite Stimme auf. Du hörst die erste im Kopfhörer."]),
+            note("Metronom", "Die App hat ein Metronom, das du im Kopfhörer hörst. Es wird nicht ins Video aufgenommen."),
+        ])),
+        ("umsetzung", "Kleine Umsetzung: vierstimmiges Mehrbildvideo", "20&ndash;30 Min.", "\n".join([
+            p("<b>Auftrag:</b> Nimm ein kurzes Stück (zum Beispiel einen Kanon oder ein vierstimmiges Lied) in vier Bildern auf und speichere das Video."),
+            ol(["<b>Pilotspur:</b> Nimm im ersten Feld die Melodie auf. Sie ist das Vorbild für die anderen.",
+                "<b>Stimmen:</b> Nimm in den anderen drei Feldern je eine Stimme auf. Du kannst dazu singen, summen oder mit einem Instrument spielen.",
+                "<b>Speichern:</b> Wähle <b>Save &amp; Share</b>. Wähle <b>Private</b> und speichere das Video auf dem Gerät. Wähle nie «Public», solange du nicht willst, dass es öffentlich ist.",
+                "<b>Kontrollieren:</b> Schau das Video an. Stimmt der Ton, stimmen die Einsätze?"]),
+            h3("Mit Notenrolle (für Fortgeschrittene)"),
+            ol(["Öffne die Noten in Noteflight oder MuseScore (siehe die Anleitungen dazu) auf dem Handy, Tablet oder Computer.",
+                "Starte eine <b>Bildschirmaufnahme</b>: Auf dem iPhone öffnest du das Kontrollzentrum und tippst auf die Aufnahme-Taste (wenn sie fehlt, fügst du sie unter Einstellungen &rarr; Kontrollzentrum hinzu). Es gibt einen Countdown von drei Sekunden.",
+                "Spiele das Stück ab und beende die Aufnahme. Das Video liegt in der Fotomediathek unter «Bildschirmaufnahmen».",
+                "Lege Notenrolle und Mehrbildvideo in <b>iMovie</b> nebeneinander (Split Screen) oder in einem Schnittprogramm."]),
+            tut("https://support.apple.com/en-us/102653", "Apple: Record the screen on your iPhone, iPad, or iPod touch (Englisch)", "Die Anleitung von Apple zur Bildschirmaufnahme. Android-Geräte haben eine ähnliche Funktion in den Schnelleinstellungen."),
+            check("hv", ["dein Video vier Bilder zeigt und der Ton stimmt,", "du die Pilotspur zuerst aufgenommen hast,", "das Video privat auf deinem Gerät gespeichert ist,", "du weisst, wie du Bildschirmaufnahme und iMovie für eine Notenrolle einsetzen würdest."]),
+            h3("Alternativen"),
+            ul(["<b>iMovie (iPhone, iPad, gratis):</b> Legt zwei Clips nebeneinander oder übereinander (Split Screen). Mehr als zwei Bilder gehen nicht. Details bei Apple: <a href=\"https://support.apple.com/guide/imovie-iphone/kna831efee4d/ios\" target=\"_blank\" rel=\"noopener\">iMovie Split Screen</a>.",
+                "<b>InShot oder CapCut:</b> Du filmst zuerst normal und legst die Clips danach in ein Raster. Beide Apps haben Gratis-Versionen mit Einschränkungen (zum Beispiel Wasserzeichen).",
+                "<b>DaVinci Resolve:</b> Wenn du mehr Kontrolle über Ton und Schnitt willst, siehe die eigene Anleitung auf dieser Seite."]),
+        ])),
+    ],
+    stolper=["<b>Bluetooth-Kopfhörer:</b> Der Ton kommt leicht verzögert an, die Stimmen sind dann nicht synchron. Nimm Kabelkopfhörer mit Mikrofon.",
+             "<b>Gratis-Grenzen:</b> Länge, Raster und Importieren sind in der Gratis-Version begrenzt. Teste vor dem Praxistag eine Aufnahme mit vier Bildern durch.",
+             "<b>Privat bleiben:</b> Wähle beim Speichern «Private». Nimm keine Kinder oder fremden Personen auf, ohne dass sie einverstanden sind.",
+             "<b>Notenrolle:</b> Einige Apps erlauben keine Bildschirmaufnahme ihrer Inhalte. Bildschirmaufnahme und Spiegelung laufen nicht gleichzeitig.",
+             "<b>Urheberrecht:</b> Fremde Stücke nur im geschlossenen Rahmen zeigen und nicht öffentlich veröffentlichen."],
+    quellen=[("Acapella: Getting Started (Mixcord/PicPlay Hilfe)", "https://intercom.help/mixcord/en/articles/4713363-acapella-getting-started"),
+             ("Acapella: mehr als neun Bilder (Mixcord/PicPlay Hilfe)", "https://intercom.help/mixcord/en/articles/3856094-acapella-how-can-i-create-a-video-with-more-than-9-grids"),
+             ("Apple: Bildschirmaufnahme auf iPhone, iPad", "https://support.apple.com/en-us/102653"),
+             ("Apple: iMovie auf dem iPhone, Split Screen", "https://support.apple.com/guide/imovie-iphone/kna831efee4d/ios")],
+))
+
 # ------------------------------------------------------------------ Moises
 GUIDES.append(dict(
     slug="moises", final=True, title="Moises", title_long="Moises: Stimmen trennen und Playalong machen",
@@ -536,7 +594,6 @@ GUIDES.append(dict(
 SOON = {
     "dorico": dict(title="Dorico SE", card="Installation, Ausprobieren, Soundbanks, Export und Import.", diff="mittel"),
     "daw": dict(title="GarageBand, Logic, Ableton", card="Playalongs bauen und Stimmen trennen in der DAW.", diff="mittel bis schwierig", bsp=["B7"]),
-    "handyvideo": dict(title="Video mit dem Handy", card="Aufnehmen mit Pilotspur, Notenrolle per Bildschirmaufnahme.", diff="leicht bis mittel", bsp=["B3"]),
     "suno": dict(title="Suno und KI-Songtext", card="Komponieren und Songtexte mit KI.", diff="leicht bis mittel", bsp=["B4", "B7"]),
     "kdrive": dict(title="kDrive und Cloud", card="Noten und Dateien teilen.", diff="mittel", bsp=["B6"]),
 }
