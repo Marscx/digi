@@ -176,7 +176,7 @@ GUIDES.append(dict(
     eyebrow="Video · Beispiel 3",
     lead="Mehrere Stimmen nacheinander aufnehmen und als Mehrbildvideo zusammenbauen, direkt auf dem Handy und ohne Schnittprogramm.",
     card="Mehrbildvideo mit Acapella, Notenrolle per Bildschirmaufnahme, iMovie als Alternative.", diff_kurz="leicht bis mittel", bsp=["B3"],
-    zeit="ca. 45&ndash;60 Minuten", diff="leicht bis mittel", geraet="Handy oder Tablet (iPhone, iPad oder Android)", kosten="Gratis-Version reicht zum Testen, Premium optional",
+    zeit="ca. 45&ndash;60 Minuten", diff="leicht bis mittel", geraet="Handy oder Tablet (iPhone, iPad oder Android)", kosten="Gratis bis 30 Sekunden, Premium optional",
     steps=[
         ("basics", "Basics: Was ist das, was brauche ich?", "10 Min.", "\n".join([
             p("Ein <b>Mehrbildvideo</b> zeigt mehrere Aufnahmen gleichzeitig in einem Raster, zum Beispiel vier Stimmen, die zusammen ein Lied singen. Mit <b>DaVinci Resolve</b> (eigene Anleitung) ist das genau, aber aufwendig. Die App <b>Acapella</b> (von PicPlay) macht es einfacher: Du nimmst eine Stimme nach der anderen auf, hörst dabei die bisherigen im Kopfhörer, und am Ende liegt das fertige Video im Raster vor."),
@@ -184,7 +184,7 @@ GUIDES.append(dict(
             h3("Das brauchst du"),
             ul(["Handy oder Tablet mit Kamera und Mikrofon", "<b>Kabelkopfhörer mit Mikrofon</b>. Bluetooth-Kopfhörer sind für Acapella nicht ideal, weil der Ton leicht verzögert ankommt", "Ein ruhiger Raum und ein Stück, das du kennst",
                 "Genug Speicherplatz auf dem Gerät"]),
-            warn("Gratis-Version und Premium", "Beim ersten Start zeigt die App ein Fenster «Hole dir Premium» (Stand November 2026, Schweiz: eine Woche gratis testen, danach CHF 11.00 im Monat oder CHF 52.00 im Jahr). Du brauchst das nicht. Schliesse das Fenster mit dem <b>X</b> oben links oder tippe auf «Acapella jetzt entdecken». Premium bringt unter anderem 1080p-Video, das Hinzufügen von Videos aus der Fotobibliothek und mehr Raster. Ohne Premium nimmst du bis zu neun Bilder auf."),
+            warn("Gratis-Version und Premium", "Beim ersten Start zeigt die App ein Fenster «Hole dir Premium» (Stand November 2026, Schweiz: eine Woche gratis testen, danach CHF 11.00 im Monat oder CHF 52.00 im Jahr). Du brauchst das nicht. Schliesse das Fenster mit dem <b>X</b> oben links oder tippe auf «Acapella jetzt entdecken». Premium bringt unter anderem 1080p-Video, das Hinzufügen von Videos aus der Fotobibliothek und mehr Raster. Ohne Premium nimmst du höchstens 30 Sekunden pro Video auf. Mehr als neun Bilder gehen auch mit Premium nur über einen Umweg."),
         ])),
         ("start", "Installieren", "10 Min.", "\n".join([
             ol(["Suche im App Store (iPhone, iPad) oder Play Store (Android) nach <b>Acapella</b> und achte darauf, dass die App von <b>PicPlay</b> (früher Mixcord) stammt.", "Installiere sie und öffne sie. Erlaube den Zugriff auf Kamera und Mikrofon.",
@@ -195,12 +195,12 @@ GUIDES.append(dict(
         ("erste", "Erste Schritte zum Testen", "15 Min.", "\n".join([
             tut("https://intercom.help/mixcord/en/articles/4713363-acapella-getting-started", "Acapella: Getting Started (Hilfe-Center des Herstellers, Englisch)",
                 "Die offizielle Kurzanleitung mit allen Schritten vom neuen Projekt bis zum Speichern. Ein Video von Acapella selbst habe ich nicht gefunden."),
-            ol(["Wähle <b>Record New</b> (neues Projekt).", "Wähle ein Raster, zum Beispiel vier Felder.", "Wähle die Länge. Du kannst die Aufnahme später kürzen.", "Tippe auf das erste Feld und dann auf die rote Aufnahmetaste. Sing oder spiel 20 Sekunden.",
+            ol(["Wähle <b>Record New</b> (neues Projekt).", "Wähle ein Raster, zum Beispiel vier Felder.", "Wähle die Länge. Gratis gehen <b>15 oder 30 Sekunden</b> (oder eine eigene Zeit bis höchstens 30 Sekunden). 1, 3 und 10 Minuten gehören zu Premium. Die App beendet die Aufnahme von selbst, wenn die Zeit um ist. Nimm deshalb jede Stimme für die ganze Dauer auf.", "Tippe auf das erste Feld und dann auf die rote Aufnahmetaste. Sing oder spiel die gewählte Zeit lang.",
                 "Schau dir den Take an. Mit dem grünen Häkchen behältst du ihn, mit dem roten Kreuz nimmst du neu auf.", "Tippe auf das nächste Feld und nimm die zweite Stimme auf. Du hörst die erste im Kopfhörer."]),
             note("Metronom", "Die App hat ein Metronom, das du im Kopfhörer hörst. Es wird nicht ins Video aufgenommen."),
         ])),
         ("umsetzung", "Kleine Umsetzung: vierstimmiges Mehrbildvideo", "20&ndash;30 Min.", "\n".join([
-            p("<b>Auftrag:</b> Nimm ein kurzes Stück (zum Beispiel einen Kanon oder ein vierstimmiges Lied) in vier Bildern auf und speichere das Video."),
+            p("<b>Auftrag:</b> Nimm einen kurzen Ausschnitt (30 Sekunden, zum Beispiel den Anfang eines Kanons oder eines vierstimmigen Liedes) in vier Bildern auf und speichere das Video. Mehr erlaubt die Gratis-Version nicht."),
             ol(["<b>Pilotspur:</b> Nimm im ersten Feld die Melodie auf. Sie ist das Vorbild für die anderen.",
                 "<b>Stimmen:</b> Nimm in den anderen drei Feldern je eine Stimme auf. Du kannst dazu singen, summen oder mit einem Instrument spielen.",
                 "<b>Speichern:</b> Wähle <b>Save &amp; Share</b>. Wähle <b>Private</b> und speichere das Video auf dem Gerät. Wähle nie «Public», solange du nicht willst, dass es öffentlich ist.",
@@ -220,7 +220,7 @@ GUIDES.append(dict(
     ],
     stolper=["<b>Bluetooth-Kopfhörer:</b> Der Ton kommt leicht verzögert an, die Stimmen sind dann nicht synchron. Nimm Kabelkopfhörer mit Mikrofon.",
              "<b>Premium-Abo:</b> Die Testphase von einer Woche wird danach kostenpflichtig (CHF 11.00 im Monat oder CHF 52.00 im Jahr, Stand November 2026). Beende sie rechtzeitig in den Abos deines Apple- oder Google-Kontos, wenn du sie ausprobiert hast.",
-             "<b>Gratis-Grenzen:</b> Hinzufügen von Videos aus der Fotobibliothek und die höchste Qualität (1080p) gehören zu Premium. Teste vor dem Praxistag eine Aufnahme mit vier Bildern durch.",
+             "<b>Gratis-Grenzen:</b> Gratis sind nur 15 oder 30 Sekunden Länge möglich. Längere Videos (1, 3, 10 Minuten), das Hinzufügen von Videos aus der Fotobibliothek und 1080p gehören zu Premium. Für ein ganzes Lied reicht die Gratis-Version nicht. Plane einen Ausschnitt ein.",
              "<b>Privat bleiben:</b> Wähle beim Speichern «Private». Nimm keine Kinder oder fremden Personen auf, ohne dass sie einverstanden sind.",
              "<b>Notenrolle:</b> Einige Apps erlauben keine Bildschirmaufnahme ihrer Inhalte. Bildschirmaufnahme und Spiegelung laufen nicht gleichzeitig.",
              "<b>Urheberrecht:</b> Fremde Stücke nur im geschlossenen Rahmen zeigen und nicht öffentlich veröffentlichen."],
