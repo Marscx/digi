@@ -176,7 +176,7 @@ GUIDES.append(dict(
     eyebrow="Video · Beispiel 3",
     lead="Mehrere Stimmen nacheinander aufnehmen und als Mehrbildvideo zusammenbauen, direkt auf dem Handy und ohne Schnittprogramm.",
     card="Mehrbildvideo mit Acapella, Notenrolle per Bildschirmaufnahme, iMovie als Alternative.", diff_kurz="leicht bis mittel", bsp=["B3"],
-    zeit="ca. 45&ndash;60 Minuten", diff="leicht bis mittel", geraet="Handy oder Tablet (iPhone, iPad oder Android)", kosten="Gratis-Version der App, Premium optional",
+    zeit="ca. 45&ndash;60 Minuten", diff="leicht bis mittel", geraet="Handy oder Tablet (iPhone, iPad oder Android)", kosten="Gratis-Version reicht zum Testen, Premium optional",
     steps=[
         ("basics", "Basics: Was ist das, was brauche ich?", "10 Min.", "\n".join([
             p("Ein <b>Mehrbildvideo</b> zeigt mehrere Aufnahmen gleichzeitig in einem Raster, zum Beispiel vier Stimmen, die zusammen ein Lied singen. Mit <b>DaVinci Resolve</b> (eigene Anleitung) ist das genau, aber aufwendig. Die App <b>Acapella</b> (von PicPlay) macht es einfacher: Du nimmst eine Stimme nach der anderen auf, hörst dabei die bisherigen im Kopfhörer, und am Ende liegt das fertige Video im Raster vor."),
@@ -184,11 +184,12 @@ GUIDES.append(dict(
             h3("Das brauchst du"),
             ul(["Handy oder Tablet mit Kamera und Mikrofon", "<b>Kabelkopfhörer mit Mikrofon</b>. Bluetooth-Kopfhörer sind für Acapella nicht ideal, weil der Ton leicht verzögert ankommt", "Ein ruhiger Raum und ein Stück, das du kennst",
                 "Genug Speicherplatz auf dem Gerät"]),
-            warn("Gratis-Version begrenzt", "Acapella nimmt bis zu neun Bilder auf. Mehr geht nur mit einem Abo. Auch Importieren von vorhandenen Videos und manche Raster brauchen das Abo. Prüfe vor dem Praxistag, was die Gratis-Version bei dir kann."),
+            warn("Gratis-Version und Premium", "Beim ersten Start zeigt die App ein Fenster «Hole dir Premium» (Stand November 2026, Schweiz: eine Woche gratis testen, danach CHF 11.00 im Monat oder CHF 52.00 im Jahr). Du brauchst das nicht. Schliesse das Fenster mit dem <b>X</b> oben links oder tippe auf «Acapella jetzt entdecken». Premium bringt unter anderem 1080p-Video, das Hinzufügen von Videos aus der Fotobibliothek und mehr Raster. Ohne Premium nimmst du bis zu neun Bilder auf."),
         ])),
         ("start", "Installieren", "10 Min.", "\n".join([
             ol(["Suche im App Store (iPhone, iPad) oder Play Store (Android) nach <b>Acapella</b> und achte darauf, dass die App von <b>PicPlay</b> (früher Mixcord) stammt.", "Installiere sie und öffne sie. Erlaube den Zugriff auf Kamera und Mikrofon.",
-                "Lege bei Bedarf ein Konto an (E-Mail oder bestehendes Konto). Aufnehmen geht je nach Version auch ohne Veröffentlichung."]),
+                "Lege bei Bedarf ein Konto an (E-Mail oder bestehendes Konto). Aufnehmen geht je nach Version auch ohne Veröffentlichung.",
+                "Schliesse das Premium-Fenster mit dem <b>X</b>. Starte keine Testphase, wenn du kein Abo willst: Sie geht sonst nach einer Woche in ein kostenpflichtiges Abo über."]),
             note("iPad ohne Abo?", 'Für das iPad gibt es zusätzlich die gratis App <a href="https://apps.apple.com/us/app/duette/id1515610873" target="_blank" rel="noopener">Duette</a> für Mehrbild-Musikvideos. Sie ist hier nicht Hauptweg, weil ich sie nicht getestet habe.'),
         ])),
         ("erste", "Erste Schritte zum Testen", "15 Min.", "\n".join([
@@ -218,7 +219,8 @@ GUIDES.append(dict(
         ])),
     ],
     stolper=["<b>Bluetooth-Kopfhörer:</b> Der Ton kommt leicht verzögert an, die Stimmen sind dann nicht synchron. Nimm Kabelkopfhörer mit Mikrofon.",
-             "<b>Gratis-Grenzen:</b> Länge, Raster und Importieren sind in der Gratis-Version begrenzt. Teste vor dem Praxistag eine Aufnahme mit vier Bildern durch.",
+             "<b>Premium-Abo:</b> Die Testphase von einer Woche wird danach kostenpflichtig (CHF 11.00 im Monat oder CHF 52.00 im Jahr, Stand November 2026). Beende sie rechtzeitig in den Abos deines Apple- oder Google-Kontos, wenn du sie ausprobiert hast.",
+             "<b>Gratis-Grenzen:</b> Hinzufügen von Videos aus der Fotobibliothek und die höchste Qualität (1080p) gehören zu Premium. Teste vor dem Praxistag eine Aufnahme mit vier Bildern durch.",
              "<b>Privat bleiben:</b> Wähle beim Speichern «Private». Nimm keine Kinder oder fremden Personen auf, ohne dass sie einverstanden sind.",
              "<b>Notenrolle:</b> Einige Apps erlauben keine Bildschirmaufnahme ihrer Inhalte. Bildschirmaufnahme und Spiegelung laufen nicht gleichzeitig.",
              "<b>Urheberrecht:</b> Fremde Stücke nur im geschlossenen Rahmen zeigen und nicht öffentlich veröffentlichen."],
