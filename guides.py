@@ -566,7 +566,7 @@ GUIDES.append(dict(
 
 # ------------------------------------------------------------------ Website mit KI
 GUIDES.append(dict(
-    slug="website-mit-ki", title="Website mit KI", title_long="Website mit KI: analysieren, verbessern, in Jimdo umsetzen",
+    slug="website-mit-ki", final=True, title="Website mit KI", title_long="Website mit KI: analysieren, verbessern, in Jimdo umsetzen",
     eyebrow="Hosten · Beispiel 2",
     lead="Eine KI schaut sich eine bestehende Website an und schlägt Verbesserungen vor. Du setzt sie zuerst von Hand um und lässt danach die KI in Jimdo selber mitarbeiten.",
     card="Bestehende Website von der KI analysieren lassen, Vorschläge umsetzen, KI in Jimdo arbeiten lassen.", diff_kurz="mittel", bsp=["B2"],
@@ -614,7 +614,7 @@ GUIDES.append(dict(
 
 # ------------------------------------------------------------------ Website veröffentlichen mit Git
 GUIDES.append(dict(
-    slug="website-git", title="Website mit Git veröffentlichen", title_long="Website veröffentlichen: Git, GitHub und Hosting",
+    slug="website-git", final=True, title="Website mit Git veröffentlichen", title_long="Website veröffentlichen: Git, GitHub und Hosting",
     eyebrow="Hosten · Beispiel 2",
     lead="Eine Website aus Dateien bauen, lokal testen, mit Git versionieren, auf GitHub speichern und bei jedem Push automatisch auf einem Hosting veröffentlichen.",
     card="Website aus HTML, CSS und JavaScript lokal testen, Git, GitHub, automatisch auf den Server.", diff_kurz="mittel bis schwierig", bsp=["B2"],
