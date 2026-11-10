@@ -180,7 +180,7 @@ GUIDES.append(dict(
     steps=[
         ("basics", "Basics: Was ist das, was brauche ich?", "10 Min.", "\n".join([
             p("Ein <b>Mehrbildvideo</b> zeigt mehrere Aufnahmen gleichzeitig in einem Raster, zum Beispiel vier Stimmen, die zusammen ein Lied singen. Mit <b>DaVinci Resolve</b> (eigene Anleitung) ist das genau, aber aufwendig. Die App <b>Acapella</b> (von PicPlay) macht es einfacher: Du nimmst eine Stimme nach der anderen auf, hörst dabei die bisherigen im Kopfhörer, und am Ende liegt das fertige Video im Raster vor."),
-            p("Die <b>Pilotspur</b> ist die erste Aufnahme, nach der sich alle anderen richten, zum Beispiel die Melodie oder ein Klavier. Eine <b>Notenrolle</b> ist ein Video, in dem die Noten zum Stück durchlaufen. Du machst sie mit einer Bildschirmaufnahme (siehe unten)."),
+            p("Die <b>Pilotspur</b> ist die Spur, nach der sich alle anderen richten: eine erste Aufnahme (zum Beispiel die Melodie oder ein Klavier) oder eine fertige Tonspur, etwa ein MP3-Export aus Noteflight. Eine <b>Notenrolle</b> ist ein Video, in dem die Noten zum Stück durchlaufen. Du machst sie mit einer Bildschirmaufnahme (siehe unten)."),
             h3("Das brauchst du"),
             ul(["Handy oder Tablet mit Kamera und Mikrofon", "<b>Kabelkopfhörer mit Mikrofon</b>. Bluetooth-Kopfhörer sind für Acapella nicht ideal, weil der Ton leicht verzögert ankommt", "Ein ruhiger Raum und ein Stück, das du kennst",
                 "Genug Speicherplatz auf dem Gerät"]),
