@@ -531,16 +531,16 @@ GUIDES.append(dict(
 
 # ------------------------------------------------------------------ Koala Sampler
 GUIDES.append(dict(
-    slug="koala-sampler", title="Koala Sampler", title_long="Koala Sampler: Beats mit dem Handy",
+    slug="koala-sampler", final=True, title="Koala Sampler", title_long="Koala Sampler: Beats mit dem Handy",
     eyebrow="Producing · Beispiel 4",
     lead="Eigene Klänge aufnehmen, auf Pads legen und zu einem kleinen Beat zusammensetzen.",
     card="Sampling, geeignet für die Schulmusik.", diff_kurz="mittel", bsp=["B4"],
-    zeit="ca. 45&ndash;60 Minuten", diff="mittel", geraet="iPhone, iPad oder Android (App)", kosten="App, Preis im Store prüfen",
+    zeit="ca. 45&ndash;60 Minuten", diff="mittel", geraet="iPhone, iPad oder Android (App)", kosten="App kostenpflichtig (CHF 4.00 im Schweizer App Store, Stand November 2026)",
     steps=[
         ("basics", "Basics: Was ist das, was brauche ich?", "5 Min.", "\n".join([
             p("Koala Sampler ist eine App, mit der du Klänge aufnimmst, auf Pads verteilst und zu Beats zusammenbaust. Sie eignet sich für die Schulmusik mit Jugendlichen, weil man ohne Vorkenntnisse schnell ein Ergebnis hat."),
             h3("Das brauchst du"),
-            ul(["Ein iPhone, iPad oder Android-Gerät", "Die App «Koala Sampler» aus dem Store (kostenpflichtig, Preis im Store prüfen)", "Kopfhörer oder einen Lautsprecher"]),
+            ul(["Ein iPhone, iPad oder Android-Gerät", "Die App «Koala Sampler» aus dem Store (kostenpflichtig: im Schweizer App Store CHF 4.00 mit In-App-Käufen, Stand November 2026, im Play Store Preis prüfen)", "Kopfhörer oder einen Lautsprecher"]),
         ])),
         ("start", "Installieren", "10 Min.", "\n".join([
             ol(["Suche im App Store oder Play Store nach <b>Koala Sampler</b> und installiere die App.", "Starte die App und erlaube den Zugriff auf das Mikrofon, damit du Klänge aufnehmen kannst."]),
@@ -556,7 +556,7 @@ GUIDES.append(dict(
             check("ko", ["du hast vier eigene Klänge aufgenommen,", "dein Beat läuft zwei Takte lang,", "du hast eine Audiodatei exportiert."]),
         ])),
     ],
-    stolper=["<b>Mikrofon:</b> Erlaube dem Gerät den Mikrofonzugriff, sonst nimmt die App nichts auf.", "<b>Lärm:</b> Nimm in einer ruhigen Umgebung auf, sonst hört man den Raum auf jedem Klang.", "<b>Kosten:</b> Die App ist kostenpflichtig. Für den Praxistag genügt, wenn eine Person sie zeigt.", "<b>Urheberrecht:</b> Samples aus fremden Liedern nicht öffentlich weitergeben."],
+    stolper=["<b>Mikrofon:</b> Erlaube dem Gerät den Mikrofonzugriff, sonst nimmt die App nichts auf.", "<b>Lärm:</b> Nimm in einer ruhigen Umgebung auf, sonst hört man den Raum auf jedem Klang.", "<b>Kosten:</b> Die App ist kostenpflichtig (im Schweizer App Store CHF 4.00, dazu In-App-Käufe für Zusatzpakete). Für den Praxistag genügt, wenn eine Person sie zeigt.", "<b>Urheberrecht:</b> Samples aus fremden Liedern nicht öffentlich weitergeben."],
     quellen=[("Koala Sampler im App Store", "https://apps.apple.com/ch/app/id1449584007"), ("Violet Recording: How to use Koala Sampler", "https://violetrecording.com/how-to-use-koala-sampler/")],
 ))
 
