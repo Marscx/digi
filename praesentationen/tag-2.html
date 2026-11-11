@@ -324,6 +324,8 @@
   .chip-cloud{display:flex; flex-wrap:wrap; gap:10px; margin-top:4px;}
   .chip{padding:9px 17px; border-radius:999px; background:var(--surface-2); border:1px solid var(--line); font-size:.92rem; font-weight:500;}
   .chip-note{font-family:'IBM Plex Mono',monospace; font-size:.72rem; color:var(--ink-soft); letter-spacing:.03em;}
+  .chip-note a{color:var(--accent-2); font-weight:600; text-decoration:none;}
+  .chip-note a:hover,.chip-note a:focus-visible{text-decoration:underline; outline:none;}
 
   .frame--fill{justify-content:flex-start;}
   .chip-scatter{
@@ -482,7 +484,7 @@
       <circle id="posDot" class="pos-dot" r="15"/>
     </svg>
 
-    <section class="frame frame--cover" data-title="Übersicht" data-notes="Begrüssung, an Tag 1 anknüpfen (Idee, Umsetzung, Hosting): Heute geht es um Konzipieren, Umsetzen und Hosten, gehostet wird entweder auf dem eigenen Hosting oder im persönlichen Moodle-Kurs. Dann die Übersicht: Am Vormittag die Beispiele, danach arbeitet ihr am Miniprojekt, nach dem Mittag präsentiert ihr. Die Beispiele 1 bis 8 sind ausgearbeitet; die Präsentation endet mit einem kurzen Schlusswort. Hinweis: Anleitungen und Quellen stehen im Moodle E-Book. Ca. 2 Minuten.">
+    <section class="frame frame--cover" data-title="Übersicht" data-notes="Begrüssung, an Tag 1 anknüpfen (Idee, Umsetzung, Hosting): Heute geht es um Konzipieren, Umsetzen und Hosten, gehostet wird entweder auf dem eigenen Hosting oder im persönlichen Moodle-Kurs. Dann die Übersicht: Am Vormittag die Beispiele, danach arbeitet ihr am Miniprojekt, nach dem Mittag präsentiert ihr. Die Beispiele 1 bis 8 sind ausgearbeitet; die Präsentation endet mit einem kurzen Schlusswort. Hinweis: Anleitungen und Quellen stehen auf der Anleitungsseite digi.marcscheidegger.ch. Ca. 2 Minuten.">
       <span class="eyebrow">HSLU &middot; Modul Digitalisierung &middot; Praxistag &middot; 14. November</span>
       <h1 class="cover-title cover-title--sm">Konzipieren, umsetzen, hosten</h1>
       <p class="cover-sub">Dein Projekt in drei Schritten &mdash; gehostet auf deinem eigenen Hosting oder in deinem pers&ouml;nlichen Moodle-Kurs.</p>
@@ -505,7 +507,7 @@
       <div class="cover-foot">
         <span class="power-tag">&#9211; Power On</span>
         <span class="presenter">Marc Scheidegger</span>
-        <span class="chip-note">Anleitungen und Quellen: Moodle E-Book</span>
+        <span class="chip-note">Anleitungen und Quellen: <a href="https://digi.marcscheidegger.ch/" target="_blank" rel="noopener">digi.marcscheidegger.ch</a></span>
       </div>
     </section>
 
@@ -663,7 +665,7 @@
       </div>
     </section>
 
-    <section class="frame frame--panel" data-title="Nicht gleich Git und Server" data-notes="Wichtiger Hinweis für alle, die ihre eigene Seite verbessern wollen: Man muss nicht mit Git und Server starten. Mit dem kostenlosen MAMP läuft die Seite auf dem eigenen Computer. Gehostet wird später entweder auf dem eigenen Hosting oder im persönlichen Moodle-Kurs. Die Schritt-für-Schritt-Anleitungen stehen im Miniprojekt im Moodle E-Book. Ca. 1,5 Minuten." data-bsp="Beispiel 2">
+    <section class="frame frame--panel" data-title="Nicht gleich Git und Server" data-notes="Wichtiger Hinweis für alle, die ihre eigene Seite verbessern wollen: Man muss nicht mit Git und Server starten. Mit dem kostenlosen MAMP läuft die Seite auf dem eigenen Computer. Gehostet wird später entweder auf dem eigenen Hosting oder im persönlichen Moodle-Kurs. Die Schritt-für-Schritt-Anleitungen stehen auf digi.marcscheidegger.ch: Website mit KI verbessern und Website mit Git veröffentlichen. Ca. 1,5 Minuten." data-bsp="Beispiel 2">
       <span class="eyebrow">Station 8 &middot; Beispiel 2</span>
       <h2>Du brauchst nicht gleich Git und Server</h2>
       <p class="lead">Probiere es zuerst bei dir zu Hause aus.</p>
@@ -672,7 +674,7 @@
         <div class="option-card"><span class="step-num">02</span>Hosten<span class="opt-sub">Sobald es passt: auf dein eigenes Hosting oder in deinen pers&ouml;nlichen Moodle-Kurs laden, und dein Projekt ist online.</span></div>
         <div class="option-card"><span class="step-num">03</span>Mit Git automatisieren<span class="opt-sub">Sp&auml;ter: &Auml;nderungen laufen automatisch auf die Test-Adresse und lassen sich nachverfolgen.</span></div>
       </div>
-      <span class="chip-note">Die Schritt-f&uuml;r-Schritt-Anleitung steht im Miniprojekt im Moodle E-Book.</span>
+      <span class="chip-note">Schritt f&uuml;r Schritt: <a href="https://digi.marcscheidegger.ch/anleitungen/website-mit-ki.html" target="_blank" rel="noopener">Website mit KI verbessern</a> &middot; <a href="https://digi.marcscheidegger.ch/anleitungen/website-git.html" target="_blank" rel="noopener">Mit Git ver&ouml;ffentlichen</a></span>
     </section>
 
     <section class="frame frame--master" data-title="Multispurvideo mit Notenrolle" data-notes="Drittes Beispiel: ein Multispurvideo mit Notenrolle. Die Notenrolle kommt aus Noteflight, das Video entsteht in DaVinci Resolve, die Videos liegen auf Vimeo und sind im Moodle E-Book eingebettet. Das E-Book ist als Gast ohne Anmeldung erreichbar, dort live zeigen: ein Instrument-Kapitel, das Tutti-Kapitel und die Noten. Ca. 2 Minuten." data-bsp="Beispiel 3" data-bsp-start="B3">
@@ -689,7 +691,7 @@
       </div>
       <p class="master-note">Beispiel Sarna Samba: pro Instrument ein Kapitel, am Schluss alle zusammen (Tutti), dazu die Notenrolle aus Noteflight. Die Videos liegen auf Vimeo und sind im Moodle E-Book eingebettet, als Gast ohne Anmeldung ansehbar.</p>
       <a class="url-tag" href="https://marcscheidegger.moodlecloud.com/mod/book/view.php?id=161" target="_blank" rel="noopener">marcscheidegger.moodlecloud.com/mod/book/view.php?id=161</a>
-      <span class="chip-note">Anleitungen zu DaVinci Resolve und Noteflight: im Miniprojekt im Moodle E-Book.</span>
+      <span class="chip-note">Anleitungen: <a href="https://digi.marcscheidegger.ch/anleitungen/davinci-resolve.html" target="_blank" rel="noopener">DaVinci Resolve</a> &middot; <a href="https://digi.marcscheidegger.ch/anleitungen/noteflight.html" target="_blank" rel="noopener">Noteflight</a></span>
     </section>
 
     <section class="frame frame--panel" data-title="Songwriting in der Schulmusik" data-notes="Viertes Beispiel, aus der Schulmusik: Jugendliche schreiben und spielen eigene Songs, ohne Vorkenntnisse und ohne Installation. Drei Werkzeuge im Fokus. openDAW läuft im Browser ohne Login, mit dem Code-Editor lässt sich zusammen mit einer KI ein Song erzeugen, und in der Pianorolle liegt er gleich als Klavier-Tutorial bereit. Dazu zeige ich live meinen Test, einen 8-taktigen Hip-Hop-Beat. Der Koala Sampler ist ein Sampler mit Sequencer und Performance-Ansicht auf dem Handy, wie bei einem MPC-Produzenten, ideal für Geräusche, Beats und Stimmungsbilder, Beispiel ist mein Ferienpass-Projekt. Noteflight macht Noten und Leadsheets im Browser, es ist auch im Multispurvideo aus Beispiel 3 im Einsatz. Falls openDAW online nicht klappt: Taste V oder den Knopf unten zeigt den Screencast von Vimeo, Esc schliesst. Ohne Internet im Fenster auf «lokale Datei abspielen» klicken (OpenDAW_Demo.mov muss neben der Präsi liegen). Nicht ins Detail gehen. Ca. 2 Minuten." data-bsp="Beispiel 4" data-bsp-start="B4">
@@ -768,13 +770,13 @@
       <span class="pause-icon">&#9749;</span>
     </section>
 
-    <section class="frame frame--panel" data-title="Dein Miniprojekt" data-notes="Der Auftrag für den Vormittag und danach: konzipieren, umsetzen, hosten. Gehostet wird auf dem eigenen Hosting oder im persönlichen Moodle-Kurs, den es für jede Person gibt. Anleitungen und Quellen stehen im Moodle E-Book. Ca. 1,5 Minuten.">
+    <section class="frame frame--panel" data-title="Dein Miniprojekt" data-notes="Der Auftrag für den Vormittag und danach: konzipieren, umsetzen, hosten. Gehostet wird auf dem eigenen Hosting oder im persönlichen Moodle-Kurs, den es für jede Person gibt. Anleitungen und Quellen stehen auf der Anleitungsseite digi.marcscheidegger.ch. Ca. 1,5 Minuten.">
       <span class="eyebrow">Out &middot; Miniprojekt</span>
       <h2>Dein Miniprojekt in drei Schritten</h2>
-      <p class="lead">Konzipieren, umsetzen, hosten &mdash; Anleitungen und Quellen im Moodle E-Book.</p>
+      <p class="lead">Konzipieren, umsetzen, hosten &mdash; Anleitungen und Quellen auf der Anleitungsseite.</p>
       <div class="option-cards">
         <div class="option-card"><span class="step-num">01</span>Konzipieren<span class="opt-sub">Was soll entstehen, und für wen? Eine Skizze genügt.</span></div>
-        <div class="option-card"><span class="step-num">02</span>Umsetzen<span class="opt-sub">Mit den Anleitungen und Quellen im Moodle E-Book.</span></div>
+        <div class="option-card"><span class="step-num">02</span>Umsetzen<span class="opt-sub">Mit den Anleitungen und Quellen auf der Anleitungsseite.</span><a class="url-tag" href="https://digi.marcscheidegger.ch/" target="_blank" rel="noopener">digi.marcscheidegger.ch</a></div>
         <div class="option-card"><span class="step-num">03</span>Hosten<span class="opt-sub">Auf deinem eigenen Hosting oder in deinem persönlichen Moodle-Kurs.</span></div>
       </div>
     </section>
