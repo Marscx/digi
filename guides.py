@@ -326,7 +326,7 @@ GUIDES.append(dict(
 
 # ------------------------------------------------------------------ Anytune
 GUIDES.append(dict(
-    slug="anytune", title="Anytune", title_long="Anytune: Tempo und Tonhöhe anpassen",
+    slug="anytune", final=True, title="Anytune", title_long="Anytune: Tempo und Tonhöhe anpassen",
     eyebrow="Playalongs · Beispiel 7, 8",
     lead="Eine bestehende Aufnahme langsamer machen, höher oder tiefer stellen eine schwierige Stelle in der Schleife üben und die Übe-Version als Datei an deine Schülerinnen und Schüler weitergeben.",
     card="Tempo und Tonhöhe einer Aufnahme anpassen.", diff_kurz="mittel", bsp=["B7", "B8"],
