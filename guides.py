@@ -755,7 +755,7 @@ GUIDES.append(dict(
 # ------------------------------------------------------------------ Index-Struktur
 # Vorab einrichten: kurzer Hinweis oben in jeder Anleitung (spart Zeit am Praxistag)
 VORAB = {
-    "noteflight": "Nichts zu installieren. Melde dich vorab mit dem Zugang aus der Infomail bei Noteflight Learn an und prüfe, dass es klappt.",
+    "noteflight": "Nichts zu installieren. Melde dich vorab mit dem Zugang, den du separat von Marc bekommst, bei Noteflight Learn an und prüfe, dass es klappt.",
     "musescore": "Lade MuseScore Studio gratis von <a href=\"https://musescore.org/de\" target=\"_blank\" rel=\"noopener\">musescore.org</a> herunter und installiere es (ca. 10 Minuten). Öffne es einmal, damit du weisst, dass es läuft.",
     "handyvideo": "Installiere Acapella (und wenn du willst CapCut) aus dem App Store oder Play Store und nimm <b>Kabelkopfhörer</b> mit. Probiere vorab, ein Video per AirDrop, Cloud oder Kabel auf den Laptop zu bringen (siehe Schritt 5).",
     "moises": "Nichts zu installieren. Lege vorab ein Gratis-Konto auf <a href=\"https://moises.ai\" target=\"_blank\" rel=\"noopener\">moises.ai</a> an und melde dich einmal an. Die App ist freiwillig.",
@@ -765,7 +765,7 @@ VORAB = {
     "davinci-resolve": "Lade die <b>kostenlose</b> Version vorab herunter und installiere sie. Der Download ist gross (1&ndash;2 Stunden). Im Computerraum der HSLU ist Resolve installiert, aber auf deinem eigenen Gerät kannst du danach weiterarbeiten. Filme mit dem Handy und bringe die Aufnahmen per AirDrop oder Cloud auf den Laptop (siehe Schritt 3).",
     "opendaw": "Nichts zu installieren. Öffne <a href=\"https://opendaw.studio\" target=\"_blank\" rel=\"noopener\">opendaw.studio</a> vorab einmal in deinem Browser und prüfe, dass es lädt.",
     "koala-sampler": "Installiere die App vorab aus dem App Store oder Play Store (Preis im Store prüfen).",
-    "moodle-kurs": "Nichts zu installieren. Melde dich vorab mit dem Zugang aus der Infomail bei Moodle an und prüfe, dass es klappt.",
+    "moodle-kurs": "Nichts zu installieren. Melde dich vorab mit dem Zugang, den du separat von Marc bekommst, bei Moodle an und prüfe, dass es klappt.",
     "website-mit-ki": "Nichts zu installieren. Lege vorab ein gratis Jimdo-Konto an und halte deinen KI-Zugang bereit.",
     "website-git": "Installiere Git vorab (Schritt 4), lege ein gratis GitHub-Konto an und halte einen Texteditor bereit. Wenn du ein eigenes Hosting hast, brauchst du seine Zugangsdaten.",
     "konzeptarbeit": "Nichts zu installieren. Teste vorab deinen KI-Zugang und überlege dir ein Projekt.",
