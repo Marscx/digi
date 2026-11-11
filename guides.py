@@ -723,7 +723,7 @@ GUIDES.append(dict(
 
 # ------------------------------------------------------------------ Konzeptarbeit
 GUIDES.append(dict(
-    slug="konzeptarbeit", title="Konzeptarbeit", title_long="Konzeptarbeit: vom Ist-Zustand zum Konzept",
+    slug="konzeptarbeit", final=True, title="Konzeptarbeit", title_long="Konzeptarbeit: vom Ist-Zustand zum Konzept",
     eyebrow="Konzipieren · Beispiel 1, 8",
     lead="Mit einer KI den Ist-Zustand analysieren, Handlungsfelder finden und ein einfaches Konzept formulieren.",
     card="Ist-Zustand, Handlungsfelder, Konzept.", diff_kurz="mittel bis schwierig", bsp=["B1", "B8"],
@@ -744,7 +744,7 @@ GUIDES.append(dict(
         ])),
         ("umsetzung", "Kleine Umsetzung: dein Konzept auf einer Seite", "30&ndash;45 Min.", "\n".join([
             p("<b>Auftrag:</b> Fasse dein Konzept auf einer Seite zusammen."),
-            ol(["Ist-Zustand in fünf Sätzen.", "Zwei Handlungsfelder mit je einem Ziel.", "Drei erste Schritte mit Termin.", "Eine Frage, die du am Nachmittag in deinem Auftritt beantwortest."]),
+            ol(["Ist-Zustand in fünf Sätzen.", "Zwei Handlungsfelder mit je einem Ziel.", "Drei erste Schritte mit Termin.", "Eine Frage, die du in deiner Kurzpräsentation klärst."]),
             check("kz", ["dein Ist-Zustand steht auf einer Seite,", "du hast zwei Ziele mit Termin,", "du hast die Vorschläge der KI geprüft und selbst entschieden."]),
         ])),
     ],
