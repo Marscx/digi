@@ -613,7 +613,7 @@ GUIDES.append(dict(
             ol(["Lege die Datei in deiner Cloud ab, zum Beispiel in Swisscom myCloud (kDrive oder ein anderer Speicher geht auch).", "Erzeuge im Teilen-Dialog einen <b>Freigabelink</b> und schütze ihn mit einem <b>Passwort</b>, wenn dein Anbieter das kann (am besten mit Ablaufdatum).",
                 "Lege in Moodle eine <b>Seite</b> an (oder das Material <b>URL</b>) und schreibe den Link und das Passwort hinein. Beides steht im geschützten Kursbereich und ist nur für angemeldete Teilnehmende sichtbar.", "Teste den Link in einem privaten Fenster, ohne in deiner Cloud angemeldet zu sein: Fragt er nach dem Passwort und öffnet er die Datei?"]),
             warn("Kurs nicht für Gäste öffnen", "Wenn Link und Passwort in einem Kurs stehen, darf der Kurs nicht für Gäste offen sein. Sonst sehen alle beides. Prüfe in deinem Kurs, ob der Gastzugang ausgeschaltet ist."),
-            note("Passwort-Link in Swisscom myCloud?", "Ob und wie Swisscom myCloud Links mit Passwort und Ablaufdatum anbietet, konnte ich nicht bestätigen. Schau im Teilen-Dialog deiner Cloud nach. Wenn dein Anbieter keinen Passwortschutz kennt, wähle einen anderen Speicher."),
+            note("Swisscom myCloud", "Swisscom myCloud bietet Freigabelinks mit Passwort. Bei einem anderen Speicher schaust du im Teilen-Dialog nach, ob er Passwortschutz kennt. Wenn nicht, wähle einen anderen Speicher."),
             h3("Wenn du weitermachen willst"),
             ul(["Lege ein <b>Buch</b> mit mehreren Kapiteln an: ein Kapitel pro Instrument oder Thema.", "Verlinke eine Anleitung von <b>digi.marcscheidegger.ch</b> in deinem Kurs."]),
         ])),
