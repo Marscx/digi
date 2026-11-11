@@ -597,6 +597,59 @@ GUIDES.append(dict(
     quellen=[("Moodle-Dokumentation: Video", "https://docs.moodle.org/de/Video"), ("Moodle-Dokumentation (Deutsch)", "https://docs.moodle.org/de/")],
 ))
 
+# ------------------------------------------------------------------ Linktree
+GUIDES.append(dict(
+    slug="linktree", title="Linktree", title_long="Linktree: eine Linkseite ohne eigene Website",
+    eyebrow="Hosten · Beispiel 2",
+    lead="Eine einzige Seite mit allen deinen Links (Website, Social Media, Shop, Projekte), ohne eine eigene Website zu bauen.",
+    card="Alle Links auf einer Seite sammeln: die einfachste Variante für einen Online-Auftritt.", diff_kurz="leicht", bsp=["B2"],
+    zeit="ca. 30&ndash;45 Minuten", diff="leicht", geraet="Computer, Tablet oder Handy (Browser oder App)", kosten="Gratis-Plan reicht (mit Linktree-Logo und Werbung)",
+    steps=[
+        ("basics", "Basics: Was ist das, was brauche ich?", "5 Min.", "\n".join([
+            p("Linktree ist ein <b>Link-in-Bio-Dienst</b>. Du bekommst eine Seite unter <code>linktr.ee/deinname</code> mit einem Knopf pro Link: zu deiner Website, deinem Instagram-Konto, deinem Shop, einem Video oder einem Projekt. Die Adresse kannst du in jede Profilzeile eintragen oder als QR-Code auf einen Flyer drucken."),
+            h3("Wann passt das?"),
+            ul(["Du hast mehrere Kanäle (Social Media, Shop, Projekte) und willst sie auf <b>einer</b> Übersicht zeigen.", "Du hast keine eigene Website und willst auch keine bauen.", "Du brauchst schnell einen Online-Auftritt, zum Beispiel für ein Projekt, ein Ensemble oder einen Kurs."]),
+            h3("Was Linktree nicht ist"),
+            ul(["Keine richtige Website: Die Seite besteht aus Knöpfen mit Links und etwas Text. Für mehr Inhalt brauchst du eine Website (siehe <a href=\"website-mit-ki.html\">Website mit KI</a>).", "Die Adresse lautet immer <code>linktr.ee/deinname</code>. Eine eigene Adresse wie <code>meinname.ch</code> ist nach den Angaben, die ich gefunden habe, nicht vorgesehen."]),
+            h3("Das brauchst du"),
+            ul(["Eine E-Mail-Adresse", "Eine Liste der Adressen (Links), die auf die Seite sollen", "Ein Profilbild oder Logo und einen kurzen Text über dich oder dein Projekt", "Einen Computer, ein Tablet oder ein Handy"]),
+            warn("Gratis-Plan", "Im Gratis-Plan zeigt deine Seite das Linktree-Logo und Werbung. Das Logo ausblenden kostet extra (laut Linktree ab dem Plan Pro). Die Preise und Funktionen der Pläne ändern sich oft. Schau vor der Anmeldung auf der <a href=\"https://linktr.ee/s/pricing\" target=\"_blank\" rel=\"noopener\">Preisseite von Linktree</a>."),
+        ])),
+        ("start", "Anmelden", "10 Min.", "\n".join([
+            ol(['Öffne <a href="https://linktr.ee/register" target="_blank" rel="noopener">linktr.ee/register</a> (oder die Linktree-App für iPhone und Android) und wähle <b>Sign up</b>.',
+                "Gib deine <b>E-Mail-Adresse</b> ein. Schau genau hin, du musst sie später bestätigen.", "Wähle einen <b>Benutzernamen</b>. Er wird Teil der Adresse: <code>linktr.ee/deinname</code>. Nimm einen Namen, der zu dir oder deinem Projekt passt und den du dir merken kannst.",
+                "Wähle den Plan <b>Free</b> (gratis). Manche Seiten bieten eine Testphase für einen bezahlten Plan an. Du brauchst sie nicht, und eine Testphase kann danach in ein Abo übergehen.", "Folge den Hinweisen auf dem Bildschirm und füge die ersten Links hinzu."]),
+            note("Menüs", "Die Menüs von Linktree ändern sich von Zeit zu Zeit. Hier stehen die Namen, die ich in der Hilfe von Linktree gefunden habe. Gilt, was du auf dem Bildschirm siehst."),
+        ])),
+        ("erste", "Erste Schritte zum Testen", "10 Min.", "\n".join([
+            tut("https://linktr.ee/help/articles/5434134-creating-your-linktree", "Linktree-Hilfe: Deine erste Linktree anlegen (Englisch)", "Zeigt Anmeldung, Benutzername und die ersten Links in kurzen Schritten."),
+            yt("Linktree erstellen Anleitung deutsch", "Wähle ein aktuelles Video. Die Oberfläche ändert sich, ältere Videos sehen anders aus."),
+            ol(["Öffne <b>My Linktree</b> und wähle <b>Edit</b>.", "Wechsle auf den Reiter <b>Links</b> und wähle <b>+ Add</b>.", "Füge die Adresse (URL) ein, die du verlinken willst, und gib einen <b>Titel</b>. Der Titel steht auf dem Knopf.",
+                "Schau dir die Vorschau an (am Computer rechts, am Handy oben). Dein Link ist ein Knopf auf deiner Seite."]),
+            note("Link erscheint nicht?", "Prüfe, ob der Link einen Titel hat, ob sein Schalter eingeschaltet ist und ob die Adresse mit <code>https://</code> beginnt."),
+        ])),
+        ("umsetzung", "Kleine Umsetzung: deine Linkseite", "20&ndash;30 Min.", "\n".join([
+            p("<b>Auftrag:</b> Baue eine Linkseite für dich oder ein Projekt mit Bild, Kurztext und fünf bis sieben Links."),
+            ol(["<b>Profil:</b> Lade ein Profilbild oder Logo hoch (<b>Edit</b>, Bereich <b>Header</b>), gib einen Titel und schreibe einen kurzen Text (bis 160 Zeichen) darunter.",
+                "<b>Links:</b> Füge fünf bis sieben Links ein, zum Beispiel Website, Instagram, YouTube, Shop, Moodle-Kurs oder dein Projekt. Das Wichtigste kommt nach oben. Linktree empfiehlt etwa sieben bis zehn Einträge. Bei mehr gruppierst du sie mit Überschriften (Header).",
+                "<b>Symbole:</b> Füge Social-Media-Symbole hinzu und wähle, ob sie oben oder unten stehen.", "<b>Design:</b> Wähle unter <b>Appearance</b> ein Theme. Das Design gilt für die ganze Seite. Schau die Vorschau an, bevor du es übernimmst.",
+                "<b>Testen:</b> Öffne <code>linktr.ee/deinname</code> auf dem Handy. Tippe jeden Knopf an und prüfe, ob er richtig ankommt.", "<b>Teilen:</b> Trage die Adresse in deine Profile ein, füge sie in deinen Moodle-Kurs ein oder erzeuge mit dem QR-Code-Werkzeug von Linktree einen QR-Code für Flyer und Plakate."]),
+            check("lt", ["deine Seite hat Bild, Titel und Kurztext,", "fünf bis sieben Links funktionieren auf dem Handy,", "die Adresse steht in mindestens einem Profil oder in deinem Moodle-Kurs."]),
+            h3("Wenn du weitermachen willst"),
+            ul(["Zeige ein Video oder Musik direkt auf der Seite mit einer <b>Link App</b> (Knopf <b>+ Add</b>, dann Link Apps durchsuchen).", "Schau dir die Statistik an: Der Gratis-Plan zeigt 28 Tage Verlauf, wie oft welcher Link angeklickt wurde.",
+                "Wenn du mehr Inhalt brauchst, baue eine Website (<a href=\"website-mit-ki.html\">Website mit KI</a>, <a href=\"website-git.html\">Website mit Git veröffentlichen</a>) und verlinke sie von deiner Linkseite."]),
+        ])),
+    ],
+    stolper=["<b>Logo und Werbung:</b> Im Gratis-Plan zeigt die Seite das Linktree-Logo und Werbung. Ausblenden ist kostenpflichtig.", "<b>Preise ändern sich:</b> Schau vor der Anmeldung auf die Preisseite von Linktree und starte keine Testphase, wenn du kein Abo willst.",
+             "<b>Benutzername ändern:</b> Du kannst ihn nur alle sieben Tage ändern. Danach gilt die neue Adresse sofort, und alte Adressen, die du verteilt hast, funktionieren möglicherweise nicht mehr. Wähle ihn deshalb gleich gut. Selbst gedruckte QR-Codes mit der alten Adresse musst du neu machen.",
+             "<b>Zu viele Links:</b> Sieben bis zehn Knöpfe sind übersichtlich. Gruppiere sonst mit Überschriften.", "<b>Die Seite gehört nicht dir:</b> Sie liegt beim Anbieter. Bewahre deine Link-Liste und dein Profilbild zusätzlich bei dir auf.",
+             "<b>Datenschutz:</b> Verlinke nichts Vertrauliches und zeige Bilder von Kindern und Jugendlichen nur mit Einwilligung. Die Seite ist öffentlich.",
+             "<b>Andere Anbieter:</b> Es gibt weitere Link-in-Bio-Dienste. Ich habe sie hier nicht verglichen."],
+    quellen=[("Linktree: Preise", "https://linktr.ee/s/pricing"), ("Linktree-Hilfe: Deine erste Linktree anlegen", "https://linktr.ee/help/articles/5434134-creating-your-linktree"), ("Linktree-Hilfe: Links und Link Apps", "https://linktr.ee/help/articles/8614037-links-and-link-apps"),
+             ("Linktree-Hilfe: Design anpassen", "https://linktr.ee/help/articles/8614125-customize-your-linktree-appearance"), ("Linktree-Hilfe: Benutzernamen ändern", "https://linktr.ee/help/articles/5434119-change-your-linktree-username"),
+             ("Linktree-Hilfe: Funktionen der bezahlten Pläne", "https://linktr.ee/help/articles/5434140-about-paid-plan-features")],
+))
+
 # ------------------------------------------------------------------ Website mit KI
 GUIDES.append(dict(
     slug="website-mit-ki", final=True, title="Website mit KI", title_long="Website mit KI: analysieren, verbessern, in Jimdo umsetzen",
@@ -766,6 +819,7 @@ VORAB = {
     "opendaw": "Nichts zu installieren. Öffne <a href=\"https://opendaw.studio\" target=\"_blank\" rel=\"noopener\">opendaw.studio</a> vorab einmal in deinem Browser und prüfe, dass es lädt.",
     "koala-sampler": "Installiere die App vorab aus dem App Store oder Play Store (Preis im Store prüfen).",
     "moodle-kurs": "Nichts zu installieren. Melde dich vorab mit dem Zugang, den du separat von Marc bekommst, bei Moodle an und prüfe, dass es klappt.",
+    "linktree": "Nichts zu installieren. Lege vorab ein gratis Linktree-Konto an (Plan Free) und sammle die Adressen, die auf deine Seite sollen.",
     "website-mit-ki": "Nichts zu installieren. Lege vorab ein gratis Jimdo-Konto an und halte deinen KI-Zugang bereit.",
     "website-git": "Installiere Git vorab (Schritt 4), lege ein gratis GitHub-Konto an und halte einen Texteditor bereit. Wenn du ein eigenes Hosting hast, brauchst du seine Zugangsdaten.",
     "konzeptarbeit": "Nichts zu installieren. Teste vorab deinen KI-Zugang und überlege dir ein Projekt.",
@@ -785,5 +839,5 @@ GROUPS = [
     ("Playalongs", "Tempo, Tonhöhe, Stimmen trennen", ["moises", "anytune", "ireal-pro", "daw"]),
     ("Video", "Multispur, Notenrolle", ["davinci-resolve", "handyvideo"]),
     ("Producing und Songwriting", "", ["opendaw", "koala-sampler", "suno"]),
-    ("Hosten und Konzept", "Moodle, Website, Cloud", ["moodle-kurs", "website-mit-ki", "website-git", "kdrive", "konzeptarbeit"]),
+    ("Hosten und Konzept", "Moodle, Website, Cloud", ["moodle-kurs", "linktree", "website-mit-ki", "website-git", "kdrive", "konzeptarbeit"]),
 ]
