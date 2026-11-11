@@ -52,6 +52,30 @@ def code(text):
             '                <pre><code>' + _h.escape(text.rstrip("\n")) + '</code></pre>\n            </div>')
 
 
+def handy_filmen():
+    return "\n".join([
+        h3("Mit dem Handy filmen"),
+        ul(["<b>Quer filmen</b> (Handy waagrecht) und das Handy <b>fest hinstellen</b> (Stativ, an Bücher lehnen), nicht aus der Hand.",
+            "<b>Gleiche Einstellungen</b> für alle Aufnahmen: gleiche Auflösung und gleiche Bildrate (zum Beispiel 1080p mit 30 Bildern pro Sekunde). Auf dem iPhone findest du das unter Einstellungen, Kamera, Video aufnehmen.",
+            "<b>Kopfhörer tragen</b>, damit die Pilotspur nicht mit aufgenommen wird.",
+            "Beginne jede Aufnahme mit einem <b>Klatschen</b>. Das ist ein Zeichen, an dem du später Bild und Ton gut zusammenschiebst.",
+            "Filme jede Stimme als eigene Datei und benenne sie gleich (zum Beispiel <code>sopran.mov</code>, <code>alt.mov</code>)."]),
+    ])
+
+
+def handy_uebertragen():
+    return "\n".join([
+        h3("Aufnahmen auf den Laptop bringen"),
+        p("Am Praxistag arbeitest du am Laptop. Bring die Videos <b>vorher</b> oder am Anfang vom Handy darauf. Wähle den Weg, der zu deinen Geräten passt:"),
+        ul(["<b>AirDrop (iPhone oder iPad auf Mac):</b> Öffne das Video in der Fotos-App, tippe auf Teilen und wähle AirDrop und deinen Mac. Auf dem Mac liegt die Datei danach im Ordner Downloads. Bluetooth und WLAN müssen auf beiden Geräten eingeschaltet sein.",
+            "<b>Cloud (alle Geräte):</b> Lade das Video in iCloud Fotos, Google Fotos, kDrive oder einen anderen Cloud-Speicher und lade es am Laptop im Browser herunter. Achte darauf, dass du die <b>Originaldatei</b> lädst und nicht eine verkleinerte Vorschau.",
+            "<b>Kabel (alle Geräte):</b> Verbinde das Handy mit dem Laptop. Auf dem Mac kopierst du die Videos mit der Fotos-App oder mit «Digitale Bilder», unter Windows mit der Fotos-App oder dem Explorer, bei Android im Ordner <code>DCIM/Camera</code> (am Handy «Dateien übertragen» wählen)."]),
+        warn("Nicht per Messenger", "Schicke Videos nicht über WhatsApp, Signal oder als Mail-Anhang. Sie werden dabei verkleinert, und Bild und Ton können leicht auseinanderlaufen. Windows und Android haben kein AirDrop: Nimm die Cloud oder das Kabel."),
+        ol(["Probiere den Weg <b>vorab</b> mit einem kurzen Testvideo aus.", "Öffne die Datei auf dem Laptop und prüfe, ob Bild und Ton da sind.",
+            "Lege alle Videos in einen Projektordner und <b>verschiebe sie danach nicht mehr</b>."]),
+    ])
+
+
 GUIDES = []
 import os as _os
 CODE_OPENDAW = open(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), "beispiele", "opendaw-midnight-hook.txt"), encoding="utf-8").read()
@@ -234,6 +258,10 @@ GUIDES.append(dict(
                 "<b>iMovie (iPhone, iPad, Mac, gratis):</b> Legt zwei Clips nebeneinander oder übereinander (Split Screen). Mehr als zwei Bilder gehen nicht. Details bei Apple: <a href=\"https://support.apple.com/guide/imovie-iphone/kna831efee4d/ios\" target=\"_blank\" rel=\"noopener\">iMovie Split Screen</a>.",
                 "<b>InShot:</b> Funktioniert ähnlich wie CapCut, mit Gratis-Einschränkungen (zum Beispiel Wasserzeichen).",
                 "<b>DaVinci Resolve:</b> Wenn du mehr Kontrolle über Ton und Schnitt willst, siehe die eigene Anleitung auf dieser Seite."]),
+        ])),
+        ("uebertragen", "Übertragen: das fertige Video auf den Laptop", "10&ndash;15 Min.", "\n".join([
+            p("Das fertige Mehrbildvideo liegt in der App und in der Fotos-App deines Handys. Für Moodle, Vimeo oder YouTube brauchst du die Datei am Laptop."),
+            handy_uebertragen(),
         ])),
     ],
     stolper=["<b>Bluetooth-Kopfhörer:</b> Der Ton kommt leicht verzögert an, die Stimmen sind dann nicht synchron. Nimm Kabelkopfhörer mit Mikrofon.",
@@ -423,6 +451,10 @@ GUIDES.append(dict(
                 "Installiere das Programm wie jedes andere (Mac: Datei öffnen und ins Programme-Verzeichnis ziehen, Windows: Installer ausführen).", "Starte Resolve. Beim ersten Start fragt es nach Einstellungen und Speicherort. Die Voreinstellungen sind in Ordnung.",
                 "Lege über <b>Neues Projekt</b> ein Projekt an und gib ihm einen Namen."]),
         ])),
+        ("handy", "Handy: filmen und auf den Laptop bringen", "20&ndash;30 Min.", "\n".join([
+            p("Die Aufnahmen für das Multispurvideo entstehen am einfachsten mit dem Handy. Der Schnitt läuft dann am Laptop."),
+            handy_filmen(), handy_uebertragen(),
+        ])),
         ("erste", "Erste Schritte zum Testen", "30 Min.", "\n".join([
             tut("https://www.tutkit.com/de/text-tutorials/1829-davinci-resolve-audio-synchronisieren-leicht-gemacht", "tutkit: DaVinci Resolve Audio synchronisieren (Textanleitung, Deutsch)", "Zeigt zwei Wege: von Hand an der Wellenform und automatisch mit «Autosync Audio». Menüs können je nach Version abweichen."),
             yt("DaVinci Resolve Einsteiger Tutorial deutsch Schnitt", "Wähle ein aktuelles Video zur Version, die du installiert hast."),
@@ -540,6 +572,7 @@ GUIDES.append(dict(
             p("Moodle ist eine Lernplattform. In deinem persönlichen Kurs legst du Abschnitte an und füllst sie mit Texten, Dateien, Videos und kleinen Aufgaben. Ein <b>Buch</b> (E-Book) ist eine Aktivität mit mehreren Kapiteln, eine <b>Seite</b> ist ein einzelner Text mit Medien."),
             h3("Das brauchst du"),
             ul(["Einen Moodle-Zugang mit Kursrechten (bekommst du von Marc für den Praxistag)", "Ein Video, das schon online liegt (zum Beispiel auf Vimeo oder YouTube)", "Einen Browser"]),
+            note("Eigenes Video?", 'Wenn du das Video selber mit dem Handy filmst: bringe es per AirDrop, Cloud oder Kabel auf den Laptop und lade es bei Vimeo oder YouTube hoch. Wie das geht, steht in der Anleitung <a href="handyvideo.html#uebertragen">Video mit dem Handy</a>.'),
         ])),
         ("start", "Anmelden", "10 Min.", "\n".join([
             ol(["Öffne die Moodle-Adresse, die dir Marc mitteilt, und melde dich mit deinen Zugangsdaten an.", "Öffne deinen persönlichen Kurs.", "Schalte oben rechts <b>Bearbeiten</b> ein. Erst dann siehst du die Knöpfe zum Anlegen und Ändern."]),
@@ -720,6 +753,26 @@ GUIDES.append(dict(
 ))
 
 # ------------------------------------------------------------------ Index-Struktur
+# Vorab einrichten: kurzer Hinweis oben in jeder Anleitung (spart Zeit am Praxistag)
+VORAB = {
+    "noteflight": "Nichts zu installieren. Melde dich vorab mit dem Zugang aus der Infomail bei Noteflight Learn an und prüfe, dass es klappt.",
+    "musescore": "Lade MuseScore Studio gratis von <a href=\"https://musescore.org/de\" target=\"_blank\" rel=\"noopener\">musescore.org</a> herunter und installiere es (ca. 10 Minuten). Öffne es einmal, damit du weisst, dass es läuft.",
+    "handyvideo": "Installiere Acapella (und wenn du willst CapCut) aus dem App Store oder Play Store und nimm <b>Kabelkopfhörer</b> mit. Probiere vorab, ein Video per AirDrop, Cloud oder Kabel auf den Laptop zu bringen (siehe Schritt 5).",
+    "moises": "Nichts zu installieren. Lege vorab ein Gratis-Konto auf <a href=\"https://moises.ai\" target=\"_blank\" rel=\"noopener\">moises.ai</a> an und melde dich einmal an. Die App ist freiwillig.",
+    "anytune": "Installiere die App vorab aus dem App Store (Preis im Store prüfen) und lege ein Stück zum Üben bereit.",
+    "guitar-pro": "Installiere das Programm vorab und melde dich an. Die Testversion läuft sieben Tage ab dem Start, das reicht für den Praxistag. Ohne Installation geht auch der Player-Modus im Browser.",
+    "ireal-pro": "Installiere die App vorab aus dem Store (kostenpflichtig, Preis im Store prüfen). Wenn du sie nicht kaufen willst, schaue nur zu.",
+    "davinci-resolve": "Lade die <b>kostenlose</b> Version vorab herunter und installiere sie. Der Download ist gross (1&ndash;2 Stunden). Im Computerraum der HSLU ist Resolve installiert, aber auf deinem eigenen Gerät kannst du danach weiterarbeiten. Filme mit dem Handy und bringe die Aufnahmen per AirDrop oder Cloud auf den Laptop (siehe Schritt 3).",
+    "opendaw": "Nichts zu installieren. Öffne <a href=\"https://opendaw.studio\" target=\"_blank\" rel=\"noopener\">opendaw.studio</a> vorab einmal in deinem Browser und prüfe, dass es lädt.",
+    "koala-sampler": "Installiere die App vorab aus dem App Store oder Play Store (Preis im Store prüfen).",
+    "moodle-kurs": "Nichts zu installieren. Melde dich vorab mit dem Zugang aus der Infomail bei Moodle an und prüfe, dass es klappt.",
+    "website-mit-ki": "Nichts zu installieren. Lege vorab ein gratis Jimdo-Konto an und halte deinen KI-Zugang bereit.",
+    "website-git": "Installiere Git vorab (Schritt 4), lege ein gratis GitHub-Konto an und halte einen Texteditor bereit. Wenn du ein eigenes Hosting hast, brauchst du seine Zugangsdaten.",
+    "konzeptarbeit": "Nichts zu installieren. Teste vorab deinen KI-Zugang und überlege dir ein Projekt.",
+}
+for _g in GUIDES:
+    _g["vorab"] = VORAB[_g["slug"]]
+
 SOON = {
     "dorico": dict(title="Dorico SE", card="Installation, Ausprobieren, Soundbanks, Export und Import.", diff="mittel"),
     "daw": dict(title="GarageBand, Logic, Ableton", card="Playalongs bauen und Stimmen trennen in der DAW.", diff="mittel bis schwierig", bsp=["B7"]),

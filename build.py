@@ -101,6 +101,8 @@ def guide_page(g):
     out.append('            </ul>')
     if not g.get("final"):
         out.append('            <p><span class="badge">Entwurf</span> Noch nicht von Hand getestet. Falls ein Menü anders heisst, gilt, was du auf dem Bildschirm siehst. Sag es Marc, dann wird die Anleitung korrigiert.</p>')
+    if g.get("vorab"):
+        out.append(f'            <div class="note"><b>Vorab einrichten</b>{g["vorab"].replace("<b>", "").replace("</b>", "")} So bleibt am Praxistag mehr Zeit zum Ausprobieren.</div>')
     out.append('            <ul class="toc">')
     for i, s in enumerate(g["steps"], 1):
         out.append(f'                <li><a href="#{s[0]}">{i} {s[1].split(":")[0]}</a></li>')
