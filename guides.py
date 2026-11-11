@@ -599,7 +599,7 @@ GUIDES.append(dict(
 
 # ------------------------------------------------------------------ Linktree
 GUIDES.append(dict(
-    slug="linktree", title="Linktree", title_long="Linktree: eine Linkseite ohne eigene Website",
+    slug="linktree", final=True, title="Linktree", title_long="Linktree: eine Linkseite ohne eigene Website",
     eyebrow="Hosten · Beispiel 2",
     lead="Eine einzige Seite mit allen deinen Links (Website, Social Media, Shop, Projekte), ohne eine eigene Website zu bauen.",
     card="Alle Links auf einer Seite sammeln: die einfachste Variante für einen Online-Auftritt.", diff_kurz="leicht", bsp=["B2"],
