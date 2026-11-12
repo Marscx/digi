@@ -204,7 +204,7 @@ GUIDES.append(dict(
 
 # ------------------------------------------------------------------ Dorico
 GUIDES.append(dict(
-    slug="dorico", title="Dorico", title_long="Dorico: installieren mit Download Assistant und Activation Manager",
+    slug="dorico", final=True, title="Dorico", title_long="Dorico: installieren mit Download Assistant und Activation Manager",
     eyebrow="Notation",
     lead="Dorico SE (gratis) von Steinberg auf dem Computer oder dem iPad installieren und die Lizenz aktivieren. Alles Weitere lernst du mit den deutschen Videos von Markus Hartmann oder im Coaching an der HSLU.",
     card="Dorico SE installieren und aktivieren. Danach mit den deutschen Videos weiterlernen.", diff_kurz="mittel", bsp=[],
