@@ -387,7 +387,7 @@ GUIDES.append(dict(
     eyebrow="Notation · Beispiel 7, 8",
     lead="Tabulaturen und Noten finden, abspielen, verlangsamen und in einzelne Stimmen zerlegen.",
     card="Installation, mySongBook, Ultimate Guitar, Soundslice.", diff_kurz="mittel", bsp=["B7", "B8"],
-    zeit="ca. 60 Minuten", diff="mittel", geraet="Computer (Mac, Windows) oder Browser", kosten="Testversion 7 Tage mit allen Funktionen, danach braucht Bearbeiten eine Lizenz",
+    zeit="ca. 60 Minuten", diff="mittel", geraet="Computer (Mac, Windows) oder Browser", kosten="Testversion 7 Tage, danach Lizenz nötig (die Gratis-Version öffnet keine Dateien)",
     steps=[
         ("basics", "Basics: Was ist das, was brauche ich?", "10 Min.", "\n".join([
             p("<b>Guitar Pro</b> ist ein Programm für Tabulaturen und Noten. Es spielt ein Stück ab, zeigt Griffbild und Noten, und du kannst Tempo und Spuren ändern. <b>mySongBook</b> ist die Sammlung mit vielen fertigen Stücken in Guitar Pro. Sie ist auch für Nicht-Gitarristinnen und Nicht-Gitarristen nützlich, weil sie Noten und Bandspuren liefert."),
@@ -396,7 +396,7 @@ GUIDES.append(dict(
             ul(["Computer mit Mac oder Windows für Guitar Pro, für die anderen beiden reicht der Browser", "Eine E-Mail-Adresse für die Konten", "Kopfhörer"]),
         ])),
         ("start", "Installieren und anmelden", "20 Min.", "\n".join([
-            ol(['Lade Guitar Pro von <a href="https://www.guitar-pro.com/" target="_blank" rel="noopener">guitar-pro.com</a> herunter und installiere es wie jedes Programm. Die Testversion läuft nach den Angaben des Herstellers 7 Tage ab der Installation, mit allen Funktionen. Danach kannst du Guitar Pro laut Hersteller weiter als kostenlosen Player für mySongBook und gekaufte Tabs benutzen. Zum Bearbeiten und Speichern eigener Dateien brauchst du eine Lizenz. Was der Player sonst noch kann, prüfst du auf der Seite des Herstellers.',
+            ol(['Lade Guitar Pro von <a href="https://www.guitar-pro.com/" target="_blank" rel="noopener">guitar-pro.com</a> herunter und installiere es wie jedes Programm. Die Testversion läuft nach den Angaben des Herstellers 7 Tage ab der Installation, mit allen Funktionen. Danach kann die Gratis-Version <b>keine Guitar-Pro-Dateien mehr öffnen und abspielen</b>. Du brauchst dann eine Lizenz. Installiere Guitar Pro deshalb erst kurz vor dem Praxistag, damit die sieben Tage dann noch laufen. Ohne Installation und ohne Lizenz zeigt dir Soundslice eine Guitar-Pro-Datei im Browser (siehe unten).',
                 'Die Anleitung des Herstellers beschreibt die Installation Schritt für Schritt: <a href="https://www.guitar-pro.com/docs/gp8/basics/installation" target="_blank" rel="noopener">Getting Started, Installation</a>.',
                 'Öffne <a href="https://www.ultimate-guitar.com/" target="_blank" rel="noopener">ultimate-guitar.com</a> und erstelle ein Gratis-Konto (oder lade die App).']),
             warn("mySongBook kostet", "Die Stücke aus mySongBook brauchen ein Abo, abgesehen von einzelnen Gratis-Stücken (zum Beispiel dem «Free Tab of the Day»). Klär das mit Marc, bevor du etwas abschliesst."),
@@ -412,7 +412,7 @@ GUIDES.append(dict(
             check("gp", ["ein Stück läuft in Guitar Pro oder im Browser,", "du hast das Tempo verändert,", "du hast eine Spur stummgeschaltet und mit der Band geübt."]),
         ])),
     ],
-    stolper=["<b>Nach der Testzeit:</b> Die Testversion dauert 7 Tage. Danach läuft Guitar Pro als kostenloser Player für mySongBook und gekaufte Tabs. Zum Bearbeiten eigener Dateien brauchst du eine Lizenz.", "<b>Kosten:</b> mySongBook ist ein Abo. Ultimate Guitar hat ein Gratis-Angebot mit Einschränkungen.",
+    stolper=["<b>Nach der Testzeit:</b> Die Testversion dauert 7 Tage ab der Installation. Danach kann die Gratis-Version keine Guitar-Pro-Dateien mehr öffnen und abspielen, du brauchst eine Lizenz. Im Browser zeigt Soundslice die Dateien weiterhin an.", "<b>Kosten:</b> mySongBook ist ein Abo. Ultimate Guitar hat ein Gratis-Angebot mit Einschränkungen.",
              "<b>Qualität der Tabs:</b> Tabs von Nutzenden können Fehler enthalten. Vergleiche mit einer Aufnahme.", "<b>Urheberrecht:</b> Tabs und Noten nur für das eigene Üben und den Unterricht im geschlossenen Rahmen weitergeben."],
     quellen=[("Guitar Pro: Installation (Docs)", "https://www.guitar-pro.com/docs/gp8/basics/installation"), ("Guitar Pro: mySongBook (Docs)", "https://www.guitar-pro.com/docs/gp8/mysongbook"),
              ("Guitar Pro: Support", "https://support.guitar-pro.com/"), ("Soundslice: Guitar Pro Viewer", "https://www.soundslice.com/guitar-pro-viewer/")],
@@ -839,7 +839,7 @@ VORAB = {
     "handyvideo": "Installiere Acapella (und wenn du willst CapCut) aus dem App Store oder Play Store und nimm <b>Kabelkopfhörer</b> mit. Probiere vorab, ein Video per AirDrop, Cloud oder Kabel auf den Laptop zu bringen (siehe Schritt 5).",
     "moises": "Nichts zu installieren. Lege vorab ein Gratis-Konto auf <a href=\"https://moises.ai\" target=\"_blank\" rel=\"noopener\">moises.ai</a> an und melde dich einmal an. Die App ist freiwillig.",
     "anytune": "Installiere die App vorab aus dem App Store (gratis, Zusatzfunktionen wie der Export kosten extra) und lege ein Stück zum Üben bereit.",
-    "guitar-pro": "Installiere das Programm vorab und melde dich an. Die Testversion läuft sieben Tage ab der Installation und hat alle Funktionen, das reicht für den Praxistag. Ohne Installation zeigt Soundslice Guitar-Pro-Dateien im Browser.",
+    "guitar-pro": "Installiere das Programm vorab und melde dich an. Die Testversion läuft sieben Tage ab der Installation, danach öffnet die Gratis-Version keine Dateien mehr. Installiere sie deshalb erst kurz vor dem Praxistag. Ohne Installation zeigt Soundslice Guitar-Pro-Dateien im Browser.",
     "ireal-pro": "Installiere die App vorab aus dem Store (kostenpflichtig, Preis im Store prüfen). Wenn du sie nicht kaufen willst, schaue nur zu.",
     "davinci-resolve": "Lade die <b>kostenlose</b> Version vorab herunter und installiere sie. Der Download ist gross (1&ndash;2 Stunden). Im Computerraum der HSLU ist Resolve installiert, aber auf deinem eigenen Gerät kannst du danach weiterarbeiten. Filme mit dem Handy und bringe die Aufnahmen per AirDrop oder Cloud auf den Laptop (siehe Schritt 3).",
     "opendaw": "Nichts zu installieren. Öffne <a href=\"https://opendaw.studio\" target=\"_blank\" rel=\"noopener\">opendaw.studio</a> vorab einmal in deinem Browser und prüfe, dass es lädt.",
