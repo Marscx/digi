@@ -625,7 +625,7 @@ GUIDES.append(dict(
 
 # ------------------------------------------------------------------ kDrive und kSuite
 GUIDES.append(dict(
-    slug="kdrive", title="kDrive und kSuite", title_long="kDrive und kSuite: Schweizer Cloud und Alternative zu Microsoft 365",
+    slug="kdrive", final=True, title="kDrive und kSuite", title_long="kDrive und kSuite: Schweizer Cloud und Alternative zu Microsoft 365",
     eyebrow="Hosten · Beispiel 6",
     lead="Dateien in einer Cloud mit Servern in der Schweiz ablegen und teilen, und prüfen, ob kSuite von Infomaniak eine Alternative zu Microsoft 365 sein kann. Mit dem Blick auf den Datenschutz.",
     card="Schweizer Cloud zum Ablegen und Teilen, Datenschutz-Check und Vergleich mit Microsoft 365.", diff_kurz="mittel", bsp=["B6"],
