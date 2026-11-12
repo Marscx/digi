@@ -438,6 +438,9 @@ GUIDES.append(dict(
         ("erste", "Erste Schritte zum Testen", "15 Min.", "\n".join([
             tut("https://www.irealpro.com/video-tutorials", "iReal Pro: Videotutorials des Herstellers (Englisch)", "Darunter «Input a song in less than 3 mins», das zeigt, wie man ein Stück eingibt."),
             ol(["Öffne ein Beispielstück und drücke <b>Play</b>.", "Ändere das <b>Tempo</b>, den <b>Stil</b> (zum Beispiel Swing oder Bossa Nova) und die Tonart.", "Schalte einzelne Instrumente der Band im Mixer stumm, zum Beispiel das Klavier, wenn du selber Akkorde spielen willst."]),
+            h3("Gratis-Stücke aus dem Forum"),
+            p("Auf der Seite von iReal Pro heisst es, im <a href=\"https://forums.irealpro.com/\" target=\"_blank\" rel=\"noopener\">Forum</a> teile eine weltweite Gemeinschaft Tausende Stücke zum kostenlosen Herunterladen. Du kannst sie direkt in der App öffnen. So kommst du schnell zu Akkordblättern, ohne sie selber einzugeben."),
+            warn("Ist das erlaubt?", "Das ist nicht eindeutig. Die Stücke im Forum stammen von Nutzenden, und viele sind Akkorde bekannter, geschützter Stücke. Eine Aussage von iReal Pro, ob das erlaubt ist, habe ich nicht gefunden. Unter Musikerinnen und Musikern heisst es oft, Akkordfolgen allein seien weniger geschützt als Melodie und Text. Das ist <b>keine Rechtsauskunft</b> und gilt nicht überall gleich. Nutze die Stücke deshalb nur für das <b>eigene Üben und den Unterricht im geschlossenen Rahmen</b>, gib sie nicht öffentlich weiter und nenne die Komponistin oder den Komponisten, wenn du etwas teilst. Klär im Zweifel mit deiner Schule, was erlaubt ist."),
         ])),
         ("umsetzung", "Kleine Umsetzung: ein eigenes Playalong", "20&ndash;30 Min.", "\n".join([
             p("<b>Auftrag:</b> Erfasse ein Stück mit den Akkorden, die du kennst, und lass dich von der Band begleiten."),
@@ -447,8 +450,8 @@ GUIDES.append(dict(
         ])),
     ],
     stolper=["<b>Kein Notenimport:</b> iReal Pro kann kein PDF, MIDI oder MusicXML in ein Stück verwandeln. Die Akkorde musst du selber eingeben oder aus der Sammlung der Community holen.", "<b>Kosten:</b> Die App ist kostenpflichtig, ein Einmalkauf pro Plattform ohne Abo. iPhone und iPad teilen sich einen Kauf, Mac, Android und Windows kosten je einzeln. Auf Mac (direkter Download) und Windows kannst du 7 Tage testen.", "<b>Tonart ändern:</b> Im Editor ändert «Set» nur die Vorzeichen, die Akkorde bleiben. «Set and Transpose» transponiert auch alle Akkorde. Für ein Playalong in deiner Tonlage brauchst du meist das Zweite.",
-             "<b>Urheberrecht:</b> Die Sammlung wird von Nutzenden gepflegt, dort gelten fremde Urheberrechte. Nutze die Stücke für das eigene Üben."],
-    quellen=[("iReal Pro: Song erstellen", "https://www.irealpro.com/learn/create-a-song"), ("iReal Pro: Videotutorials", "https://www.irealpro.com/video-tutorials"), ("iReal Pro: Dokumentation", "https://www.irealpro.com/documentation/")],
+             "<b>Urheberrecht:</b> Die Sammlung im Forum wird von Nutzenden gepflegt. Ob das Teilen von Akkorden geschützter Stücke erlaubt ist, ist nicht eindeutig geklärt (siehe Schritt 3). Nutze die Stücke nur für das eigene Üben und den Unterricht im geschlossenen Rahmen."],
+    quellen=[("iReal Pro: Song erstellen", "https://www.irealpro.com/learn/create-a-song"), ("iReal Pro: Videotutorials", "https://www.irealpro.com/video-tutorials"), ("iReal Pro: Dokumentation", "https://www.irealpro.com/documentation/"), ("iReal Pro: Forum", "https://forums.irealpro.com/")],
 ))
 
 # ------------------------------------------------------------------ DaVinci Resolve
