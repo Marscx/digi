@@ -1020,13 +1020,12 @@ for _g in GUIDES:
 
 SOON = {
     "daw": dict(title="GarageBand, Logic, Ableton", card="Playalongs bauen und Stimmen trennen in der DAW.", diff="mittel bis schwierig", bsp=["B7"]),
-    "suno": dict(title="Suno und KI-Songtext", card="Komponieren und Songtexte mit KI.", diff="leicht bis mittel", bsp=["B4", "B7"]),
 }
 
 GROUPS = [
     ("Notation", "Noten schreiben, finden, tauschen", ["noteflight", "guitar-pro", "musescore", "dorico"]),
     ("Playalongs", "Tempo, Tonhöhe, Stimmen trennen", ["moises", "anytune", "ireal-pro", "daw"]),
     ("Video", "Multispur, Notenrolle", ["davinci-resolve", "handyvideo"]),
-    ("Producing und Songwriting", "", ["opendaw", "koala-sampler", "suno"]),
+    ("Producing und Songwriting", "", ["opendaw", "koala-sampler"]),
     ("Hosten und Konzept", "Moodle, Website, Cloud", ["moodle-kurs", "kdrive", "linktree", "website-mit-ki", "website-git", "konzeptarbeit"]),
 ]
