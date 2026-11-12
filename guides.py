@@ -380,6 +380,61 @@ GUIDES.append(dict(
     quellen=[("Moises: Webseite", "https://moises.ai/"), ("Moises: Hilfe-Center", "https://help.moises.ai/"), ("Moises im App Store", "https://apps.apple.com/US/app/id1515796612")],
 ))
 
+# ------------------------------------------------------------------ GarageBand, Logic, Ableton
+GUIDES.append(dict(
+    slug="daw", title="GarageBand, Logic, Ableton", title_long="GarageBand, Logic und Ableton: Playalongs und Musik in der DAW",
+    eyebrow="Playalongs · Beispiel 7",
+    lead="Mit einer DAW Musik aufnehmen, Begleitungen bauen und Playalongs herstellen. GarageBand ist der leichte Einstieg, Logic Pro und Ableton Live sind steiler.",
+    card="Playalongs und Aufnahmen in der DAW: GarageBand zum Einstieg, Logic und Ableton für Fortgeschrittene.", diff_kurz="mittel bis schwierig", bsp=["B7"],
+    zeit="ca. 90&ndash;120 Minuten", diff="mittel bis schwierig", geraet="Mac oder iPhone und iPad (GarageBand, Logic), Mac oder Windows (Ableton)", kosten="GarageBand gratis, Logic Pro CHF 180 (Mac App Store), Ableton Live ab CHF 79, 30 Tage Testversion",
+    steps=[
+        ("basics", "Basics: Was ist das, was brauche ich?", "10 Min.", "\n".join([
+            p("Eine <b>DAW</b> (Digital Audio Workstation) ist ein Programm, um Musik aufzunehmen, zu arrangieren und zu mischen. Für uns zählt: Du kannst <b>Playalongs</b> bauen (eine Begleitung, die du in Tempo und Tonart anpasst, mit stummgeschalteter eigener Stimme) und eigene Stimmen aufnehmen."),
+            warn("Wo anfangen?", "<b>GarageBand ist als Einstieg gut geeignet.</b> Es ist gratis und einfach. <b>Logic Pro und Ableton Live sind steiler für den Einstieg.</b> Sie können mehr, aber du brauchst deutlich mehr Zeit zum Lernen. Fange mit GarageBand an, und wechsle erst, wenn du an Grenzen stösst."),
+            h3("Die drei im Vergleich"),
+            ul(["<b>GarageBand:</b> von Apple, <b>gratis</b>, für Mac, iPhone und iPad. Mit virtuellen Schlagzeugern (Drummer), Instrumenten und Loops. Auf dem Mac bis 255 Spuren, auf dem iPhone und iPad bis 32. Der einfachste Weg zu einem Playalong.",
+                "<b>Logic Pro:</b> von Apple, <b>nur für Apple-Geräte</b> (Mac, auch als iPad-Abo). Im Schweizer Mac App Store CHF 180.00 als Einmalkauf (Stand November 2026). Es kann Aufnahmen mit dem <b>Stem Splitter</b> in Stimmen trennen (Gesang, Schlagzeug, Bass, Gitarre, Klavier, Sonstiges, nach Apple mit M1-Chip oder neuer) und bringt virtuelle Spielende («Session Players») mit.",
+                "<b>Ableton Live:</b> für <b>Windows und Mac</b>. Intro kostet CHF 79, Standard CHF 269 und Suite CHF 569 (Ableton-Shop Schweiz, zeitweise mit Rabatt, Stand November 2026). Intro hat 16 Audio- und MIDI-Spuren. Es gibt eine kostenlose Testversion von 30 Tagen."]),
+            note("Und ohne Mac?", "Auf Windows kommst du gratis mit <a href=\"opendaw.html\">openDAW</a> im Browser weit. Ableton Live ist die Windows-Variante, wenn du eine richtige DAW willst."),
+            h3("Das brauchst du"),
+            ul(["Einen <b>Mac</b> (GarageBand, Logic), ein <b>iPhone oder iPad</b> (GarageBand) oder einen <b>Windows-PC oder Mac</b> (Ableton)", "Kopfhörer, damit die Begleitung nicht in die Aufnahme zurückläuft", "Genug freien Speicher: Die Klangbibliotheken sind gross (bei Logic bis 44 GB)", "Ein Stück, für das du ein Playalong bauen willst"]),
+        ])),
+        ("start", "Installieren", "30&ndash;60 Min.", "\n".join([
+            h3("GarageBand (Mac, iPhone, iPad)"),
+            ol(["Prüfe, ob GarageBand schon auf deinem Gerät ist. Sonst suche im App Store nach <b>GarageBand</b> (Apple) und installiere es. Es kostet nichts.", "Beachte die Anforderungen: Nach dem Schweizer App Store braucht die Mac-Version macOS 15.6 oder neuer, die Version für iPhone und iPad iOS oder iPadOS 27. Auf älteren Geräten bekommst du eine ältere Version oder keine.", "Öffne GarageBand und lade bei Bedarf die <b>Sound-Bibliothek</b> nach (Instrumente, Loops, Drummer). Das kann dauern."]),
+            h3("Logic Pro (Mac)"),
+            ol(["Suche im Mac App Store nach <b>Logic Pro</b>. Der Preis ist CHF 180.00 (Stand November 2026), ein Einmalkauf. Ob es eine Testversion gibt, prüfe auf der Seite von Apple, die Store-Seite nennt keine. Kaufe nicht ohne Rücksprache.", "Nach dem Store braucht Logic macOS 26.1 oder neuer. Für die Minimal-Installation sind etwa 6 GB frei zu halten, für die ganze Sound-Bibliothek 44 GB oder mehr.", "Der Stem Splitter braucht einen Mac mit M1-Chip oder neuer."]),
+            h3("Ableton Live (Windows und Mac)"),
+            ol(['Öffne <a href="https://www.ableton.com/de/trial/" target="_blank" rel="noopener">ableton.com/de/trial</a> und lade die kostenlose Testversion herunter (Mac: DMG öffnen und «Live Trial» in den Ordner Programme ziehen, Windows: ZIP entpacken und den Installer starten).', "Öffne «Live Trial» und wähle «Kostenlose Testversion starten». Im Browser meldest du dich an oder legst ein kostenloses Konto an. Es braucht weder ein Abo noch eine Kreditkarte, aber eine Internetverbindung.",
+                "Die Testversion ist <b>30 Tage</b> lang und enthält alle Funktionen von Live 12 Suite. Danach kannst du Sets noch öffnen, aber nicht mehr speichern oder exportieren."]),
+            warn("Nichts kaufen, was du nicht brauchst", "Alle drei zeigen dir Hinweise auf Zusatzpakete, Abos oder Upgrades. Für den Praxistag brauchst du davon nichts. Schliesse solche Fenster und kaufe nichts ohne Rücksprache."),
+        ])),
+        ("erste", "Erste Schritte zum Testen", "30 Min.", "\n".join([
+            tut("https://support.apple.com/de-ch/guide/garageband/welcome/mac", "Apple: GarageBand Benutzerhandbuch für den Mac (Deutsch)", "Das offizielle Handbuch. Für iPhone und iPad gibt es ein eigenes Handbuch."),
+            tut("https://support.apple.com/de-ch/guide/logicpro/welcome/mac", "Apple: Logic Pro Benutzerhandbuch für den Mac (Deutsch)", "Das offizielle Handbuch zu Logic Pro."),
+            tut("https://www.ableton.com/de/live/learn-live/", "Ableton: Learn Live (Deutsch, Anleitung des Herstellers)", "Eine Einführung des Herstellers in Live."),
+            yt("GarageBand Tutorial deutsch Anfänger", "Wähle ein aktuelles Video. Die Oberfläche ändert sich mit jeder Version."),
+            ol(["Lege in GarageBand ein neues Projekt an und wähle ein <b>leeres Projekt</b> (oder «Software-Instrument», «Drummer» oder «Audio»).", "Füge eine <b>Drummer-Spur</b> hinzu, wähle einen Schlagzeuger und spiele sie ab. Ändere das Tempo.", "Füge ein <b>Software-Instrument</b> hinzu (zum Beispiel Klavier) und spiele ein paar Töne mit der Tastatur oder auf dem Bildschirm.", "Nimm mit dem Mikrofon einige Sekunden auf einer <b>Audiospur</b> auf und spiele sie ab."]),
+        ])),
+        ("umsetzung", "Kleine Umsetzung: ein Playalong bauen", "30&ndash;45 Min.", "\n".join([
+            p("<b>Auftrag:</b> Baue ein Playalong für ein einfaches Stück in einem Tempo, in dem du üben kannst, und nimm deine eigene Stimme dazu auf."),
+            ol(["Lege ein neues Projekt an und stelle <b>Tempo</b> und <b>Tonart</b> auf dein Stück ein.", "Baue eine <b>Begleitung</b>: eine Drummer-Spur und ein Instrument (Klavier, Bass oder Gitarre) mit den Akkorden des Stücks. Wähle ein langsames Tempo, das du später steigern kannst.", "Lege einen <b>Zyklus-Bereich</b> (Loop) über die Stelle, die du üben willst.",
+                "Nimm auf einer Audiospur deine eigene Stimme oder dein Instrument auf. Trage Kopfhörer.", "Schalte deine Spur stumm und spiele mit der Begleitung. Das ist dein Playalong.", "Exportiere das Ergebnis als Audiodatei (im Menü «Teilen», der Eintrag heisst je nach Version etwas anders)."]),
+            check("daw", ["dein Projekt hat eine Begleitung und läuft in deinem Tempo,", "du hast eine Spur aufgenommen und wieder stummgeschaltet,", "du hast das Playalong als Audiodatei exportiert und angehört."]),
+            h3("Wenn du Logic Pro oder Ableton nimmst"),
+            ul(["Der Ablauf ist derselbe: Tempo, Begleitung, Aufnahme, Export. Die Menüs und die Namen sind anders, deshalb brauchst du mehr Zeit.", "Mit <b>Logic Pro</b> kannst du eine fertige Aufnahme mit dem <b>Stem Splitter</b> in Stimmen trennen und dann eine Stimme stummschalten. Das ist ein Playalong aus einer Aufnahme. Nutze nur Aufnahmen, die du verwenden darfst.",
+                "Bei <b>Ableton Live</b> gibt es ab Live 12.3 ebenfalls eine Stem-Trennung. Welche Ausgabe sie enthält, steht nicht eindeutig fest. Prüfe das vor einem Kauf auf der Seite von Ableton.", "Alternative zum Stimmentrennen ohne DAW: siehe die Anleitung <a href=\"moises.html\">Moises</a>."]),
+            note("Playalong teilen", "Gib die exportierte Datei nicht in Moodle ab. Lege sie in der Cloud ab und teile sie mit Link und Passwort (siehe <a href=\"kdrive.html\">kDrive und kSuite</a> und <a href=\"moodle-kurs.html\">Moodle-Kurs</a>)."),
+        ])),
+    ],
+    stolper=["<b>Zu steiler Einstieg:</b> Logic Pro und Ableton Live brauchen viel Lernzeit. Fange mit GarageBand an.", "<b>Logic nur für Apple:</b> Logic Pro läuft nur auf dem Mac (und als iPad-Abo). Auf Windows brauchst du Ableton Live oder openDAW.",
+             "<b>Neue Systemversionen:</b> Die aktuellen Versionen von GarageBand und Logic brauchen neue Systeme (Mac macOS 15.6 beziehungsweise 26.1, iPhone und iPad iOS 27). Prüfe im Store, ob dein Gerät mitkommt.", "<b>Testversion läuft ab:</b> Ableton Live Trial dauert 30 Tage. Danach kannst du Sets nicht mehr speichern oder exportieren.",
+             "<b>Preise ändern sich:</b> Bei Ableton gibt es zeitweise Rabatte, und Live 13 ist für Anfang 2027 angekündigt. Prüfe vor dem Kauf die Seite des Herstellers.", "<b>Bibliothek gross:</b> Die Klangbibliotheken brauchen viel Platz (Logic bis 44 GB). Lade nur, was du brauchst.", "<b>Urheberrecht:</b> Fremde Aufnahmen nur für das eigene Üben und den Unterricht im geschlossenen Rahmen. Exportierte Playalongs nicht öffentlich weitergeben."],
+    quellen=[("Apple: GarageBand für den Mac (Mac App Store Schweiz)", "https://apps.apple.com/ch/app/garageband/id682658836"), ("Apple: GarageBand für iPhone und iPad (App Store Schweiz)", "https://apps.apple.com/ch/app/garageband/id408709785"), ("Apple: Logic Pro (Mac App Store Schweiz)", "https://apps.apple.com/ch/app/logic-pro/id634148309?mt=12"),
+             ("Apple: GarageBand Benutzerhandbuch", "https://support.apple.com/de-ch/guide/garageband/welcome/mac"), ("Apple: Logic Pro Benutzerhandbuch", "https://support.apple.com/de-ch/guide/logicpro/welcome/mac"), ("Ableton: Live kaufen (Preise, Anforderungen)", "https://www.ableton.com/de/shop/live/"),
+             ("Ableton: Live kostenlos testen", "https://www.ableton.com/de/trial/"), ("Ableton: Learn Live", "https://www.ableton.com/de/live/learn-live/")],
+))
+
 # ------------------------------------------------------------------ Anytune
 GUIDES.append(dict(
     slug="anytune", final=True, title="Anytune", title_long="Anytune: Tempo und Tonhöhe anpassen",
@@ -1008,6 +1063,7 @@ VORAB = {
     "opendaw": "Nichts zu installieren. Öffne <a href=\"https://opendaw.studio\" target=\"_blank\" rel=\"noopener\">opendaw.studio</a> vorab einmal in deinem Browser und prüfe, dass es lädt.",
     "koala-sampler": "Installiere die App vorab aus dem App Store oder Play Store (Preis im Store prüfen).",
     "moodle-kurs": "Nichts zu installieren. Melde dich vorab mit dem Zugang, den du separat von Marc bekommst, bei Moodle an und prüfe, dass es klappt.",
+    "daw": "Installiere GarageBand (gratis) aus dem App Store, wenn du ein Apple-Gerät hast. Logic Pro kostet CHF 180, Ableton Live hat eine Testversion von 30 Tagen (installiere sie erst kurz vor dem Praxistag). Beide sind steiler für den Einstieg.",
     "dorico": "Lege vorab ein Steinberg-Konto an, fordere Dorico SE (gratis) auf der Seite von Steinberg an und installiere es mit dem Steinberg Download Assistant. Der Download ist gross. Aktiviere die Lizenz im Steinberg Activation Manager und starte Dorico einmal. Auf dem iPad installierst du stattdessen die gratis App Dorico aus dem App Store.",
     "kdrive": "Nichts zu installieren. Lege vorab ein gratis Infomaniak-Konto an (my kSuite oder kSuite Pro Free) und schalte die Zwei-Faktor-Anmeldung ein. Lade keine vertraulichen Daten zum Testen hoch.",
     "linktree": "Nichts zu installieren. Lege vorab ein gratis Linktree-Konto an (Plan Free) und sammle die Adressen, die auf deine Seite sollen.",
@@ -1019,7 +1075,6 @@ for _g in GUIDES:
     _g["vorab"] = VORAB[_g["slug"]]
 
 SOON = {
-    "daw": dict(title="GarageBand, Logic, Ableton", card="Playalongs bauen und Stimmen trennen in der DAW.", diff="mittel bis schwierig", bsp=["B7"]),
 }
 
 GROUPS = [

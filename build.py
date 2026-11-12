@@ -170,7 +170,7 @@ def index_page():
 
         <section id="anleitungen">
             <h2>Anleitungen</h2>
-            <p class="lead">Die Anleitungen entstehen Stück für Stück. Wer fertig ist, ist anklickbar. «Folgt» heisst, die Anleitung wird noch geschrieben.</p>
+            <p class="lead">«Fertig» heisst, die Anleitung ist von Hand getestet. «Entwurf» heisst, sie ist geschrieben, aber noch nicht getestet. Falls ein Menü anders heisst, gilt, was du auf dem Bildschirm siehst.</p>
 """)
     by_slug = {g["slug"]: g for g in GUIDES}
     for gtitle, gsub, items in GROUPS:
