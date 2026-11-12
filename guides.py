@@ -204,11 +204,11 @@ GUIDES.append(dict(
 
 # ------------------------------------------------------------------ Video mit dem Handy
 GUIDES.append(dict(
-    slug="handyvideo", title="Video mit dem Handy", title_long="Video mit dem Handy: Mehrbildvideo gleich beim Filmen",
+    slug="handyvideo", final=True, title="Video mit dem Handy", title_long="Video mit dem Handy: Mehrbildvideo gleich beim Filmen",
     eyebrow="Video · Beispiel 3",
     lead="Mehrere Stimmen nacheinander aufnehmen und als Mehrbildvideo zusammenbauen, direkt auf dem Handy und ohne Schnittprogramm.",
     card="Mehrbildvideo mit Acapella oder CapCut, Notenrolle per Bildschirmaufnahme.", diff_kurz="leicht bis mittel", bsp=["B3"],
-    zeit="ca. 45&ndash;60 Minuten", diff="leicht bis mittel", geraet="Handy oder Tablet (iPhone, iPad oder Android)", kosten="Acapella gratis bis 30 Sekunden, CapCut gratis ohne Zeitlimit",
+    zeit="ca. 45&ndash;60 Minuten", diff="leicht bis mittel", geraet="Handy oder Tablet (iPhone, iPad oder Android)", kosten="Gratis zum Ausprobieren: Acapella bis 30 Sekunden, CapCut mit 3 Exporten pro Monat in guter Auflösung",
     steps=[
         ("basics", "Basics: Was ist das, was brauche ich?", "10 Min.", "\n".join([
             p("Ein <b>Mehrbildvideo</b> zeigt mehrere Aufnahmen gleichzeitig in einem Raster, zum Beispiel vier Stimmen, die zusammen ein Lied singen. Mit <b>DaVinci Resolve</b> (eigene Anleitung) ist das genau, aber aufwendig. Die App <b>Acapella</b> (von PicPlay) macht es einfacher: Du nimmst eine Stimme nach der anderen auf, hörst dabei die bisherigen im Kopfhörer, und am Ende liegt das fertige Video im Raster vor."),
@@ -216,6 +216,7 @@ GUIDES.append(dict(
             h3("Das brauchst du"),
             ul(["Handy oder Tablet mit Kamera und Mikrofon", "<b>Kabelkopfhörer mit Mikrofon</b>. Bluetooth-Kopfhörer sind für Acapella nicht ideal, weil der Ton leicht verzögert ankommt", "Ein ruhiger Raum und ein Stück, das du kennst",
                 "Genug Speicherplatz auf dem Gerät"]),
+            note("Gratis zum Experimentieren", "Beide Apps eignen sich in der Gratis-Version gut zum Ausprobieren. <b>Aufpassen:</b> Beide zeigen immer wieder Bezahlangebote und Testphasen. Tippe nichts davon an und schliesse sie mit dem <b>kleinen X</b>. Achte bei jedem Fenster darauf, wo das X ist."),
             warn("Gratis-Version und Premium", "Beim ersten Start zeigt die App ein Fenster «Hole dir Premium» (Stand November 2026, Schweiz: eine Woche gratis testen, danach CHF 11.00 im Monat oder CHF 52.00 im Jahr). Du brauchst das nicht. Schliesse das Fenster mit dem <b>X</b> oben links oder tippe auf «Acapella jetzt entdecken». Premium bringt unter anderem 1080p-Video, das Hinzufügen von Videos aus der Fotobibliothek und mehr Raster. Ohne Premium nimmst du höchstens 30 Sekunden pro Video auf. Mehr als neun Bilder gehen auch mit Premium nur über einen Umweg."),
         ])),
         ("start", "Installieren", "10 Min.", "\n".join([
@@ -251,8 +252,8 @@ GUIDES.append(dict(
                 "Füge die weiteren Clips als <b>Overlay</b> (zusätzliche Videospur) darüber ein. Auf dem Computer legst du sie in der Timeline übereinander. Die Clips müssen zeitlich übereinander liegen, sonst laufen sie nacheinander.",
                 "Verkleinere jeden Clip mit zwei Fingern (oder an den Ecken) und schiebe ihn an seinen Platz im Raster.",
                 "Richte die Clips am Ton aus. Du hörst, ob die Einsätze zusammenpassen, und schiebst einen Clip bei Bedarf kurz nach vorn oder hinten.",
-                "Exportiere das Video in der höchsten Gratis-Qualität (1080p)."]),
-            warn("Wasserzeichen und Pro", "Nach den Angaben, die ich gefunden habe, exportiert CapCut ein Video ohne Wasserzeichen, solange du keine Vorlagen oder Effekte mit Pro-Zeichen benutzt. Manche Quellen widersprechen sich, und die Preise ändern sich. Schau beim Export auf das Pro-Zeichen und starte keine Testphase, wenn du kein Abo willst. Die Menünamen der App können je nach Version abweichen."),
+                "Exportiere das Video in der besten Qualität, die die Gratis-Version erlaubt."]),
+            warn("Exporte und Bezahlangebote", "Im Test erlaubt CapCut in der Gratis-Version <b>drei Exporte pro Monat</b> in guter Auflösung. Das reicht für den Praxistag, plane deine Exporte aber und teste nicht zehnmal. CapCut zeigt wie Acapella immer wieder Pro-Angebote und Testphasen. Schliesse sie mit dem <b>kleinen X</b> und starte keine Testphase, wenn du kein Abo willst. Die Menünamen der App können je nach Version abweichen."),
             h3("Weitere Alternativen"),
             ul(["<b>GridPlayer (Mac, Windows, Linux, gratis):</b> Ein Abspielprogramm, das mehrere Videos gleichzeitig nebeneinander im Raster zeigt. Es ist <b>kein</b> Aufnahme- und kein Schnittprogramm und exportiert nichts (laut Beschreibung des Projekts). Nützlich, um die einzelnen Stimmen beim Üben oder in der Besprechung nebeneinander anzuschauen. Für den Mac gibt es die Version nur für Apple-Chips (M-Reihe). Sie ist nicht signiert, macOS fragt deshalb nach einer Ausnahme. Lade es nur von der Seite des Projekts auf <a href=\"https://github.com/vzhd1701/gridplayer\" target=\"_blank\" rel=\"noopener\">GitHub</a>, nicht von Download-Portalen. Ich habe es nicht getestet.",
                 "<b>iMovie (iPhone, iPad, Mac, gratis):</b> Legt zwei Clips nebeneinander oder übereinander (Split Screen). Mehr als zwei Bilder gehen nicht. Details bei Apple: <a href=\"https://support.apple.com/guide/imovie-iphone/kna831efee4d/ios\" target=\"_blank\" rel=\"noopener\">iMovie Split Screen</a>.",
@@ -266,7 +267,7 @@ GUIDES.append(dict(
     ],
     stolper=["<b>Bluetooth-Kopfhörer:</b> Der Ton kommt leicht verzögert an, die Stimmen sind dann nicht synchron. Nimm Kabelkopfhörer mit Mikrofon.",
              "<b>Premium-Abo:</b> Die Testphase von einer Woche wird danach kostenpflichtig (CHF 11.00 im Monat oder CHF 52.00 im Jahr, Stand November 2026). Beende sie rechtzeitig in den Abos deines Apple- oder Google-Kontos, wenn du sie ausprobiert hast.",
-             "<b>Gratis-Grenzen:</b> In Acapella sind gratis nur 15 oder 30 Sekunden möglich. Längere Videos (1, 3, 10 Minuten), das Hinzufügen von Videos aus der Fotobibliothek und 1080p gehören zu Premium. Für ein ganzes Lied nimm CapCut.",
+             "<b>Bezahlangebote wegklicken:</b> In Acapella und CapCut erscheinen immer wieder Premium- und Pro-Fenster. Tippe sie nicht an, sondern schliesse sie mit dem <b>kleinen X</b>.", "<b>CapCut-Exporte:</b> Die Gratis-Version erlaubt im Test drei Exporte pro Monat in guter Auflösung. Exportiere erst, wenn der Schnitt fertig ist.", "<b>Gratis-Grenzen:</b> In Acapella sind gratis nur 15 oder 30 Sekunden möglich. Längere Videos (1, 3, 10 Minuten), das Hinzufügen von Videos aus der Fotobibliothek und 1080p gehören zu Premium. Für ein ganzes Lied nimm CapCut (gratis drei Exporte pro Monat).",
              "<b>Privat bleiben:</b> Wähle beim Speichern «Private». Nimm keine Kinder oder fremden Personen auf, ohne dass sie einverstanden sind.",
              "<b>Notenrolle:</b> Einige Apps erlauben keine Bildschirmaufnahme ihrer Inhalte. Bildschirmaufnahme und Spiegelung laufen nicht gleichzeitig.",
              "<b>Urheberrecht:</b> Fremde Stücke nur im geschlossenen Rahmen zeigen und nicht öffentlich veröffentlichen."],
@@ -940,7 +941,7 @@ GUIDES.append(dict(
 VORAB = {
     "noteflight": "Nichts zu installieren. Melde dich vorab mit dem Zugang, den du separat von Marc bekommst, bei Noteflight Learn an und prüfe, dass es klappt.",
     "musescore": "Lade MuseScore Studio gratis von <a href=\"https://musescore.org/de\" target=\"_blank\" rel=\"noopener\">musescore.org</a> herunter und installiere es (ca. 10 Minuten). Öffne es einmal, damit du weisst, dass es läuft.",
-    "handyvideo": "Installiere Acapella (und wenn du willst CapCut) aus dem App Store oder Play Store und nimm <b>Kabelkopfhörer</b> mit. Probiere vorab, ein Video per AirDrop, Cloud oder Kabel auf den Laptop zu bringen (siehe Schritt 5).",
+    "handyvideo": "Installiere Acapella (und wenn du willst CapCut) aus dem App Store oder Play Store und nimm <b>Kabelkopfhörer</b> mit. Beide Apps zeigen Bezahlangebote: schliesse sie mit dem kleinen X. Probiere vorab, ein Video per AirDrop, Cloud oder Kabel auf den Laptop zu bringen (siehe Schritt 5).",
     "moises": "Nichts zu installieren. Lege vorab ein Gratis-Konto auf <a href=\"https://moises.ai\" target=\"_blank\" rel=\"noopener\">moises.ai</a> an und melde dich einmal an. Die App ist freiwillig.",
     "anytune": "Installiere die App vorab aus dem App Store (gratis, Zusatzfunktionen wie der Export kosten extra) und lege ein Stück zum Üben bereit.",
     "guitar-pro": "Installiere das Programm vorab und melde dich an. Die Testversion läuft sieben Tage ab der Installation, danach öffnet die Gratis-Version keine Dateien mehr. Installiere sie deshalb erst kurz vor dem Praxistag. Ohne Installation zeigt Soundslice Guitar-Pro-Dateien im Browser.",
