@@ -421,19 +421,19 @@ GUIDES.append(dict(
 
 # ------------------------------------------------------------------ iReal Pro
 GUIDES.append(dict(
-    slug="ireal-pro", title="iReal Pro", title_long="iReal Pro: Playalong aus Akkorden",
+    slug="ireal-pro", final=True, title="iReal Pro", title_long="iReal Pro: Playalong aus Akkorden",
     eyebrow="Playalongs · Beispiel 7, 8",
     lead="Akkorde eingeben und eine Band spielen lassen, in deinem Tempo und deiner Tonart.",
     card="Begleitautomat mit Akkordeingabe.", diff_kurz="leicht bis mittel", bsp=["B7", "B8"],
-    zeit="ca. 45 Minuten", diff="leicht bis mittel", geraet="Handy, Tablet oder Computer (App)", kosten="App, Preis im Store prüfen",
+    zeit="ca. 45 Minuten", diff="leicht bis mittel", geraet="Handy, Tablet oder Computer (App)", kosten="Einmalkauf pro Plattform, kein Abo (Preis im Store prüfen), 7 Tage Testversion auf Mac (direkter Download) und Windows",
     steps=[
         ("basics", "Basics: Was ist das, was brauche ich?", "5 Min.", "\n".join([
             p("iReal Pro ist ein Begleitautomat: Du gibst die Akkorde eines Stücks ein, wählst einen Stil, und eine virtuelle Band (Klavier, Bass, Schlagzeug) begleitet dich. Es gibt eine grosse Sammlung von Stücken, die andere Nutzende geteilt haben."),
             h3("Das brauchst du"),
-            ul(["iPhone, iPad, Android-Gerät, Mac oder Windows-Computer", "Die App aus dem Store (kostenpflichtig, Preis im Store prüfen)", "Ein Stück mit Akkorden, zum Beispiel aus einem Liederbuch"]),
+            ul(["iPhone, iPad, Android-Gerät, Mac oder Windows-Computer", "Die App (kostenpflichtig: Einmalkauf pro Plattform, kein Abo, Preis im Store prüfen. iPhone und iPad teilen sich einen Kauf, die anderen Plattformen kosten je einzeln)", "Ein Stück mit Akkorden, zum Beispiel aus einem Liederbuch"]),
         ])),
         ("start", "Installieren", "10 Min.", "\n".join([
-            ol(['Lade iReal Pro aus dem App Store, Play Store oder von <a href="https://www.irealpro.com/" target="_blank" rel="noopener">irealpro.com</a> (Mac, Windows) herunter.', "Starte die App. Sie enthält schon einige Beispielstücke zum Hören."]),
+            ol(['Lade iReal Pro aus dem App Store (iPhone, iPad, Mac), aus dem Play Store (Android) oder aus dem Microsoft Store (Windows) herunter. Für den Mac gibt es auch einen direkten Download auf <a href="https://www.irealpro.com/" target="_blank" rel="noopener">irealpro.com</a> mit einer Testversion von 7 Tagen. Auch der Microsoft Store bietet für Windows eine Testversion von 7 Tagen. Die Mac-App im Mac App Store hat keine Testversion.', "Starte die App. Sie enthält schon einige Beispielstücke zum Hören."]),
         ])),
         ("erste", "Erste Schritte zum Testen", "15 Min.", "\n".join([
             tut("https://www.irealpro.com/video-tutorials", "iReal Pro: Videotutorials des Herstellers (Englisch)", "Darunter «Input a song in less than 3 mins», das zeigt, wie man ein Stück eingibt."),
@@ -442,11 +442,11 @@ GUIDES.append(dict(
         ("umsetzung", "Kleine Umsetzung: ein eigenes Playalong", "20&ndash;30 Min.", "\n".join([
             p("<b>Auftrag:</b> Erfasse ein Stück mit den Akkorden, die du kennst, und lass dich von der Band begleiten."),
             ol(["Lege ein neues Stück an (Plus-Knopf, bei Mac das Plus oben rechts oder <b>Cmd+N</b>, bei Windows der Stift oder <b>Strg+N</b>).", "Wähle eine Vorlage, vergib einen Titel und stelle die Tonart ein.", "Gib die Akkorde Takt für Takt ein. Die erlaubten Akkordsymbole stehen in der Anleitung des Herstellers.",
-                "Wähle einen Stil und spiele das Stück ab. Passe Tempo und Tonart an deine Stimme an.", "Dupliziere das Stück, bevor du viel experimentierst, damit du die Ausgangsfassung behältst."]),
+                "Wähle einen Stil und spiele das Stück ab. Passe Tempo und Tonart an deine Stimme an.", "Dupliziere das Stück, bevor du viel experimentierst, damit du die Ausgangsfassung behältst (Mac: Cmd+D, Windows: Alt+D)."]),
             check("ir", ["dein Stück ist mit Akkorden erfasst,", "die Band spielt es in deinem Tempo,", "du hast die Tonart mindestens einmal geändert."]),
         ])),
     ],
-    stolper=["<b>Kein Notenimport:</b> iReal Pro kann kein PDF, MIDI oder MusicXML in ein Stück verwandeln. Die Akkorde musst du selber eingeben oder aus der Sammlung der Community holen.", "<b>Kosten:</b> Die App ist kostenpflichtig. Preise unterscheiden sich je nach Gerät.",
+    stolper=["<b>Kein Notenimport:</b> iReal Pro kann kein PDF, MIDI oder MusicXML in ein Stück verwandeln. Die Akkorde musst du selber eingeben oder aus der Sammlung der Community holen.", "<b>Kosten:</b> Die App ist kostenpflichtig, ein Einmalkauf pro Plattform ohne Abo. iPhone und iPad teilen sich einen Kauf, Mac, Android und Windows kosten je einzeln. Auf Mac (direkter Download) und Windows kannst du 7 Tage testen.", "<b>Tonart ändern:</b> Im Editor ändert «Set» nur die Vorzeichen, die Akkorde bleiben. «Set and Transpose» transponiert auch alle Akkorde. Für ein Playalong in deiner Tonlage brauchst du meist das Zweite.",
              "<b>Urheberrecht:</b> Die Sammlung wird von Nutzenden gepflegt, dort gelten fremde Urheberrechte. Nutze die Stücke für das eigene Üben."],
     quellen=[("iReal Pro: Song erstellen", "https://www.irealpro.com/learn/create-a-song"), ("iReal Pro: Videotutorials", "https://www.irealpro.com/video-tutorials"), ("iReal Pro: Dokumentation", "https://www.irealpro.com/documentation/")],
 ))
@@ -945,7 +945,7 @@ VORAB = {
     "moises": "Nichts zu installieren. Lege vorab ein Gratis-Konto auf <a href=\"https://moises.ai\" target=\"_blank\" rel=\"noopener\">moises.ai</a> an und melde dich einmal an. Die App ist freiwillig.",
     "anytune": "Installiere die App vorab aus dem App Store (gratis, Zusatzfunktionen wie der Export kosten extra) und lege ein Stück zum Üben bereit.",
     "guitar-pro": "Installiere das Programm vorab und melde dich an. Die Testversion läuft sieben Tage ab der Installation, danach öffnet die Gratis-Version keine Dateien mehr. Installiere sie deshalb erst kurz vor dem Praxistag. Ohne Installation zeigt Soundslice Guitar-Pro-Dateien im Browser.",
-    "ireal-pro": "Installiere die App vorab aus dem Store (kostenpflichtig, Preis im Store prüfen). Wenn du sie nicht kaufen willst, schaue nur zu.",
+    "ireal-pro": "Installiere die App vorab (kostenpflichtig, Einmalkauf pro Plattform, Preis im Store prüfen). Auf dem Mac (direkter Download) und unter Windows gibt es eine Testversion von 7 Tagen, installiere sie deshalb erst kurz vor dem Praxistag. Wenn du sie nicht kaufen willst, schaue nur zu.",
     "davinci-resolve": "Lade die <b>kostenlose</b> Version vorab herunter und installiere sie. Der Download ist gross (1&ndash;2 Stunden). Im Computerraum der HSLU ist Resolve installiert, aber auf deinem eigenen Gerät kannst du danach weiterarbeiten. Filme mit dem Handy und bringe die Aufnahmen per AirDrop oder Cloud auf den Laptop (siehe Schritt 3).",
     "opendaw": "Nichts zu installieren. Öffne <a href=\"https://opendaw.studio\" target=\"_blank\" rel=\"noopener\">opendaw.studio</a> vorab einmal in deinem Browser und prüfe, dass es lädt.",
     "koala-sampler": "Installiere die App vorab aus dem App Store oder Play Store (Preis im Store prüfen).",
