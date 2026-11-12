@@ -206,15 +206,15 @@ GUIDES.append(dict(
 GUIDES.append(dict(
     slug="dorico", title="Dorico", title_long="Dorico: installieren mit Download Assistant und Activation Manager",
     eyebrow="Notation",
-    lead="Dorico SE (gratis) von Steinberg installieren und die Lizenz aktivieren. Alles Weitere lernst du mit den deutschen Videos von Markus Hartmann oder im Coaching an der HSLU.",
+    lead="Dorico SE (gratis) von Steinberg auf dem Computer oder dem iPad installieren und die Lizenz aktivieren. Alles Weitere lernst du mit den deutschen Videos von Markus Hartmann oder im Coaching an der HSLU.",
     card="Dorico SE installieren und aktivieren. Danach mit den deutschen Videos weiterlernen.", diff_kurz="mittel", bsp=[],
-    zeit="ca. 60&ndash;90 Minuten (Download inbegriffen)", diff="mittel", geraet="Computer (Mac, Windows)", kosten="Dorico SE gratis (bis acht Spielende), Elements und Pro kostenpflichtig",
+    zeit="ca. 60&ndash;90 Minuten (Download inbegriffen)", diff="mittel", geraet="Computer (Mac, Windows) oder iPad", kosten="Dorico SE gratis (bis acht Spielende), Elements und Pro kostenpflichtig. iPad-App gratis, mehr Funktionen kosten extra",
     steps=[
         ("basics", "Basics: Was ist das, was brauche ich?", "10 Min.", "\n".join([
             p("<b>Dorico</b> ist ein Notensatzprogramm von Steinberg. Es gibt drei Ausgaben: <b>Dorico SE</b> (gratis), <b>Dorico Elements</b> und <b>Dorico Pro</b> (beide kostenpflichtig). Für den Einstieg und für diese Anleitung genügt <b>Dorico SE</b>: Nach den Angaben von Steinberg ist es gratis und eignet sich für Partituren mit bis zu acht Spielenden."),
-            note("Diese Anleitung macht nur die Installation", "Hier steht, wie du Dorico auf deinen Computer bringst und die Lizenz aktivierst. Dorico selbst zu lernen ist umfangreich. Dafür gibt es gute deutsche Videos von Markus Hartmann (siehe Schritt 4) oder ein Coaching bei Marcel Vonesch an der HSLU."),
+            note("Diese Anleitung macht nur die Installation", "Hier steht, wie du Dorico auf deinen Computer bringst und die Lizenz aktivierst. Dorico selbst zu lernen ist umfangreich. Dafür gibt es gute deutsche Videos von Markus Hartmann (siehe Schritt 5) oder ein Coaching bei Marcel Vonesch an der HSLU."),
             h3("Das brauchst du"),
-            ul(["Einen Computer mit <b>Windows 10 oder 11 (64 Bit)</b> oder <b>macOS</b> (nach den Angaben von Steinberg für Dorico 6 macOS 12 bis 15, Intel oder Apple-Chip)", "Etwa <b>5 GB freien Speicher</b> und <b>4 GB Arbeitsspeicher</b> (8 GB sind besser)", "Eine <b>Internetverbindung</b> für Download und Aktivierung", "Eine <b>E-Mail-Adresse</b> für dein Steinberg-Konto", "Etwas Zeit: Der Download ist gross, am besten <b>vor</b> dem Praxistag"]),
+            ul(["Einen Computer mit <b>Windows 10 oder 11 (64 Bit)</b> oder <b>macOS</b> (nach den Angaben von Steinberg für Dorico 6 macOS 12 bis 15, Intel oder Apple-Chip)", "Etwa <b>5 GB freien Speicher</b> und <b>4 GB Arbeitsspeicher</b> (8 GB sind besser)", "Eine <b>Internetverbindung</b> für Download und Aktivierung", "Eine <b>E-Mail-Adresse</b> für dein Steinberg-Konto", "Etwas Zeit: Der Download ist gross, am besten <b>vor</b> dem Praxistag", "Alternativ ein <b>iPad</b> mit iPadOS 17 oder neuer (siehe Schritt 3)"]),
             h3("Die zwei Hilfsprogramme von Steinberg"),
             ul(["<b>Steinberg Download Assistant:</b> lädt Dorico herunter und installiert es. Er installiert auch die Hilfsprogramme, die Dorico braucht. Steinberg empfiehlt ihn ausdrücklich.", "<b>Steinberg Activation Manager:</b> die Lizenzverwaltung. Dort aktivierst du deine Lizenz, damit Dorico startet."]),
         ])),
@@ -226,6 +226,14 @@ GUIDES.append(dict(
                 "<b>Lizenz aktivieren:</b> Öffne den <b>Steinberg Activation Manager</b>. Dort sollte Dorico SE stehen. Wähle <b>Activate</b> (Aktivieren), wenn die Lizenz noch nicht aktiv ist.", "<b>Starten:</b> Öffne Dorico. Es sollte ohne Nachfrage nach einem Code starten und das Startfenster zeigen."]),
             warn("Dorico SE: ein Code?", "Dorico SE verlangt <b>keinen Code per E-Mail</b>. Die Lizenz liegt in deinem Steinberg-Konto, sobald du Dorico SE auf der Seite von Steinberg angefordert hast. Wenn Dorico nach einem Code fragt, ist die Lizenz nicht in deinem Konto. Gehe dann zurück zur Seite «Dorico SE» und fordere sie dort noch einmal an."),
             note("Gekaufte Version (Elements oder Pro)", "Wenn du einen Code für eine bezahlte Version hast, löst du ihn im Download Assistant mit <b>Redeem Code</b> ein. Danach installierst du die Version und aktivierst sie im Activation Manager. Alte Lizenzen, die noch über das Programm eLicenser liefen, bekommst du dort nicht mehr, der eLicenser-Dienst wurde am 20. Mai 2025 abgeschaltet (laut Hilfe von Steinberg)."),
+        ])),
+        ("ipad", "Dorico auf dem iPad", "15 Min.", "\n".join([
+            p("Dorico gibt es auch als App für das <b>iPad</b>. Du brauchst dafür <b>weder den Download Assistant noch den Activation Manager</b>. Das gilt nur für den Computer."),
+            ul(["<b>Gratis:</b> Die App ist gratis. Du schreibst damit Musik für bis zu vier Instrumente, nach der Anmeldung mit einer kostenlosen Steinberg ID für bis zu acht (laut Beschreibung im Schweizer App Store). Das entspricht etwa der Gratis-Version Dorico SE.", "<b>Voraussetzung:</b> iPad mit iPadOS 17 oder neuer (nach dem App Store), etwa 1 GB freier Speicher.",
+                "<b>Mehr Funktionen kosten extra:</b> Monatsabo CHF 5.00, Jahresabo CHF 50.00 oder einmalig CHF 100.00 (Lifetime Unlock), Stand November 2026, Schweizer App Store. Damit gibt es Ensembles beliebiger Grösse und den Engrave-Modus.", "<b>Eingabe:</b> mit der Bildschirmtastatur, den Drum-Pads oder Griffbrettdiagrammen. Exportieren kannst du zum Beispiel als PDF, Audio oder MusicXML."]),
+            ol(["Öffne den App Store auf dem iPad und suche nach <b>Dorico</b> (Untertitel «Compose Music») von Steinberg. Installiere die App.", "Öffne sie. Melde dich, wenn du magst, mit deiner <b>Steinberg ID</b> an, um die Grenze von vier auf acht Instrumente zu heben.", "Lege ein neues Projekt an, gib ein paar Noten ein und spiele sie ab."]),
+            warn("Abos und Käufe", "Die App zeigt Hinweise auf das Abo und den Einmalkauf. Du brauchst sie für die Gratis-Version nicht. Schliesse die Fenster und kaufe nichts, wenn du nicht willst."),
+            note("Prüfen", "Die Angaben zur iPad-App stammen aus dem App Store. Ich habe sie nicht auf einem iPad ausprobiert."),
         ])),
         ("erste", "Prüfen, ob alles läuft", "10 Min.", "\n".join([
             ol(["Starte Dorico. Im Startfenster wählst du <b>Neu</b> und ein leeres Projekt (zum Beispiel für ein Soloinstrument).", "Gib mit der Tastatur oder der Maus ein paar Noten ein.", "Drücke die <b>Leertaste</b>. Dorico spielt die Noten ab. Hörst du etwas, funktionieren Programm und Klänge."]),
@@ -246,7 +254,7 @@ GUIDES.append(dict(
              "<b>Grosser Download:</b> Plane Zeit ein und installiere vor dem Praxistag.", "<b>Versionen:</b> Es gibt mehrere Dorico-Versionen. Achte darauf, dass das Video zur Version passt, die du installiert hast."],
     quellen=[("Steinberg: Dorico SE (gratis)", "https://www.steinberg.net/dorico/se/"), ("Steinberg: Downloads und Download Assistant", "https://download.steinberg.net/downloads/index.html"), ("Steinberg-Hilfe: Download Assistant (Englisch)", "https://helpcenter.steinberg.de/hc/en-us/articles/4413298536594-Steinberg-Licensing-Steinberg-Download-Assistant-guide"),
              ("Steinberg-Hilfe: Offline-Aktivierung (Englisch)", "https://helpcenter.steinberg.de/hc/en-us/articles/6593785878290-Steinberg-Licensing-Offline-Activation"), ("Dorico-Blog: Dorico auf Deutsch mit Markus Hartmann", "https://blog.dorico.com/seminare/"),
-             ("YouTube: Playlist «Dorico auf Deutsch»", "https://www.youtube.com/playlist?list=PLoyaeouPUsdvRiO6dQ4PgCvJkDZhedcg-"), ("Steinberg: Dorico vergleichen (SE, Elements, Pro)", "https://www.steinberg.net/dorico/compare-editions/")],
+             ("YouTube: Playlist «Dorico auf Deutsch»", "https://www.youtube.com/playlist?list=PLoyaeouPUsdvRiO6dQ4PgCvJkDZhedcg-"), ("Steinberg: Dorico vergleichen (SE, Elements, Pro)", "https://www.steinberg.net/dorico/compare-editions/"), ("Dorico für das iPad im Schweizer App Store", "https://apps.apple.com/ch/app/dorico-compose-music/id1556625090")],
 ))
 
 # ------------------------------------------------------------------ Video mit dem Handy
@@ -1000,7 +1008,7 @@ VORAB = {
     "opendaw": "Nichts zu installieren. Öffne <a href=\"https://opendaw.studio\" target=\"_blank\" rel=\"noopener\">opendaw.studio</a> vorab einmal in deinem Browser und prüfe, dass es lädt.",
     "koala-sampler": "Installiere die App vorab aus dem App Store oder Play Store (Preis im Store prüfen).",
     "moodle-kurs": "Nichts zu installieren. Melde dich vorab mit dem Zugang, den du separat von Marc bekommst, bei Moodle an und prüfe, dass es klappt.",
-    "dorico": "Lege vorab ein Steinberg-Konto an, fordere Dorico SE (gratis) auf der Seite von Steinberg an und installiere es mit dem Steinberg Download Assistant. Der Download ist gross. Aktiviere die Lizenz im Steinberg Activation Manager und starte Dorico einmal.",
+    "dorico": "Lege vorab ein Steinberg-Konto an, fordere Dorico SE (gratis) auf der Seite von Steinberg an und installiere es mit dem Steinberg Download Assistant. Der Download ist gross. Aktiviere die Lizenz im Steinberg Activation Manager und starte Dorico einmal. Auf dem iPad installierst du stattdessen die gratis App Dorico aus dem App Store.",
     "kdrive": "Nichts zu installieren. Lege vorab ein gratis Infomaniak-Konto an (my kSuite oder kSuite Pro Free) und schalte die Zwei-Faktor-Anmeldung ein. Lade keine vertraulichen Daten zum Testen hoch.",
     "linktree": "Nichts zu installieren. Lege vorab ein gratis Linktree-Konto an (Plan Free) und sammle die Adressen, die auf deine Seite sollen.",
     "website-mit-ki": "Nichts zu installieren. Lege vorab ein gratis Jimdo-Konto an und halte deinen KI-Zugang bereit.",
