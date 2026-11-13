@@ -382,7 +382,7 @@ GUIDES.append(dict(
 
 # ------------------------------------------------------------------ GarageBand, Logic, Ableton
 GUIDES.append(dict(
-    slug="daw", title="GarageBand, Logic, Ableton", title_long="GarageBand, Logic und Ableton: Playalongs und Musik in der DAW",
+    slug="daw", final=True, title="GarageBand, Logic, Ableton", title_long="GarageBand, Logic und Ableton: Playalongs und Musik in der DAW",
     eyebrow="Playalongs · Beispiel 7",
     lead="Mit einer DAW Musik aufnehmen, Begleitungen bauen und Playalongs herstellen. GarageBand ist der leichte Einstieg, Logic Pro und Ableton Live sind steiler.",
     card="Playalongs und Aufnahmen in der DAW: GarageBand zum Einstieg, Logic und Ableton für Fortgeschrittene.", diff_kurz="mittel bis schwierig", bsp=["B7"],
@@ -944,7 +944,7 @@ GUIDES.append(dict(
 
 # ------------------------------------------------------------------ Terminal
 GUIDES.append(dict(
-    slug="terminal", title="Terminal", title_long="Terminal: die ersten Befehle",
+    slug="terminal", final=True, title="Terminal", title_long="Terminal: die ersten Befehle",
     eyebrow="Hosten · Beispiel 2",
     lead="Das Terminal öffnen und die wichtigsten Befehle kennenlernen: wo bin ich, Ordner wechseln, einen Testserver starten, den Zustand von Git ansehen. Die Grundlage für die Anleitung «Website mit Git».",
     card="Terminal öffnen, sich zurechtfinden, Testserver starten und erste Git-Befehle.", diff_kurz="leicht bis mittel", bsp=["B2"],
