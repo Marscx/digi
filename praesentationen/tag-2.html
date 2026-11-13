@@ -511,69 +511,46 @@
       </div>
     </section>
 
-    <section class="frame frame--panel" data-title="Chatbot, Workflow oder Agent?" data-notes="Die drei Stufen erklären. Immer am selben Beispiel bleiben: der Prozess der Detailplanung. Merksatz: Ein Chatfenster allein ist noch kein Agent. Ca. 2 Minuten.">
-      <span class="eyebrow">Station 1 &middot; Begriffe</span>
-      <h2>Chatbot, Workflow oder Agent?</h2>
-      <p class="lead">Drei Stufen &mdash; vom Antworten zum selbstst&auml;ndigen Handeln.</p>
-      <div class="option-cards">
-        <div class="option-card"><span class="step-num">01</span>Chatbot<span class="opt-sub">beantwortet Fragen. &laquo;Was passiert bei der Detailplanung?&raquo;</span></div>
-        <div class="option-card"><span class="step-num">02</span>Workflow<span class="opt-sub">fester Ablauf mit KI-Schritten. Notiz, dann JSON, dann Pr&uuml;fung.</span></div>
-        <div class="option-card"><span class="step-num">03</span>Agent<span class="opt-sub">entscheidet selbst, welche Schritte n&ouml;tig sind, setzt Werkzeuge ein und pr&uuml;ft sich. &laquo;Suche L&uuml;cken und schlage Verbesserungen vor.&raquo;</span></div>
-      </div>
-    </section>
-
-    <section class="frame frame--panel" data-title="Was ein Prozess-Agent braucht" data-notes="Sieben Bauteile durchgehen, nicht alle vertiefen. Unter jedem steht, was es dafür bei uns wirklich gibt: den Auftrag als Textdatei, die Norm und die Prozesse als Daten, zwei Werkzeuge (Prüfung und Freigabe). Betonen: Leitplanken und Freigabe sind das, was einen Agenten im Schulalltag brauchbar macht. Ca. 2 Minuten.">
-      <span class="eyebrow">Station 2 &middot; Bauteile</span>
-      <h2>Was ein Prozess-Agent braucht</h2>
-      <p class="lead">Sieben Bauteile &mdash; ein Chatfenster allein ist noch kein Agent.</p>
-      <div class="channel-row">
-        <div class="channel"><span class="ch-jack"></span><span class="ch-label">Ziel</span><span class="ch-sub">Auftrag in CLAUDE.md</span></div>
-        <div class="channel"><span class="ch-jack"></span><span class="ch-label">Wissen</span><span class="ch-sub">QUARTE-Norm und Prozesse</span></div>
-        <div class="channel"><span class="ch-jack"></span><span class="ch-label">Werkzeuge</span><span class="ch-sub">pruefen.py, freigeben.py</span></div>
-        <div class="channel"><span class="ch-jack"></span><span class="ch-label">Gedächtnis</span><span class="ch-sub">Entwürfe und Verlauf</span></div>
-        <div class="channel"><span class="ch-jack"></span><span class="ch-label">Steuerung</span><span class="ch-sub">planen, handeln, prüfen</span></div>
-        <div class="channel"><span class="ch-jack"></span><span class="ch-label">Leitplanken</span><span class="ch-sub">Regeln und Freigabe</span></div>
-        <div class="channel"><span class="ch-jack"></span><span class="ch-label">Auswertung</span><span class="ch-sub">Prüfbericht</span></div>
-      </div>
-    </section>
-
-    <section class="frame frame--master" data-title="Signalkette des Agenten" data-notes="Das ist der Ablauf, den wir am Beispiel gleich anschauen, und er ist kein Gedankenspiel: Es gibt ihn wirklich als Werkzeuge. Der Auftrag steht in einer Textdatei, die Prüfung ist ein Skript, die Freigabe ein zweites Skript, das nur auf das Ja eines Menschen läuft. Alles davor ist ein Vorschlag. Wichtig: Der Mensch bleibt am Regler. Ca. 1,5 Minuten.">
-      <span class="eyebrow">Master &middot; Signalkette des Agenten</span>
-      <h2>Notiz &rarr; JSON &rarr; Pr&uuml;fung &rarr; Digitalisierungsgrad &rarr; Freigabe</h2>
+    <section class="frame frame--master" data-title="Vom Prompt zur Prozessdarstellung" data-notes="Beispiel 1: Prozessanalyse. So geht das Vorgehen: Ich beschreibe den Ablauf in eigenen Worten, das ist der Prompt. Die KI stellt Rückfragen und legt den Prozess als Entwurf an. Der Entwurf wird gegen die QUARTE-Norm geprüft, und für jeden Schritt wird der Digitalisierungsgrad geschätzt. Daraus entsteht die Darstellung im Browser, die Prozesslandkarte. Zum Schluss gibt der Mensch frei. Nur kurz zur Technik: Der Entwurf ist eine JSON-Datei, das ist ein ausgefülltes Formular mit festen Feldern. Die Prüfung ist ein Python-Skript, eine Checkliste für den Computer. Man muss beides nicht selber können, die KI schreibt und erklärt es. Es geht auch ohne Python: Ein Agent braucht ein Werkzeug zum Handeln, keine Programmiersprache. Ein Skript prüft immer gleich, die KI kann abweichen. Deshalb gibt der Mensch frei. Ca. 1,5 Minuten." data-bsp="Beispiel 1" data-bsp-start="B1">
+      <span class="eyebrow">Station 1 &middot; Beispiel 1</span>
+      <h2>Vom Prompt zur Prozessdarstellung</h2>
       <div class="knob-chain">
-        <div class="knob"><span>NOTIZ</span></div>
+        <div class="knob"><span>PROMPT</span></div>
         <span class="chain-arrow">&rarr;</span>
-        <div class="knob"><span>JSON</span></div>
+        <div class="knob"><span>ENTWURF</span></div>
         <span class="chain-arrow">&rarr;</span>
-        <div class="knob"><span>PRÜFUNG</span></div>
+        <div class="knob"><span>PR&Uuml;FUNG</span></div>
         <span class="chain-arrow">&rarr;</span>
-        <div class="knob"><span>GRAD</span></div>
+        <div class="knob"><span>DARSTELLUNG</span></div>
         <span class="chain-arrow">&rarr;</span>
         <div class="knob"><span>FREIGABE</span></div>
       </div>
-      <p class="master-note">Aus einer Notiz &uuml;ber den Ablauf entsteht der Prozess als JSON. Der Agent pr&uuml;ft ihn gegen QUARTE und sch&auml;tzt den Digitalisierungsgrad. Der Mensch gibt frei.</p>
+      <p class="master-note">Ich beschreibe den Ablauf in eigenen Worten, die KI macht daraus eine Prozessdarstellung. Der Mensch pr&uuml;ft und gibt frei.</p>
       <div class="chip-cloud">
-        <span class="chip"><b>Notiz</b>Gespr&auml;ch oder Text</span>
-        <span class="chip"><b>JSON</b>Ordner entwuerfe/</span>
-        <span class="chip"><b>Pr&uuml;fung</b>pruefen.py</span>
-        <span class="chip"><b>Grad</b>Skala 0&ndash;3 mit Begr&uuml;ndung</span>
-        <span class="chip"><b>Freigabe</b>freigeben.py, nur auf Ja</span>
+        <span class="chip"><b>Prompt</b>Ablauf in eigenen Worten</span>
+        <span class="chip"><b>Entwurf</b>KI fragt nach und legt den Prozess an</span>
+        <span class="chip"><b>Pr&uuml;fung</b>gegen die QUARTE-Norm, Grad 0&ndash;3</span>
+        <span class="chip"><b>Darstellung</b>Prozesslandkarte im Browser</span>
+        <span class="chip"><b>Freigabe</b>der Mensch sagt Ja</span>
+      </div>
+      <span class="chip-note">Technik dahinter, nur kurz: Der Entwurf ist eine JSON-Datei (ein Formular), die Pr&uuml;fung ein Python-Skript (eine Checkliste).</span>
+    </section>
+
+    <section class="frame frame--panel" data-title="Der Prompt" data-notes="So kann ein Prompt aussehen. Ich beschreibe den Ablauf, hier die Detailplanung eines Konzerts. Der Prompt sagt, was ich will, in welcher Reihenfolge und wonach geprüft wird: erst Rückfragen, dann ein Prozessentwurf, geprüft gegen die QUARTE-Norm, mit Digitalisierungsgrad je Schritt und dem Hinweis, nichts zu erfinden. Das ist ein Beispiel, kein wörtlicher Prompt. Die festen Regeln stehen in einer Textdatei, an die sich der Agent hält. Ca. 1 Minute." data-bsp="Beispiel 1">
+      <span class="eyebrow">Station 2 &middot; Beispiel 1</span>
+      <h2>Der Prompt</h2>
+      <p class="lead">Ein Beispiel, wie der Auftrag aussehen kann.</p>
+      <blockquote class="prompt">Ich beschreibe dir die Detailplanung eines Konzerts an unserer Musikschule. Stelle mir zuerst R&uuml;ckfragen: Wer ist zust&auml;ndig, welches Werkzeug wird gebraucht, wohin gehen die Daten? Schreibe den Ablauf dann als Prozessentwurf, pr&uuml;fe ihn gegen die QUARTE-Norm und sch&auml;tze f&uuml;r jeden Schritt den Digitalisierungsgrad von 0 bis 3 mit kurzer Begr&uuml;ndung. Erfinde nichts.</blockquote>
+      <div class="chip-cloud">
+        <span class="chip">Ziel: ein Prozessentwurf</span>
+        <span class="chip">Rahmen: erst R&uuml;ckfragen</span>
+        <span class="chip">Pr&uuml;fung: QUARTE-Norm</span>
+        <span class="chip">Ergebnis: Grad 0&ndash;3 mit Begr&uuml;ndung</span>
+        <span class="chip">Regel: nichts erfinden</span>
       </div>
     </section>
 
-    <section class="frame frame--panel" data-title="JSON und .py einfach erklärt" data-notes="Kurz erklären, was hinter den beiden Dateitypen steckt: JSON ist ein ausgefülltes Formular mit festen Feldern, links der Name, rechts der Wert. Menschen können es lesen, Programme können es verarbeiten. Eine .py-Datei ist eine Checkliste für den Computer, in Python geschrieben, die er Zeile für Zeile abarbeitet. Im Beispiel prüft pruefen.py das Formular, und freigeben.py läuft nur auf das Ja eines Menschen. Wir müssen sie nicht verstehen, um sie zu benutzen, aber wir sollten wissen, was sie tut. Die KI kann sie Zeile für Zeile erklären, und sie kann das Skript auch selber schreiben. Es geht auch ohne Python: Ein Agent braucht ein Werkzeug, mit dem er handeln kann, zum Beispiel Dateien lesen und schreiben, aber keine Programmiersprache. Die Prüfung kann die KI nach einer Checkliste im Text machen, oder eine Tabelle rechnet nach. Ein Skript prüft immer gleich, die KI kann abweichen. Deshalb gibt der Mensch frei. Eventuell eine echte JSON-Datei und pruefen.py in einem Editor zeigen. Ca. 1,5 Minuten.">
-      <span class="eyebrow">Master &middot; Die Dateien dahinter</span>
-      <h2>JSON und .py einfach erkl&auml;rt</h2>
-      <p class="lead">Ein Formular und eine Checkliste &mdash; mehr steckt nicht dahinter.</p>
-      <div class="option-cards">
-        <div class="option-card"><span class="step-num">01</span>JSON: ein ausgef&uuml;lltes Formular<span class="opt-sub">Text mit festen Feldern: links der Name, rechts der Wert. Menschen k&ouml;nnen es lesen, Programme k&ouml;nnen es verarbeiten.</span><span class="url-tag">"schritt": "Terminbereinigung", "grad": 1</span></div>
-        <div class="option-card"><span class="step-num">02</span>.py: eine Checkliste f&uuml;r den Computer<span class="opt-sub">Python-Text, den der Computer Zeile f&uuml;r Zeile abarbeitet. pruefen.py pr&uuml;ft das Formular, freigeben.py l&auml;uft nur auf das Ja eines Menschen.</span><span class="url-tag">python3 pruefen.py</span></div>
-        <div class="option-card"><span class="step-num">03</span>Auch ohne Python<span class="opt-sub">Ein Agent braucht ein Werkzeug zum Handeln, keine Programmiersprache. Die KI kann das Skript schreiben und erkl&auml;ren, oder sie pr&uuml;ft nach deiner Checkliste im Text. Ein Skript pr&uuml;ft immer gleich.</span></div>
-      </div>
-      <span class="chip-note">Wir m&uuml;ssen sie nicht verstehen, um sie zu benutzen &mdash; nur wissen, was sie tun. Der Mensch bleibt am Regler.</span>
-    </section>
-
-    <section class="frame frame--panel" data-title="Die Prozesslandkarte" data-notes="Beispiel 1 ist eine Musikschule. Die Landkarte ist die QUARTE-Vorgabe des Verbands. Urspr&uuml;nglich in Flowler gezeichnet, heute als JSON gepflegt und im Browser dargestellt. Hervorgehoben ist der Prozess, den wir analysiert haben. Ca. 1,5 Minuten." data-bsp="Beispiel 1" data-bsp-start="B1">
+    <section class="frame frame--panel" data-title="Die Prozesslandkarte" data-notes="Beispiel 1 ist eine Musikschule. Die Landkarte ist die QUARTE-Vorgabe des Verbands. Urspr&uuml;nglich in Flowler gezeichnet, heute als JSON gepflegt und im Browser dargestellt. Hervorgehoben ist der Prozess, den wir analysiert haben. Ca. 1,5 Minuten." data-bsp="Beispiel 1">
       <span class="eyebrow">Station 3 &middot; Beispiel 1</span>
       <h2>Die Prozesslandkarte nach QUARTE</h2>
       <p class="lead">Elf Prozesse in drei Gruppen &mdash; urspr&uuml;nglich in Flowler gezeichnet, heute als JSON gepflegt, im Browser dargestellt.</p>
@@ -831,7 +808,7 @@
 
   <div class="minimap">
     <div class="minimap-inner" id="miniInner">
-      <svg id="miniSvg" viewBox="0 0 35012 2100" preserveAspectRatio="none">
+      <svg id="miniSvg" viewBox="0 0 32278 2100" preserveAspectRatio="none">
         <path id="miniPath" class="mini-cable" vector-effect="non-scaling-stroke"/>
       </svg>
       <div id="miniDots"></div>
@@ -850,7 +827,7 @@
   <div class="notes" id="notes" hidden></div>
 
   <div class="footer">
-    <div class="footer-meta"><b id="counter">01 / 25</b><span id="footerTitle" class="footer-title"></span></div>
+    <div class="footer-meta"><b id="counter">01 / 23</b><span id="footerTitle" class="footer-title"></span></div>
     <div class="nav-buttons">
       <button class="nav-btn" id="notesBtn" aria-label="Drehbuch ein- oder ausblenden" title="Drehbuch (Taste N)">&#9998;</button>
       <button class="nav-btn" id="prevBtn" aria-label="Zur&uuml;ck">&#8592;</button>
@@ -863,32 +840,30 @@
 (function(){
   var FRAMES = [
     {cx:900, cy:1100, w:1300, h:700},
-    {cx:2270, cy:700, w:1100, h:640},
-    {cx:3580, cy:1500, w:1100, h:640},
-    {cx:4914, cy:700, w:1180, h:680},
-    {cx:6248, cy:1500, w:1250, h:700},
-    {cx:7648, cy:700, w:1100, h:640},
-    {cx:9078, cy:1500, w:1500, h:860},
-    {cx:10553, cy:700, w:1250, h:720},
-    {cx:11953, cy:1500, w:1250, h:680},
-    {cx:13353, cy:700, w:1250, h:600},
-    {cx:14732, cy:1500, w:1180, h:640},
-    {cx:16111, cy:700, w:1250, h:700},
-    {cx:17511, cy:1500, w:1250, h:640},
-    {cx:18911, cy:700, w:1250, h:600},
-    {cx:20311, cy:1500, w:1250, h:660},
-    {cx:21711, cy:700, w:1250, h:700},
-    {cx:23111, cy:1500, w:1250, h:720},
-    {cx:24511, cy:700, w:1250, h:740},
-    {cx:25911, cy:1500, w:1250, h:710},
-    {cx:27311, cy:700, w:1250, h:760},
-    {cx:28504, cy:1500, w:560, h:420},
-    {cx:29712, cy:700, w:1300, h:560},
-    {cx:31112, cy:1500, w:1200, h:620},
-    {cx:32512, cy:700, w:1200, h:700},
-    {cx:33912, cy:1500, w:1200, h:540}
+    {cx:2270, cy:700, w:1250, h:680},
+    {cx:3580, cy:1500, w:1250, h:700},
+    {cx:4914, cy:700, w:1100, h:640},
+    {cx:6344, cy:1500, w:1500, h:860},
+    {cx:7819, cy:700, w:1250, h:720},
+    {cx:9219, cy:1500, w:1250, h:680},
+    {cx:10619, cy:700, w:1250, h:600},
+    {cx:11998, cy:1500, w:1180, h:640},
+    {cx:13377, cy:700, w:1250, h:700},
+    {cx:14777, cy:1500, w:1250, h:640},
+    {cx:16177, cy:700, w:1250, h:600},
+    {cx:17577, cy:1500, w:1250, h:660},
+    {cx:18977, cy:700, w:1250, h:700},
+    {cx:20377, cy:1500, w:1250, h:720},
+    {cx:21777, cy:700, w:1250, h:740},
+    {cx:23177, cy:1500, w:1250, h:710},
+    {cx:24577, cy:700, w:1250, h:760},
+    {cx:25770, cy:1500, w:560, h:420},
+    {cx:26978, cy:700, w:1300, h:560},
+    {cx:28378, cy:1500, w:1200, h:620},
+    {cx:29778, cy:700, w:1200, h:700},
+    {cx:31178, cy:1500, w:1200, h:540}
   ];
-  var WORLD_W = 35012, WORLD_H = 2100, PAD = 150, MAXSCALE = 1.35;
+  var WORLD_W = 32278, WORLD_H = 2100, PAD = 150, MAXSCALE = 1.35;
 
   var stage = document.getElementById('stage');
   var world = document.getElementById('world');
@@ -1060,7 +1035,7 @@
       else if (e.key===' '){ e.preventDefault(); if (localMode){ if (demoVideo.paused){ demoVideo.play(); } else { demoVideo.pause(); } } }
       return;
     }
-    if (e.key==='v' || e.key==='V'){ if (current===15){ toggleVideo(); } return; }
+    if (e.key==='v' || e.key==='V'){ if (current===13){ toggleVideo(); } return; }
     if (e.key==='ArrowRight' || e.key==='PageDown' || e.key===' '){ e.preventDefault(); goTo(current+1); }
     else if (e.key==='ArrowLeft' || e.key==='PageUp'){ e.preventDefault(); goTo(current-1); }
     else if (e.key==='Home'){ goTo(0); }
