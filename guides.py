@@ -942,6 +942,78 @@ GUIDES.append(dict(
     quellen=[("Jimdo", "https://www.jimdo.com/"), ("Jimdo Hilfe", "https://help.jimdo.com/"), ("MDN: Erste Schritte mit dem Web (Deutsch)", "https://developer.mozilla.org/de/docs/Learn/Getting_started_with_the_web")],
 ))
 
+# ------------------------------------------------------------------ Terminal
+GUIDES.append(dict(
+    slug="terminal", title="Terminal", title_long="Terminal: die ersten Befehle",
+    eyebrow="Hosten · Beispiel 2",
+    lead="Das Terminal öffnen und die wichtigsten Befehle kennenlernen: wo bin ich, Ordner wechseln, einen Testserver starten, den Zustand von Git ansehen. Die Grundlage für die Anleitung «Website mit Git».",
+    card="Terminal öffnen, sich zurechtfinden, Testserver starten und erste Git-Befehle.", diff_kurz="leicht bis mittel", bsp=["B2"],
+    zeit="ca. 30&ndash;45 Minuten", diff="leicht bis mittel", geraet="Computer (Mac oder Windows)", kosten="gratis, nichts zu installieren",
+    steps=[
+        ("basics", "Basics: Was ist das, was brauche ich?", "5 Min.", "\n".join([
+            p("Das <b>Terminal</b> ist ein Fenster, in dem du dem Computer mit Text Befehle gibst, statt mit der Maus zu klicken. Für Websites brauchst du es vor allem für drei Dinge: einen <b>Testserver</b> starten, mit <b>Git</b> arbeiten und Programme starten, die ohne Knöpfe laufen. Du brauchst dafür nur wenige Befehle."),
+            h3("Das brauchst du"),
+            ul(["Einen Computer mit <b>Mac</b> (das Programm «Terminal» ist schon da) oder <b>Windows</b> (nimm «PowerShell», ebenfalls schon da)", "Einen Ordner mit ein paar Dateien zum Üben, am besten deine Website aus der Anleitung <a href=\"website-git.html\">Website mit Git</a>", "Etwas Mut: Die Befehle auf dieser Seite löschen nichts (siehe die Warnung unten)"]),
+            warn("Nicht alles eintippen, was dir jemand gibt", "Befehle im Terminal wirken sofort und fragen oft nicht nach. <b>Lösche</b> nie etwas mit einem Befehl (<code>rm</code>, <code>del</code>), den du nicht verstehst. Das gilt auch für Befehle einer KI oder aus dem Internet: Lass sie dir erst erklären. Gib im Terminal nie ein Passwort ein, das du sonst nirgends brauchst, und in einen KI-Chat nie ein Passwort."),
+        ])),
+        ("start", "Das Terminal öffnen", "5 Min.", "\n".join([
+            h3("Mac"),
+            ol(["Drücke <b>Cmd+Leertaste</b> (Spotlight), tippe <b>Terminal</b> und drücke die Eingabetaste.", "Es öffnet sich ein Fenster mit einer Zeile, die auf <code>%</code> oder <code>$</code> endet. Dahinter schreibst du deine Befehle."]),
+            h3("Windows"),
+            ol(["Drücke die <b>Windows-Taste</b>, tippe <b>PowerShell</b> und drücke die Eingabetaste.", "Wenn du später Git installiert hast, steht dir auch <b>Git Bash</b> zur Verfügung. Die Befehle unten gehen in beiden."]),
+            note("So funktioniert es", "Du tippst einen Befehl und drückst die <b>Eingabetaste</b>. Das Terminal antwortet mit Text oder gar nicht, wenn alles gut ging. Mit der <b>Pfeiltaste nach oben</b> holst du den letzten Befehl zurück, mit der <b>Tab-Taste</b> ergänzt es einen angefangenen Namen, mit <b>Ctrl+C</b> brichst du einen laufenden Befehl ab."),
+        ])),
+        ("erste", "Die ersten Befehle: wo bin ich, was ist hier?", "15 Min.", "\n".join([
+            p("Tippe die Befehle nacheinander ein und schau, was passiert. Alles hier verändert nichts an deinen Dateien."),
+            code("pwd"),
+            p("<b>pwd</b> zeigt, in welchem Ordner du gerade bist (Windows PowerShell: geht auch)."),
+            code("ls"),
+            p("<b>ls</b> listet die Dateien und Ordner in diesem Ordner (unter Windows geht auch <code>dir</code>)."),
+            code("cd Documents"),
+            p("<b>cd</b> wechselt in einen Ordner. Der Ordner muss hier liegen, sonst gibt es eine Fehlermeldung. Der Ordner heisst im Terminal <code>Documents</code>, auch wenn der Finder «Dokumente» zeigt. Schau mit <code>ls</code> nach."),
+            code("cd .."),
+            p("<b>cd ..</b> geht einen Ordner nach oben."),
+            code("cd ~"),
+            p("<b>cd ~</b> geht in deinen persönlichen Ordner (Home)."),
+            code("mkdir meine-website"),
+            p("<b>mkdir</b> legt einen neuen Ordner an."),
+            code('cd "Mein Ordner"'),
+            p("Ordner mit <b>Leerzeichen</b> im Namen schreibst du in Anführungszeichen. Am einfachsten ist es, Ordner ohne Leerzeichen anzulegen."),
+            code("clear"),
+            p("<b>clear</b> räumt das Fenster auf."),
+            h3("Den Ordner im Finder oder Explorer öffnen"),
+            ul(["Mac: <code>open .</code> öffnet den aktuellen Ordner im Finder.", "Windows: <code>explorer .</code> öffnet ihn im Explorer."]),
+            note("Der Punkt", "Der Punkt <code>.</code> steht für «dieser Ordner», zwei Punkte <code>..</code> für «der Ordner darüber»."),
+        ])),
+        ("website", "Die Befehle für deine Website", "15 Min.", "\n".join([
+            p("Diese Befehle brauchst du in der Anleitung <a href=\"website-git.html\">Website mit Git</a>. Hier siehst du sie in Ruhe, bevor du sie dort einsetzt."),
+            h3("Testserver starten"),
+            code("cd meine-website\npython3 -m http.server 8000"),
+            p("Der Testserver liefert die Seite aus deinem Ordner aus. Öffne im Browser <code>http://localhost:8000</code>. Beenden mit <b>Ctrl+C</b>. Auf Windows heisst der Befehl meist <code>py -m http.server 8000</code>."),
+            h3("Git ansehen (ändert nichts)"),
+            code("git --version\ngit status\ngit log --oneline"),
+            ul(["<b>git --version</b> zeigt, ob Git installiert ist und welche Version.", "<b>git status</b> zeigt, was sich seit der letzten gespeicherten Fassung geändert hat.", "<b>git log --oneline</b> listet alle gespeicherten Fassungen. Mit <b>q</b> verlässt du die Liste."]),
+            h3("Eine Fassung speichern und hochladen"),
+            code('git add .\ngit commit -m "Beschreibung der Änderung"\ngit push'),
+            ul(["<b>git add .</b> merkt alle geänderten Dateien vor.", "<b>git commit -m</b> speichert eine Fassung mit einer kurzen Beschreibung.", "<b>git push</b> lädt die Fassung zu GitHub hoch."]),
+            note("Fehlermeldung?", "Wenn ein Befehl eine Fehlermeldung zeigt, kopiere den ganzen Text und lass ihn dir von der KI erklären. Gib in den Chat <b>keine Passwörter</b> ein."),
+        ])),
+        ("umsetzung", "Kleine Umsetzung: Ordner anlegen und Testserver starten", "15 Min.", "\n".join([
+            p("<b>Auftrag:</b> Lege im Terminal einen Ordner an, schreibe eine Seite hinein und zeige sie im Browser."),
+            ol(["Öffne das Terminal und wechsle mit <code>cd</code> an den Ort, an dem du arbeiten willst (zum Beispiel <code>cd ~</code>).", "Lege den Ordner an: <code>mkdir meine-website</code>, dann wechsle hinein: <code>cd meine-website</code>.", "Öffne den Ordner mit <code>open .</code> (Mac) oder <code>explorer .</code> (Windows).",
+                "Speichere in dem Ordner mit einem Texteditor eine Datei <code>index.html</code> mit einem Satz Text (oder lass dir von einer KI eine kleine Seite schreiben).", "Starte den Testserver: <code>python3 -m http.server 8000</code> (Windows meist <code>py -m http.server 8000</code>).", "Öffne <code>http://localhost:8000</code> im Browser. Siehst du deine Seite?", "Beende den Server mit <b>Ctrl+C</b>."]),
+            check("tm", ["du hast ein Terminal geöffnet und weisst mit <code>pwd</code>, wo du bist,", "du hast einen Ordner angelegt und bist hineingewechselt,", "du hast deine Seite mit dem Testserver im Browser gesehen."]),
+            h3("Wenn du weitermachen willst"),
+            ul(["Mach weiter mit der Anleitung <a href=\"website-git.html\">Website mit Git veröffentlichen</a>.", "Frag die KI, was ein Befehl bedeutet, bevor du ihn eingibst. Sie erklärt dir jede Zeile."]),
+        ])),
+    ],
+    stolper=["<b>«command not found» oder «nicht erkannt»:</b> Das Programm ist nicht installiert oder du hast dich vertippt. Bei <code>python3</code> unter Windows probiere <code>py</code>.", "<b>Falscher Ordner:</b> Prüfe mit <code>pwd</code> und <code>ls</code>, wo du bist. Die meisten Fehler kommen daher, dass du im falschen Ordner bist.",
+             "<b>Leerzeichen im Ordnernamen:</b> Setze den Namen in Anführungszeichen oder benenne den Ordner ohne Leerzeichen.", "<b>Löschen:</b> Befehle wie <code>rm</code> oder <code>del</code> löschen ohne Papierkorb. Nutze sie nur, wenn du genau weisst, was sie tun.",
+             "<b>Der Server läuft weiter:</b> Ein Testserver läuft, bis du ihn mit Ctrl+C beendest. Schliesse ihn, wenn du fertig bist.", "<b>Passwörter:</b> Gib im Terminal und in einem KI-Chat nie ein Passwort ein, das du anderswo brauchst."],
+    quellen=[("Apple: Terminal-Benutzerhandbuch (Deutsch)", "https://support.apple.com/de-ch/guide/terminal/welcome/mac"), ("Microsoft: PowerShell, Überblick (Deutsch)", "https://learn.microsoft.com/de-de/powershell/scripting/overview"),
+             ("Git: Das Pro-Git-Buch (Deutsch)", "https://git-scm.com/book/de/v2"), ("Git: Einführung (Englisch)", "https://git-scm.com/docs/gittutorial")],
+))
+
 # ------------------------------------------------------------------ Website veröffentlichen mit Git
 GUIDES.append(dict(
     slug="website-git", final=True, title="Website mit Git veröffentlichen", title_long="Website veröffentlichen: Git, GitHub und Hosting",
@@ -955,6 +1027,7 @@ GUIDES.append(dict(
             p("Der Weg: <b>Dateien auf dem Computer &rarr; Git (Commit) &rarr; GitHub (Push) &rarr; Hosting holt sich die neue Fassung automatisch.</b> So ist auch diese Seite hier veröffentlicht."),
             h3("Das brauchst du"),
             ul(["Computer mit Mac oder Windows und einem Browser", "Einen Texteditor (besser ein Code-Editor wie Visual Studio Code)", "Ein kostenloses Konto bei <a href=\"https://github.com/\" target=\"_blank\" rel=\"noopener\">github.com</a>", "Für Teil 6: ein Hosting mit Git-Funktion (zum Beispiel Plesk) oder GitHub Pages (gratis)", "Einen Zugang zu einer KI"]),
+            note("Neu im Terminal?", 'Für den Testserver und für Git brauchst du das Terminal. Die ersten Befehle und das Öffnen unter Mac und Windows stehen in der Anleitung <a href="terminal.html">Terminal: die ersten Befehle</a>. Lies sie zuerst, wenn du das Terminal noch nie benutzt hast.'),
             warn("Öffentlich oder privat", "Ein öffentliches Repository kann jede Person lesen. Lege nie Passwörter, Schlüssel oder private Daten hinein. Für Websites, die sowieso öffentlich sind, ist das kein Problem."),
         ])),
         ("lokal", "Die Website lokal bauen", "25 Min.", "\n".join([
@@ -1068,6 +1141,7 @@ VORAB = {
     "kdrive": "Nichts zu installieren. Lege vorab ein gratis Infomaniak-Konto an (my kSuite oder kSuite Pro Free) und schalte die Zwei-Faktor-Anmeldung ein. Lade keine vertraulichen Daten zum Testen hoch.",
     "linktree": "Nichts zu installieren. Lege vorab ein gratis Linktree-Konto an (Plan Free) und sammle die Adressen, die auf deine Seite sollen.",
     "website-mit-ki": "Nichts zu installieren. Lege vorab ein gratis Jimdo-Konto an und halte deinen KI-Zugang bereit.",
+    "terminal": "Nichts zu installieren. Auf dem Mac ist das Terminal schon da, unter Windows nimm PowerShell. Lege einen Ordner mit ein paar Dateien zum Üben bereit.",
     "website-git": "Installiere Git vorab (Schritt 4), lege ein gratis GitHub-Konto an und halte einen Texteditor bereit. Wenn du ein eigenes Hosting hast, brauchst du seine Zugangsdaten.",
     "konzeptarbeit": "Nichts zu installieren. Teste vorab deinen KI-Zugang und überlege dir ein Projekt.",
 }
@@ -1082,5 +1156,5 @@ GROUPS = [
     ("Playalongs", "Tempo, Tonhöhe, Stimmen trennen", ["moises", "anytune", "ireal-pro", "daw"]),
     ("Video", "Multispur, Notenrolle", ["davinci-resolve", "handyvideo"]),
     ("Producing und Songwriting", "", ["opendaw", "koala-sampler"]),
-    ("Hosten und Konzept", "Moodle, Website, Cloud", ["moodle-kurs", "kdrive", "linktree", "website-mit-ki", "website-git", "konzeptarbeit"]),
+    ("Hosten und Konzept", "Moodle, Website, Cloud", ["moodle-kurs", "kdrive", "linktree", "website-mit-ki", "terminal", "website-git", "konzeptarbeit"]),
 ]

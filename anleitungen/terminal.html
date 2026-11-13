@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <title>Terminal: die ersten Befehle · digi.marcscheidegger.ch</title>
+    <meta name="description" content="Das Terminal öffnen und die wichtigsten Befehle kennenlernen: wo bin ich, Ordner wechseln, einen Testserver starten, den Zustand von Git ansehen. Die Grundlage für die Anleitung «Website mit Git».">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="theme-color" content="#0b1220">
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../marke.css?v=1">
+    <link rel="stylesheet" href="../anleitungen.css?v=4">
+</head>
+<body>
+    <header class="ms-bar">
+        <div class="ms-bar-inner">
+            <a class="ms-brand" href="https://neu.marcscheidegger.ch/">Marc <span>Scheidegger</span></a>
+            <nav aria-label="Hauptnavigation">
+                <ul class="ms-nav">
+                    <li><a href="../index.html">Start</a></li>
+                    <li><a href="../index.html#anleitungen" aria-current="page">Anleitungen</a></li>
+                    <li><a href="../index.html#praesentationen">Präsentationen</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="wrap">
+        <p class="crumbs"><a href="../index.html#anleitungen">&larr; Alle Anleitungen</a></p>
+
+        <section class="hero">
+            <p class="eyebrow">Hosten · Beispiel 2</p>
+            <h1>Terminal: die ersten Befehle</h1>
+            <p class="lead">Das Terminal öffnen und die wichtigsten Befehle kennenlernen: wo bin ich, Ordner wechseln, einen Testserver starten, den Zustand von Git ansehen. Die Grundlage für die Anleitung «Website mit Git».</p>
+            <ul class="facts">
+                <li><b>Zeit</b><span>ca. 30&ndash;45 Minuten</span></li>
+                <li><b>Schwierigkeit</b><span>leicht bis mittel</span></li>
+                <li><b>Gerät</b><span>Computer (Mac oder Windows)</span></li>
+                <li><b>Kosten</b><span>gratis, nichts zu installieren</span></li>
+            </ul>
+            <p><span class="badge">Entwurf</span> Noch nicht von Hand getestet. Falls ein Menü anders heisst, gilt, was du auf dem Bildschirm siehst. Sag es Marc, dann wird die Anleitung korrigiert.</p>
+            <div class="note"><b>Vorab einrichten</b>Nichts zu installieren. Auf dem Mac ist das Terminal schon da, unter Windows nimm PowerShell. Lege einen Ordner mit ein paar Dateien zum Üben bereit. So bleibt am Praxistag mehr Zeit zum Ausprobieren.</div>
+            <ul class="toc">
+                <li><a href="#basics">1 Basics</a></li>
+                <li><a href="#start">2 Das Terminal öffnen</a></li>
+                <li><a href="#erste">3 Die ersten Befehle</a></li>
+                <li><a href="#website">4 Die Befehle für deine Website</a></li>
+                <li><a href="#umsetzung">5 Kleine Umsetzung</a></li>
+                <li><a href="#stolper">Stolpersteine</a></li>
+            </ul>
+        </section>
+
+        <section class="step" id="basics">
+            <header><span class="step-num">1</span><h2>Basics: Was ist das, was brauche ich?</h2><span class="time">5 Min.</span></header>
+            <p>Das <b>Terminal</b> ist ein Fenster, in dem du dem Computer mit Text Befehle gibst, statt mit der Maus zu klicken. Für Websites brauchst du es vor allem für drei Dinge: einen <b>Testserver</b> starten, mit <b>Git</b> arbeiten und Programme starten, die ohne Knöpfe laufen. Du brauchst dafür nur wenige Befehle.</p>
+            <h3>Das brauchst du</h3>
+            <ul>
+                <li>Einen Computer mit <b>Mac</b> (das Programm «Terminal» ist schon da) oder <b>Windows</b> (nimm «PowerShell», ebenfalls schon da)</li>
+                <li>Einen Ordner mit ein paar Dateien zum Üben, am besten deine Website aus der Anleitung <a href="website-git.html">Website mit Git</a></li>
+                <li>Etwas Mut: Die Befehle auf dieser Seite löschen nichts (siehe die Warnung unten)</li>
+            </ul>
+            <div class="warn"><b>Nicht alles eintippen, was dir jemand gibt</b>Befehle im Terminal wirken sofort und fragen oft nicht nach. <b>Lösche</b> nie etwas mit einem Befehl (<code>rm</code>, <code>del</code>), den du nicht verstehst. Das gilt auch für Befehle einer KI oder aus dem Internet: Lass sie dir erst erklären. Gib im Terminal nie ein Passwort ein, das du sonst nirgends brauchst, und in einen KI-Chat nie ein Passwort.</div>
+        </section>
+
+        <section class="step" id="start">
+            <header><span class="step-num">2</span><h2>Das Terminal öffnen</h2><span class="time">5 Min.</span></header>
+            <h3>Mac</h3>
+            <ol>
+                <li>Drücke <b>Cmd+Leertaste</b> (Spotlight), tippe <b>Terminal</b> und drücke die Eingabetaste.</li>
+                <li>Es öffnet sich ein Fenster mit einer Zeile, die auf <code>%</code> oder <code>$</code> endet. Dahinter schreibst du deine Befehle.</li>
+            </ol>
+            <h3>Windows</h3>
+            <ol>
+                <li>Drücke die <b>Windows-Taste</b>, tippe <b>PowerShell</b> und drücke die Eingabetaste.</li>
+                <li>Wenn du später Git installiert hast, steht dir auch <b>Git Bash</b> zur Verfügung. Die Befehle unten gehen in beiden.</li>
+            </ol>
+            <div class="note"><b>So funktioniert es</b>Du tippst einen Befehl und drückst die <b>Eingabetaste</b>. Das Terminal antwortet mit Text oder gar nicht, wenn alles gut ging. Mit der <b>Pfeiltaste nach oben</b> holst du den letzten Befehl zurück, mit der <b>Tab-Taste</b> ergänzt es einen angefangenen Namen, mit <b>Ctrl+C</b> brichst du einen laufenden Befehl ab.</div>
+        </section>
+
+        <section class="step" id="erste">
+            <header><span class="step-num">3</span><h2>Die ersten Befehle: wo bin ich, was ist hier?</h2><span class="time">15 Min.</span></header>
+            <p>Tippe die Befehle nacheinander ein und schau, was passiert. Alles hier verändert nichts an deinen Dateien.</p>
+            <div class="code">
+                <button type="button" class="copy">Kopieren</button>
+                <pre><code>pwd</code></pre>
+            </div>
+            <p><b>pwd</b> zeigt, in welchem Ordner du gerade bist (Windows PowerShell: geht auch).</p>
+            <div class="code">
+                <button type="button" class="copy">Kopieren</button>
+                <pre><code>ls</code></pre>
+            </div>
+            <p><b>ls</b> listet die Dateien und Ordner in diesem Ordner (unter Windows geht auch <code>dir</code>).</p>
+            <div class="code">
+                <button type="button" class="copy">Kopieren</button>
+                <pre><code>cd Documents</code></pre>
+            </div>
+            <p><b>cd</b> wechselt in einen Ordner. Der Ordner muss hier liegen, sonst gibt es eine Fehlermeldung. Der Ordner heisst im Terminal <code>Documents</code>, auch wenn der Finder «Dokumente» zeigt. Schau mit <code>ls</code> nach.</p>
+            <div class="code">
+                <button type="button" class="copy">Kopieren</button>
+                <pre><code>cd ..</code></pre>
+            </div>
+            <p><b>cd ..</b> geht einen Ordner nach oben.</p>
+            <div class="code">
+                <button type="button" class="copy">Kopieren</button>
+                <pre><code>cd ~</code></pre>
+            </div>
+            <p><b>cd ~</b> geht in deinen persönlichen Ordner (Home).</p>
+            <div class="code">
+                <button type="button" class="copy">Kopieren</button>
+                <pre><code>mkdir meine-website</code></pre>
+            </div>
+            <p><b>mkdir</b> legt einen neuen Ordner an.</p>
+            <div class="code">
+                <button type="button" class="copy">Kopieren</button>
+                <pre><code>cd &quot;Mein Ordner&quot;</code></pre>
+            </div>
+            <p>Ordner mit <b>Leerzeichen</b> im Namen schreibst du in Anführungszeichen. Am einfachsten ist es, Ordner ohne Leerzeichen anzulegen.</p>
+            <div class="code">
+                <button type="button" class="copy">Kopieren</button>
+                <pre><code>clear</code></pre>
+            </div>
+            <p><b>clear</b> räumt das Fenster auf.</p>
+            <h3>Den Ordner im Finder oder Explorer öffnen</h3>
+            <ul>
+                <li>Mac: <code>open .</code> öffnet den aktuellen Ordner im Finder.</li>
+                <li>Windows: <code>explorer .</code> öffnet ihn im Explorer.</li>
+            </ul>
+            <div class="note"><b>Der Punkt</b>Der Punkt <code>.</code> steht für «dieser Ordner», zwei Punkte <code>..</code> für «der Ordner darüber».</div>
+        </section>
+
+        <section class="step" id="website">
+            <header><span class="step-num">4</span><h2>Die Befehle für deine Website</h2><span class="time">15 Min.</span></header>
+            <p>Diese Befehle brauchst du in der Anleitung <a href="website-git.html">Website mit Git</a>. Hier siehst du sie in Ruhe, bevor du sie dort einsetzt.</p>
+            <h3>Testserver starten</h3>
+            <div class="code">
+                <button type="button" class="copy">Kopieren</button>
+                <pre><code>cd meine-website
+python3 -m http.server 8000</code></pre>
+            </div>
+            <p>Der Testserver liefert die Seite aus deinem Ordner aus. Öffne im Browser <code>http://localhost:8000</code>. Beenden mit <b>Ctrl+C</b>. Auf Windows heisst der Befehl meist <code>py -m http.server 8000</code>.</p>
+            <h3>Git ansehen (ändert nichts)</h3>
+            <div class="code">
+                <button type="button" class="copy">Kopieren</button>
+                <pre><code>git --version
+git status
+git log --oneline</code></pre>
+            </div>
+            <ul>
+                <li><b>git --version</b> zeigt, ob Git installiert ist und welche Version.</li>
+                <li><b>git status</b> zeigt, was sich seit der letzten gespeicherten Fassung geändert hat.</li>
+                <li><b>git log --oneline</b> listet alle gespeicherten Fassungen. Mit <b>q</b> verlässt du die Liste.</li>
+            </ul>
+            <h3>Eine Fassung speichern und hochladen</h3>
+            <div class="code">
+                <button type="button" class="copy">Kopieren</button>
+                <pre><code>git add .
+git commit -m &quot;Beschreibung der Änderung&quot;
+git push</code></pre>
+            </div>
+            <ul>
+                <li><b>git add .</b> merkt alle geänderten Dateien vor.</li>
+                <li><b>git commit -m</b> speichert eine Fassung mit einer kurzen Beschreibung.</li>
+                <li><b>git push</b> lädt die Fassung zu GitHub hoch.</li>
+            </ul>
+            <div class="note"><b>Fehlermeldung?</b>Wenn ein Befehl eine Fehlermeldung zeigt, kopiere den ganzen Text und lass ihn dir von der KI erklären. Gib in den Chat <b>keine Passwörter</b> ein.</div>
+        </section>
+
+        <section class="step" id="umsetzung">
+            <header><span class="step-num">5</span><h2>Kleine Umsetzung: Ordner anlegen und Testserver starten</h2><span class="time">15 Min.</span></header>
+            <p><b>Auftrag:</b> Lege im Terminal einen Ordner an, schreibe eine Seite hinein und zeige sie im Browser.</p>
+            <ol>
+                <li>Öffne das Terminal und wechsle mit <code>cd</code> an den Ort, an dem du arbeiten willst (zum Beispiel <code>cd ~</code>).</li>
+                <li>Lege den Ordner an: <code>mkdir meine-website</code>, dann wechsle hinein: <code>cd meine-website</code>.</li>
+                <li>Öffne den Ordner mit <code>open .</code> (Mac) oder <code>explorer .</code> (Windows).</li>
+                <li>Speichere in dem Ordner mit einem Texteditor eine Datei <code>index.html</code> mit einem Satz Text (oder lass dir von einer KI eine kleine Seite schreiben).</li>
+                <li>Starte den Testserver: <code>python3 -m http.server 8000</code> (Windows meist <code>py -m http.server 8000</code>).</li>
+                <li>Öffne <code>http://localhost:8000</code> im Browser. Siehst du deine Seite?</li>
+                <li>Beende den Server mit <b>Ctrl+C</b>.</li>
+            </ol>
+            <h3>Fertig, wenn&hellip;</h3>
+            <ul class="check">
+                <li><label><input type="checkbox" data-k="tm1"> du hast ein Terminal geöffnet und weisst mit <code>pwd</code>, wo du bist,</label></li>
+                <li><label><input type="checkbox" data-k="tm2"> du hast einen Ordner angelegt und bist hineingewechselt,</label></li>
+                <li><label><input type="checkbox" data-k="tm3"> du hast deine Seite mit dem Testserver im Browser gesehen.</label></li>
+            </ul>
+            <h3>Wenn du weitermachen willst</h3>
+            <ul>
+                <li>Mach weiter mit der Anleitung <a href="website-git.html">Website mit Git veröffentlichen</a>.</li>
+                <li>Frag die KI, was ein Befehl bedeutet, bevor du ihn eingibst. Sie erklärt dir jede Zeile.</li>
+            </ul>
+        </section>
+
+        <section class="step" id="stolper">
+            <header><span class="step-num">!</span><h2>Stolpersteine</h2></header>
+            <ul>
+                <li><b>«command not found» oder «nicht erkannt»:</b> Das Programm ist nicht installiert oder du hast dich vertippt. Bei <code>python3</code> unter Windows probiere <code>py</code>.</li>
+                <li><b>Falscher Ordner:</b> Prüfe mit <code>pwd</code> und <code>ls</code>, wo du bist. Die meisten Fehler kommen daher, dass du im falschen Ordner bist.</li>
+                <li><b>Leerzeichen im Ordnernamen:</b> Setze den Namen in Anführungszeichen oder benenne den Ordner ohne Leerzeichen.</li>
+                <li><b>Löschen:</b> Befehle wie <code>rm</code> oder <code>del</code> löschen ohne Papierkorb. Nutze sie nur, wenn du genau weisst, was sie tun.</li>
+                <li><b>Der Server läuft weiter:</b> Ein Testserver läuft, bis du ihn mit Ctrl+C beendest. Schliesse ihn, wenn du fertig bist.</li>
+                <li><b>Passwörter:</b> Gib im Terminal und in einem KI-Chat nie ein Passwort ein, das du anderswo brauchst.</li>
+            </ul>
+        </section>
+
+        <section class="sources">
+            <h3>Quellen</h3>
+            <ul>
+                <li><a href="https://support.apple.com/de-ch/guide/terminal/welcome/mac" target="_blank" rel="noopener">Apple: Terminal-Benutzerhandbuch (Deutsch)</a></li>
+                <li><a href="https://learn.microsoft.com/de-de/powershell/scripting/overview" target="_blank" rel="noopener">Microsoft: PowerShell, Überblick (Deutsch)</a></li>
+                <li><a href="https://git-scm.com/book/de/v2" target="_blank" rel="noopener">Git: Das Pro-Git-Buch (Deutsch)</a></li>
+                <li><a href="https://git-scm.com/docs/gittutorial" target="_blank" rel="noopener">Git: Einführung (Englisch)</a></li>
+            </ul>
+            <p>Stand: November 2026. Noch nicht von Hand getestet.</p>
+        </section>
+    </main>
+
+    <footer class="ms-foot">
+        <p>Von <a href="https://neu.marcscheidegger.ch/" target="_blank" rel="noopener">Marc Scheidegger</a>, entwickelt mit Claude (Anthropic) ·
+        <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.de" target="_blank" rel="noopener license">CC BY-NC-SA 4.0</a></p>
+        <ul>
+            <li><a href="https://neu.marcscheidegger.ch/impressum.html">Impressum</a></li>
+            <li><a href="https://neu.marcscheidegger.ch/datenschutz.html">Datenschutz</a></li>
+        </ul>
+    </footer>
+
+
+    <script>
+        // Häkchen der Checkliste im Browser merken (nur auf diesem Gerät)
+        document.querySelectorAll('input[data-k]').forEach(function (c) {
+            try { c.checked = localStorage.getItem('digi-' + c.dataset.k) === '1'; } catch (e) {}
+            c.addEventListener('change', function () {
+                try { localStorage.setItem('digi-' + c.dataset.k, c.checked ? '1' : '0'); } catch (e) {}
+            });
+        });
+
+        // Kopieren-Knopf der Codefenster
+        document.querySelectorAll('.code .copy').forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                var text = btn.parentNode.querySelector('code').textContent;
+                function ok() { btn.textContent = 'Kopiert'; btn.classList.add('done'); setTimeout(function () { btn.textContent = 'Kopieren'; btn.classList.remove('done'); }, 2000); }
+                function fallback() {
+                    var ta = document.createElement('textarea'); ta.value = text; ta.style.position = 'fixed'; ta.style.opacity = '0';
+                    document.body.appendChild(ta); ta.select();
+                    try { document.execCommand('copy'); ok(); } catch (e) { btn.textContent = 'Markieren und Cmd/Strg+C'; }
+                    document.body.removeChild(ta);
+                }
+                if (navigator.clipboard && window.isSecureContext) { navigator.clipboard.writeText(text).then(ok, fallback); } else { fallback(); }
+            });
+        });
+    </script>
+
+</body>
+</html>
