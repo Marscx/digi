@@ -93,7 +93,7 @@ GUIDES.append(dict(
             h3("Das brauchst du"),
             ul(["Computer oder Tablet mit einem aktuellen Browser (Chrome, Safari, Edge oder Firefox)", "Internetverbindung",
                 "Eine E-Mail-Adresse für das Konto", "Kopfhörer, wenn du dein Stück abspielst und andere nicht stören willst"]),
-            note("Noteflight Learn am Praxistag", "Für den Praxistag bekommst du von Marc einen Zugang zu seinem Noteflight Learn. Damit kannst du im geschlossenen Rahmen testen, teilen und alle Funktionen ausprobieren. Du brauchst dafür noch kein eigenes Abo."),
+            note("Noteflight Learn am Praxistag", "Für den Praxistag bekommst du von Marc einen Zugang zu seinem Noteflight Learn. Damit kannst du im geschlossenen Rahmen testen, teilen und alle Funktionen ausprobieren. Du brauchst dafür noch kein eigenes Abo. Die Anmeldeseite: <a href=\"https://marcscheidegger.sites.noteflight.com/\" target=\"_blank\" rel=\"noopener\">marcscheidegger.sites.noteflight.com</a>. Die Zugangsdaten bekommst du separat."),
         ])),
         ("start", "Anmelden", "10 Min.", "\n".join([
             ol(['Öffne <a href="https://www.noteflight.com/" target="_blank" rel="noopener">noteflight.com</a>.',
