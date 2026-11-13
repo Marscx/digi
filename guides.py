@@ -975,6 +975,7 @@ GUIDES.append(dict(
             p("<b>cd ..</b> geht einen Ordner nach oben."),
             code("cd ~"),
             p("<b>cd ~</b> geht in deinen persönlichen Ordner (Home)."),
+            note("Die Tilde ~ finden", "Das Zeichen <code>~</code> («Tilde», der kleine Bogen) liegt je nach Tastatur anders. Auf einer <b>Mac-Tastatur (Schweiz)</b> drückst du <b>Alt+N</b> und danach die <b>Leertaste</b>. Wenn du es nicht findest, geht es ohne: <code>cd</code> allein führt auf dem Mac in den persönlichen Ordner, und <code>cd $HOME</code> geht auf dem Mac und in PowerShell."),
             code("mkdir meine-website"),
             p("<b>mkdir</b> legt einen neuen Ordner an."),
             code('cd "Mein Ordner"'),
