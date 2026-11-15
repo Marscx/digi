@@ -28,7 +28,7 @@ def head(title, desc, prefix):
     <meta name="robots" content="noindex, nofollow">
     <meta name="theme-color" content="#0b1220">
     <link rel="icon" href="{prefix}favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="{prefix}marke.css?v=6">
+    <link rel="stylesheet" href="{prefix}marke.css?v=7">
     <link rel="stylesheet" href="{prefix}anleitungen.css?v={V}">
 </head>
 <body>
