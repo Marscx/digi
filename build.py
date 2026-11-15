@@ -12,7 +12,7 @@ import os
 from guides import GUIDES, GROUPS, SOON
 
 V = 5                                   # Version der CSS-Dateien (?v=N)
-HOME = "https://neu.marcscheidegger.ch"   # ÜBERGANG bis Livegang (nach 14.11.2026): "neu." entfernen
+HOME = "https://marcscheidegger.ch"       # Hauptseite (Links in Kopf- und Fusszeile)
 STAND = "November 2026"
 HERE = os.path.dirname(os.path.abspath(__file__))
 
