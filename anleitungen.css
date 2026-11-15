@@ -10,8 +10,8 @@
     --ink: #0f172a;
     --soft: #475569;
     --line: #dde3ee;
-    --accent: #1d4ed8;       /* Links, Schritte */
-    --accent-soft: #e6edff;
+    --accent: #c23a2b;       /* Links, Schritte: Koralle, auf hellem Grund dunkler für gute Lesbarkeit */
+    --accent-soft: #ffeae6;
     --gold: #b7791f;         /* Hinweise */
     --gold-soft: #fff4dc;
     --ok: #15803d;
@@ -28,8 +28,8 @@
         --ink: #f1f5fb;
         --soft: #a9b8d6;
         --line: #26365a;
-        --accent: #8fb0ff;
-        --accent-soft: #19284a;
+        --accent: #ff8273;
+        --accent-soft: #3a1c22;
         --gold: #f2b544;
         --gold-soft: #2c2411;
         --ok: #6ee7a0;
@@ -49,9 +49,11 @@ a { color: var(--accent); }
 
 /* ---------- Kopf der Seite ---------- */
 .hero { padding: 40px 0 8px; }
-.eyebrow { font-size: .8rem; letter-spacing: .08em; text-transform: uppercase; color: var(--gold); font-weight: 700; margin: 0 0 6px; }
-h1 { font-size: clamp(1.9rem, 1.3rem + 2.4vw, 2.8rem); line-height: 1.12; margin: 0 0 10px; letter-spacing: -.01em; }
-h2 { font-size: 1.45rem; line-height: 1.2; margin: 0 0 8px; }
+/* Kleines Etikett über dem Titel – wie die Kicker der Hauptseite (Schreibmaschine, Punkt in Koralle) */
+.eyebrow { display: inline-flex; align-items: center; gap: 8px; padding: 3px 10px; border: 1px solid var(--line); font-family: var(--ms-schreib); font-size: .72rem; letter-spacing: .18em; text-transform: uppercase; color: var(--soft); margin: 0 0 12px; }
+.eyebrow::before { content: ""; flex: none; width: 6px; height: 6px; background: var(--ms-akzent); }
+h1 { font-size: clamp(2.1rem, 1.4rem + 2.8vw, 3.2rem); font-weight: 300; line-height: 1.08; margin: 0 0 10px; letter-spacing: -.03em; overflow-wrap: break-word; }
+h2 { font-size: 1.5rem; font-weight: 400; line-height: 1.2; margin: 0 0 8px; letter-spacing: -.01em; }
 h3 { font-size: 1.1rem; margin: 18px 0 6px; }
 .lead { font-size: 1.15rem; color: var(--soft); margin: 0 0 18px; max-width: 62ch; }
 
@@ -60,50 +62,50 @@ h3 { font-size: 1.1rem; margin: 18px 0 6px; }
 
 /* ---------- Eckdaten (Zeit, Schwierigkeit, Gerät, Kosten) ---------- */
 .facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 10px; margin: 18px 0 8px; padding: 0; list-style: none; }
-.facts li { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 10px 14px; }
+.facts li { background: var(--card); border: 1px solid var(--line); border-radius: 0; padding: 10px 14px; }
 .facts b { display: block; font-size: .75rem; letter-spacing: .06em; text-transform: uppercase; color: var(--soft); }
 .facts span { font-weight: 600; }
 
-.badge { display: inline-block; font-size: .78rem; font-weight: 700; padding: 3px 10px; border-radius: 999px; background: var(--gold-soft); color: var(--gold); vertical-align: middle; }
+.badge { display: inline-block; font-size: .78rem; font-weight: 700; padding: 3px 10px; border-radius: 0; background: var(--gold-soft); color: var(--gold); vertical-align: middle; }
 .badge--ok { background: var(--ok-soft); color: var(--ok); }
 .badge--soft { background: var(--accent-soft); color: var(--accent); }
 
 /* ---------- Inhaltsverzeichnis ---------- */
 .toc { display: flex; flex-wrap: wrap; gap: 8px; margin: 20px 0 0; padding: 0; list-style: none; }
-.toc a { display: block; text-decoration: none; padding: 6px 14px; border-radius: 999px; border: 1px solid var(--line); background: var(--card); color: var(--ink); font-size: .92rem; font-weight: 600; }
+.toc a { display: block; text-decoration: none; padding: 6px 14px; border-radius: 0; border: 1px solid var(--line); background: var(--card); color: var(--ink); font-size: .92rem; font-weight: 600; }
 .toc a:hover { border-color: var(--accent); color: var(--accent); }
 
 /* ---------- Schritte ---------- */
-.step { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 22px 22px 18px; margin: 22px 0; }
+.step { background: var(--card); border: 1px solid var(--line); border-radius: 0; padding: 22px 22px 18px; margin: 22px 0; }
 .step > header { display: flex; align-items: center; gap: 14px; margin-bottom: 10px; }
-.step-num { flex: none; width: 38px; height: 38px; border-radius: 50%; background: var(--accent); color: #fff; display: grid; place-items: center; font-weight: 800; }
+.step-num { flex: none; width: 38px; height: 38px; background: var(--ms-akzent); color: var(--ms-akzent-ink); display: grid; place-items: center; font-family: var(--ms-schreib); font-size: 1.1rem; }
 @media (prefers-color-scheme: dark) { .step-num { color: #0b1220; } }
 .step h2 { margin: 0; }
 .step .time { margin-left: auto; font-size: .85rem; color: var(--soft); white-space: nowrap; }
 .step ol, .step ul { padding-left: 1.3rem; }
 .step li { margin: 4px 0; }
-kbd { font-family: ui-monospace, Menlo, monospace; font-size: .85em; background: var(--accent-soft); border: 1px solid var(--line); border-radius: 5px; padding: 1px 6px; }
+kbd { font-family: ui-monospace, Menlo, monospace; font-size: .85em; background: var(--accent-soft); border: 1px solid var(--line); border-radius: 0; padding: 1px 6px; }
 
 /* ---------- Hinweise ---------- */
-.note, .warn, .draft { border-radius: 12px; padding: 12px 16px; margin: 14px 0; font-size: .98rem; }
+.note, .warn, .draft { border-radius: 0; padding: 12px 16px; margin: 14px 0; font-size: .98rem; }
 .note { background: var(--accent-soft); }
 .warn { background: var(--warn-soft); }
 .draft { background: var(--gold-soft); }
 .note b, .warn b, .draft b { display: block; margin-bottom: 2px; }
 
 /* ---------- Tutorial-Box ---------- */
-.tutorial { display: flex; gap: 14px; align-items: flex-start; border: 1px dashed var(--line); border-radius: 12px; padding: 12px 16px; margin: 14px 0; }
+.tutorial { display: flex; gap: 14px; align-items: flex-start; border: 1px dashed var(--line); border-radius: 0; padding: 12px 16px; margin: 14px 0; }
 .tutorial .badge { flex: none; margin-top: 2px; }
 .tutorial p { margin: 0; }
 .tutorial small { color: var(--soft); }
-.video { position: relative; aspect-ratio: 16 / 9; margin: 14px 0; border-radius: 12px; overflow: hidden; background: #000; }
+.video { position: relative; aspect-ratio: 16 / 9; margin: 14px 0; border-radius: 0; overflow: hidden; background: #000; }
 .video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
 
 /* ---------- Codefenster mit Kopieren-Knopf ---------- */
-.code { position: relative; margin: 14px 0; border: 1px solid var(--line); border-radius: 12px; background: #0f172a; color: #e6edf7; }
+.code { position: relative; margin: 14px 0; border: 1px solid var(--line); border-radius: 0; background: #0f172a; color: #e6edf7; }
 .code pre { margin: 0; padding: 16px 16px; overflow: auto; max-height: 28rem; white-space: pre; overflow-wrap: normal; tab-size: 4; }
 .code code { font-family: ui-monospace, Menlo, Consolas, monospace; font-size: .82rem; line-height: 1.5; overflow-wrap: normal; }
-.code .copy { position: absolute; top: 8px; right: 8px; z-index: 1; font: inherit; font-size: .8rem; font-weight: 700; padding: 5px 12px; border-radius: 8px; border: 1px solid #3b4a6b; background: #1b2740; color: #e6edf7; cursor: pointer; }
+.code .copy { position: absolute; top: 8px; right: 8px; z-index: 1; font: inherit; font-size: .8rem; font-weight: 700; padding: 5px 12px; border-radius: 0; border: 1px solid #3b4a6b; background: #1b2740; color: #e6edf7; cursor: pointer; }
 .code .copy:hover { border-color: #8fb0ff; }
 .code .copy.done { background: #12301f; border-color: #6ee7a0; color: #6ee7a0; }
 
@@ -117,20 +119,20 @@ kbd { font-family: ui-monospace, Menlo, monospace; font-size: .85em; background:
 .group h2 { display: flex; align-items: baseline; gap: 10px; }
 .group h2 small { font-size: .85rem; font-weight: 500; color: var(--soft); }
 .cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 12px; margin: 12px 0 0; padding: 0; list-style: none; }
-.card { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 14px 16px; display: flex; flex-direction: column; gap: 6px; }
-.card a.card-link { text-decoration: none; color: var(--ink); font-weight: 700; font-size: 1.05rem; }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 0; padding: 14px 16px; display: flex; flex-direction: column; gap: 6px; }
+.card a.card-link { text-decoration: none; color: var(--ink); font-weight: 500; font-size: 1.1rem; }
 .card a.card-link:hover { color: var(--accent); }
 .card a.card-link::after { content: ""; position: absolute; inset: 0; }
 .card { position: relative; }
 .card--soon { opacity: .72; }
 .card p { margin: 0; font-size: .92rem; color: var(--soft); }
 .card .meta { margin-top: auto; display: flex; flex-wrap: wrap; gap: 6px; font-size: .8rem; }
-.pill { padding: 2px 9px; border-radius: 999px; border: 1px solid var(--line); color: var(--soft); }
+.pill { padding: 2px 9px; border-radius: 0; border: 1px solid var(--line); color: var(--soft); }
 
 .big-links { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; margin: 18px 0; }
-.big-link { display: block; text-decoration: none; color: var(--ink); background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 18px 20px; }
+.big-link { display: block; text-decoration: none; color: var(--ink); background: var(--card); border: 1px solid var(--line); border-radius: 0; padding: 18px 20px; }
 .big-link:hover { border-color: var(--accent); }
-.big-link b { font-size: 1.15rem; display: block; margin-bottom: 4px; }
+.big-link b { font-size: 1.2rem; font-weight: 500; display: block; margin-bottom: 4px; }
 .big-link span { color: var(--soft); font-size: .95rem; }
 
 .sources { font-size: .92rem; color: var(--soft); }

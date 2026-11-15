@@ -11,7 +11,7 @@ import os
 
 from guides import GUIDES, GROUPS, SOON
 
-V = 4                                   # Version der CSS-Dateien (?v=N)
+V = 5                                   # Version der CSS-Dateien (?v=N)
 HOME = "https://neu.marcscheidegger.ch"   # ÜBERGANG bis Livegang (nach 14.11.2026): "neu." entfernen
 STAND = "November 2026"
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -28,13 +28,13 @@ def head(title, desc, prefix):
     <meta name="robots" content="noindex, nofollow">
     <meta name="theme-color" content="#0b1220">
     <link rel="icon" href="{prefix}favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="{prefix}marke.css?v=1">
+    <link rel="stylesheet" href="{prefix}marke.css?v=3">
     <link rel="stylesheet" href="{prefix}anleitungen.css?v={V}">
 </head>
 <body>
     <header class="ms-bar">
         <div class="ms-bar-inner">
-            <a class="ms-brand" href="{HOME}/">Marc <span>Scheidegger</span></a>
+            <a class="ms-brand" href="{HOME}/" aria-label="Marc Scheidegger – Startseite"><b class="ms-knopf" aria-hidden="true"></b><span>Marc</span> <span>Scheidegger</span></a>
             <nav aria-label="Hauptnavigation">
                 <ul class="ms-nav">
                     <li><a href="{prefix}index.html"{' aria-current="page"' if prefix == '' else ''}>Start</a></li>
