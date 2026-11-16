@@ -470,28 +470,11 @@
   .video-overlay .btn-video:hover{color:#fff; background:#e8873a;}
   .video-hint{font-family:'IBM Plex Mono',monospace; font-size:.78rem; letter-spacing:.08em; color:#a6b0a4;}
 
-  /* Zeitleiste: Tagesplan, laeuft mit der Uhr mit */
-  .ov-grid--plan{grid-template-columns:repeat(4,1fr); gap:10px;}
-  .ov-grid--plan .ov-card{padding:10px 14px; gap:3px;}
-  .ov-grid--plan .ov-text{font-size:.98rem; line-height:1.25;}
-  .zeit{position:fixed; top:8px; left:300px; right:24px; height:50px; z-index:30; font-family:'IBM Plex Mono',monospace; pointer-events:none;}
-  .zeit[hidden]{display:none;}
-  .zeit-bar{position:absolute; left:0; right:112px; top:0; height:26px; display:flex; gap:2px;}
-  .zeit-seg{flex:1 1 0; min-width:0; background:var(--surface-2); border:1px solid var(--line); border-radius:4px; font-size:.74rem; color:var(--ink-soft); display:flex; align-items:center; padding:0 5px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
-  .zeit-seg.is-pause{background:transparent; border-style:dashed;}
-  .zeit-seg.is-now{background:var(--accent); border-color:var(--accent); color:#fff; font-weight:600;}
-  .zeit-seg.is-past{opacity:.55;}
-  .zeit-ticks{position:absolute; left:0; right:112px; top:29px; height:16px;}
-  .zeit-tick{position:absolute; top:0; transform:translateX(-50%); font-size:.72rem; color:var(--ink-soft); white-space:nowrap;}
-  .zeit-marker{position:absolute; top:-4px; width:3px; height:34px; margin-left:-1px; background:var(--accent-2); border-radius:2px; box-shadow:0 0 0 1px var(--surface);}
-  .zeit-clock{position:absolute; right:0; top:-3px; width:100px; text-align:center; font-size:1.3rem; font-weight:600; color:var(--ink); background:var(--surface); border:1px solid var(--line); border-radius:8px; padding:3px 0;}
-  @media (max-width:980px){ .zeit{left:24px; top:40px;} .zeit-seg{font-size:0;} }
 </style>
 </head>
 <body>
 
 <div class="brand">HSLU &middot; Modul Digitalisierung</div>
-<div class="zeit" id="zeit" aria-label="Zeitplan"><div class="zeit-bar" id="zeitBar"></div><div class="zeit-ticks" id="zeitTicks"></div><div class="zeit-marker" id="zeitMarker"></div><div class="zeit-clock" id="zeitClock">--:--</div></div>
 
 <div class="stage" id="stage">
   <div class="world" id="world">
@@ -502,23 +485,18 @@
       <circle id="posDot" class="pos-dot" r="15"/>
     </svg>
 
-    <section class="frame frame--cover" data-title="Übersicht" data-notes="Begrüssung, an Tag 1 anknüpfen (Idee, Umsetzung, Hosting): Heute geht es um Konzipieren, Umsetzen und Hosten, gehostet wird entweder auf dem eigenen Hosting oder im persönlichen Moodle-Kurs. Dann den Zeitplan: 09:00 Begrüssung und Beispiele, 10:00 Pause, 10:20 Anleitungen sichten und mit der Umsetzung beginnen, 12:00 Mittag, 13:30 Kurzpräsentationen (2 bis 3 Minuten pro Person), 14:00 Umsetzung, 15:15 Kurzfeedback mit Protokoll, 16:00 Schluss. Oben am Rand läuft der Zeitplan mit der Uhr mit (Taste T blendet ihn aus oder ein). Die Beispiele 1 bis 8 sind ausgearbeitet; die Präsentation endet mit einem kurzen Schlusswort. Hinweis: Anleitungen und Quellen stehen auf der Anleitungsseite digi.marcscheidegger.ch. Ca. 2 Minuten.">
+    <section class="frame frame--cover" data-title="Übersicht" data-notes="Begrüssung, an Tag 1 anknüpfen (Idee, Umsetzung, Hosting): Heute geht es um Konzipieren, Umsetzen und Hosten, gehostet wird entweder auf dem eigenen Hosting oder im persönlichen Moodle-Kurs. Dann die Übersicht: erst die Beispiele, dann arbeitet ihr am Miniprojekt, danach folgt der kurze Auftritt. Die Beispiele 1 bis 8 sind ausgearbeitet; die Präsentation endet mit einem kurzen Schlusswort. Hinweis: Anleitungen und Quellen stehen auf der Anleitungsseite digi.marcscheidegger.ch. Ca. 2 Minuten.">
       <span class="eyebrow">HSLU &middot; Modul Digitalisierung &middot; Praxistag &middot; 14. November</span>
       <h1 class="cover-title cover-title--sm">Konzipieren, umsetzen, hosten</h1>
       <p class="cover-sub">Dein Projekt in drei Schritten &mdash; gehostet auf deinem eigenen Hosting oder in deinem pers&ouml;nlichen Moodle-Kurs.</p>
-      <div class="ov-grid ov-grid--plan">
-        <div class="ov-card"><span class="ov-time">09:00</span><span class="ov-text">Begr&uuml;ssung, Beispiele aus der Praxis</span></div>
-        <div class="ov-card"><span class="ov-time">10:00</span><span class="ov-text">Pause</span></div>
-        <div class="ov-card"><span class="ov-time">10:20</span><span class="ov-text">Anleitungen sichten, mit der Umsetzung beginnen</span></div>
-        <div class="ov-card"><span class="ov-time">12:00</span><span class="ov-text">Mittagspause</span></div>
-        <div class="ov-card"><span class="ov-time">13:30</span><span class="ov-text">Kurzpr&auml;sentationen: Was geht ihr an?</span></div>
-        <div class="ov-card"><span class="ov-time">14:00</span><span class="ov-text">Umsetzung</span></div>
-        <div class="ov-card"><span class="ov-time">15:15</span><span class="ov-text">Kurzfeedback: Stolpersteine, Protokoll</span></div>
-        <div class="ov-card"><span class="ov-time">16:00</span><span class="ov-text">Schluss</span></div>
+      <div class="ov-grid">
+        <div class="ov-card"><span class="ov-time">Beispiele</span><span class="ov-text">Acht Beispiele, zugeschnitten auf euch</span></div>
+        <div class="ov-card"><span class="ov-time">Miniprojekt</span><span class="ov-text">Ihr konzipiert euer Miniprojekt</span></div>
+        <div class="ov-card"><span class="ov-time">Auftritt</span><span class="ov-text">Je 2&ndash;3 Minuten pr&auml;sentieren, danach weiterarbeiten</span></div>
       </div>
       <span class="ov-label">Die Beispiele am Morgen</span>
       <div class="chip-cloud">
-        <span class="chip"><b>B1</b> Prozessanalyse Events</span>
+        <span class="chip"><b>B1</b> Prozessanalyse mit KI</span>
         <span class="chip"><b>B2</b> Eine Website verbessern</span>
         <span class="chip"><b>B3</b> Multispurvideo mit Notenrolle</span>
         <span class="chip"><b>B4</b> Songwriting in der Schulmusik</span>
@@ -573,67 +551,29 @@
       </div>
     </section>
 
-    <section class="frame frame--panel" data-title="Die Prozesslandkarte" data-notes="Beispiel 1 ist eine Musikschule. Die Landkarte ist die QUARTE-Vorgabe des Verbands. Urspr&uuml;nglich in Flowler gezeichnet, heute als JSON gepflegt und im Browser dargestellt. Hervorgehoben ist der Prozess, den wir analysiert haben. Ca. 1,5 Minuten." data-bsp="Beispiel 1">
+    <section class="frame frame--panel" data-title="Die Prozesslandkarte" data-notes="Die Landkarte der Prozesse nach QUARTE, der Vorgabe des Verbands für Musikschulen: elf Prozesse in den Gruppen Führung, Leistung und Support. Auf dieser Karte setzt die Prozessanalyse auf: Man wählt einen Prozess, beschreibt den Ablauf, prüft ihn gegen die Norm und schätzt den Digitalisierungsgrad je Schritt. Ca. 1 Minute." data-bsp="Beispiel 1">
       <span class="eyebrow">Station 3 &middot; Beispiel 1</span>
       <h2>Die Prozesslandkarte nach QUARTE</h2>
-      <p class="lead">Elf Prozesse in drei Gruppen &mdash; urspr&uuml;nglich in Flowler gezeichnet, heute als JSON gepflegt, im Browser dargestellt.</p>
+      <p class="lead">Elf Prozesse in drei Gruppen &mdash; die Landkarte des Verbands, auf der jede Prozessanalyse aufsetzt.</p>
       <div class="group-row"><span class="group-label">F&uuml;hrung</span><div class="chip-cloud"><span class="chip">1.1 Strategieentwicklung</span><span class="chip">1.2 Führung / Evaluation</span><span class="chip">1.3 Personalentwicklung</span><span class="chip">1.4 Kommunikation</span></div></div>
-      <div class="group-row"><span class="group-label">Leistung</span><div class="chip-cloud"><span class="chip">2.1 Unterrichtsorganisation</span><span class="chip">2.2 Musikunterricht</span><span class="chip">2.3 Talentförderung</span><span class="chip chip--hot">2.4 Konzerte / Veranstaltungen (Events)</span><span class="chip">2.5 PR / Marketing</span></div></div>
+      <div class="group-row"><span class="group-label">Leistung</span><div class="chip-cloud"><span class="chip">2.1 Unterrichtsorganisation</span><span class="chip">2.2 Musikunterricht</span><span class="chip">2.3 Talentförderung</span><span class="chip">2.4 Konzerte / Veranstaltungen (Events)</span><span class="chip">2.5 PR / Marketing</span></div></div>
       <div class="group-row"><span class="group-label">Support</span><div class="chip-cloud"><span class="chip">3.1 Infrastruktur</span><span class="chip">3.2 Finanz- und Rechnungswesen</span></div></div>
-      <span class="chip-note">Hervorgehoben: der Prozess, den wir analysiert haben.</span>
+      <span class="chip-note">Auf diese Karte setzt die Prozessanalyse auf: Zu jedem Prozess lassen sich Schritte, Zust&auml;ndigkeiten und der Digitalisierungsgrad erfassen.</span>
     </section>
 
-    <section class="frame frame--panel" data-title="Der Prozess Events" data-notes="Zwei Teilprozesse: erst der Jahresterminplan, dann die Detailplanung pro Event. Die Punkte zeigen den Digitalisierungsgrad (rot ist analog, grün automatisiert). Nur der Flagship-Zweig ist bis zum Ende ausgearbeitet. Grau ist der Schritt, der noch nicht bewertet ist. Ca. 2 Minuten." data-bsp="Beispiel 1">
+    <section class="frame frame--panel" data-title="Was der Agent daraus macht" data-notes="Der Agent liefert drei Dinge: Er findet Medienbrüche, prüft gegen die QUARTE-Norm und schlägt Verbesserungen vor. Wichtig: Alles bleibt ein Vorschlag, bis ein Mensch freigibt. Ca. 1 Minute." data-bsp="Beispiel 1">
       <span class="eyebrow">Station 4 &middot; Beispiel 1</span>
-      <h2>Der Prozess &laquo;Events&raquo; und sein Digitalisierungsgrad</h2>
-      <div class="flow-block"><span class="flow-title">Jahresterminplan</span><div class="flow-line"><span class="step" title="Digitalisierungsgrad 2"><span class="dot lvl-2"></span>Termine letztes SJ übernehmen</span> <span class="arr">&rarr;</span> <span class="step" title="Digitalisierungsgrad 1"><span class="dot lvl-1"></span>Terminbereinigung</span> <span class="arr">&rarr;</span> <span class="step" title="Digitalisierungsgrad 1"><span class="dot lvl-1"></span>Terminkoordination</span> <span class="arr">&rarr;</span> <span class="step" title="noch nicht erfasst"><span class="dot lvl-n"></span>Inserate-Budget planen und freigeben</span> <span class="arr">&rarr;</span> <span class="step" title="Digitalisierungsgrad 2"><span class="dot lvl-2"></span>Reservationen ausführen</span> <span class="arr">&rarr;</span> <span class="step" title="Digitalisierungsgrad 1"><span class="dot lvl-1"></span>Terminliste für LeKo erstellen</span> <span class="arr">&rarr;</span> <span class="step" title="Digitalisierungsgrad 2"><span class="dot lvl-2"></span>Anmeldetool aufbereiten</span></div></div>
-      <div class="flow-block"><span class="flow-title">Detailplanung</span><div class="flow-line"> <span class="step step--gate" title="Verzweigung"><span class="gate">&#9671;</span>Eventtyp: Flagship &middot; Fachschaft &middot; Klassenkonzert &middot; Lp-Konzert</span> <span class="arr">&rarr;</span> <span class="step" title="Digitalisierungsgrad 2"><span class="dot lvl-2"></span>Teilnehmer und Programm Ermittlung (grob)</span> <span class="arr">&rarr;</span> <span class="step" title="Digitalisierungsgrad 2"><span class="dot lvl-2"></span>Programm eintragen</span> <span class="arr">&rarr;</span> <span class="step" title="Digitalisierungsgrad 2"><span class="dot lvl-2"></span>Material und Vorproben eintragen</span> <span class="arr">&rarr;</span> <span class="step" title="Digitalisierungsgrad 2"><span class="dot lvl-2"></span>Teilnahme und Programmüberprüfung</span> <span class="arr">&rarr;</span> <span class="step" title="Digitalisierungsgrad 2"><span class="dot lvl-2"></span>Flyer und Programme erstellen</span> <span class="arr">&rarr;</span> <span class="step" title="Digitalisierungsgrad 2"><span class="dot lvl-2"></span>Social Media</span> <span class="arr">&rarr;</span> <span class="step" title="Digitalisierungsgrad 2"><span class="dot lvl-2"></span>Inserate erstellen und versenden</span> <span class="arr">&rarr;</span> <span class="step" title="Digitalisierungsgrad 2"><span class="dot lvl-2"></span>Gemeindeblätter und Berichte</span> <span class="arr">&rarr;</span> <span class="step" title="Digitalisierungsgrad 2"><span class="dot lvl-2"></span>Material und Infrastruktur bereitstellen</span> <span class="arr">&rarr;</span> <span class="step" title="Digitalisierungsgrad 2"><span class="dot lvl-2"></span>Durchführung</span></div></div>
-      <div class="flow-block"><span class="flow-title">Zusätzlich ergänzt</span><div class="flow-line"><span class="step" title="Digitalisierungsgrad 1"><span class="dot lvl-1"></span>Termine in die Kanäle übertragen</span></div></div>
-      <div class="legend"><span><span class="dot lvl-0"></span>0 Analog</span><span><span class="dot lvl-1"></span>1 Teilweise digital</span><span><span class="dot lvl-2"></span>2 Digital</span><span><span class="dot lvl-3"></span>3 Automatisiert</span><span><span class="dot lvl-n"></span>noch nicht erfasst</span></div>
-    </section>
-
-    <section class="frame frame--panel" data-title="Digitalisierungsgrad auf einen Blick" data-notes="Die Balken zeigen die erfassten Schritte, 3 wäre voll automatisiert. Der Durchschnitt liegt bei 1,8. Auffällig: Die Schritte rund um Termine und Terminliste sind am wenigsten digital. Ca. 1,5 Minuten." data-bsp="Beispiel 1">
-      <span class="eyebrow">Station 5 &middot; Beispiel 1</span>
-      <h2>Digitalisierungsgrad auf einen Blick</h2>
-      <div class="bars-wrap">
-        <div class="bars"><div class="bar-row"><span class="bar-label">Termine letztes SJ übernehmen</span><span class="bar-track"><span class="bar-fill lvl-2" style="width:67%"></span></span><span class="bar-val">2</span></div><div class="bar-row"><span class="bar-label">Terminbereinigung</span><span class="bar-track"><span class="bar-fill lvl-1" style="width:33%"></span></span><span class="bar-val">1</span></div><div class="bar-row"><span class="bar-label">Terminkoordination</span><span class="bar-track"><span class="bar-fill lvl-1" style="width:33%"></span></span><span class="bar-val">1</span></div><div class="bar-row"><span class="bar-label">Reservationen ausführen</span><span class="bar-track"><span class="bar-fill lvl-2" style="width:67%"></span></span><span class="bar-val">2</span></div><div class="bar-row"><span class="bar-label">Terminliste für LeKo erstellen</span><span class="bar-track"><span class="bar-fill lvl-1" style="width:33%"></span></span><span class="bar-val">1</span></div><div class="bar-row"><span class="bar-label">Anmeldetool aufbereiten</span><span class="bar-track"><span class="bar-fill lvl-2" style="width:67%"></span></span><span class="bar-val">2</span></div><div class="bar-row"><span class="bar-label">Teilnehmer und Programm Ermittlung (grob)</span><span class="bar-track"><span class="bar-fill lvl-2" style="width:67%"></span></span><span class="bar-val">2</span></div><div class="bar-row"><span class="bar-label">Programm eintragen</span><span class="bar-track"><span class="bar-fill lvl-2" style="width:67%"></span></span><span class="bar-val">2</span></div><div class="bar-row"><span class="bar-label">Material und Vorproben eintragen</span><span class="bar-track"><span class="bar-fill lvl-2" style="width:67%"></span></span><span class="bar-val">2</span></div><div class="bar-row"><span class="bar-label">Teilnahme und Programmüberprüfung</span><span class="bar-track"><span class="bar-fill lvl-2" style="width:67%"></span></span><span class="bar-val">2</span></div><div class="bar-row"><span class="bar-label">Flyer und Programme erstellen</span><span class="bar-track"><span class="bar-fill lvl-2" style="width:67%"></span></span><span class="bar-val">2</span></div><div class="bar-row"><span class="bar-label">Social Media</span><span class="bar-track"><span class="bar-fill lvl-2" style="width:67%"></span></span><span class="bar-val">2</span></div><div class="bar-row"><span class="bar-label">Inserate erstellen und versenden</span><span class="bar-track"><span class="bar-fill lvl-2" style="width:67%"></span></span><span class="bar-val">2</span></div><div class="bar-row"><span class="bar-label">Gemeindeblätter und Berichte</span><span class="bar-track"><span class="bar-fill lvl-2" style="width:67%"></span></span><span class="bar-val">2</span></div><div class="bar-row"><span class="bar-label">Material und Infrastruktur bereitstellen</span><span class="bar-track"><span class="bar-fill lvl-2" style="width:67%"></span></span><span class="bar-val">2</span></div><div class="bar-row"><span class="bar-label">Durchführung</span><span class="bar-track"><span class="bar-fill lvl-2" style="width:67%"></span></span><span class="bar-val">2</span></div><div class="bar-row"><span class="bar-label">Termine in die Kanäle übertragen (zusätzlich ergänzt)</span><span class="bar-track"><span class="bar-fill lvl-1" style="width:33%"></span></span><span class="bar-val">1</span></div></div>
-        <div class="stat"><span class="stat-num">&Oslash; 1,8</span><span class="stat-unit">von 3</span><span class="stat-note">&uuml;ber 17 erfasste Schritte</span></div>
-      </div>
-    </section>
-
-    <section class="frame frame--panel" data-title="Eine Quelle, vier Kanäle" data-notes="Das Kernbild für die Schnittstellen: Jeder Termin wird einmal erfasst und dann mehrfach weitergetragen, meistens von Hand. Auf dem Weg dazwischen passieren die Fehler und geht die Zeit verloren. Ca. 2 Minuten." data-bsp="Beispiel 1">
-      <span class="eyebrow">Station 6 &middot; Beispiel 1</span>
-      <h2>Eine Quelle, vier Kan&auml;le</h2>
-      <p class="lead">Jeder Termin wird einmal erfasst &mdash; und dann mehrfach weitergetragen.</p>
-      <div class="hub">
-        <div class="hub-src">Excel-Terminliste</div>
-        <div class="hub-targets">
-          <div class="hub-row"><span class="arr">&rarr;</span><span class="hub-name">Website-Liste und Veranstaltungsseite</span><span class="tag tag-hand">von Hand</span></div>
-          <div class="hub-row"><span class="arr">&rarr;</span><span class="hub-name">Outlook-Kalender</span><span class="tag tag-hand">von Hand</span></div>
-          <div class="hub-row"><span class="arr">&rarr;</span><span class="hub-name">Umfragen im internen Bereich</span><span class="tag tag-hand">von Hand</span></div>
-          <div class="hub-row"><span class="arr">&rarr;</span><span class="hub-name">PDF f&uuml;r Lehrerkonferenz und Extranet</span><span class="tag tag-auto">Export</span></div>
-        </div>
-      </div>
-      <div class="stat-row">
-        <div class="stat-card"><span class="stat-num">13</span><span class="stat-note">Schnittstellen im Prozess</span></div>
-        <div class="stat-card"><span class="stat-num">10</span><span class="stat-note">davon von Hand</span></div>
-        <div class="stat-card"><span class="stat-num">1 &rarr; 4</span><span class="stat-note">eine Quelle, vier Kan&auml;le</span></div>
-      </div>
-    </section>
-
-    <section class="frame frame--panel" data-title="Was der Agent daraus macht" data-notes="Der Agent liefert drei Dinge: findet, prüft, schlägt vor. Die Zahlen stammen aus dem echten Prüfbericht (pruefen.py), nicht aus dem Kopf. Wichtig: Alles bleibt ein Vorschlag, bis ein Mensch freigibt. Ca. 1,5 Minuten." data-bsp="Beispiel 1">
-      <span class="eyebrow">Station 7 &middot; Beispiel 1</span>
       <h2>Was der Agent daraus macht</h2>
       <div class="option-cards">
-        <div class="option-card"><span class="step-num">01</span>Findet<span class="opt-sub">Medienbr&uuml;che: 10 von 13 Schnittstellen laufen von Hand.</span></div>
-        <div class="option-card"><span class="step-num">02</span>Pr&uuml;ft<span class="opt-sub">gegen QUARTE: 10 von 47 Dokumenten sind erfasst, die Checkliste gilt nur f&uuml;r grosse Events.</span></div>
-        <div class="option-card"><span class="step-num">03</span>Schl&auml;gt vor<span class="opt-sub">z.B. Termine einmal erfassen und automatisch auf Website und Kalender ausgeben.</span></div>
+        <div class="option-card"><span class="step-num">01</span>Findet<span class="opt-sub">Medienbr&uuml;che, also Schritte und Schnittstellen, die noch von Hand laufen.</span></div>
+        <div class="option-card"><span class="step-num">02</span>Pr&uuml;ft<span class="opt-sub">gegen QUARTE: Welche Dokumente der Norm sind erfasst, wo gibt es L&uuml;cken?</span></div>
+        <div class="option-card"><span class="step-num">03</span>Schl&auml;gt vor<span class="opt-sub">z.B. Daten nur einmal erfassen und automatisch weitergeben.</span></div>
       </div>
-      <span class="chip-note">Die Zahlen stammen aus dem Prüfbericht (python3 pruefen.py). Alles bleibt ein Vorschlag, bis ein Mensch freigibt.</span>
+      <span class="chip-note">Alles bleibt ein Vorschlag, bis ein Mensch freigibt.</span>
     </section>
 
     <section class="frame frame--master" data-title="Eine Website verbessern" data-notes="Zweites Beispiel: eine bestehende Website verbessern, hier mein eigener Weg. Aus der WordPress-Seite entstand zuerst eine Jimdo-Seite als Test, dann eine eigene Seite aus reinem HTML, CSS und JS. Sie läuft zuerst auf einer Test-Adresse und wird danach live geschaltet. Ca. 2 Minuten." data-bsp="Beispiel 2" data-bsp-start="B2">
-      <span class="eyebrow">Station 8 &middot; Beispiel 2</span>
+      <span class="eyebrow">Station 5 &middot; Beispiel 2</span>
       <h2>Eine Website verbessern</h2>
       <div class="knob-chain">
         <div class="knob"><span>WORDPRESS</span></div>
@@ -655,7 +595,7 @@
     </section>
 
     <section class="frame frame--panel" data-title="Der erste Auftrag" data-notes="Das ist mein allererster Auftrag zu diesem Projekt, unverändert, vom 31. Oktober. Er ist kurz, nennt aber Ziel, Vorlage, Rahmen und Qualitätswunsch. Danach ging es im Gespräch Schritt für Schritt weiter. Ca. 1,5 Minuten." data-bsp="Beispiel 2">
-      <span class="eyebrow">Station 8 &middot; Beispiel 2</span>
+      <span class="eyebrow">Station 5 &middot; Beispiel 2</span>
       <h2>Der erste Auftrag an Claude</h2>
       <p class="lead">W&ouml;rtlich, so wie ich ihn am 31. Oktober geschrieben habe.</p>
       <blockquote class="prompt">kannst du mir eine jimdo website erstellen mit den vorgaben meiner wordpress website ohne domain einfach zum testen. ich bin bei jimdo mit meiner apple id eingeloggt. ich habe den testaccount schon eröffnet. schaue auf <a class="prompt-link" href="https://marcscheidegger.ch" target="_blank" rel="noopener">marcscheidegger.ch</a> nach wie ich das gegliedert habe und mache die website schöner und besser gegliedert beziehe alle unterseiten ein. ich möchte aber nicht meine domain für jimdo benutzen</blockquote>
@@ -668,7 +608,7 @@
     </section>
 
     <section class="frame frame--panel" data-title="Das Ergebnis, live" data-notes="Hier zeige ich das Ergebnis live im Browser. Zwei Fenster nebeneinander öffnen und vergleichen: links die Jimdo-Version aus dem ersten Auftrag, rechts die eigene Seite auf der Test-Adresse. Ca. 2 Minuten." data-bsp="Beispiel 2">
-      <span class="eyebrow">Station 8 &middot; Beispiel 2</span>
+      <span class="eyebrow">Station 5 &middot; Beispiel 2</span>
       <h2>Das Ergebnis, live gezeigt</h2>
       <p class="lead">Zwei Stufen derselben Seite &mdash; zum Vergleichen nebeneinander &ouml;ffnen.</p>
       <div class="option-cards">
@@ -678,7 +618,7 @@
     </section>
 
     <section class="frame frame--panel" data-title="Nicht gleich Git und Server" data-notes="Wichtiger Hinweis für alle, die ihre eigene Seite verbessern wollen: Man muss nicht mit Git und Server starten. Der einfachste Einstieg ist Linktree: eine Seite mit allen Links zu Social Media, Shop und Projekten, ganz ohne eigene Website. Wer eine eigene Seite verbessern will, probiert sie mit einem lokalen Testserver (ein Befehl im Terminal) auf dem eigenen Computer aus. Gehostet wird später entweder auf dem eigenen Hosting oder im persönlichen Moodle-Kurs. Die Schritt-für-Schritt-Anleitungen stehen auf digi.marcscheidegger.ch: Linktree, Website mit KI verbessern und Website mit Git veröffentlichen. Ca. 1,5 Minuten." data-bsp="Beispiel 2">
-      <span class="eyebrow">Station 8 &middot; Beispiel 2</span>
+      <span class="eyebrow">Station 5 &middot; Beispiel 2</span>
       <h2>Du brauchst nicht gleich Git und Server</h2>
       <p class="lead">Probiere es zuerst bei dir zu Hause aus, oder starte mit einer einfachen Linkseite.</p>
       <div class="option-cards">
@@ -690,7 +630,7 @@
     </section>
 
     <section class="frame frame--master" data-title="Multispurvideo mit Notenrolle" data-notes="Drittes Beispiel: ein Multispurvideo mit Notenrolle. Die Notenrolle kommt aus Noteflight, das Video entsteht in DaVinci Resolve, die Videos liegen auf Vimeo und sind im Moodle E-Book eingebettet. Das E-Book ist als Gast ohne Anmeldung erreichbar, dort live zeigen: ein Instrument-Kapitel, das Tutti-Kapitel und die Noten. Ca. 2 Minuten." data-bsp="Beispiel 3" data-bsp-start="B3">
-      <span class="eyebrow">Station 9 &middot; Beispiel 3</span>
+      <span class="eyebrow">Station 6 &middot; Beispiel 3</span>
       <h2>Ein Multispurvideo mit Notenrolle</h2>
       <div class="knob-chain">
         <div class="knob"><span>NOTEFLIGHT</span></div>
@@ -707,7 +647,7 @@
     </section>
 
     <section class="frame frame--panel" data-title="Songwriting in der Schulmusik" data-notes="Viertes Beispiel, aus der Schulmusik: Jugendliche schreiben und spielen eigene Songs, ohne Vorkenntnisse und ohne Installation. Drei Werkzeuge im Fokus. openDAW läuft im Browser ohne Login, mit dem Code-Editor lässt sich zusammen mit einer KI ein Song erzeugen, und in der Pianorolle liegt er gleich als Klavier-Tutorial bereit. Dazu zeige ich live meinen Test, einen 8-taktigen Hip-Hop-Beat. Der Koala Sampler ist ein Sampler mit Sequencer und Performance-Ansicht auf dem Handy, wie bei einem MPC-Produzenten, ideal für Geräusche, Beats und Stimmungsbilder, Beispiel ist mein Ferienpass-Projekt. Noteflight macht Noten und Leadsheets im Browser, es ist auch im Multispurvideo aus Beispiel 3 im Einsatz. Falls openDAW online nicht klappt: Taste V oder den Knopf unten zeigt den Screencast von Vimeo, Esc schliesst. Ohne Internet im Fenster auf «lokale Datei abspielen» klicken (OpenDAW_Demo.mov muss neben der Präsi liegen). Nicht ins Detail gehen. Ca. 2 Minuten." data-bsp="Beispiel 4" data-bsp-start="B4">
-      <span class="eyebrow">Station 10 &middot; Beispiel 4</span>
+      <span class="eyebrow">Station 7 &middot; Beispiel 4</span>
       <h2>Songwriting in der Schulmusik</h2>
       <p class="lead">Drei Werkzeuge, die Jugendliche sofort einsetzen k&ouml;nnen &mdash; ohne Vorkenntnisse.</p>
       <div class="option-cards">
@@ -722,7 +662,7 @@
     </section>
 
     <section class="frame frame--panel" data-title="Musikunterricht in heterogener Klasse" data-notes="Fünftes Beispiel, aus dem Klassenunterricht: Eine Regelklasse bringt sehr unterschiedliche musikalische Voraussetzungen mit. Darum mischen wir klassischen, geleiteten Unterricht mit E-Learning. Ein Teil der Klasse arbeitet mit Frontalunterricht oder dem Papierdossier, neu als PDF-Dossier (ich habe es meistens in Pages gestaltet, das taugt gut als Grafikprogramm, es geht aber auch mit Claude), die anderen Gruppen lernen selbständig mit Videotutorials im Moodle-Kurs. Der Kurs hat zu allen Themen Videotutorials, hier live zeigen (Link auf der Folie). Werkzeuge: Vimeo für die Videos, Moodle (lässt sich durch Zebis ersetzen), Noteflight für die Noten, DaVinci Resolve für den Videoschnitt mit mehreren Kameras. Das Material ist im Schwierigkeitsgrad breit, das Ziel bleibt das gemeinsame Klassenmusizieren. Nicht ins Detail gehen. Ca. 2 Minuten." data-bsp="Beispiel 5" data-bsp-start="B5">
-      <span class="eyebrow">Station 11 &middot; Beispiel 5</span>
+      <span class="eyebrow">Station 8 &middot; Beispiel 5</span>
       <h2>Musikunterricht in heterogener Klasse</h2>
       <p class="lead">E-Learning und klassischer Unterricht gemischt &mdash; f&uuml;r sehr unterschiedliche Lernvoraussetzungen.</p>
       <div class="option-cards">
@@ -734,7 +674,7 @@
     </section>
 
     <section class="frame frame--panel" data-title="Plattform für Chorleute" data-notes="Sechstes Beispiel, aus dem Gesangsunterricht im Chor: Chorleute bekommen Noten und Ton online, einzelne Stimmen getrennt hörbar. Zwei Werkzeuge im Fokus. kDrive, die Cloud von Infomaniak mit Servern in der Schweiz, ist gratis startbar und eignet sich zum Teilen von PDF-Noten: Man lädt die Lernenden per E-Mail in einen geteilten Ordner ein, ohne öffentlichen Link. Auf der Anleitungsseite gibt es dazu einen Datenschutz-Check und den Vergleich mit Microsoft 365. In Noteflight lassen sich Chorsätze abspielen, einzelne Stimmen stumm schalten, transponieren, und XML-Noten lassen sich importieren und exportieren (Anleitungen dazu als Tutorials im Moodle). Ihr bekommt von mir einen Zugang zu meinem Noteflight Learn, damit ihr im geschlossenen Rahmen testen, teilen und alle Funktionen ausprobieren könnt. Der Knopf «Test-Zugang für euch» führt direkt zur Anmeldeseite. Ein Video auf YouTube lässt sich direkt mit den Noten verknüpfen, ohne Multispurvideo. Stolpersteine nur kurz: Urheberrecht (geschlossener Rahmen hilft) und die Kosten von Learn (Abo). Beispiel aus dem Klassenunterricht: Link auf der Folie. Tonhöhe und Tempo anpassen kommt im Beispiel 7. Nicht ins Detail gehen. Ca. 2 Minuten." data-bsp="Beispiel 6" data-bsp-start="B6">
-      <span class="eyebrow">Station 12 &middot; Beispiel 6</span>
+      <span class="eyebrow">Station 9 &middot; Beispiel 6</span>
       <h2>Plattform f&uuml;r Chorleute</h2>
       <p class="lead">Noten und Ton zusammen, jede Stimme einzeln h&ouml;rbar &mdash; im gesch&uuml;tzten Rahmen.</p>
       <div class="option-cards">
@@ -749,7 +689,7 @@
     </section>
 
     <section class="frame frame--panel" data-title="Playbacks für den Gesangsunterricht" data-notes="Siebtes Beispiel, aus dem Gesangsunterricht: Playbacks, Tempo und Tonlage. Fokus Anytune: Tempo und Tonhöhe getrennt verändern, Stellen loopen, zum Üben und zum Anpassen an die eigene Stimmlage. Tempo ändern geht auch direkt in YouTube und Vimeo (Wiedergabegeschwindigkeit im Player), allerdings ohne Tonhöhe. Stimmen trennen (Stem Separation): in Logic, Ableton oder Cubase eingebaut, zum Gratis-Testen Moises, das läuft im Browser (moises.ai, Gratis-Konto mit Monatslimit von wenigen Songs, laut Recherche etwa 5 Trennungen pro Monat, aktuelle Bedingungen vorher im eigenen Konto prüfen; deshalb vorher einen Song hochladen und das Ergebnis bereithalten, nicht live Songs verbrauchen). Playalongs selber erstellen: in einer DAW (GarageBand ist als Einstieg gut geeignet, Logic Pro und Ableton Live sind steiler, Logic nur für Apple, Ableton für Windows und Mac; Anleitung auf digi.marcscheidegger.ch) oder mit iReal Pro (Akkorde eingeben, die Band spielt). Noten- und Songquellen: Guitar Pro mit mySongBook (viele Songs, auch für Nicht-Gitarrist:innen), Noteflight, MuseScore. Weitere Wege nur nennen: GarageBand, Band-in-a-Box, Noten umschreiben mit XML Import und Export. Auch im Beispiel enthalten, hier nicht ausgeführt: Video (Konzept, Drehbuch, Schnitt, Export) und Social Media. Urheberrecht kurz erwähnen: Trennen und Anpassen nur für den Unterricht im geschlossenen Rahmen. Nicht ins Detail gehen. Ca. 2 Minuten." data-bsp="Beispiel 7" data-bsp-start="B7">
-      <span class="eyebrow">Station 13 &middot; Beispiel 7</span>
+      <span class="eyebrow">Station 10 &middot; Beispiel 7</span>
       <h2>Playbacks f&uuml;r den Gesangsunterricht</h2>
       <p class="lead">Tempo und Tonlage anpassen, Stimmen trennen, Playalongs selber machen.</p>
       <div class="option-cards">
@@ -762,7 +702,7 @@
     </section>
 
     <section class="frame frame--panel" data-title="Digitale Tools für die eigenen Skills" data-notes="Achtes Beispiel: Digitale Tools, um die eigenen musikalischen Skills zu verbessern. Einstieg: Ist-Zustand analysieren, Ziele definieren, und auch hier einen Prompt machen und schauen, was die KI vorschlägt. Dazu der Übe-Timer. Üben mit Noten und Ton: Guitar Pro für gute TABs und Noten, auch Fingerstyle und Flatpicking, und eine gute Quelle für viele Songs. Moises für Playalongs durch Stimmen trennen (Gratis-Limit beachten), Anytune für Tempo und Tonhöhe, iReal Pro für Playalongs, in YouTube die Wiedergabegeschwindigkeit. Sich selber aufnehmen, das ist ein starkes Lernwerkzeug. Looper: Hardware wie der TC Looper, Software wie Koala, oder GarageBand als Überhilfe. Notieren: GoodNotes, um Stücke im Nashville Number System aufzuschreiben. Das Nashville Number System lässt sich ganz analog lernen, die KI kann es erklären. Menschen: Unterricht online buchen, mit KI recherchieren, wer im eigenen Sektor in der Schweiz oder international unterrichtet. Analog Stunden nehmen, zum Beispiel Gitarre oder Mandoline an einer Musikschule, oder gleich in die Staaten reisen und sich vom Nashville-Vibe anstecken lassen. Inspiration: auf YouTube neue Musik entdecken, mich hat vor allem Tiny Desk inspiriert. Das führt zur Grundmotivation und zum Schluss der Präsentation. Nicht ins Detail gehen. Ca. 2 Minuten." data-bsp="Beispiel 8" data-bsp-start="B8">
-      <span class="eyebrow">Station 14 &middot; Beispiel 8</span>
+      <span class="eyebrow">Station 11 &middot; Beispiel 8</span>
       <h2>Digitale Tools f&uuml;r die eigenen Skills</h2>
       <p class="lead">Standort bestimmen, gezielt &uuml;ben, sich aufnehmen &mdash; und Menschen dazunehmen.</p>
       <div class="option-cards">
@@ -831,7 +771,7 @@
 
   <div class="minimap">
     <div class="minimap-inner" id="miniInner">
-      <svg id="miniSvg" viewBox="0 0 32278 2100" preserveAspectRatio="none">
+      <svg id="miniSvg" viewBox="0 0 27973 2100" preserveAspectRatio="none">
         <path id="miniPath" class="mini-cable" vector-effect="non-scaling-stroke"/>
       </svg>
       <div id="miniDots"></div>
@@ -850,7 +790,7 @@
   <div class="notes" id="notes" hidden></div>
 
   <div class="footer">
-    <div class="footer-meta"><b id="counter">01 / 23</b><span id="footerTitle" class="footer-title"></span></div>
+    <div class="footer-meta"><b id="counter">01 / 20</b><span id="footerTitle" class="footer-title"></span></div>
     <div class="nav-buttons">
       <button class="nav-btn" id="notesBtn" aria-label="Drehbuch ein- oder ausblenden" title="Drehbuch (Taste N)">&#9998;</button>
       <button class="nav-btn" id="prevBtn" aria-label="Zur&uuml;ck">&#8592;</button>
@@ -866,27 +806,24 @@
     {cx:2270, cy:700, w:1250, h:680},
     {cx:3580, cy:1500, w:1250, h:700},
     {cx:4914, cy:700, w:1100, h:640},
-    {cx:6344, cy:1500, w:1500, h:860},
-    {cx:7819, cy:700, w:1250, h:720},
-    {cx:9219, cy:1500, w:1250, h:680},
-    {cx:10619, cy:700, w:1250, h:600},
-    {cx:11998, cy:1500, w:1180, h:640},
-    {cx:13377, cy:700, w:1250, h:700},
-    {cx:14777, cy:1500, w:1250, h:640},
-    {cx:16177, cy:700, w:1250, h:600},
-    {cx:17577, cy:1500, w:1250, h:660},
-    {cx:18977, cy:700, w:1250, h:700},
-    {cx:20377, cy:1500, w:1250, h:720},
-    {cx:21777, cy:700, w:1250, h:740},
-    {cx:23177, cy:1500, w:1250, h:710},
-    {cx:24577, cy:700, w:1250, h:760},
-    {cx:25770, cy:1500, w:560, h:420},
-    {cx:26978, cy:700, w:1300, h:560},
-    {cx:28378, cy:1500, w:1200, h:620},
-    {cx:29778, cy:700, w:1200, h:700},
-    {cx:31178, cy:1500, w:1200, h:540}
+    {cx:6314, cy:1500, w:1250, h:600},
+    {cx:7693, cy:700, w:1180, h:640},
+    {cx:9072, cy:1500, w:1250, h:700},
+    {cx:10472, cy:700, w:1250, h:640},
+    {cx:11872, cy:1500, w:1250, h:600},
+    {cx:13272, cy:700, w:1250, h:660},
+    {cx:14672, cy:1500, w:1250, h:700},
+    {cx:16072, cy:700, w:1250, h:720},
+    {cx:17472, cy:1500, w:1250, h:740},
+    {cx:18872, cy:700, w:1250, h:710},
+    {cx:20272, cy:1500, w:1250, h:760},
+    {cx:21465, cy:700, w:560, h:420},
+    {cx:22673, cy:1500, w:1300, h:560},
+    {cx:24073, cy:700, w:1200, h:620},
+    {cx:25473, cy:1500, w:1200, h:700},
+    {cx:26873, cy:700, w:1200, h:540}
   ];
-  var WORLD_W = 32278, WORLD_H = 2100, PAD = 150, MAXSCALE = 1.35;
+  var WORLD_W = 27973, WORLD_H = 2100, PAD = 150, MAXSCALE = 1.35;
 
   var stage = document.getElementById('stage');
   var world = document.getElementById('world');
@@ -1058,13 +995,12 @@
       else if (e.key===' '){ e.preventDefault(); if (localMode){ if (demoVideo.paused){ demoVideo.play(); } else { demoVideo.pause(); } } }
       return;
     }
-    if (e.key==='v' || e.key==='V'){ if (current===13){ toggleVideo(); } return; }
+    if (e.key==='v' || e.key==='V'){ if (current===10){ toggleVideo(); } return; }
     if (e.key==='ArrowRight' || e.key==='PageDown' || e.key===' '){ e.preventDefault(); goTo(current+1); }
     else if (e.key==='ArrowLeft' || e.key==='PageUp'){ e.preventDefault(); goTo(current-1); }
     else if (e.key==='Home'){ goTo(0); }
     else if (e.key==='End'){ goTo(FRAMES.length-1); }
     else if (e.key==='n' || e.key==='N'){ toggleNotes(); }
-    else if (e.key==='t' || e.key==='T'){ zeitBox.hidden = !zeitBox.hidden; }
   });
 
   var touchX = null;
@@ -1082,45 +1018,6 @@
   buildCable();
   goTo(0, false);
 
-  // ---- Zeitleiste ----
-  var PLAN = [['09:00','Beispiele',0],['10:00','Pause',1],['10:20','Anleitungen · Umsetzung',0],['12:00','Mittag',1],['13:30','Kurzpräsi',0],['14:00','Umsetzung',0],['15:15','Feedback',0]];
-  var PLAN_END = '16:00';
-  function hm(s){ var p=s.split(':'); return parseInt(p[0],10)*60+parseInt(p[1],10); }
-  var zeitBar = document.getElementById('zeitBar'), zeitTicks = document.getElementById('zeitTicks');
-  var zeitMarker = document.getElementById('zeitMarker'), zeitClock = document.getElementById('zeitClock'), zeitBox = document.getElementById('zeit');
-  var testZeit = (new URLSearchParams(location.search).get('zeit')||'').match(/^(\d{1,2}):(\d{2})$/);
-  var segEls = [];
-  function zeitBauen(){
-    zeitBar.innerHTML=''; zeitTicks.innerHTML=''; segEls=[];
-    var total = hm(PLAN_END)-hm(PLAN[0][0]);
-    PLAN.forEach(function(p,i){
-      var start=hm(p[0]), end=hm(i<PLAN.length-1?PLAN[i+1][0]:PLAN_END);
-      var s=document.createElement('div'); s.className='zeit-seg'+(p[2]?' is-pause':''); s.textContent=p[1]; s.title=p[0]+' bis '+(i<PLAN.length-1?PLAN[i+1][0]:PLAN_END)+': '+p[1];
-      s.style.flexGrow=String(end-start); zeitBar.appendChild(s); segEls.push({el:s,start:start,end:end});
-    });
-  }
-  function zeitTickSetzen(){
-    zeitTicks.innerHTML='';
-    var bw=zeitBar.getBoundingClientRect().width, total=hm(PLAN_END)-hm(PLAN[0][0]);
-    var marken=PLAN.map(function(p){return p[0];}).concat([PLAN_END]);
-    marken.forEach(function(m){
-      var x=(hm(m)-hm(PLAN[0][0]))/total*bw;
-      var tk=document.createElement('span'); tk.className='zeit-tick'; tk.textContent=m; tk.style.left=x+'px'; zeitTicks.appendChild(tk);
-    });
-  }
-  function zeitAktualisieren(){
-    var n=new Date(), min = testZeit ? parseInt(testZeit[1],10)*60+parseInt(testZeit[2],10) : n.getHours()*60+n.getMinutes()+n.getSeconds()/60;
-    var hh=Math.floor(min/60), mm=Math.floor(min%60);
-    zeitClock.textContent=('0'+hh).slice(-2)+':'+('0'+mm).slice(-2);
-    var startMin=hm(PLAN[0][0]), endMin=hm(PLAN_END), bar=zeitBar.getBoundingClientRect(), box=zeitBox.getBoundingClientRect();
-    segEls.forEach(function(s){ s.el.classList.toggle('is-now', min>=s.start && min<s.end); s.el.classList.toggle('is-past', min>=s.end); });
-    var c=Math.max(startMin, Math.min(endMin, min));
-    var x=(c-startMin)/(endMin-startMin)*bar.width + (bar.left-box.left);
-    zeitMarker.style.left=x+'px';
-  }
-  zeitBauen(); zeitTickSetzen(); zeitAktualisieren();
-  setInterval(zeitAktualisieren, 15000);
-  window.addEventListener('resize', function(){ zeitTickSetzen(); zeitAktualisieren(); });
 })();
 </script>
 </body>
