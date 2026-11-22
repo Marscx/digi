@@ -10,7 +10,7 @@ def tut(url, title, note):
             f'                <small>{note}</small></p>\n            </div>')
 
 
-def yt(query, note="Wähle ein aktuelles Video und schau es vor dem Praxistag kurz an."):
+def yt(query, note="Wähle ein aktuelles Video und schau es kurz an, bevor du loslegst."):
     from urllib.parse import quote_plus
     return tut("https://www.youtube.com/results?search_query=" + quote_plus(query),
                "YouTube-Suche: «" + query + "»", note)
@@ -66,7 +66,7 @@ def handy_filmen():
 def handy_uebertragen():
     return "\n".join([
         h3("Aufnahmen auf den Laptop bringen"),
-        p("Am Praxistag arbeitest du am Laptop. Bring die Videos <b>vorher</b> oder am Anfang vom Handy darauf. Wähle den Weg, der zu deinen Geräten passt:"),
+        p("Zum Schneiden arbeitest du am Laptop. Bring die Videos vom Handy darauf, am besten gleich nach dem Filmen. Wähle den Weg, der zu deinen Geräten passt:"),
         ul(["<b>AirDrop (iPhone oder iPad auf Mac):</b> Öffne das Video in der Fotos-App, tippe auf Teilen und wähle AirDrop und deinen Mac. Auf dem Mac liegt die Datei danach im Ordner Downloads. Bluetooth und WLAN müssen auf beiden Geräten eingeschaltet sein.",
             "<b>Cloud (alle Geräte):</b> Lade das Video in iCloud Fotos, Google Fotos, kDrive oder einen anderen Cloud-Speicher und lade es am Laptop im Browser herunter. Achte darauf, dass du die <b>Originaldatei</b> lädst und nicht eine verkleinerte Vorschau.",
             "<b>Kabel (alle Geräte):</b> Verbinde das Handy mit dem Laptop. Auf dem Mac kopierst du die Videos mit der Fotos-App oder mit «Digitale Bilder», unter Windows mit der Fotos-App oder dem Explorer, bei Android im Ordner <code>DCIM/Camera</code> (am Handy «Dateien übertragen» wählen)."]),
@@ -83,7 +83,7 @@ CODE_OPENDAW = open(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), 
 # ------------------------------------------------------------------ Noteflight
 GUIDES.append(dict(
     slug="noteflight", final=True, title="Noteflight", title_long="Noteflight: erste Noten im Browser",
-    eyebrow="Notation · Beispiel 3, 4, 5, 6",
+    eyebrow="Notation",
     lead="Eine Melodie schreiben, abspielen, teilen und exportieren, ohne etwas zu installieren.",
     card="Erste Noten im Browser, abspielen, teilen, exportieren.", diff_kurz="leicht", bsp=["B3", "B4", "B5", "B6"],
     zeit="ca. 60&ndash;90 Minuten", diff="leicht", geraet="Computer oder Tablet, nur Browser", kosten="Gratis-Konto zum Testen",
@@ -93,7 +93,7 @@ GUIDES.append(dict(
             h3("Das brauchst du"),
             ul(["Computer oder Tablet mit einem aktuellen Browser (Chrome, Safari, Edge oder Firefox)", "Internetverbindung",
                 "Eine E-Mail-Adresse für das Konto", "Kopfhörer, wenn du dein Stück abspielst und andere nicht stören willst"]),
-            note("Noteflight Learn am Praxistag", "Für den Praxistag bekommst du von Marc einen Zugang zu seinem Noteflight Learn. Damit kannst du im geschlossenen Rahmen testen, teilen und alle Funktionen ausprobieren. Du brauchst dafür noch kein eigenes Abo. Die Anmeldeseite: <a href=\"https://marcscheidegger.sites.noteflight.com/\" target=\"_blank\" rel=\"noopener\">marcscheidegger.sites.noteflight.com</a>. Die Zugangsdaten bekommst du separat."),
+            note("Noteflight Learn", "Noteflight Learn ist eine geschlossene Lernumgebung für Lehrpersonen und Klassen (kostenpflichtiges Abo). Dort testest und teilst du im geschlossenen Rahmen und hast alle Funktionen. Im Modul Digitalisierung der HSLU bekamen die Teilnehmenden dafür einen Test-Zugang. Zum Ausprobieren reicht dir das Gratis-Konto."),
         ])),
         ("start", "Anmelden", "10 Min.", "\n".join([
             ol(['Öffne <a href="https://www.noteflight.com/" target="_blank" rel="noopener">noteflight.com</a>.',
@@ -127,7 +127,7 @@ GUIDES.append(dict(
     stolper=["<b>Gratis-Konto begrenzt:</b> Das Gratis-Konto hat Einschränkungen (zum Beispiel bei der Zahl der Partituren). Schau vor dem Start in den aktuellen Bedingungen nach, wie weit es reicht.",
              "<b>Import sieht anders aus:</b> Noteflight nutzt eine ältere Version von MusicXML. Nach dem Import kann die Formatierung abweichen, prüfe Taktstriche, Vorzeichen und Texte.",
              "<b>Urheberrecht:</b> Geschützte Stücke nur im geschlossenen Rahmen teilen (zum Beispiel Noteflight Learn oder Moodle mit Anmeldung), nicht öffentlich im Internet.",
-             "<b>Learn kostet:</b> Noteflight Learn ist ein Abo-Angebot. Für den Praxistag nutzt ihr Marcs Zugang."],
+             "<b>Learn kostet:</b> Noteflight Learn ist ein Abo-Angebot. Zum Ausprobieren reicht das Gratis-Konto."],
     quellen=[("Noteflight: Guide", "https://noteflight.com/guide"),
              ("Noteflight Hilfe-Center: Importing and Exporting Music", "https://support.noteflight.com/hc/en-us/articles/360021512951-Importing-and-Exporting-Music"),
              ("Noteflight Hilfe-Center: Exporting Scores for Noteflight Learn Assignments", "https://support.noteflight.com/hc/en-us/articles/360040361432-Exporting-Scores-for-Noteflight-Learn-Assignments")],
@@ -136,7 +136,7 @@ GUIDES.append(dict(
 # ------------------------------------------------------------------ MuseScore
 GUIDES.append(dict(
     slug="musescore", final=True, title="MuseScore", title_long="MuseScore: Noten schreiben, finden und tauschen",
-    eyebrow="Notation · Beispiel 3, 4, 5, 6, 7",
+    eyebrow="Notation",
     lead="Das kostenlose Notenprogramm installieren, eine Melodie schreiben und als PDF, MP3 und MusicXML weitergeben.",
     card="Plattform, Software und Import/Export.", diff_kurz="mittel", bsp=["B3", "B4", "B5", "B6", "B7"],
     zeit="ca. 60&ndash;90 Minuten", diff="mittel", geraet="Computer (Mac, Windows, Linux)", kosten="Programm gratis, kein Konto nötig",
@@ -214,7 +214,7 @@ GUIDES.append(dict(
             p("<b>Dorico</b> ist ein Notensatzprogramm von Steinberg. Es gibt drei Ausgaben: <b>Dorico SE</b> (gratis), <b>Dorico Elements</b> und <b>Dorico Pro</b> (beide kostenpflichtig). Für den Einstieg und für diese Anleitung genügt <b>Dorico SE</b>: Nach den Angaben von Steinberg ist es gratis und eignet sich für Partituren mit bis zu acht Spielenden."),
             note("Diese Anleitung macht nur die Installation", "Hier steht, wie du Dorico auf deinen Computer bringst und die Lizenz aktivierst. Dorico selbst zu lernen ist umfangreich. Dafür gibt es gute deutsche Videos von Markus Hartmann (siehe Schritt 5) oder ein Coaching bei Marcel Vonesch an der HSLU."),
             h3("Das brauchst du"),
-            ul(["Einen Computer mit <b>Windows 10 oder 11 (64 Bit)</b> oder <b>macOS</b> (nach den Angaben von Steinberg für Dorico 6 macOS 12 bis 15, Intel oder Apple-Chip)", "Etwa <b>5 GB freien Speicher</b> und <b>4 GB Arbeitsspeicher</b> (8 GB sind besser)", "Eine <b>Internetverbindung</b> für Download und Aktivierung", "Eine <b>E-Mail-Adresse</b> für dein Steinberg-Konto", "Etwas Zeit: Der Download ist gross, am besten <b>vor</b> dem Praxistag", "Alternativ ein <b>iPad</b> mit iPadOS 17 oder neuer (siehe Schritt 3)"]),
+            ul(["Einen Computer mit <b>Windows 10 oder 11 (64 Bit)</b> oder <b>macOS</b> (nach den Angaben von Steinberg für Dorico 6 macOS 12 bis 15, Intel oder Apple-Chip)", "Etwa <b>5 GB freien Speicher</b> und <b>4 GB Arbeitsspeicher</b> (8 GB sind besser)", "Eine <b>Internetverbindung</b> für Download und Aktivierung", "Eine <b>E-Mail-Adresse</b> für dein Steinberg-Konto", "Etwas Zeit: Der Download ist gross, am besten <b>vor</b> dem ersten Einsatz", "Alternativ ein <b>iPad</b> mit iPadOS 17 oder neuer (siehe Schritt 3)"]),
             h3("Die zwei Hilfsprogramme von Steinberg"),
             ul(["<b>Steinberg Download Assistant:</b> lädt Dorico herunter und installiert es. Er installiert auch die Hilfsprogramme, die Dorico braucht. Steinberg empfiehlt ihn ausdrücklich.", "<b>Steinberg Activation Manager:</b> die Lizenzverwaltung. Dort aktivierst du deine Lizenz, damit Dorico startet."]),
         ])),
@@ -251,7 +251,7 @@ GUIDES.append(dict(
     ],
     stolper=["<b>Download Assistant meldet nicht an:</b> Die Anmeldung läuft im Browser. Wenn nichts passiert, schalte Werbeblocker und Virenschutz vorübergehend aus oder installiere den Download Assistant neu. Das sind Erfahrungen aus dem Steinberg-Forum.", "<b>Dorico SE fragt nach einem Code:</b> Fordere Dorico SE auf der Seite von Steinberg noch einmal an, damit die Lizenz in deinem Konto liegt.",
              "<b>Die Lizenz fehlt im Activation Manager:</b> Wenn dort «No license found» steht, hast du die Lizenz oder den Code noch nicht eingelöst. Prüfe, ob du mit dem richtigen Steinberg-Konto angemeldet bist.", "<b>Acht Spielende:</b> Dorico SE ist für höchstens acht Spielende gedacht. Grössere Partituren kann SE nach Angaben von Steinberg nur lesen.",
-             "<b>Grosser Download:</b> Plane Zeit ein und installiere vor dem Praxistag.", "<b>Versionen:</b> Es gibt mehrere Dorico-Versionen. Achte darauf, dass das Video zur Version passt, die du installiert hast."],
+             "<b>Grosser Download:</b> Plane Zeit ein und installiere rechtzeitig vor dem ersten Einsatz.", "<b>Versionen:</b> Es gibt mehrere Dorico-Versionen. Achte darauf, dass das Video zur Version passt, die du installiert hast."],
     quellen=[("Steinberg: Dorico SE (gratis)", "https://www.steinberg.net/dorico/se/"), ("Steinberg: Downloads und Download Assistant", "https://download.steinberg.net/downloads/index.html"), ("Steinberg-Hilfe: Download Assistant (Englisch)", "https://helpcenter.steinberg.de/hc/en-us/articles/4413298536594-Steinberg-Licensing-Steinberg-Download-Assistant-guide"),
              ("Steinberg-Hilfe: Offline-Aktivierung (Englisch)", "https://helpcenter.steinberg.de/hc/en-us/articles/6593785878290-Steinberg-Licensing-Offline-Activation"), ("Dorico-Blog: Dorico auf Deutsch mit Markus Hartmann", "https://blog.dorico.com/seminare/"),
              ("YouTube: Playlist «Dorico auf Deutsch»", "https://www.youtube.com/playlist?list=PLoyaeouPUsdvRiO6dQ4PgCvJkDZhedcg-"), ("Steinberg: Dorico vergleichen (SE, Elements, Pro)", "https://www.steinberg.net/dorico/compare-editions/"), ("Dorico für das iPad im Schweizer App Store", "https://apps.apple.com/ch/app/dorico-compose-music/id1556625090")],
@@ -260,7 +260,7 @@ GUIDES.append(dict(
 # ------------------------------------------------------------------ Video mit dem Handy
 GUIDES.append(dict(
     slug="handyvideo", final=True, title="Video mit dem Handy", title_long="Video mit dem Handy: Mehrbildvideo gleich beim Filmen",
-    eyebrow="Video · Beispiel 3",
+    eyebrow="Video",
     lead="Mehrere Stimmen nacheinander aufnehmen und als Mehrbildvideo zusammenbauen, direkt auf dem Handy und ohne Schnittprogramm.",
     card="Mehrbildvideo mit Acapella oder CapCut, Notenrolle per Bildschirmaufnahme.", diff_kurz="leicht bis mittel", bsp=["B3"],
     zeit="ca. 45&ndash;60 Minuten", diff="leicht bis mittel", geraet="Handy oder Tablet (iPhone, iPad oder Android)", kosten="Gratis zum Ausprobieren: Acapella bis 30 Sekunden, CapCut mit 3 Exporten pro Monat in guter Auflösung",
@@ -308,7 +308,7 @@ GUIDES.append(dict(
                 "Verkleinere jeden Clip mit zwei Fingern (oder an den Ecken) und schiebe ihn an seinen Platz im Raster.",
                 "Richte die Clips am Ton aus. Du hörst, ob die Einsätze zusammenpassen, und schiebst einen Clip bei Bedarf kurz nach vorn oder hinten.",
                 "Exportiere das Video in der besten Qualität, die die Gratis-Version erlaubt."]),
-            warn("Exporte und Bezahlangebote", "Im Test erlaubt CapCut in der Gratis-Version <b>drei Exporte pro Monat</b> in guter Auflösung. Das reicht für den Praxistag, plane deine Exporte aber und teste nicht zehnmal. CapCut zeigt wie Acapella immer wieder Pro-Angebote und Testphasen. Schliesse sie mit dem <b>kleinen X</b> und starte keine Testphase, wenn du kein Abo willst. Die Menünamen der App können je nach Version abweichen."),
+            warn("Exporte und Bezahlangebote", "Im Test erlaubt CapCut in der Gratis-Version <b>drei Exporte pro Monat</b> in guter Auflösung. Das reicht zum Ausprobieren, plane deine Exporte aber und teste nicht zehnmal. CapCut zeigt wie Acapella immer wieder Pro-Angebote und Testphasen. Schliesse sie mit dem <b>kleinen X</b> und starte keine Testphase, wenn du kein Abo willst. Die Menünamen der App können je nach Version abweichen."),
             h3("Weitere Alternativen"),
             ul(["<b>GridPlayer (Mac, Windows, Linux, gratis):</b> Ein Abspielprogramm, das mehrere Videos gleichzeitig nebeneinander im Raster zeigt. Es ist <b>kein</b> Aufnahme- und kein Schnittprogramm und exportiert nichts (laut Beschreibung des Projekts). Nützlich, um die einzelnen Stimmen beim Üben oder in der Besprechung nebeneinander anzuschauen. Für den Mac gibt es die Version nur für Apple-Chips (M-Reihe). Sie ist nicht signiert, macOS fragt deshalb nach einer Ausnahme. Lade es nur von der Seite des Projekts auf <a href=\"https://github.com/vzhd1701/gridplayer\" target=\"_blank\" rel=\"noopener\">GitHub</a>, nicht von Download-Portalen. Ich habe es nicht getestet.",
                 "<b>iMovie (iPhone, iPad, Mac, gratis):</b> Legt zwei Clips nebeneinander oder übereinander (Split Screen). Mehr als zwei Bilder gehen nicht. Details bei Apple: <a href=\"https://support.apple.com/guide/imovie-iphone/kna831efee4d/ios\" target=\"_blank\" rel=\"noopener\">iMovie Split Screen</a>.",
@@ -337,7 +337,7 @@ GUIDES.append(dict(
 # ------------------------------------------------------------------ Moises
 GUIDES.append(dict(
     slug="moises", final=True, title="Moises", title_long="Moises: Stimmen trennen und Playalong machen",
-    eyebrow="Playalongs · Beispiel 7, 8",
+    eyebrow="Playalongs",
     lead="Ein Stück in Gesang, Schlagzeug, Bass und mehr zerlegen und dir daraus ein Playalong bauen.",
     card="Stimmen trennen im Browser, Gratis-Konto.", diff_kurz="mittel", bsp=["B7", "B8"],
     zeit="ca. 45&ndash;60 Minuten", diff="mittel", geraet="Browser auf Computer oder Tablet, oder App", kosten="Gratis-Konto mit Monatslimit",
@@ -383,7 +383,7 @@ GUIDES.append(dict(
 # ------------------------------------------------------------------ GarageBand, Logic, Ableton
 GUIDES.append(dict(
     slug="daw", final=True, title="GarageBand, Logic, Ableton", title_long="GarageBand, Logic und Ableton: Playalongs und Musik in der DAW",
-    eyebrow="Playalongs · Beispiel 7",
+    eyebrow="Playalongs",
     lead="Mit einer DAW Musik aufnehmen, Begleitungen bauen und Playalongs herstellen. GarageBand ist der leichte Einstieg, Logic Pro und Ableton Live sind steiler.",
     card="Playalongs und Aufnahmen in der DAW: GarageBand zum Einstieg, Logic und Ableton für Fortgeschrittene.", diff_kurz="mittel bis schwierig", bsp=["B7"],
     zeit="ca. 90&ndash;120 Minuten", diff="mittel bis schwierig", geraet="Mac oder iPhone und iPad (GarageBand, Logic), Mac oder Windows (Ableton)", kosten="GarageBand gratis, Logic Pro CHF 180 (Mac App Store), Ableton Live ab CHF 79, 30 Tage Testversion",
@@ -407,7 +407,7 @@ GUIDES.append(dict(
             h3("Ableton Live (Windows und Mac)"),
             ol(['Öffne <a href="https://www.ableton.com/de/trial/" target="_blank" rel="noopener">ableton.com/de/trial</a> und lade die kostenlose Testversion herunter (Mac: DMG öffnen und «Live Trial» in den Ordner Programme ziehen, Windows: ZIP entpacken und den Installer starten).', "Öffne «Live Trial» und wähle «Kostenlose Testversion starten». Im Browser meldest du dich an oder legst ein kostenloses Konto an. Es braucht weder ein Abo noch eine Kreditkarte, aber eine Internetverbindung.",
                 "Die Testversion ist <b>30 Tage</b> lang und enthält alle Funktionen von Live 12 Suite. Danach kannst du Sets noch öffnen, aber nicht mehr speichern oder exportieren."]),
-            warn("Nichts kaufen, was du nicht brauchst", "Alle drei zeigen dir Hinweise auf Zusatzpakete, Abos oder Upgrades. Für den Praxistag brauchst du davon nichts. Schliesse solche Fenster und kaufe nichts ohne Rücksprache."),
+            warn("Nichts kaufen, was du nicht brauchst", "Alle drei zeigen dir Hinweise auf Zusatzpakete, Abos oder Upgrades. Zum Ausprobieren brauchst du davon nichts. Schliesse solche Fenster und kaufe nichts ohne Rücksprache."),
         ])),
         ("erste", "Erste Schritte zum Testen", "30 Min.", "\n".join([
             tut("https://support.apple.com/de-ch/guide/garageband/welcome/mac", "Apple: GarageBand Benutzerhandbuch für den Mac (Deutsch)", "Das offizielle Handbuch. Für iPhone und iPad gibt es ein eigenes Handbuch."),
@@ -438,7 +438,7 @@ GUIDES.append(dict(
 # ------------------------------------------------------------------ Anytune
 GUIDES.append(dict(
     slug="anytune", final=True, title="Anytune", title_long="Anytune: Tempo und Tonhöhe anpassen",
-    eyebrow="Playalongs · Beispiel 7, 8",
+    eyebrow="Playalongs",
     lead="Eine bestehende Aufnahme langsamer machen, höher oder tiefer stellen eine schwierige Stelle in der Schleife üben und die Übe-Version als Datei an deine Schülerinnen und Schüler weitergeben.",
     card="Tempo und Tonhöhe einer Aufnahme anpassen.", diff_kurz="mittel", bsp=["B7", "B8"],
     zeit="ca. 45&ndash;60 Minuten", diff="mittel", geraet="iPhone, iPad oder Mac (App)", kosten="App gratis, Funktionen als Zusatzkäufe (Export getunter Titel CHF 4.00, Schweizer App Store, Stand November 2026), Mac-App CHF 30.00",
@@ -452,7 +452,7 @@ GUIDES.append(dict(
         ("start", "Installieren", "10 Min.", "\n".join([
             ol(["Suche im App Store (iPhone, iPad) oder Mac App Store nach <b>Anytune</b> und installiere die App.", "Starte die App. Beim ersten Start fragt sie, ob sie auf deine Musik zugreifen darf. Erlaube den Zugriff, wenn du Dateien aus der Musik-App nutzen willst.",
                 "Hole eine Aufnahme in die App: aus der Musik-App, aus der Dateien-App oder per «Öffnen in» aus einer anderen App."]),
-            note("Hinweis", "Zeige Marcs Playalongs aus Moises oder Noteflight (mp3-Export) hier hinein, dann übst du mit deinen eigenen Dateien."),
+            note("Hinweis", "Hole eigene Playalongs, zum Beispiel aus Moises oder Noteflight (mp3-Export), hier hinein, dann übst du mit deinen eigenen Dateien."),
         ])),
         ("erste", "Erste Schritte zum Testen", "10 Min.", "\n".join([
             tut("https://de.anytune.us/user-guide/basics", "Anytune: Benutzerhandbuch, Grundlagen (Deutsch)", "Das offizielle Handbuch gibt es auch auf Deutsch. Lies die Grundlagen, bevor du die Schritte unten ausprobierst."),
@@ -495,7 +495,7 @@ GUIDES.append(dict(
 # ------------------------------------------------------------------ Guitar Pro
 GUIDES.append(dict(
     slug="guitar-pro", final=True, title="Guitar Pro, Ultimate Guitar, Soundslice", title_long="Guitar Pro, Ultimate Guitar und Soundslice",
-    eyebrow="Notation · Beispiel 7, 8",
+    eyebrow="Notation",
     lead="Tabulaturen und Noten finden, abspielen, verlangsamen und in einzelne Stimmen zerlegen.",
     card="Installation, mySongBook, Ultimate Guitar, Soundslice.", diff_kurz="mittel", bsp=["B7", "B8"],
     zeit="ca. 60 Minuten", diff="mittel", geraet="Computer (Mac, Windows) oder Browser", kosten="Testversion 7 Tage, danach Lizenz nötig (die Gratis-Version öffnet keine Dateien)",
@@ -507,10 +507,10 @@ GUIDES.append(dict(
             ul(["Computer mit Mac oder Windows für Guitar Pro, für die anderen beiden reicht der Browser", "Eine E-Mail-Adresse für die Konten", "Kopfhörer"]),
         ])),
         ("start", "Installieren und anmelden", "20 Min.", "\n".join([
-            ol(['Lade Guitar Pro von <a href="https://www.guitar-pro.com/" target="_blank" rel="noopener">guitar-pro.com</a> herunter und installiere es wie jedes Programm. Die Testversion läuft nach den Angaben des Herstellers 7 Tage ab der Installation, mit allen Funktionen. Danach kann die Gratis-Version <b>keine Guitar-Pro-Dateien mehr öffnen und abspielen</b>. Du brauchst dann eine Lizenz. Installiere Guitar Pro deshalb erst kurz vor dem Praxistag, damit die sieben Tage dann noch laufen. Ohne Installation und ohne Lizenz zeigt dir Soundslice eine Guitar-Pro-Datei im Browser (siehe unten).',
+            ol(['Lade Guitar Pro von <a href="https://www.guitar-pro.com/" target="_blank" rel="noopener">guitar-pro.com</a> herunter und installiere es wie jedes Programm. Die Testversion läuft nach den Angaben des Herstellers 7 Tage ab der Installation, mit allen Funktionen. Danach kann die Gratis-Version <b>keine Guitar-Pro-Dateien mehr öffnen und abspielen</b>. Du brauchst dann eine Lizenz. Installiere Guitar Pro deshalb erst, wenn du es brauchst, damit die sieben Tage dann noch laufen. Ohne Installation und ohne Lizenz zeigt dir Soundslice eine Guitar-Pro-Datei im Browser (siehe unten).',
                 'Die Anleitung des Herstellers beschreibt die Installation Schritt für Schritt: <a href="https://www.guitar-pro.com/docs/gp8/basics/installation" target="_blank" rel="noopener">Getting Started, Installation</a>.',
                 'Öffne <a href="https://www.ultimate-guitar.com/" target="_blank" rel="noopener">ultimate-guitar.com</a> und erstelle ein Gratis-Konto (oder lade die App).']),
-            warn("mySongBook kostet", "Die Stücke aus mySongBook brauchen ein Abo, abgesehen von einzelnen Gratis-Stücken (zum Beispiel dem «Free Tab of the Day»). Klär das mit Marc, bevor du etwas abschliesst."),
+            warn("mySongBook kostet", "Die Stücke aus mySongBook brauchen ein Abo, abgesehen von einzelnen Gratis-Stücken (zum Beispiel dem «Free Tab of the Day»). Klär die Kosten, bevor du etwas abschliesst."),
         ])),
         ("erste", "Erste Schritte zum Testen", "15 Min.", "\n".join([
             tut("https://www.guitar-pro.com/docs/gp8/mysongbook", "Guitar Pro: mySongBook in Guitar Pro 8 (offizielle Anleitung, Englisch)", "Erklärt, was mySongBook ist und wie man ein Stück öffnet."),
@@ -532,7 +532,7 @@ GUIDES.append(dict(
 # ------------------------------------------------------------------ iReal Pro
 GUIDES.append(dict(
     slug="ireal-pro", final=True, title="iReal Pro", title_long="iReal Pro: Playalong aus Akkorden",
-    eyebrow="Playalongs · Beispiel 7, 8",
+    eyebrow="Playalongs",
     lead="Akkorde eingeben und eine Band spielen lassen, in deinem Tempo und deiner Tonart.",
     card="Begleitautomat mit Akkordeingabe.", diff_kurz="leicht bis mittel", bsp=["B7", "B8"],
     zeit="ca. 45 Minuten", diff="leicht bis mittel", geraet="Handy, Tablet oder Computer (App)", kosten="Einmalkauf pro Plattform, kein Abo (Preis im Store prüfen), 7 Tage Testversion auf Mac (direkter Download) und Windows",
@@ -567,17 +567,17 @@ GUIDES.append(dict(
 # ------------------------------------------------------------------ DaVinci Resolve
 GUIDES.append(dict(
     slug="davinci-resolve", final=True, title="DaVinci Resolve", title_long="DaVinci Resolve: Multispurvideo schneiden",
-    eyebrow="Video · Beispiel 3, 5",
+    eyebrow="Video",
     lead="Mehrere Aufnahmen auf einer Tonspur synchron schneiden und nebeneinander zeigen, zum Beispiel für ein Multispurvideo mit Notenrolle.",
     card="Installieren, ausprobieren, Multispurvideo schneiden.", diff_kurz="mittel bis schwierig", bsp=["B3", "B5"],
     zeit="ca. 2&ndash;3 Stunden", diff="mittel bis schwierig", geraet="Computer (Mac, Windows), iPad-Version vorhanden", kosten="Gratisversion reicht",
     steps=[
         ("basics", "Basics: Was ist das, was brauche ich?", "10 Min.", "\n".join([
-            p("DaVinci Resolve ist ein Videoschnittprogramm von Blackmagic Design. Die Gratisversion reicht für unser Multispurvideo. Du schneidest mehrere Aufnahmen (zum Beispiel jede Stimme einzeln) auf dieselbe Tonspur und zeigst sie nebeneinander."),
+            p("DaVinci Resolve ist ein Videoschnittprogramm von Blackmagic Design. Die Gratisversion reicht für ein Multispurvideo. Du schneidest mehrere Aufnahmen (zum Beispiel jede Stimme einzeln) auf dieselbe Tonspur und zeigst sie nebeneinander."),
             h3("Das brauchst du"),
-            ul(["Einen Computer mit genügend Speicher und Leistung (Mac oder Windows, am Praxistag notfalls im Computerraum der HSLU) oder ein iPad mit der iPad-Version", "Etwa 1&ndash;2 Stunden Zeit für Download und Installation, am besten <b>vor</b> dem Praxistag",
+            ul(["Einen Computer mit genügend Speicher und Leistung (Mac oder Windows) oder ein iPad mit der iPad-Version", "Etwa 1&ndash;2 Stunden Zeit für Download und Installation, am besten <b>vor</b> dem ersten Einsatz",
                 "Deine Aufnahmen als Videodateien und eine Tonspur zum Synchronisieren, zum Beispiel einen mp3-Export aus Noteflight als Pilotspur", "Kopfhörer"]),
-            note("Vor dem Praxistag", "Installiere DaVinci Resolve zu Hause. Der Download ist gross und dauert auch bei schnellem Internet lange."),
+            note("Vorher installieren", "Installiere DaVinci Resolve zu Hause. Der Download ist gross und dauert auch bei schnellem Internet lange."),
         ])),
         ("start", "Installieren", "30&ndash;60 Min.", "\n".join([
             ol(['Öffne <a href="https://www.blackmagicdesign.com/products/davinciresolve" target="_blank" rel="noopener">blackmagicdesign.com/products/davinciresolve</a> und lade die <b>kostenlose Version</b> für dein System herunter. Je nach Seite brauchst du ein Anmeldeformular mit E-Mail-Adresse.',
@@ -613,7 +613,7 @@ GUIDES.append(dict(
 # ------------------------------------------------------------------ openDAW
 GUIDES.append(dict(
     slug="opendaw", final=True, title="openDAW", title_long="openDAW: Musik produzieren im Browser",
-    eyebrow="Producing · Beispiel 4",
+    eyebrow="Producing",
     lead="Einen kurzen Beat im Browser bauen, ohne Anmeldung und ohne Installation.",
     card="DAW im Browser, ohne Registrierung.", diff_kurz="leicht bis schwierig", bsp=["B4"],
     zeit="ca. 45&ndash;60 Minuten", diff="leicht bis schwierig", geraet="Computer mit Browser", kosten="gratis, ohne Registrierung",
@@ -655,7 +655,7 @@ GUIDES.append(dict(
             p("Gib einer KI (zum Beispiel Claude) den Auftrag, ein Skript nach den Scripting Docs von openDAW zu schreiben. Ein Beispiel für den Auftrag:"),
             code("Lies die Scripting Docs auf opendaw.studio. Schreibe ein openDAW-Skript (TypeScript), das einen 8-Takt-Beat in [Stil] mit [Tempo] BPM erzeugt: Schlagzeug, Bass und eine einfache Melodie. Es soll mit openDAW.newProject() beginnen und mit project.openInStudio() enden."),
             note("Wichtig", "Die KI muss die aktuellen Scripting Docs kennen. Ohne sie erfindet sie Befehle, die es nicht gibt. Läuft das Skript nicht, kopiere die Fehlermeldung des Editors zurück in den Chat und lass es korrigieren."),
-            warn("Fremden Code nur mit Vorsicht ausführen", "Ein Skript läuft in deinem Browser. Führe nur Code aus, den du von einer vertrauenswürdigen Quelle hast und zumindest grob verstehst. Dieser Code stammt aus dem Praxistag und tut nichts anderes, als ein Projekt zu bauen."),
+            warn("Fremden Code nur mit Vorsicht ausführen", "Ein Skript läuft in deinem Browser. Führe nur Code aus, den du von einer vertrauenswürdigen Quelle hast und zumindest grob verstehst. Dieser Code stammt aus einer Sitzung mit Claude Code und tut nichts anderes, als ein Projekt zu bauen."),
         ])),
     ],
     stolper=["<b>Neues Programm:</b> Funktionen und Menüs ändern sich. Wenn etwas anders aussieht, folge dem, was du siehst.", "<b>Browser:</b> Nicht jede Funktion läuft in jedem Browser. Wechsle im Zweifel auf Chrome.", "<b>Speichern:</b> Ohne Anmeldung liegt dein Projekt nur auf deinem Gerät. Sichere es."],
@@ -665,7 +665,7 @@ GUIDES.append(dict(
 # ------------------------------------------------------------------ Koala Sampler
 GUIDES.append(dict(
     slug="koala-sampler", final=True, title="Koala Sampler", title_long="Koala Sampler: Beats mit dem Handy",
-    eyebrow="Producing · Beispiel 4",
+    eyebrow="Producing",
     lead="Eigene Klänge aufnehmen, auf Pads legen und zu einem kleinen Beat zusammensetzen.",
     card="Sampling, geeignet für die Schulmusik.", diff_kurz="mittel", bsp=["B4"],
     zeit="ca. 45&ndash;60 Minuten", diff="mittel", geraet="iPhone, iPad oder Android (App)", kosten="App kostenpflichtig (CHF 4.00 im Schweizer App Store, Stand November 2026)",
@@ -689,27 +689,27 @@ GUIDES.append(dict(
             check("ko", ["du hast vier eigene Klänge aufgenommen,", "dein Beat läuft zwei Takte lang,", "du hast eine Audiodatei exportiert."]),
         ])),
     ],
-    stolper=["<b>Mikrofon:</b> Erlaube dem Gerät den Mikrofonzugriff, sonst nimmt die App nichts auf.", "<b>Lärm:</b> Nimm in einer ruhigen Umgebung auf, sonst hört man den Raum auf jedem Klang.", "<b>Kosten:</b> Die App ist kostenpflichtig (im Schweizer App Store CHF 4.00, dazu In-App-Käufe für Zusatzpakete). Für den Praxistag genügt, wenn eine Person sie zeigt.", "<b>Urheberrecht:</b> Samples aus fremden Liedern nicht öffentlich weitergeben."],
+    stolper=["<b>Mikrofon:</b> Erlaube dem Gerät den Mikrofonzugriff, sonst nimmt die App nichts auf.", "<b>Lärm:</b> Nimm in einer ruhigen Umgebung auf, sonst hört man den Raum auf jedem Klang.", "<b>Kosten:</b> Die App ist kostenpflichtig (im Schweizer App Store CHF 4.00, dazu In-App-Käufe für Zusatzpakete). Zum Ausprobieren genügt es, wenn eine Person in der Gruppe sie zeigt.", "<b>Urheberrecht:</b> Samples aus fremden Liedern nicht öffentlich weitergeben."],
     quellen=[("Koala Sampler im App Store", "https://apps.apple.com/ch/app/id1449584007"), ("Violet Recording: How to use Koala Sampler", "https://violetrecording.com/how-to-use-koala-sampler/")],
 ))
 
 # ------------------------------------------------------------------ Moodle
 GUIDES.append(dict(
     slug="moodle-kurs", final=True, title="Moodle-Kurs", title_long="Moodle: Kursinhalte erstellen und Video einbetten",
-    eyebrow="Hosten · Beispiel 5",
-    lead="In deinem persönlichen Moodle-Kurs eine Seite oder ein E-Book anlegen und ein Video einbetten.",
+    eyebrow="Hosten",
+    lead="In deinem eigenen Moodle-Kurs eine Seite oder ein E-Book anlegen und ein Video einbetten.",
     card="Kurs ausprobieren, Inhalte erstellen, Video einbetten.", diff_kurz="mittel", bsp=["B5"],
-    zeit="ca. 60&ndash;90 Minuten", diff="mittel", geraet="Computer mit Browser", kosten="Zugang kommt von Marc",
+    zeit="ca. 60&ndash;90 Minuten", diff="mittel", geraet="Computer mit Browser", kosten="Moodle-Zugang mit Kursrechten nötig (Schule oder eigener Kurs)",
     steps=[
         ("basics", "Basics: Was ist das, was brauche ich?", "5 Min.", "\n".join([
             p("Moodle ist eine Lernplattform. In deinem persönlichen Kurs legst du Abschnitte an und füllst sie mit Texten, Links, eingebetteten Videos und kleinen Aufgaben. Ein <b>Buch</b> (E-Book) ist eine Aktivität mit mehreren Kapiteln, eine <b>Seite</b> ist ein einzelner Text mit Medien."),
             h3("Das brauchst du"),
-            ul(["Einen Moodle-Zugang mit Kursrechten (bekommst du von Marc für den Praxistag)", "Ein Video, das schon online liegt (zum Beispiel auf Vimeo oder YouTube)", "Einen Browser"]),
+            ul(["Einen Moodle-Zugang mit Kursrechten (von deiner Schule oder mit einem eigenen Kurs, zum Beispiel bei MoodleCloud)", "Ein Video, das schon online liegt (zum Beispiel auf Vimeo oder YouTube)", "Einen Browser"]),
             warn("Keine Dateien in Moodle hochladen", "Lade Dateien (Audio, PDF, Noten, Videos) <b>nicht</b> in Moodle hoch. Lege sie in einer Cloud ab (zum Beispiel Swisscom myCloud) und teile sie dort mit einem <b>Link und einem Passwort</b>. In Moodle stehen nur der Link und das Passwort, im geschützten Kursbereich. Wie das geht, steht unten im Schritt 4."),
             note("Eigenes Video?", 'Wenn du das Video selber mit dem Handy filmst: bringe es per AirDrop, Cloud oder Kabel auf den Laptop und lade es bei Vimeo oder YouTube hoch. Wie das geht, steht in der Anleitung <a href="handyvideo.html#uebertragen">Video mit dem Handy</a>.'),
         ])),
         ("start", "Anmelden", "10 Min.", "\n".join([
-            ol(["Öffne die Moodle-Adresse, die dir Marc mitteilt, und melde dich mit deinen Zugangsdaten an.", "Öffne deinen persönlichen Kurs.", "Schalte oben rechts <b>Bearbeiten</b> ein. Erst dann siehst du die Knöpfe zum Anlegen und Ändern."]),
+            ol(["Öffne die Moodle-Adresse deines Kurses und melde dich mit deinen Zugangsdaten an.", "Öffne deinen Kurs.", "Schalte oben rechts <b>Bearbeiten</b> ein. Erst dann siehst du die Knöpfe zum Anlegen und Ändern."]),
             warn("Zugangsdaten", "Gib dein Passwort nie weiter. Ändere das Startpasswort beim ersten Mal, wenn Moodle dazu auffordert."),
         ])),
         ("erste", "Erste Schritte zum Testen", "25 Min.", "\n".join([
@@ -740,7 +740,7 @@ GUIDES.append(dict(
 # ------------------------------------------------------------------ kDrive und kSuite
 GUIDES.append(dict(
     slug="kdrive", final=True, title="kDrive und kSuite", title_long="kDrive und kSuite: Schweizer Cloud und Alternative zu Microsoft 365",
-    eyebrow="Hosten · Beispiel 6",
+    eyebrow="Hosten",
     lead="Dateien in einer Cloud mit Servern in der Schweiz ablegen und teilen, und prüfen, ob kSuite von Infomaniak eine Alternative zu Microsoft 365 sein kann. Mit dem Blick auf den Datenschutz.",
     card="Schweizer Cloud zum Ablegen und Teilen, Datenschutz-Check und Vergleich mit Microsoft 365.", diff_kurz="mittel", bsp=["B6"],
     zeit="ca. 60&ndash;90 Minuten", diff="mittel", geraet="Computer mit Browser, optional Desktop- und Handy-App", kosten="Gratis-Angebot zum Testen, Passwortschutz für Links erst im bezahlten Paket",
@@ -783,14 +783,14 @@ GUIDES.append(dict(
         ])),
         ("erste", "Erste Schritte zum Testen", "20 Min.", "\n".join([
             tut("https://www.infomaniak.com/en/support/faq/2382/share-data-from-the-kdrive-web-app", "Infomaniak-Hilfe: Daten aus der kDrive-Web-App teilen (Englisch)", "Zeigt die Freigabe mit Link, Passwort und Ablaufdatum und das Einladen einzelner Personen."),
-            ol(["Lege in kDrive einen Ordner <b>Praxistag</b> an und lade eine Testdatei hoch (PDF, Audio oder ein Word-Dokument).", "Öffne ein Word-, Excel- oder PowerPoint-Dokument im Browser und ändere etwas. Das ist die Online-Bearbeitung im Büro-Teil von kSuite.",
+            ol(["Lege in kDrive einen Ordner <b>Unterricht</b> an und lade eine Testdatei hoch (PDF, Audio oder ein Word-Dokument).", "Öffne ein Word-, Excel- oder PowerPoint-Dokument im Browser und ändere etwas. Das ist die Online-Bearbeitung im Büro-Teil von kSuite.",
                 "Klicke mit der rechten Maustaste auf die Datei und wähle <b>Teilen</b>. Aktiviere den <b>öffentlichen Freigabelink</b> und stelle ein, ob man nur ansehen oder auch bearbeiten und herunterladen darf. Wenn dein Paket es erlaubt, setze ein <b>Ablaufdatum</b> und ein <b>Passwort</b>.",
                 "Kopiere den Link und öffne ihn in einem <b>privaten Fenster</b>, ohne bei Infomaniak angemeldet zu sein. Siehst du die Datei, und fragt der Link nach dem Passwort?"]),
             warn("Link aus- und wieder einschalten", "Wenn du den öffentlichen Link ausschaltest und wieder einschaltest, ändert sich die Adresse, und die alte ist ungültig."),
         ])),
         ("umsetzung", "Kleine Umsetzung: Unterrichtsmaterial per Link teilen", "30 Min.", "\n".join([
             p("<b>Auftrag:</b> Teile ein Arbeitsblatt oder eine Audiodatei mit einem geschützten Link und trage ihn in Moodle ein."),
-            ol(["Lege die Datei im Ordner <b>Praxistag</b> ab.", "Erzeuge einen Freigabelink nur zum <b>Ansehen und Herunterladen</b>, mit Passwort und Ablaufdatum, soweit dein Paket das kann.", "Lege in deinem Moodle-Kurs eine Seite an und schreibe Link und Passwort hinein (siehe die Anleitung <a href=\"moodle-kurs.html\">Moodle-Kurs</a>). Lade die Datei nicht in Moodle hoch.",
+            ol(["Lege die Datei im Ordner <b>Unterricht</b> ab.", "Erzeuge einen Freigabelink nur zum <b>Ansehen und Herunterladen</b>, mit Passwort und Ablaufdatum, soweit dein Paket das kann.", "Lege in deinem Moodle-Kurs eine Seite an und schreibe Link und Passwort hinein (siehe die Anleitung <a href=\"moodle-kurs.html\">Moodle-Kurs</a>). Lade die Datei nicht in Moodle hoch.",
                 "Teste den Link als Teilnehmende in einem privaten Fenster."]),
             check("kd", ["du hast eine Datei in kDrive abgelegt und einen Freigabelink erzeugt,", "der Link funktioniert im privaten Fenster,", "du hast geprüft, ob dein Paket Passwort und Ablaufdatum bietet,", "du hast die Zwei-Faktor-Anmeldung eingeschaltet."]),
         ])),
@@ -806,7 +806,7 @@ GUIDES.append(dict(
                 "<b>Rechte klein halten:</b> Gib der Klasse nur <b>Ansehen</b>. Bearbeiten bekommt nur, wer wirklich mitschreiben soll.", "<b>Ohne Konto geht es nur mit Link:</b> Wenn Lernende kein Infomaniak-Konto anlegen wollen, bleibt der Freigabelink. Mit Passwort und Ablaufdatum geht das erst in einem bezahlten Paket."]),
         ])),
         ("mycloud", "myCloud: die Alternative von Swisscom, wenn du ein Swisscom-Abo hast", "15 Min.", "\n".join([
-            p("Wenn du ein Swisscom-Abo hast, kannst du <b>myCloud</b> mit deinem Swisscom-Login nutzen. Das ist ein Cloud-Speicher, in dem du Dateien ablegst und teilst, ohne ein zusätzliches Konto bei einem anderen Anbieter. Für den Praxistag ist er eine Alternative zu kDrive."),
+            p("Wenn du ein Swisscom-Abo hast, kannst du <b>myCloud</b> mit deinem Swisscom-Login nutzen. Das ist ein Cloud-Speicher, in dem du Dateien ablegst und teilst, ohne ein zusätzliches Konto bei einem anderen Anbieter. Er ist eine Alternative zu kDrive."),
             h3("Was myCloud kann"),
             ul(["<b>Dateien teilen:</b> Du kannst einen Link erzeugen, mit oder ohne <b>Ablaufdatum</b> und mit oder ohne <b>Passwortschutz</b>. Das ist genau das, was du für das Teilen im geschützten Moodle-Bereich brauchst (siehe <a href=\"moodle-kurs.html\">Moodle-Kurs</a>).",
                 "<b>Speicher:</b> Laut Swisscom-Hilfe gehört zu einem kostenlosen Konto ein Speicher von 10 GB, mehr Speicher kostet. Prüfe, was dein Abo einschliesst."]),
@@ -844,7 +844,7 @@ GUIDES.append(dict(
 # ------------------------------------------------------------------ Linktree
 GUIDES.append(dict(
     slug="linktree", final=True, title="Linktree", title_long="Linktree: eine Linkseite ohne eigene Website",
-    eyebrow="Hosten · Beispiel 2",
+    eyebrow="Hosten",
     lead="Eine einzige Seite mit allen deinen Links (Website, Social Media, Shop, Projekte), ohne eine eigene Website zu bauen.",
     card="Alle Links auf einer Seite sammeln: die einfachste Variante für einen Online-Auftritt.", diff_kurz="leicht", bsp=["B2"],
     zeit="ca. 30&ndash;45 Minuten", diff="leicht", geraet="Computer, Tablet oder Handy (Browser oder App)", kosten="Gratis-Plan reicht (mit Linktree-Logo und Werbung)",
@@ -897,7 +897,7 @@ GUIDES.append(dict(
 # ------------------------------------------------------------------ Website mit KI
 GUIDES.append(dict(
     slug="website-mit-ki", final=True, title="Website mit KI", title_long="Website mit KI: analysieren, verbessern, in Jimdo umsetzen",
-    eyebrow="Hosten · Beispiel 2",
+    eyebrow="Hosten",
     lead="Eine KI schaut sich eine bestehende Website an und schlägt Verbesserungen vor. Du setzt sie zuerst von Hand um und lässt danach die KI in Jimdo selber mitarbeiten.",
     card="Bestehende Website von der KI analysieren lassen, Vorschläge umsetzen, KI in Jimdo arbeiten lassen.", diff_kurz="mittel", bsp=["B2"],
     zeit="ca. 90&ndash;120 Minuten", diff="mittel", geraet="Computer mit Browser", kosten="gratis (KI-Zugang und Jimdo-Konto vorausgesetzt)",
@@ -945,7 +945,7 @@ GUIDES.append(dict(
 # ------------------------------------------------------------------ Terminal
 GUIDES.append(dict(
     slug="terminal", final=True, title="Terminal", title_long="Terminal: die ersten Befehle",
-    eyebrow="Hosten · Beispiel 2",
+    eyebrow="Hosten",
     lead="Das Terminal öffnen und die wichtigsten Befehle kennenlernen: wo bin ich, Ordner wechseln, einen Testserver starten, den Zustand von Git ansehen. Die Grundlage für die Anleitung «Website mit Git».",
     card="Terminal öffnen, sich zurechtfinden, Testserver starten und erste Git-Befehle.", diff_kurz="leicht bis mittel", bsp=["B2"],
     zeit="ca. 30&ndash;45 Minuten", diff="leicht bis mittel", geraet="Computer (Mac oder Windows)", kosten="gratis, nichts zu installieren",
@@ -1018,7 +1018,7 @@ GUIDES.append(dict(
 # ------------------------------------------------------------------ Website veröffentlichen mit Git
 GUIDES.append(dict(
     slug="website-git", final=True, title="Website mit Git veröffentlichen", title_long="Website veröffentlichen: Git, GitHub und Hosting",
-    eyebrow="Hosten · Beispiel 2",
+    eyebrow="Hosten",
     lead="Eine Website aus Dateien bauen, lokal testen, mit Git versionieren, auf GitHub speichern und bei jedem Push automatisch auf einem Hosting veröffentlichen.",
     card="Website aus HTML, CSS und JavaScript lokal testen, Git, GitHub, automatisch auf den Server.", diff_kurz="mittel bis schwierig", bsp=["B2"],
     zeit="ca. 90&ndash;120 Minuten", diff="mittel bis schwierig", geraet="Computer (Mac oder Windows)", kosten="Git und GitHub gratis, Hosting je nach Anbieter (GitHub Pages gratis)",
@@ -1095,7 +1095,7 @@ GUIDES.append(dict(
 # ------------------------------------------------------------------ Konzeptarbeit
 GUIDES.append(dict(
     slug="konzeptarbeit", final=True, title="Konzeptarbeit", title_long="Konzeptarbeit: vom Ist-Zustand zum Konzept",
-    eyebrow="Konzipieren · Beispiel 1, 8",
+    eyebrow="Konzipieren",
     lead="Mit einer KI den Ist-Zustand analysieren, Handlungsfelder finden und ein einfaches Konzept formulieren.",
     card="Ist-Zustand, Handlungsfelder, Konzept.", diff_kurz="mittel bis schwierig", bsp=["B1", "B8"],
     zeit="ca. 60&ndash;90 Minuten", diff="mittel bis schwierig", geraet="Computer oder Tablet mit KI-Zugang", kosten="gratis (KI-Zugang vorausgesetzt)",
@@ -1115,7 +1115,7 @@ GUIDES.append(dict(
         ])),
         ("umsetzung", "Kleine Umsetzung: dein Konzept auf einer Seite", "30&ndash;45 Min.", "\n".join([
             p("<b>Auftrag:</b> Fasse dein Konzept auf einer Seite zusammen."),
-            ol(["Ist-Zustand in fünf Sätzen.", "Zwei Handlungsfelder mit je einem Ziel.", "Drei erste Schritte mit Termin.", "Eine Frage, die du in deiner Kurzpräsentation klärst."]),
+            ol(["Ist-Zustand in fünf Sätzen.", "Zwei Handlungsfelder mit je einem Ziel.", "Drei erste Schritte mit Termin.", "Eine Frage, die du als Nächstes klären willst."]),
             check("kz", ["dein Ist-Zustand steht auf einer Seite,", "du hast zwei Ziele mit Termin,", "du hast die Vorschläge der KI geprüft und selbst entschieden."]),
         ])),
     ],
@@ -1124,20 +1124,20 @@ GUIDES.append(dict(
 ))
 
 # ------------------------------------------------------------------ Index-Struktur
-# Vorab einrichten: kurzer Hinweis oben in jeder Anleitung (spart Zeit am Praxistag)
+# Vorab einrichten: kurzer Hinweis oben in jeder Anleitung (spart Zeit beim Ausprobieren)
 VORAB = {
-    "noteflight": "Nichts zu installieren. Melde dich vorab mit dem Zugang, den du separat von Marc bekommst, bei Noteflight Learn an und prüfe, dass es klappt.",
+    "noteflight": "Nichts zu installieren. Lege vorab ein Gratis-Konto bei Noteflight an und prüfe, dass die Anmeldung klappt.",
     "musescore": "Lade MuseScore Studio gratis von <a href=\"https://musescore.org/de\" target=\"_blank\" rel=\"noopener\">musescore.org</a> herunter und installiere es (ca. 10 Minuten). Öffne es einmal, damit du weisst, dass es läuft.",
     "handyvideo": "Installiere Acapella (und wenn du willst CapCut) aus dem App Store oder Play Store und nimm <b>Kabelkopfhörer</b> mit. Beide Apps zeigen Bezahlangebote: schliesse sie mit dem kleinen X. Probiere vorab, ein Video per AirDrop, Cloud oder Kabel auf den Laptop zu bringen (siehe Schritt 5).",
     "moises": "Nichts zu installieren. Lege vorab ein Gratis-Konto auf <a href=\"https://moises.ai\" target=\"_blank\" rel=\"noopener\">moises.ai</a> an und melde dich einmal an. Die App ist freiwillig.",
     "anytune": "Installiere die App vorab aus dem App Store (gratis, Zusatzfunktionen wie der Export kosten extra) und lege ein Stück zum Üben bereit.",
-    "guitar-pro": "Installiere das Programm vorab und melde dich an. Die Testversion läuft sieben Tage ab der Installation, danach öffnet die Gratis-Version keine Dateien mehr. Installiere sie deshalb erst kurz vor dem Praxistag. Ohne Installation zeigt Soundslice Guitar-Pro-Dateien im Browser.",
-    "ireal-pro": "Installiere die App vorab (kostenpflichtig, Einmalkauf pro Plattform, Preis im Store prüfen). Auf dem Mac (direkter Download) und unter Windows gibt es eine Testversion von 7 Tagen, installiere sie deshalb erst kurz vor dem Praxistag. Wenn du sie nicht kaufen willst, schaue nur zu.",
-    "davinci-resolve": "Lade die <b>kostenlose</b> Version vorab herunter und installiere sie. Der Download ist gross (1&ndash;2 Stunden). Im Computerraum der HSLU ist Resolve installiert, aber auf deinem eigenen Gerät kannst du danach weiterarbeiten. Filme mit dem Handy und bringe die Aufnahmen per AirDrop oder Cloud auf den Laptop (siehe Schritt 3).",
+    "guitar-pro": "Installiere das Programm vorab und melde dich an. Die Testversion läuft sieben Tage ab der Installation, danach öffnet die Gratis-Version keine Dateien mehr. Installiere sie deshalb erst, wenn du sie brauchst. Ohne Installation zeigt Soundslice Guitar-Pro-Dateien im Browser.",
+    "ireal-pro": "Installiere die App vorab (kostenpflichtig, Einmalkauf pro Plattform, Preis im Store prüfen). Auf dem Mac (direkter Download) und unter Windows gibt es eine Testversion von 7 Tagen, installiere sie deshalb erst, wenn du sie brauchst. Wenn du sie nicht kaufen willst, schaue nur zu.",
+    "davinci-resolve": "Lade die <b>kostenlose</b> Version vorab herunter und installiere sie. Der Download ist gross (1&ndash;2 Stunden). Filme mit dem Handy und bringe die Aufnahmen per AirDrop oder Cloud auf den Laptop (siehe Schritt 3).",
     "opendaw": "Nichts zu installieren. Öffne <a href=\"https://opendaw.studio\" target=\"_blank\" rel=\"noopener\">opendaw.studio</a> vorab einmal in deinem Browser und prüfe, dass es lädt.",
     "koala-sampler": "Installiere die App vorab aus dem App Store oder Play Store (Preis im Store prüfen).",
-    "moodle-kurs": "Nichts zu installieren. Melde dich vorab mit dem Zugang, den du separat von Marc bekommst, bei Moodle an und prüfe, dass es klappt.",
-    "daw": "Installiere GarageBand (gratis) aus dem App Store, wenn du ein Apple-Gerät hast. Logic Pro kostet CHF 180, Ableton Live hat eine Testversion von 30 Tagen (installiere sie erst kurz vor dem Praxistag). Beide sind steiler für den Einstieg.",
+    "moodle-kurs": "Nichts zu installieren. Melde dich vorab bei deinem Moodle an und prüfe, dass es klappt.",
+    "daw": "Installiere GarageBand (gratis) aus dem App Store, wenn du ein Apple-Gerät hast. Logic Pro kostet CHF 180, Ableton Live hat eine Testversion von 30 Tagen (installiere sie erst, wenn du sie brauchst). Beide sind steiler für den Einstieg.",
     "dorico": "Lege vorab ein Steinberg-Konto an, fordere Dorico SE (gratis) auf der Seite von Steinberg an und installiere es mit dem Steinberg Download Assistant. Der Download ist gross. Aktiviere die Lizenz im Steinberg Activation Manager und starte Dorico einmal. Auf dem iPad installierst du stattdessen die gratis App Dorico aus dem App Store.",
     "kdrive": "Nichts zu installieren. Lege vorab ein gratis Infomaniak-Konto an (my kSuite oder kSuite Pro Free) und schalte die Zwei-Faktor-Anmeldung ein. Lade keine vertraulichen Daten zum Testen hoch.",
     "linktree": "Nichts zu installieren. Lege vorab ein gratis Linktree-Konto an (Plan Free) und sammle die Adressen, die auf deine Seite sollen.",
@@ -1148,6 +1148,50 @@ VORAB = {
 }
 for _g in GUIDES:
     _g["vorab"] = VORAB[_g["slug"]]
+
+# Aus der Praxis: Erfahrungen und Stolpersteine aus dem HSLU-Modul Digitalisierung (anonym, ohne Namen)
+PRAXIS = {
+    "konzeptarbeit": [
+        "<b>KI-Zugang vorab klären:</b> Mehrere Teilnehmende verloren Zeit mit Konten, alten Zugängen und Telefonnummern. Lege vor dem Start ein Konto an, prüfe die Anmeldung und bleibe bei einem Konto.",
+        "<b>Genau sagen, was du willst:</b> Was du hineingibst, bestimmt, was herauskommt. Ohne klaren Auftrag verliert man sich in endlosen Nachbesserungen. Schreibe zuerst auf, was herauskommen soll.",
+        "<b>Vorgaben aus guten Beispielen:</b> Gib der KI Webseiten, Songs oder Ideen, die du gut findest, als Vorbild. Sie arbeitet dann deutlich genauer.",
+    ],
+    "website-mit-ki": [
+        "<b>Klein anfangen:</b> Auch Teilnehmende ohne Vorkenntnisse bauten an einem Tag eine erste Seite. Der Start ist eine einzige Datei, die du per Doppelklick im Browser öffnest.",
+        "<b>Immer an derselben Datei arbeiten lassen:</b> Wenn die KI jedes Mal eine neue Fassung liefert, geht der Überblick verloren. Bitte sie, an derselben Datei zu bleiben, und lade sie nach jeder Änderung neu im Browser.",
+        "<b>Vorgaben aus guten Beispielen:</b> Nenne der KI Seiten, die dir gefallen, und sage, was du übernehmen willst.",
+        "<b>KI-Zugang vorab klären:</b> Konten und alte Zugänge kosteten Zeit. Prüfe die Anmeldung, bevor du loslegst.",
+    ],
+    "website-git": [
+        "<b>Für einfache Seiten genügt eine einzige Datei:</b> Wer zum Beispiel einen Arbeitsblatt-Generator baut, braucht keinen Testserver. Ein Doppelklick auf die Datei öffnet die Seite im Browser. Git und Hosting kommen später, wenn die Seite wachsen oder online gehen soll.",
+        "<b>Ältere Computer:</b> Auf einem alten Computer liess sich nichts installieren. Dann bleibst du bei Werkzeugen im Browser, und GitHub nimmt Dateien meines Wissens auch im Browser entgegen.",
+        "<b>Inhalte der KI prüfen:</b> Griffbilder, Akkorde und Texte, die die KI erzeugt, mit einer verlässlichen Vorlage vergleichen und nachspielen.",
+    ],
+    "musescore": [
+        "<b>PDF in Noten umwandeln:</b> Mit Audiveris (gratis) entstand aus einem PDF eine .mxl-Datei, die sich in MuseScore mit Noten und Text öffnen liess, in gutem Erscheinungsbild. Eine KI korrigierte danach Fehler und teilte Chorstimmen in einzelne Systeme auf. Kontrolliere trotzdem selbst. Ein anderes Umwandlungsprogramm (ScanScore) stürzte im Test mehrmals ab.",
+        "<b>Drei XML-Versionen:</b> Es gibt komprimiertes .mxl und unkomprimiertes .xml oder .musicxml. MuseScore öffnet .mxl direkt, Noteflight braucht die unkomprimierte Fassung.",
+        "<b>Editierbare Noten finden:</b> MusicXML-Dateien auf musescore.com lassen sich direkt bearbeiten, bei geschützten Stücken gilt das Urheberrecht.",
+        "<b>KI schreibt Noten:</b> Eine KI kann Noten als MusicXML schreiben, macht aber Fehler bei Tonart, Takten und Silben. Öffne die Datei im Notenschreibprogramm, damit eine Fachperson sie prüfen, korrigieren und anpassen kann.",
+    ],
+    "noteflight": [
+        "<b>XML-Versionen:</b> Noteflight liest unkomprimiertes XML. Komprimierte Dateien (.mxl) liest es nicht direkt. Exportiere sie dann in MuseScore als unkomprimiertes XML.",
+    ],
+    "davinci-resolve": [
+        "<b>Für Einsteigende anspruchsvoll:</b> Auch wer schon Videos geschnitten hat, fand DaVinci Resolve zunächst kompliziert, weil es anders arbeitet. Plane Zeit ein und beginne mit einem kurzen Clip. Wer am Handy schneiden will, startet mit CapCut.",
+        "<b>Anmeldung und Bestätigung:</b> Bei der Anmeldung kann die Bestätigung haken. Mit etwas Geduld ging es weiter, und nach der Einarbeitung machte die Arbeit Spass.",
+    ],
+    "handyvideo": [
+        "<b>Mit dem Einfachen beginnen:</b> Wer DaVinci Resolve für einen Tag zu kompliziert fand, kam mit CapCut am Handy schneller zu einem ersten Video. DaVinci Resolve kann später folgen.",
+    ],
+    "opendaw": [
+        "<b>Alles sichern:</b> Lade das Projekt als Datei herunter (Bundle mit der Endung .odb), lade die einzelnen Spuren (Stems) als Audiodateien herunter und speichere den Code als Textdatei. Die Menübezeichnungen können sich ändern. Ohne Sicherung geht ein Projekt verloren.",
+        "<b>Noten aus dem Song:</b> Der Song liegt als Code vor, die KI kann daraus Noten als MusicXML schreiben. Öffne sie in einem Notenschreibprogramm, damit eine Fachperson sie korrigieren und anpassen kann.",
+        "<b>Fachperson prüfen lassen:</b> Ob ein KI-Song brauchbar, singbar und spielbar ist, muss jemand mit Musikerfahrung beurteilen. Das braucht Zeit.",
+    ],
+}
+for _g in GUIDES:
+    if _g["slug"] in PRAXIS:
+        _g["praxis"] = PRAXIS[_g["slug"]]
 
 SOON = {
 }

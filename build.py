@@ -100,12 +100,14 @@ def guide_page(g):
         out.append(f'                <li><b>{label}</b><span>{g[key]}</span></li>')
     out.append('            </ul>')
     if not g.get("final"):
-        out.append('            <p><span class="badge">Entwurf</span> Noch nicht von Hand getestet. Falls ein Menü anders heisst, gilt, was du auf dem Bildschirm siehst. Sag es Marc, dann wird die Anleitung korrigiert.</p>')
+        out.append('            <p><span class="badge">Entwurf</span> Noch nicht von Hand getestet. Falls ein Menü anders heisst, gilt, was du auf dem Bildschirm siehst. Schick eine Rückmeldung, dann wird die Anleitung korrigiert.</p>')
     if g.get("vorab"):
-        out.append(f'            <div class="note"><b>Vorab einrichten</b>{g["vorab"].replace("<b>", "").replace("</b>", "")} So bleibt am Praxistag mehr Zeit zum Ausprobieren.</div>')
+        out.append(f'            <div class="note"><b>Vorab einrichten</b>{g["vorab"].replace("<b>", "").replace("</b>", "")} So bleibt dir mehr Zeit zum Ausprobieren.</div>')
     out.append('            <ul class="toc">')
     for i, s in enumerate(g["steps"], 1):
         out.append(f'                <li><a href="#{s[0]}">{i} {s[1].split(":")[0]}</a></li>')
+    if g.get("praxis"):
+        out.append('                <li><a href="#praxis">Aus der Praxis</a></li>')
     out.append('                <li><a href="#stolper">Stolpersteine</a></li>')
     out.append('            </ul>')
     out.append('        </section>\n')
@@ -113,6 +115,15 @@ def guide_page(g):
         out.append(f'        <section class="step" id="{sid}">')
         out.append(f'            <header><span class="step-num">{i}</span><h2>{title}</h2><span class="time">{zeit}</span></header>')
         out.append(body.strip("\n"))
+        out.append('        </section>\n')
+    if g.get("praxis"):
+        out.append('        <section class="step" id="praxis">')
+        out.append('            <header><span class="step-num">P</span><h2>Aus der Praxis</h2></header>')
+        out.append('            <p>Erfahrungen aus dem Modul Digitalisierung der HSLU, wo Teilnehmende diese Werkzeuge ausprobiert haben:</p>')
+        out.append('            <ul>')
+        for s in g["praxis"]:
+            out.append(f'                <li>{s}</li>')
+        out.append('            </ul>')
         out.append('        </section>\n')
     out.append('        <section class="step" id="stolper">')
     out.append('            <header><span class="step-num">!</span><h2>Stolpersteine</h2></header>')
@@ -136,8 +147,8 @@ def guide_page(g):
 
 
 def card_done(g):
-    tags = "".join(f'<span class="pill">{b}</span>' for b in g["bsp"])
-    badge = '<span class="badge badge--ok">Fertig</span>' if g.get("final") else '<span class="badge">Entwurf</span>'
+    tags = ""
+    badge = "" if g.get("final") else '<span class="badge">Entwurf</span>'
     return (f'                    <li class="card"><a class="card-link" href="anleitungen/{g["slug"]}.html">{g["title"]}</a>'
             f'<p>{g["card"]}</p><div class="meta">{badge}'
             f'<span class="pill">{g["diff_kurz"]}</span>{tags}</div></li>')
@@ -151,26 +162,19 @@ def card_soon(s):
 
 def index_page():
     out = [head("Digitale Werkzeuge für Musikvermittlung",
-                "Anleitungen und Präsentationen zum HSLU-Praxistag: konzipieren, umsetzen, hosten.", "")]
+                "Anleitungen aus der Praxis, für die Praxis: Noten, Playalongs, Video, Musik machen, Websites und Dateien teilen.", "")]
     out.append("""
     <main class="wrap wrap--wide">
         <section class="hero">
-            <p class="eyebrow">HSLU · Modul Digitalisierung · Praxistag</p>
-            <h1>Konzipieren, umsetzen, hosten</h1>
-            <p class="lead">Anleitungen zu den Werkzeugen aus den Beispielen, jede in vier Schritten: Basics, Installation, erste Schritte, kleine Umsetzung. Dazu die Präsentationen der beiden Tage.</p>
-        </section>
-
-        <section id="praesentationen">
-            <h2>Präsentationen</h2>
-            <div class="big-links">
-                <a class="big-link" href="praesentationen/tag-2.html"><b>Tag 2: Konzipieren, umsetzen, hosten</b><span>Die Präsentation vom 14. November mit den acht Beispielen. Pfeiltasten zum Blättern, <kbd>N</kbd> zeigt das Drehbuch.</span></a>
-                <a class="big-link" href="praesentationen/tag-1.html"><b>Tag 1</b><span>Die Präsentation vom ersten Tag.</span></a>
-            </div>
+            <p class="eyebrow">Digitale Werkzeuge für Musikvermittlung</p>
+            <h1>Anleitungen aus der Praxis, für die Praxis</h1>
+            <p class="lead">Schritt-für-Schritt-Anleitungen zu digitalen Werkzeugen für Musikunterricht, Chorarbeit und eigene Projekte: Noten, Playalongs, Video, Musik machen, Websites und Dateien teilen. Jede Anleitung hat vier Schritte (Basics, Installation, erste Schritte, kleine Umsetzung) und nennt die Stolpersteine, die wir in der Praxis erlebt haben.</p>
+            <div class="note"><b>Aus der Praxis, in der Praxis erprobt</b>Die Anleitungen sind nach dem Prinzip «Good Practice» entstanden: Marc Scheidegger hat die Werkzeuge im Alltag selbst benutzt, und sie sind im Modul Digitalisierung der HSLU (Hochschule Luzern – Musik) mit Teilnehmenden ausprobiert worden. Die Erfahrungen und Stolpersteine daraus stehen in den Anleitungen. Wo etwas nicht selbst getestet ist, steht es dabei.</div>
         </section>
 
         <section id="anleitungen">
             <h2>Anleitungen</h2>
-            <p class="lead">«Fertig» heisst, die Anleitung ist von Hand getestet. «Entwurf» heisst, sie ist geschrieben, aber noch nicht getestet. Falls ein Menü anders heisst, gilt, was du auf dem Bildschirm siehst.</p>
+            <p class="lead">Programme und Menüs verändern sich oft. Falls ein Menü anders heisst, gilt, was du auf dem Bildschirm siehst. Preise und Funktionen: Stand November 2026.</p>
 """)
     by_slug = {g["slug"]: g for g in GUIDES}
     for gtitle, gsub, items in GROUPS:
@@ -181,7 +185,15 @@ def index_page():
             out.append(card_done(by_slug[it]) if it in by_slug else card_soon(SOON[it]))
         out.append('                </ul>')
         out.append('            </div>\n')
-    out.append('        </section>\n    </main>')
+    out.append('        </section>\n')
+    out.append('''        <section id="praesentationen">
+            <h2>Präsentationen aus dem HSLU-Modul</h2>
+            <div class="big-links">
+                <a class="big-link" href="praesentationen/tag-2.html"><b>Tag 2: Konzipieren, umsetzen, hosten</b><span>Die Präsentation vom zweiten Tag mit Beispielen aus der Praxis. Pfeiltasten zum Blättern, <kbd>N</kbd> zeigt das Drehbuch.</span></a>
+                <a class="big-link" href="praesentationen/tag-1.html"><b>Tag 1</b><span>Die Präsentation vom ersten Tag des Moduls.</span></a>
+            </div>
+        </section>''')
+    out.append('    </main>')
     out.append(foot())
     out.append('</body>\n</html>\n')
     return "\n".join(out)

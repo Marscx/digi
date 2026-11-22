@@ -29,7 +29,7 @@
         <p class="crumbs"><a href="../index.html#anleitungen">&larr; Alle Anleitungen</a></p>
 
         <section class="hero">
-            <p class="eyebrow">Producing · Beispiel 4</p>
+            <p class="eyebrow">Producing</p>
             <h1>openDAW: Musik produzieren im Browser</h1>
             <p class="lead">Einen kurzen Beat im Browser bauen, ohne Anmeldung und ohne Installation.</p>
             <ul class="facts">
@@ -38,13 +38,14 @@
                 <li><b>Gerät</b><span>Computer mit Browser</span></li>
                 <li><b>Kosten</b><span>gratis, ohne Registrierung</span></li>
             </ul>
-            <div class="note"><b>Vorab einrichten</b>Nichts zu installieren. Öffne <a href="https://opendaw.studio" target="_blank" rel="noopener">opendaw.studio</a> vorab einmal in deinem Browser und prüfe, dass es lädt. So bleibt am Praxistag mehr Zeit zum Ausprobieren.</div>
+            <div class="note"><b>Vorab einrichten</b>Nichts zu installieren. Öffne <a href="https://opendaw.studio" target="_blank" rel="noopener">opendaw.studio</a> vorab einmal in deinem Browser und prüfe, dass es lädt. So bleibt dir mehr Zeit zum Ausprobieren.</div>
             <ul class="toc">
                 <li><a href="#basics">1 Basics</a></li>
                 <li><a href="#start">2 Öffnen</a></li>
                 <li><a href="#erste">3 Erste Schritte zum Testen</a></li>
                 <li><a href="#umsetzung">4 Kleine Umsetzung</a></li>
                 <li><a href="#code">5 Code-Editor</a></li>
+                <li><a href="#praxis">Aus der Praxis</a></li>
                 <li><a href="#stolper">Stolpersteine</a></li>
             </ul>
         </section>
@@ -323,7 +324,17 @@ project.openInStudio()</code></pre>
                 <pre><code>Lies die Scripting Docs auf opendaw.studio. Schreibe ein openDAW-Skript (TypeScript), das einen 8-Takt-Beat in [Stil] mit [Tempo] BPM erzeugt: Schlagzeug, Bass und eine einfache Melodie. Es soll mit openDAW.newProject() beginnen und mit project.openInStudio() enden.</code></pre>
             </div>
             <div class="note"><b>Wichtig</b>Die KI muss die aktuellen Scripting Docs kennen. Ohne sie erfindet sie Befehle, die es nicht gibt. Läuft das Skript nicht, kopiere die Fehlermeldung des Editors zurück in den Chat und lass es korrigieren.</div>
-            <div class="warn"><b>Fremden Code nur mit Vorsicht ausführen</b>Ein Skript läuft in deinem Browser. Führe nur Code aus, den du von einer vertrauenswürdigen Quelle hast und zumindest grob verstehst. Dieser Code stammt aus dem Praxistag und tut nichts anderes, als ein Projekt zu bauen.</div>
+            <div class="warn"><b>Fremden Code nur mit Vorsicht ausführen</b>Ein Skript läuft in deinem Browser. Führe nur Code aus, den du von einer vertrauenswürdigen Quelle hast und zumindest grob verstehst. Dieser Code stammt aus einer Sitzung mit Claude Code und tut nichts anderes, als ein Projekt zu bauen.</div>
+        </section>
+
+        <section class="step" id="praxis">
+            <header><span class="step-num">P</span><h2>Aus der Praxis</h2></header>
+            <p>Erfahrungen aus dem Modul Digitalisierung der HSLU, wo Teilnehmende diese Werkzeuge ausprobiert haben:</p>
+            <ul>
+                <li><b>Alles sichern:</b> Lade das Projekt als Datei herunter (Bundle mit der Endung .odb), lade die einzelnen Spuren (Stems) als Audiodateien herunter und speichere den Code als Textdatei. Die Menübezeichnungen können sich ändern. Ohne Sicherung geht ein Projekt verloren.</li>
+                <li><b>Noten aus dem Song:</b> Der Song liegt als Code vor, die KI kann daraus Noten als MusicXML schreiben. Öffne sie in einem Notenschreibprogramm, damit eine Fachperson sie korrigieren und anpassen kann.</li>
+                <li><b>Fachperson prüfen lassen:</b> Ob ein KI-Song brauchbar, singbar und spielbar ist, muss jemand mit Musikerfahrung beurteilen. Das braucht Zeit.</li>
+            </ul>
         </section>
 
         <section class="step" id="stolper">
