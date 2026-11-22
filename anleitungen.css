@@ -15,6 +15,9 @@
     --gold: #b7791f;         /* Hinweise */
     --gold-soft: #fff4dc;
     --ok: #15803d;
+    --lv-leicht: #15803d;
+    --lv-mittel: #d97706;
+    --lv-schwer: #c62828;
     --ok-soft: #e4f6ea;
     --warn: #b42318;
     --warn-soft: #fdecea;
@@ -33,6 +36,9 @@
         --gold: #f2b544;
         --gold-soft: #2c2411;
         --ok: #6ee7a0;
+        --lv-leicht: #4ade80;
+        --lv-mittel: #fbbf24;
+        --lv-schwer: #f87171;
         --ok-soft: #12301f;
         --warn: #ff9a8f;
         --warn-soft: #3a1714;
@@ -146,3 +152,13 @@ kbd { font-family: ui-monospace, Menlo, monospace; font-size: .85em; background:
     .step > header { flex-wrap: wrap; }
     .step .time { margin-left: 52px; }
 }
+
+/* Schwierigkeit mit Farbcode: grün leicht, gelb mittel, rot schwierig (Text bleibt dabei, Farbe allein trägt nichts) */
+.dot { display: inline-block; width: 11px; height: 11px; margin-right: 8px; vertical-align: -1px; background: var(--lv-mittel); }
+.d-leicht { background: var(--lv-leicht); }
+.d-mittel { background: var(--lv-mittel); }
+.d-schwer { background: var(--lv-schwer); }
+.d-leicht-mittel { background: linear-gradient(90deg, var(--lv-leicht) 50%, var(--lv-mittel) 50%); }
+.d-mittel-schwer { background: linear-gradient(90deg, var(--lv-mittel) 50%, var(--lv-schwer) 50%); }
+.d-leicht-schwer { background: linear-gradient(90deg, var(--lv-leicht) 33%, var(--lv-mittel) 33% 66%, var(--lv-schwer) 66%); }
+.legend { display: flex; flex-wrap: wrap; gap: 4px 18px; margin: 0 0 14px; color: var(--soft); font-size: .9rem; }

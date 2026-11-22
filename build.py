@@ -11,7 +11,7 @@ import os
 
 from guides import GUIDES, GROUPS, SOON
 
-V = 5                                   # Version der CSS-Dateien (?v=N)
+V = 6                                   # Version der CSS-Dateien (?v=N)
 HOME = "https://marcscheidegger.ch"       # Hauptseite (Links in Kopf- und Fusszeile)
 STAND = "November 2026"
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -97,7 +97,8 @@ def guide_page(g):
     out.append(f'            <p class="lead">{g["lead"]}</p>')
     out.append('            <ul class="facts">')
     for label, key in (("Zeit", "zeit"), ("Schwierigkeit", "diff"), ("Gerät", "geraet"), ("Kosten", "kosten")):
-        out.append(f'                <li><b>{label}</b><span>{g[key]}</span></li>')
+        dot = diff_dot(g[key]) if key == "diff" else ""
+        out.append(f'                <li><b>{label}</b><span>{dot}{g[key]}</span></li>')
     out.append('            </ul>')
     if not g.get("final"):
         out.append('            <p><span class="badge">Entwurf</span> Noch nicht von Hand getestet. Falls ein Menü anders heisst, gilt, was du auf dem Bildschirm siehst. Schick eine Rückmeldung, dann wird die Anleitung korrigiert.</p>')
@@ -146,12 +147,19 @@ def guide_page(g):
     return "\n".join(out)
 
 
+def diff_dot(text):
+    t = text.lower()
+    lv = [k for k, w in (("leicht", "leicht"), ("mittel", "mittel"), ("schwer", "schwierig")) if w in t]
+    cls = "d-" + "-".join(lv) if lv else "d-mittel"
+    return f'<i class="dot {cls}" aria-hidden="true"></i>'
+
+
 def card_done(g):
     tags = ""
     badge = "" if g.get("final") else '<span class="badge">Entwurf</span>'
     return (f'                    <li class="card"><a class="card-link" href="anleitungen/{g["slug"]}.html">{g["title"]}</a>'
             f'<p>{g["card"]}</p><div class="meta">{badge}'
-            f'<span class="pill">{g["diff_kurz"]}</span>{tags}</div></li>')
+            f'<span class="pill">{diff_dot(g["diff_kurz"])}{g["diff_kurz"]}</span>{tags}</div></li>')
 
 
 def card_soon(s):
@@ -174,6 +182,7 @@ def index_page():
 
         <section id="anleitungen">
             <h2>Anleitungen</h2>
+            <p class="legend"><span><i class="dot d-leicht"></i>leicht</span><span><i class="dot d-mittel"></i>mittel</span><span><i class="dot d-schwer"></i>schwierig</span></p>
             <p class="lead">Programme und Menüs verändern sich oft. Falls ein Menü anders heisst, gilt, was du auf dem Bildschirm siehst. Preise und Funktionen: Stand November 2026.</p>
 """)
     by_slug = {g["slug"]: g for g in GUIDES}
